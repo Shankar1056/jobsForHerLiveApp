@@ -1,0 +1,331 @@
+<resources>
+    <string name="app_name">JobsForHer</string>
+    <string name="use_live_key_in_production_environment">Please use your live merchant key in production environment</string>
+    <string name="test">Test</string>
+    <string name="production">Production</string>
+    <string-array name="environment_array">
+        <item>@string/test</item>
+        <item>@string/production</item>
+    </string-array>
+    <!--<string name="facebook_app_id">184970908668911</string>-->
+    <string name="facebook_app_id">1199799046722116</string>
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+    <!--<string name="fb_login_protocol_scheme">fb184970908668911</string>-->
+    <string name="fb_login_protocol_scheme">fb1199799046722116</string>
+    <string name="email_id">Email ID</string>
+    <string name="password">Password</string>
+    <string name="mentorher">MentorHer</string>
+    <string name="welcome_back_great_to_see_you_again">Welcome Back, Great\nto see you again!</string>
+    <string name="sign_in">Sign In</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="not_a_member_sign_up_here">Not a member? <u>Sign Up Here</u></string>
+    <string name="email_or_mobile_number">Email or Mobile Number</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="full_name">Full Name</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="continue_with_facebook">Continue with Facebook</string>
+    <string name="reset_password_wq">Reset Password</string>
+    <string name="let_me_in_already">Let me in already!</string>
+    <string name="otp_headline">Now we need the magic\npassword, a.k.a. The OTP!</string>
+    <string name="otp_subline">A OTP(one time password) has sent to your mobile No: +91XXXX8463 and Email Address:
+        UXXXXXXX22@gmail.com
+    </string>
+    <string name="now_s_the_time_to_use_it">Now’s the time to use it</string>
+    <string name="www_jobsforher_com">www.jobsforher.com/</string>
+    <string name="edit">Edit</string>
+    <string name="your_profile_is_in_your_control_always_just_like_your_career_and_life_should_be_now_get_behind_the_wheel">
+        Your profile is in your control. Always. Just like your career and life should be. Now, get behind the wheel…
+    </string>
+    <string name="customize_to_strategize">Customize to strategize!</string>
+    <string name="i_ll_do_it_later">I\'ll do it later</string>
+    <string name="save_amp_continue"><![CDATA[Save & Continue]]></string>
+    <string name="upload_photo">Upload Photo</string>
+    <string name="one_line_about_yourself">One line about yourself</string>
+    <string name="save_continue"><![CDATA[Save & Continue]]></string>
+    <string name="education">Education</string>
+    <string name="work">Work</string>
+    <string name="life">Life</string>
+    <string name="skills">Skills</string>
+    <string name="add_education">+ Add Education</string>
+    <string name="signup_education_process_text">College (experience) counts! \n Tell us more about yours.</string>
+    <string name="add_work">+ Add Work Experience</string>
+    <string name="add_life">+ Add Life Experience</string>
+    <string name="add_skills">+ Add Skills</string>
+    <string name="save">Save</string>
+    <string name="women_in_tech">Women In Tech</string>
+    <string name="open_group">Open Group</string>
+    <string name="members_550">550 members</string>
+    <string name="invite">Invite</string>
+    <string name="joined">Joined</string>
+    <string name="about_us">About Us</string>
+    <string name="posts">Posts</string>
+    <string name="photos">Photos</string>
+    <string name="videos">Videos</string>
+    <string name="back">Back</string>
+    <string name="create_post">Create Post</string>
+    <string name="create_comments">Comments Page</string>
+    <string name="write_something_here">Write Something Here...</string>
+    <string name="add_video_url">Add Video Url Here...</string>
+    <string name="add">Add:</string>
+    <string name="text">Text</string>
+    <string name="video">Video</string>
+    <string name="image">Image</string>
+    <string name="document">Document</string>
+    <string name="upload">Upload</string>
+    <string name="filename_doc">Filename.doc</string>
+    <string name="filetype_text">Filetype: Jpeg, Jpg, Pdf, Gif, Doc (Max 5mb file).</string>
+    <string name="post">Post</string>
+    <string name="cancel">Cancel</string>
+    <string name="ex_name">Nidhi Sharma</string>
+    <string name="ex_post_time">Posted 2 days ago</string>
+    <string name="ex_post_text">This is the example post where it contains al the options like showing the post text,
+        preview image or document with size and download option. And also option like likes, comments,and share.
+    </string>
+
+
+
+
+    <string name="footer_text_desc">JobsForHer is an online portal that enables women to accelerate their careers by connecting them to jobs, community, mentoring, reskilling, and networking opportunities.</string>
+    <string name="footer_home">Home</string>
+    <string name="footer_events">Events</string>
+    <string name="footer_blogs">Blogs</string>
+    <string name="footer_aboutus">About Us</string>
+    <string name="footer_contactus">Contact Us</string>
+    <string name="footer_fulltimejobs">Full Time Jobs</string>
+    <string name="footer_parttimejobs">Part Time Jobs</string>
+    <string name="footer_returnee_program">Returnee program</string>
+    <string name="footer_volunteer_jobs">Volunteer Jobs</string>
+    <string name="footer_work_from_home_jobs">Work From Home Jobs</string>
+    <string name="footer_freelance_jobs">Freelance Jobs</string>
+    <string name="footer_candidates_zone">Candidate\'s Zone</string>
+    <string name="footer_mentors_zone">Mentor\'s Zone</string>
+    <string name="footer_partners_zone">Partner\'s Zone</string>
+    <string name="footer_accelherate">AccelHERate</string>
+    <string name="footer_restarther">RestartHer</string>
+    <string name="footer_restarther_response">RestartHer Sponsors</string>
+    <string name="footer_become_ambassador">Become an ambassador</string>
+    <string name="footer_jobs_bangalore">Jobs in Bangalore</string>
+    <string name="footer_jobs_chennai">Jobs in Chennai</string>
+    <string name="footer_jobs_hyderabad">Jobs in Hyderabad</string>
+    <string name="footer_jobs_delhi">Jobs in Delhi</string>
+    <string name="footer_jobs_mumbai">Jobs in Mumbai</string>
+    <string name="footer_jobs_pune">Jobs in Pune</string>
+    <string name="Follow_us_on">FOLLOW US ON</string>
+    <string name="footer_more_button">More</string>
+    <string name="create_group">Create Group</string>
+    <string name="group_name_imp">Group Name *</string>
+    <string name="group_name">Group Name</string>
+    <string name="phone_num_imp">Phone Number*</string>
+    <string name="phone_num">Phone Number</string>
+    <string name="group_type_imp">Group Type*</string>
+    <string name="closed_group">Closed Group</string>
+    <string name="group_des_imp">Group Description*</string>
+    <string name="objective_imp">Objective*</string>
+    <string name="audience_trying_reach_imp">Audience you are trying to reach*</string>
+    <string name="upload_group_profile_image">Upload Group Profile Image</string>
+    <string name="send_req">Send Request</string>
+    <string name="filter">Filter</string>
+    <string name="top_trending_categories">Top Trending Category</string>
+    <string name="my_groups">My Groups</string>
+    <string name="all_categories">All Categories</string>
+    <string name="leave_group">Leave Group</string>
+    <string name="report_this_group">Report this group</string>
+
+
+    <string name="congrtulations">Congratulations Neha!</string>
+    <string name="how_should_womens_career_be_showcased">How should a women\&apos;s career journey \nbe showcased?</string>
+    <string name="work_button">Work</string>
+    <string name="plus_button">\t+\nplus</string>
+    <string name="life_button">Life</string>
+    <string name="equals_text">=</string>
+    <string name="total_experience">     Total Experience      </string>
+    <string name="hint_text">www.jobsforher/nehabagaria</string>
+    <string name="ill_do_it_later">I\'ll do it later</string>
+
+
+    <string name="easily_using">Easily using</string>
+    <string name="using_email">Or using email</string>
+    <string name="email_id_hint">Email ID</string>
+    <string name="password_hint">Password</string>
+    <string name="sign_in_page">SIGN IN</string>
+    <string name="by_signing_up_i_agree_to_the_certify">By signing up, I agree to the <u>Terms and Conditions</u> \nand certify that I am a woman</string>
+    <string name="not_a_woman_acc">Not a Woman AccelHERator?</string>
+    <string name="click_here_u"><u>Click here</u></string>
+
+
+    <string name="header_our_offerings">Our Offerings</string>
+    <string name="footer_jobs">Jobs</string>
+    <string name="footer_companies">Companies</string>
+    <string name="footer_groups">Groups</string>
+    <string name="footer_reskilling">Reskilling</string>
+    <string name="footer_mentors">Mentors</string>
+    <string name="footer_eventss">Events</string>
+    <string name="footer_blogss">Blogs</string>
+    <string name="footer_aboutuss">About Us</string>
+    <string name="footer_contact">Contact</string>
+    <string name="header_we_are_on_social">We are on Social</string>
+    <string name="header_address">Address</string>
+    <string name="footer_address">31/5, Rich Crown, Above State Bank of Mysore, \nColes Road, Cleveland Town, Pulikeshi Nagar, \nBengaluru, Karnataka 560005</string>
+    <string name="header_aboutus">About Us</string>
+    <string name="footer_aboutusdata">JobsForHer is an online portal that enables women to accelerate their careers by connecting them to jobs, community, mentoring, reskilling, and networking opportunities.</string>
+    <string name="footer_text1">&#169; Jobsforher 2019</string>
+    <string name="footer_termsconditions">Terms and Conditions</string>
+    <string name="footer_privacypolicy">Privacy Policy</string>
+
+
+
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+
+    <string name="add_photo_image">Add Photo/Image</string>
+    <string name="add_video">Add Video</string>
+    <string name="add_bg_colour">Add Background colour</string>
+    <string name="add_document">Add Document</string>
+    <string name="horizontal_ellipsis">&#8230;</string>
+    <string name="todo">To do</string>
+    <string name="we_all_forget">Forgot Password</string>
+    <string name="enter_your_registered_emailid">Enter your registered email id</string>
+    <string name="send_email">Send mail</string>
+    <string name="sign_up_as">Sign Up As</string>
+
+
+
+    <string name="woman_accelator">Woman AccelHERator</string>
+    <string name="who_wants_to_start">Who wants to start, restart or rise \nin her career</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="continue_with_linedin">Continue with LinkedIn</string>
+    <string name="signup_with_email">Sign up with Email</string>
+    <string name="sign_in_here"><u>Sign In Here</u></string>
+    <string name="already_an_accelherator_">Already an AccelHERator?</string>
+    <string name="employ_her">EmployHer</string>
+    <string name="who_wants_hire_top_woman">Who wants to hire top woman \ntalent across India</string>
+    <string name="reskillher">ReskillHer</string>
+    <string name="who_wants_to_reskill">Who wants to reskill &amp; upskill \nwoman in and out of the workforce</string>
+    <string name="who_wants_to_guide">Who wants to guide &amp; inspire \nwoman to accelerate their career</string>
+    <string name="stage_studying">Studying</string>
+    <string name="want_to_start_my_career">Want to start my career</string>
+    <string name="on_a_break">On a Break</string>
+    <string name="want_to_restart_my_career">Want to restart my career</string>
+    <string name="currently_working">Currently Working</string>
+    <string name="want_to_rise_in_my_career">Want to rise in my career</string>
+    <string name="profile_strength">Profile Strength:</string>
+    <string name="could_be_better">Could be better!</string>
+    <string name="congrats_on_being_a_starter">Congrats on being a STARTER!</string>
+    <string name="college_edu_exp">College (education + experience)</string>
+    <string name="counts">counts.</string>
+    <string name="here_place_to_flaunt">Here\'s the place to flaunt it.</string>
+    <string name="ok_here_goes">Ok, here goes</string>
+
+
+    <string name="enter_new_password">Enter New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+
+
+    <string name="confirmation_text">Congrats! You now have your very own\n Profile+ link (this URL cannot be changed) \nHit \"Yes\" to confirm.
+    </string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="congrats_on_being_a_riser">Congrats on being a RISER</string>
+    <string name="which_city_located_in">Which city are you located in?</string>
+    <string name="eg_bangalore">Eg: Bangalore</string>
+    <string name="next">Next</string>
+    <string name="location">Location</string>
+    <string name="type_ur_location_here">Type your location here</string>
+    <string name="popular_locations">Popular locations</string>
+
+    <string name="congrats_on_being_a_restarter">Congrats on being a RESTARTER</string>
+    <string name="groups">Groups</string>
+    <string name="view_all_categories">View All Categories</string>
+    <string name="all">Other</string>
+    <string name="featured">Featured</string>
+    <string name="create_ur_career_profile">Create your career profile+.</string>
+    <string name="ur_profile_url">Your Profile+ URL</string>
+    <string name="get_started">Get Started</string>
+
+
+    <string name="starter_ques_one">1. First, what degree are you pursuing?</string>
+    <string name="forgot_password_u"><u>Forgot Password?</u></string>
+    <string name="eg_b_degree">Eg: Bachelor of engineering</string>
+    <string name="ok">Ok</string>
+    <string name="starter_ques_two">2. How awesome! Which college/university?</string>
+    <string name="eg_b_school">Eg: Don Bosco Institute of Technology</string>
+    <string name="starter_ques_two_where">Where is it located?</string>
+    <string name="eg_place">Eg: Bangalore, India</string>
+    <string name="eg_no">29</string>
+    <string name="eg_month">August</string>
+    <string name="eg_year">2016</string>
+    <string name="starter_ques_when">3. When did you start?</string>
+    <string name="starter_ques_two_when_finish">When did or will you finish?</string>
+    <string name="put_ur_best_face_forward">Put yout best face forward. \nUpload your profile picture</string>
+    <string name="browse">Browse</string>
+    <string name="starter_des_urself">Describe yourself in one line. (Because one-liners will get you everywhere!)
+    </string>
+    <string name="type_ur_ans_here">Type your answer here...</string>
+    <string name="ceo_founder">CEO, Founder</string>
+    <string name="eg_name">Neha Bagaria</string>
+    <string name="eg_company_name">JobsForHer</string>
+    <string name="eg_location">Bangalore Area, India</string>
+    <string name="eg_description">Neha Bagaria is an entrepreneur at heart, a Wharton grad, a wife, a mother-of- two and
+        a woman who restarted her career, thus founding JobsForHer.
+    </string>
+    <string name="well_done">Well done, Neha! So far, \nyou’ve been GREAT.</string>
+    <string name="want_to_complete">Want to complete your profile \nand make it really SUPERB?</string>
+    <string name="i_wld_luv_to">I\'d Love to</string>
+    <string name="starter_ques_skills">4. You got SKILLS? Tell us what they are!</string>
+    <string name="footer_facebook">Facebook</string>
+    <string name="footer_linkedin">LinkedIn</string>
+    <string name="footer_instagram">Instagram</string>
+    <string name="footer_twitter">Twitter</string>
+    <string name="footer_youtube">Youtube</string>
+    <string name="type_ur_degree_here">Type your Degree here</string>
+    <string name="type_ur_college_here">Type your College here</string>
+    <string name="title_load_previous_comment">Load previous comment</string>
+    <string name="title_name_not_editable">Name is not editable here.</string>
+
+
+    <string name="about_expert_chat">JobsForHer’s reskilling partners and mentors have helped thousands of women start, restart and rise in their careers. Now, it’s your turn! Our network of mentors and professionals in various fields share their expertise on career growth, skill development and much more.</string>
+    <string name="about_expert_group_heading">Join JobsforHer Groups</string>
+    <string name="about_expert_group_heading1">for exclusive access to</string>
+    <string name="about_expert_group_expert_chat">Expert Chats,</string>
+    <string name="title_select_month_year">Select Month and Year</string>
+    <string name="title_month">Month</string>
+    <string name="title_year">Year</string>
+    <string name="title_go">Go</string>
+    <string name="title_expert_chat_calendar">The Expert Chat Calendar - </string>
+    <string name="title_week1">Week1</string>
+    <string name="title_join_chat">Join Chat</string>
+    <string name="title_view_details">View Details</string>
+    <string name="now">now!</string>
+    <string name="text_expert_chat">Expert Chat</string>
+    <string name="text_jobs_you_may_like">Jobs you may like</string>
+    <string name="text_see_all">See All</string>
+    <string name="text_companies_you_may_like">Companies you may like</string>
+    <string name="text_groups_you_may_like">Groups you may like</string>
+
+
+    <!--<string name="app_name">Android Spinner</string>-->
+
+    <string-array name="report_list">
+        <item>Violence</item>
+        <item>Harassment</item>
+        <item>Suicide or Self Injury</item>
+        <item>Fraud or Scam</item>
+        <item>Unauthorised Sales</item>
+        <item>Hate Speech</item>
+        <item>Nudity</item>
+        <item>pretending to be another person or business</item>
+        <item>Others</item>
+
+    </string-array>
+
+
+    <string-array name="month">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+    </string-array>
+
+
+</resources>

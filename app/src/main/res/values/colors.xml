@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryDark">@color/white</color>
+    <color name="colorAccent">@color/black</color>
+
+
+    <color name="green">#99CA3B</color>
+    <color name="black">#000000</color>
+    <color name="darkgrey">#7E7E7E</color>
+    <color name="lightgrey">#6F6E6E</color>
+    <color name="comments_gray">#DFDFDF</color>
+    <color name="bordergrey">#E5E5E5</color>
+    <color name="widgetgrey">#FBFBFB</color>
+    <color name="white">#FFFFFF</color>
+    <color name="menu_grey">#6A6A6A</color>
+    <color name="text_dark_grey">#6D6D6D</color>
+    <color name="profileview_grey">#AEAEAE</color>
+    <color name="profileview_textgrey">#7D7D7D</color>
+    <color name="companies_textcolor">#B2B2B2</color>
+
+    <color name="blue">#2680EB</color>
+    <color name="pink">#FF5180</color>
+    <color name="comments_pink">#794D9E</color>
+    <color name="darkpink">#A211AC</color>
+    <color name="facebookblue">#3B5998</color>
+    <color name="darkestgrey">#5D5D5D</color>
+    <color name="greyseparator">#707070</color>
+    <color name="lightestgrey">#F1F1F1</color>
+    <color name="lightestgrey1">#FFF1F1F1</color>
+    <color name="greyseparator_company">#EBEDF2</color>
+
+    <color name="lightblue">#4A69AA</color>
+
+    <color name="color_grey">#F3F1F2</color>
+    <color name="color_light_blue">#4CAAC6</color>
+    <color name="color_light_black">#A6A6A6</color>
+    <color name="text_black">#484848</color>
+    <color name="grey">#F3F3F3</color>
+
+
+</resources>

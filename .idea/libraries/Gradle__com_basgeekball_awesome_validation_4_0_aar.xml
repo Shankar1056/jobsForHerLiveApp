@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: com.basgeekball:awesome-validation:4.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c265414904c9776d4cf0afa1fba2ca00/jetified-awesome-validation-4.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c265414904c9776d4cf0afa1fba2ca00/jetified-awesome-validation-4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c265414904c9776d4cf0afa1fba2ca00/jetified-awesome-validation-4.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/b335709437c7e04970246b0b69b1610a/jetified-awesome-validation-4.0/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/b335709437c7e04970246b0b69b1610a/jetified-awesome-validation-4.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/b335709437c7e04970246b0b69b1610a/jetified-awesome-validation-4.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/modules-2/files-2.1/com.basgeekball/awesome-validation/4.0/eee271b86dc7624e4aa49f9901c36996d07233ca/awesome-validation-4.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/modules-2/files-2.1/com.basgeekball/awesome-validation/4.0/e9520afa9be858465d9229af5f292587ecec6e1c/awesome-validation-4.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

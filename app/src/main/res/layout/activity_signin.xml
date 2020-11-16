@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background_gradient">
+
+    <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:labelFor="@+id/btn_Back"
+                android:id="@+id/btn_Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="7dp"
+                android:contentDescription="go_back"
+                android:paddingBottom="7dp"
+                android:src="@drawable/ic_arrow_back_black"
+                android:layout_marginStart="10dp"/>
+
+        <TextView
+                android:id="@+id/headline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="If you're her"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/darkgrey"
+                android:textSize="22sp"
+                android:lines="1"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"/>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+        <LinearLayout
+                android:id="@+id/ll_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Sign in easily using"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="18sp"
+                    android:gravity="center_horizontal"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    android:text="@string/easily_using"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="18sp"
+                    android:gravity="center_horizontal"/>
+
+            <LinearLayout
+                    android:id="@+id/layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_facebook"
+                        android:contentDescription="facebook"
+                        android:background="@null"
+                        android:padding="20dp"
+                        android:id="@+id/fb_button"/>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_search"
+                        android:contentDescription="gmail"
+                        android:background="@null"
+                        android:padding="20dp"
+                        android:id="@+id/gplus_button"/>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_linkedin"
+                        android:contentDescription="linkedin"
+                        android:background="@null"
+                        android:padding="20dp"
+                        android:id="@+id/linkedin_button"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:weightSum="2">
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="4dp"
+                        android:background="@color/darkgrey"
+                        android:layout_weight="1"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/using_email"
+                        android:textColor="@color/darkgrey"
+                        android:textSize="16sp"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="4dp"
+                        android:background="@color/darkgrey"
+                        android:layout_weight="1"/>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:textColorHint="@color/darkgrey"
+                    android:orientation="horizontal"
+                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <EditText
+                        android:id="@+id/edittext_emailid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/darkgrey"
+                        android:lines="1"
+                        android:paddingTop="4dp"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:textColor="@color/darkgrey"
+                        android:contentDescription="email"
+                        android:hint="@string/email_id_hint"
+                        android:drawableRight="@drawable/ic_checked_green"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/white"
+                    android:textColorHint="@color/darkgrey"
+                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <EditText
+                        android:id="@+id/editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/password_hint"
+                        android:singleLine="true"
+                        android:lines="1"
+                        android:paddingTop="4dp"
+                        android:contentDescription="password"
+                        android:textColorHint="@color/darkgrey"
+                        android:textColor="@color/darkgrey"
+                        android:backgroundTint="@color/darkgrey"
+                        android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                    android:id="@+id/forgotpasswordid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:text="@string/forgot_password_u"
+                    android:textColor="@color/darkgrey"
+                    android:backgroundTint="@color/darkgrey"
+                    android:textSize="16sp"/>
+
+            <Button
+                    android:id="@+id/signin"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/sign_in_page"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/darkgrey"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:textAllCaps="false"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:id="@+id/new_to_jobsforher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="20dp"
+                        android:text="New to JobsForHer?"
+                        android:textColor="@color/darkgrey"
+                        android:textSize="16sp"/>
+
+                <TextView
+                        android:id="@+id/signuphere"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:text="Sign Up now"
+                        android:textColor="@color/blue"
+                        android:textSize="16sp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/jfhhorizontallogo"
+            android:layout_gravity="bottom"
+            android:visibility="gone"
+            android:baselineAlignBottom="true"
+            android:paddingTop="100dp"/>
+
+
+</LinearLayout>
+

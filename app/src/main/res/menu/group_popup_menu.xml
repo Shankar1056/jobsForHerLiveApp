@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context=".activities.ZActivityGroupsDetails">
+    <item
+            android:id="@+id/action_leave"
+            android:title="@string/leave_group"
+            android:icon="@null"
+            app:showAsAction="never"/>
+    <item
+            android:id="@+id/action_report"
+            android:title="@string/report_this_group"
+            android:icon="@drawable/ic_flag"
+            app:showAsAction="always|withText"/>
+
+
+</menu>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background_gradient">
+
+    <!-- HEADER -->
+    <include
+            android:id="@+id/top_header"
+            layout="@layout/toolbar_welcome"/>
+
+    <!-- FOOTER -->
+    <LinearLayout
+            android:id="@+id/bottom_menu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true">
+
+        <!-- menu bar -->
+        <include
+                layout="@layout/layout_empty"/>
+
+    </LinearLayout>
+
+    <!-- MAIN PART -->
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/top_header"
+            android:layout_above="@id/bottom_menu"
+            android:scrollbars="none">
+
+        <LinearLayout
+                android:id="@+id/sub_content_view"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="50dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content">
+
+            <com.jobsforher.customviews.CustomBoldFontTextView
+                    android:layout_width="match_parent"
+                    android:textColor="#5B5B5B"
+                    android:textSize="20sp"
+                    android:text="First, what stage of life are you in right now?"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:fontFamily="@font/opensansbold"
+                    android:textAlignment="textStart"
+                    android:layout_height="wrap_content"
+                    tools:ignore="RtlCompat"/>
+
+            <LinearLayout
+                    android:id="@+id/llStudying"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:background="@color/white"
+                    android:weightSum="1"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:padding="10dp"
+                        android:layout_weight=".3"
+                        android:src="@drawable/starter_img"/>
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_weight=".6"
+                        android:orientation="vertical">
+
+                    <com.jobsforher.customviews.CustomBoldFontTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stage_studying"
+                            android:textColor="#484848"
+                            android:fontFamily="@font/opensansbold"
+                            android:textSize="16sp"/>
+
+
+                    <com.jobsforher.customviews.CustomFontTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/want_to_start_my_career"
+                            android:textColor="#484848"
+                            android:fontFamily="@font/opensansregular"
+                            android:lines="2"
+                            android:textSize="12sp"/>
+
+
+                </LinearLayout>
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight=".1"
+                        android:src="@drawable/ic_right_arrow"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/llOnBreak"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="1"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:padding="10dp"
+                        android:layout_weight=".3"
+                        android:src="@drawable/stage_break"/>
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_weight=".6"
+                        android:orientation="vertical">
+
+
+                    <com.jobsforher.customviews.CustomBoldFontTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/on_a_break"
+                            android:textColor="#484848"
+                            android:fontFamily="@font/opensansbold"
+                            android:textSize="16sp"/>
+
+
+                    <com.jobsforher.customviews.CustomFontTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/want_to_restart_my_career"
+                            android:textColor="#484848"
+                            android:fontFamily="@font/opensansregular"
+                            android:lines="2"
+                            android:textSize="12sp"/>
+
+
+                </LinearLayout>
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight=".1"
+                        android:src="@drawable/ic_right_arrow"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/llCurrentlyWorking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="1"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:padding="10dp"
+                        android:layout_weight=".3"
+                        android:src="@drawable/stage_currently_working"/>
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_weight=".6"
+                        android:orientation="vertical">
+
+
+                    <com.jobsforher.customviews.CustomBoldFontTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/currently_working"
+                            android:textColor="#484848"
+                            android:fontFamily="@font/opensansbold"
+                            android:textSize="16sp"/>
+
+
+                    <com.jobsforher.customviews.CustomFontTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/want_to_rise_in_my_career"
+                            android:textColor="#484848"
+                            android:fontFamily="@font/opensansregular"
+                            android:lines="2"
+                            android:textSize="12sp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".1"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_right_arrow"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

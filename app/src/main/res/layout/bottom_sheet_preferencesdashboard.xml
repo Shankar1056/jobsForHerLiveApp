@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_height="wrap_content"
+              android:gravity="bottom"
+        android:focusableInTouchMode="true"
+              android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/green">
+        <TextView android:id="@+id/closetext"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textSize="18dp"
+                  android:drawablePadding="10dp"
+                  android:padding="10dp"
+                  android:textStyle="bold"
+                  android:textColor="@color/white"
+                  android:drawableLeft="@drawable/ic_arrow_back_white_new"
+                  android:text="Edit Job Alert"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--<TextView android:id="@+id/closetext"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="16dp"-->
+    <!--android:padding="10dp"-->
+    <!--android:visibility="gone"-->
+    <!--android:textStyle="bold"-->
+    <!--android:textColor="@color/greyseparator"-->
+    <!--android:drawableRight="@drawable/ic_close_black"-->
+    <!--android:text="Add/Edit Preference"/>-->
+    <!--<View android:layout_width="match_parent" android:layout_height="2dp"-->
+    <!--android:background="@color/lightestgrey1"/>-->
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+
+
+
+            <LinearLayout android:id="@+id/edit_post"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:paddingLeft="15dp"
+                          android:paddingTop="15dp"
+                          android:paddingRight="15dp"
+                          android:orientation="vertical">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:textColor="@color/lightgrey"
+                          android:text="Title"/>
+                <EditText android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:hint="Eg. Software Developer, Data Analyst"
+                          android:id="@+id/title"/>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/edit_post_history"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:paddingLeft="15dp"
+                          android:paddingTop="5dp"
+                          android:paddingRight="15dp"
+                          android:orientation="vertical">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:drawablePadding="10dp"
+                          android:textColor="@color/lightgrey"
+                          android:text="Preferred Location"/>
+
+                <MultiAutoCompleteTextView
+                        android:id="@+id/pref_location_multiAutoCompleteTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="Enter here"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:visibility="gone"
+                          android:paddingLeft="15dp"
+                          android:paddingTop="5dp"
+                          android:paddingRight="15dp"
+                          android:orientation="vertical">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:drawablePadding="10dp"
+                          android:textColor="@color/lightgrey"
+                          android:text="Title"/>
+                <EditText android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:drawablePadding="10dp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:visibility="visible"
+                          android:paddingLeft="15dp"
+                          android:paddingTop="5dp"
+                          android:paddingRight="15dp"
+                          android:orientation="vertical">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:drawablePadding="10dp"
+                          android:textColor="@color/lightgrey"
+                          android:text="Job Types"/>
+                <!--<EditText android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:drawablePadding="10dp"/>-->
+                <MultiAutoCompleteTextView
+                        android:id="@+id/jobtype_multiAutoCompleteTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Enter here" />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:visibility="visible"
+                          android:paddingLeft="15dp"
+                          android:paddingTop="5dp"
+                          android:paddingRight="15dp"
+                          android:orientation="vertical">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:drawablePadding="10dp"
+                          android:textColor="@color/lightgrey"
+                          android:text="Functional Area"/>
+                <MultiAutoCompleteTextView android:id="@+id/farea_multiAutoCompleteTextView"
+                                           android:layout_width="match_parent"
+                                           android:layout_height="wrap_content"
+                                           android:drawablePadding="10dp"
+                                           android:ems="10"
+                                           android:hint="Enter here" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:visibility="visible"
+                          android:paddingLeft="15dp"
+                          android:paddingTop="5dp"
+                          android:paddingRight="15dp"
+                          android:orientation="vertical">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:drawablePadding="10dp"
+                          android:textColor="@color/lightgrey"
+                          android:text="Preferred Industries"/>
+                <MultiAutoCompleteTextView android:id="@+id/industry_multiAutoCompleteTextView"
+                                           android:layout_width="match_parent"
+                                           android:layout_height="wrap_content"
+                                           android:drawablePadding="10dp"
+                                           android:ems="10"
+                                           android:hint="Enter here"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:visibility="visible"
+                          android:paddingLeft="15dp"
+                          android:paddingTop="5dp"
+                          android:paddingRight="15dp"
+                          android:orientation="vertical">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:drawablePadding="10dp"
+                          android:textColor="@color/lightgrey"
+                          android:text="Years of Experience"/>
+                <MultiAutoCompleteTextView
+                        android:id="@+id/experience_multiAutoCompleteTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:hint="Enter here"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:visibility="visible"
+                          android:paddingLeft="15dp"
+                          android:paddingTop="5dp"
+                          android:paddingRight="15dp"
+                          android:orientation="vertical">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:drawablePadding="10dp"
+                          android:textColor="@color/lightgrey"
+                          android:text="Skills"/>
+                <EditText android:id="@+id/pref_keyword"
+                          android:hint="Eg. MySQL,Android"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:visibility="visible"
+                          android:paddingTop="15dp"
+                          android:paddingBottom="15dp"
+                          android:paddingLeft="25dp"
+                          android:paddingRight="25dp"
+                          android:layout_gravity="center_horizontal"
+                          android:orientation="horizontal">
+                <Button android:id="@+id/cancel_pref"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/curved_grey_border_nofill"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/greyseparator"
+                        android:text="Cancel"/>
+                <Button android:id="@+id/save_pref"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/white"
+                        android:background="@color/green"
+                        android:text="Save"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

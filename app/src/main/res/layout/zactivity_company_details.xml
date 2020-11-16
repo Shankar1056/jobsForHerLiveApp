@@ -1,0 +1,1673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/mainScroll_jobss"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/button_action"
+            android:visibility="visible"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:background="@color/lightestgrey"
+            android:orientation="vertical">
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="0dp"
+                    android:id="@+id/banner"
+                    />
+
+            <LinearLayout
+                    android:id="@+id/mainlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/curved_white_border_filled_white">
+                    <ImageView android:id="@+id/comp_logo"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:padding="20dp"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:layout_marginTop="0dp"
+                            android:src="@drawable/ic_launcher_background"/>
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical">
+                        <TextView
+                                android:id="@+id/compname"
+                                android:layout_marginTop="3dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:singleLine="true"
+                                android:text="Company Name"/>
+                        <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:orientation="horizontal">
+                            <!--<TextView-->
+                            <!--android:id="@+id/companytype"-->
+                            <!--android:layout_marginTop="3dp"-->
+                            <!--android:textColor="@color/black"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:paddingRight="10dp"-->
+                            <!--android:drawableLeft="@drawable/ic_companies"-->
+                            <!--android:drawablePadding="3dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="Company Name"/>-->
+                            <!--<View android:layout_width="1dp"-->
+                            <!--android:layout_height="16dp"-->
+                            <!--android:layout_gravity="bottom"-->
+                            <!--android:background="@color/greyseparator"/>-->
+                            <TextView
+                                    android:id="@+id/complocation"
+                                    android:layout_marginTop="3dp"
+                                    android:textColor="@color/black"
+                                    android:drawableLeft="@drawable/ic_location"
+                                    android:drawablePadding="3dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Location"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="left"
+                                android:orientation="horizontal">
+                            <!--<TextView-->
+                            <!--android:id="@+id/jobtiming"-->
+                            <!--android:layout_marginTop="3dp"-->
+                            <!--android:textColor="@color/black"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:paddingRight="10dp"-->
+                            <!--android:drawableLeft="@drawable/ic_time"-->
+                            <!--android:drawablePadding="3dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="22 hours ago"/>-->
+                            <!--<View android:layout_width="1dp"-->
+                            <!--android:layout_height="16dp"-->
+                            <!--android:layout_gravity="bottom"-->
+                            <!--android:background="@color/greyseparator"/>-->
+                            <TextView
+                                    android:id="@+id/compfollowers"
+                                    android:layout_marginTop="3dp"
+                                    android:textColor="@color/black"
+                                    android:drawableLeft="@drawable/ic_followers"
+                                    android:drawablePadding="3dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Followers"/>
+                        </LinearLayout>
+                        <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="5dp">
+                            <!--<ImageView android:id="@+id/starJob"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:padding="5dp"-->
+                            <!--android:src="@drawable/ic_star"/>-->
+                            <!--<ImageView android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:padding="5dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:id="@+id/shareJob"-->
+                            <!--android:backgroundTint="@color/lightestgrey1"-->
+                            <!--android:src="@drawable/ic_share_new"/>-->
+
+                            <TextView
+                                    android:id="@+id/shareCompany"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14dp"
+                                    android:paddingLeft="15dp"
+                                    android:paddingRight="15dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingBottom="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@drawable/curved_green_border"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/green"
+                                    android:drawableRight="@drawable/ic_share_green"
+                                    android:drawablePadding="5dp"
+                                    android:text="Share"/>
+
+
+                            <com.jobsforher.customviews.CustomFontButton
+                                    android:visibility="visible"
+                                    android:layout_weight="1"
+                                    android:id="@+id/btnJoined"
+                                    android:layout_width="wrap_content"
+                                    android:height="10dp"
+                                    android:text="Following"
+                                    android:textColor="@color/black"
+                                    android:layout_gravity="right"
+                                    android:textSize="12sp"
+                                    android:layout_marginLeft="10dp"
+                                    android:textAllCaps="false"
+                                    android:background="@drawable/curved_grey_without_border"
+                                    android:layout_height="30dp"/>
+
+                            <Button android:layout_weight="1"
+                                    android:id="@+id/join_group"
+                                    android:visibility="visible"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:textColor="@color/white"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="Follow"
+                                    android:layout_gravity="right"
+                                    android:textSize="12sp"
+                                    android:textAllCaps="false"
+                                    android:background="@drawable/curved_green_border_filled_white_adapter"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/view_main"
+                        android:layout_marginTop="10dp"
+                        android:scrollbars="none"
+                        android:background="@drawable/curved_white_border_filled_white"
+                        android:fillViewport="true">
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        <Button android:id="@+id/comp_aboutus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:textAllCaps="false"
+                                android:text="About Us" />
+                        <View android:layout_width="1dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@color/profileview_grey"/>
+                        <Button android:id="@+id/comp_jobs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:textAllCaps="false"
+                                android:background="@null"
+                                android:text="Jobs" />
+                        <View android:layout_width="1dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@color/profileview_grey"/>
+                        <Button android:id="@+id/comp_events"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:textAllCaps="false"
+                                android:background="@null"
+                                android:text="Events" />
+                        <View android:layout_width="1dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@color/profileview_grey"/>
+                        <!--<Button android:id="@+id/comp_mentors"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingLeft="10dp"-->
+                        <!--android:paddingRight="10dp"-->
+                        <!--android:textAllCaps="false"-->
+                        <!--android:background="@null"-->
+                        <!--android:text="Mentors" />-->
+                        <!--<View android:layout_width="1dp"-->
+                        <!--android:layout_height="20dp"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:background="@color/profileview_grey"/>-->
+                        <Button android:id="@+id/comp_blogs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:textAllCaps="false"
+                                android:background="@null"
+                                android:text="Blogs" />
+                        <View android:layout_width="1dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@color/profileview_grey"/>
+                        <Button android:id="@+id/comp_groups"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:textAllCaps="false"
+                                android:background="@null"
+                                android:text="Groups" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <!--AboutUs Layout design-->
+                <LinearLayout android:id="@+id/layout_aboutus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="12dp"
+                        android:visibility="visible"
+                        android:background="@drawable/curved_white_border_filled_white"
+                        android:orientation="vertical">
+                    <TextView
+                            android:layout_marginTop="3dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:singleLine="true"
+                            android:text="About Us"/>
+                    <TextView
+                            android:id="@+id/compaboutus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/menu_grey"
+                            android:text="Description"
+                            android:autoLink="all"
+                            android:maxLines="5"
+                            android:ellipsize="end" />
+
+                    <TextView
+                            android:id="@+id/compaboutus_"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/menu_grey"
+                            android:text="Description"
+                            android:autoLink="all"
+                            android:ellipsize="end"
+                            android:visibility="gone"/>
+                    <TextView
+                            android:id="@+id/default_aboutus"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="30dp"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No about us found"/>
+                    <TextView
+                            android:id="@+id/seemore_aboutus"
+                            android:layout_marginTop="3dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/blue"
+                            android:singleLine="true"
+                            android:text="See More"/>
+                    <!--<TextView-->
+                    <!--android:id="@+id/jobaboutus"-->
+                    <!--android:textColor="@color/menu_grey"-->
+                    <!--android:textSize="12dp"-->
+                    <!--android:paddingRight="10dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/gridview_aboutus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="8dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <TextView
+                            android:id="@+id/seemore_aboutus_images"
+                            android:layout_marginTop="3dp"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/blue"
+                            android:singleLine="true"
+                            android:text="See More"/>
+
+                </LinearLayout>
+                <!--Company details Layout design-->
+                <LinearLayout android:id="@+id/layout_compdetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="12dp"
+                        android:background="@drawable/curved_white_border_filled_white"
+                        android:orientation="vertical">
+                    <TextView
+                            android:layout_marginTop="3dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:singleLine="true"
+                            android:text="Company Details"/>
+                    <TextView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:textColor="@color/companies_textcolor"
+                            android:singleLine="true"
+                            android:text="Industry"/>
+                    <TextView
+                            android:id="@+id/comp_industry"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:textColor="@color/lightgrey"
+                            android:singleLine="true"
+                            android:text="IT Software/Technology"/>
+                    <View android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="5dp"
+                            android:padding="5dp"
+                            android:background="@color/greyseparator_company"/>
+                    <TextView
+                            android:id="@+id/comp_size_text"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:textColor="@color/companies_textcolor"
+                            android:singleLine="true"
+                            android:text="Size"/>
+                    <TextView
+                            android:id="@+id/comp_size"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:textColor="@color/lightgrey"
+                            android:singleLine="true"
+                            android:text="1001 - 5001"/>
+                    <View android:id="@+id/size_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:padding="1dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/greyseparator_company"/>
+                    <TextView
+                            android:id="@+id/comp_estd_text"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:textColor="@color/companies_textcolor"
+                            android:singleLine="true"
+                            android:text="Established In"/>
+                    <TextView
+                            android:id="@+id/established_date"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:textColor="@color/lightgrey"
+                            android:singleLine="true"
+                            android:text="2015"/>
+                    <View android:id="@+id/estd_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:padding="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/greyseparator_company"/>
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+                        <TextView
+                                android:id="@+id/active_jobs"
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:layout_weight="1"
+                                android:textColor="@color/blue"
+                                android:singleLine="true"
+                                android:text="No active job openings"/>
+                        <Button
+                                android:id="@+id/view_company"
+                                android:visibility="visible"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:textColor="@color/white"
+                                android:layout_marginLeft="10dp"
+                                android:layout_gravity="right"
+                                android:text="View"
+                                android:textSize="12sp"
+                                android:textAllCaps="false"
+                                android:background="@drawable/curved_green_border_filled_white_adapter"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+                <!--Company culture Layout design-->
+                <LinearLayout android:id="@+id/layout_compculture"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:padding="12dp"
+                        android:background="@drawable/curved_white_border_filled_white"
+                        android:orientation="vertical">
+                    <TextView
+                            android:layout_marginTop="3dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:singleLine="true"
+                            android:text="Company Culture"/>
+                    <!--<at.blogc.android.views.ExpandableTextView
+                            android:id="@+id/company_culture"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/menu_grey"
+                            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            android:maxLines="5"
+                            android:linksClickable="true"
+                            android:autoLink="all"
+                            android:layout_marginTop="5dp"
+                            android:ellipsize="end"
+                            app:animation_duration="750"/>-->
+                    <WebView
+                            android:id="@+id/company_culture"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    <TextView
+                            android:id="@+id/default_company_culture"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="30dp"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No company culture found" />
+
+                    <TextView
+                            android:id="@+id/seemore_comculture"
+                            android:layout_marginTop="3dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/blue"
+                            android:singleLine="true"
+                            android:visibility="gone"
+                            android:text="See More"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/gridview_compculture"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="8dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <TextView
+                            android:id="@+id/seemore_comculture_images"
+                            android:layout_marginTop="3dp"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/blue"
+                            android:singleLine="true"
+                            android:text="See More"/>
+                </LinearLayout>
+                <!--Company policies Layout design-->
+                <LinearLayout android:id="@+id/layout_comppolicies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="12dp"
+                        android:background="@drawable/curved_white_border_filled_white"
+                        android:orientation="vertical">
+                    <TextView
+                            android:layout_marginTop="3dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:singleLine="true"
+                            android:text="Company Policies"/>
+                    <LinearLayout
+                            android:id="@+id/policy_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                        <LinearLayout
+                                android:id="@+id/llCard_maternity"
+                                android:visibility="visible"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1">
+
+                                <LinearLayout android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+                                    <ImageView
+                                            android:src="@drawable/ic_maternity_leave_policy"
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:background="@drawable/curved_grey_border_nofill"
+                                            android:elevation="2dp"/>
+                                    <View android:layout_width="match_parent" android:layout_height="3dp"
+                                            android:background="@color/green"/>
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginEnd="2dp"
+                                        android:orientation="vertical"
+                                        android:layout_weight="0.8">
+
+                                    <TextView
+                                            android:id="@+id/row_name_maternity"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start"
+                                            android:textStyle="bold"
+                                            android:textSize="16sp"
+                                            android:paddingRight="8dp"
+                                            android:text="Maternity Leave Policy"
+                                            android:singleLine="true"/>
+
+                                    <at.blogc.android.views.ExpandableTextView
+                                            android:id="@+id/row_text_maternity"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/menu_grey"
+                                            android:text="No maternity leave added"
+                                            android:maxLines="3"
+                                            android:layout_marginTop="5dp"
+                                            android:ellipsize="end"
+                                            app:animation_duration="750"/>
+                                    <TextView
+                                            android:id="@+id/seemore_maternity"
+                                            android:layout_marginTop="3dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/blue"
+                                            android:singleLine="true"
+                                            android:text="See More"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                                android:id="@+id/llCard_paternity"
+                                android:visibility="visible"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1">
+
+                                <LinearLayout android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+                                    <ImageView
+                                            android:src="@drawable/ic_paternity_leave_policy"
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:background="@drawable/curved_grey_border_nofill"
+                                            android:elevation="2dp"/>
+                                    <View android:layout_width="match_parent" android:layout_height="3dp"
+                                            android:background="@color/green"/>
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginEnd="2dp"
+                                        android:orientation="vertical"
+                                        android:layout_weight="0.8">
+
+                                    <TextView
+                                            android:id="@+id/row_name_paternity"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start"
+                                            android:textStyle="bold"
+                                            android:textSize="16sp"
+                                            android:paddingRight="8dp"
+                                            android:text="Paternity Leave Policy"
+                                            android:singleLine="true"/>
+
+                                    <at.blogc.android.views.ExpandableTextView
+                                            android:id="@+id/row_text_paternity"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/menu_grey"
+                                            android:text="No paternity leave added"
+                                            android:maxLines="3"
+                                            android:layout_marginTop="5dp"
+                                            android:ellipsize="end"
+                                            app:animation_duration="750"/>
+                                    <TextView
+                                            android:id="@+id/seemore_paternity"
+                                            android:layout_marginTop="3dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/blue"
+                                            android:singleLine="true"
+                                            android:text="See More"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                                android:id="@+id/llCard_childcare"
+                                android:visibility="visible"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1">
+                                <LinearLayout android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+                                    <ImageView
+                                            android:src="@drawable/childcare"
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:background="@drawable/curved_grey_border_nofill"
+                                            android:scaleType="center"/>
+                                    <View android:layout_width="match_parent" android:layout_height="3dp"
+                                            android:layout_marginTop="-3dp"
+                                            android:background="@color/green"/>
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginEnd="2dp"
+                                        android:orientation="vertical"
+                                        android:layout_weight="0.8">
+
+                                    <TextView
+                                            android:id="@+id/row_name_childcare"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start"
+                                            android:textStyle="bold"
+                                            android:textSize="16sp"
+                                            android:paddingRight="8dp"
+                                            android:text="Child Care Policy"
+                                            android:singleLine="true"/>
+
+                                    <at.blogc.android.views.ExpandableTextView
+                                            android:id="@+id/row_text_childcare"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/menu_grey"
+                                            android:text="No child care policy added"
+                                            android:maxLines="3"
+                                            android:layout_marginTop="5dp"
+                                            android:ellipsize="end"
+                                            app:animation_duration="750"/>
+                                    <TextView
+                                            android:id="@+id/seemore_childcare"
+                                            android:layout_marginTop="3dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/blue"
+                                            android:singleLine="true"
+                                            android:text="See More"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+                            <TextView
+                                    android:id="@+id/seemore_policylayout"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/blue"
+                                    android:singleLine="true"
+                                    android:text="See More"/>
+                        </LinearLayout>
+                        <LinearLayout
+                                android:id="@+id/llCard_harrasment"
+                                android:visibility="visible"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1">
+                                <LinearLayout android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+                                    <ImageView
+                                            android:src="@drawable/ic_sexual_harassment_policy"
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:background="@drawable/curved_grey_border_nofill"
+                                            android:elevation="2dp"/>
+                                    <View android:layout_width="match_parent" android:layout_height="3dp"
+                                            android:background="@color/green"/>
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginEnd="2dp"
+                                        android:orientation="vertical"
+                                        android:layout_weight="0.8">
+
+                                    <TextView
+                                            android:id="@+id/row_name_harrasment"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start"
+                                            android:textStyle="bold"
+                                            android:textSize="16sp"
+                                            android:paddingRight="8dp"
+                                            android:text="Harresment Policy"
+                                            android:singleLine="true"/>
+
+                                    <at.blogc.android.views.ExpandableTextView
+                                            android:id="@+id/row_text_harrasment"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/menu_grey"
+                                            android:text="No harresment policy added"
+                                            android:maxLines="3"
+                                            android:layout_marginTop="5dp"
+                                            android:ellipsize="end"
+                                            app:animation_duration="750"/>
+                                    <TextView
+                                            android:id="@+id/seemore_harrasment"
+                                            android:layout_marginTop="3dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/blue"
+                                            android:singleLine="true"
+                                            android:text="See More"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                                android:id="@+id/llCard_transportation"
+                                android:visibility="visible"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1">
+
+                                <LinearLayout android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+                                    <ImageView
+                                            android:src="@drawable/ic_transportation_facility"
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:background="@drawable/curved_grey_border_nofill"
+                                            android:elevation="2dp"/>
+                                    <View android:layout_width="match_parent" android:layout_height="3dp"
+                                            android:background="@color/green"/>
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginEnd="2dp"
+                                        android:orientation="vertical"
+                                        android:layout_weight="0.8">
+
+                                    <TextView
+                                            android:id="@+id/row_name_transportation"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start"
+                                            android:textStyle="bold"
+                                            android:textSize="16sp"
+                                            android:paddingRight="8dp"
+                                            android:text="Transportation Policy"
+                                            android:singleLine="true"/>
+
+                                    <at.blogc.android.views.ExpandableTextView
+                                            android:id="@+id/row_text_transportation"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/menu_grey"
+                                            android:text="No transportation policy added"
+                                            android:maxLines="3"
+                                            android:layout_marginTop="5dp"
+                                            android:ellipsize="end"
+                                            app:animation_duration="750"/>
+                                    <TextView
+                                            android:id="@+id/seemore_transportation"
+                                            android:layout_marginTop="3dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/blue"
+                                            android:singleLine="true"
+                                            android:text="See More"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                                android:id="@+id/llCard_flexi"
+                                android:visibility="visible"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1">
+
+                                <LinearLayout android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+                                    <ImageView
+                                            android:src="@drawable/ic_flexi_option"
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:background="@drawable/curved_grey_border_nofill"
+                                            android:elevation="2dp"/>
+                                    <View android:layout_width="match_parent" android:layout_height="3dp"
+                                            android:background="@color/green"/>
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginEnd="2dp"
+                                        android:orientation="vertical"
+                                        android:layout_weight="0.8">
+
+                                    <TextView
+                                            android:id="@+id/row_name_flexi"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start"
+                                            android:textStyle="bold"
+                                            android:textSize="16sp"
+                                            android:paddingRight="8dp"
+                                            android:text="Flexi Option Policy"
+                                            android:singleLine="true"/>
+
+                                    <at.blogc.android.views.ExpandableTextView
+                                            android:id="@+id/row_text_flexi"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/menu_grey"
+                                            android:text="No flexi option policy added"
+                                            android:maxLines="3"
+                                            android:layout_marginTop="5dp"
+                                            android:ellipsize="end"
+                                            app:animation_duration="750"/>
+                                    <TextView
+                                            android:id="@+id/seemore_flexi"
+                                            android:layout_marginTop="3dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/blue"
+                                            android:singleLine="true"
+                                            android:text="See More"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                                android:id="@+id/llCard_other"
+                                android:visibility="visible"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1">
+
+                                <LinearLayout android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+                                    <ImageView
+                                            android:src="@drawable/ic_others"
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:background="@drawable/curved_grey_border_nofill"
+                                            android:elevation="2dp"/>
+                                    <View android:layout_width="match_parent" android:layout_height="3dp"
+                                            android:background="@color/green"/>
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginEnd="2dp"
+                                        android:orientation="vertical"
+                                        android:layout_weight="0.8">
+
+                                    <TextView
+                                            android:id="@+id/row_name_other"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start"
+                                            android:textStyle="bold"
+                                            android:textSize="16sp"
+                                            android:paddingRight="8dp"
+                                            android:text="Other Policy"
+                                            android:singleLine="true"/>
+
+                                    <at.blogc.android.views.ExpandableTextView
+                                            android:id="@+id/row_text_other"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/menu_grey"
+                                            android:text="No other policy added"
+                                            android:maxLines="3"
+                                            android:layout_marginTop="5dp"
+                                            android:ellipsize="end"
+                                            app:animation_duration="750"/>
+
+                                    <TextView
+                                            android:id="@+id/seemore_other"
+                                            android:layout_marginTop="3dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/blue"
+                                            android:singleLine="true"
+                                            android:text="See More"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView
+                            android:id="@+id/default_company_policy"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="30dp"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No company policy found"/>
+
+                </LinearLayout>
+                <!--Diversity Initiatives Layout design-->
+                <LinearLayout android:id="@+id/layout_compdiversity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="12dp"
+                        android:background="@drawable/curved_white_border_filled_white"
+                        android:orientation="vertical">
+                    <TextView
+                            android:layout_marginTop="3dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:singleLine="true"
+                            android:text="Diversity initiatives"/>
+                    <at.blogc.android.views.ExpandableTextView
+                            android:id="@+id/company_diversity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/menu_grey"
+                            android:maxLines="5"
+                            android:autoLink="all"
+                            android:text="Our mission is deeply inclusive: empower every person and every organization on the planet to achieve more. We expect each of us—no matter what our level, role or function is—to play an active role in creating environments where people of diverse backgrounds are excited to bring all of who they are and do their best work."
+                            android:layout_marginTop="5dp"
+                            android:ellipsize="end"
+                            app:animation_duration="750"/>
+                    <TextView
+                            android:id="@+id/default_company_diversity"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="30dp"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No company diversity found"/>
+                    <TextView
+                            android:id="@+id/seemore_comdiversity"
+                            android:layout_marginTop="3dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/blue"
+                            android:singleLine="true"
+                            android:text="See More"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/gridview_diversity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="8dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <TextView
+                            android:id="@+id/seemore_comdiversity_images"
+                            android:layout_marginTop="3dp"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/blue"
+                            android:singleLine="true"
+                            android:text="See More"/>
+                </LinearLayout>
+                <!--Jobs layout design-->
+                <LinearLayout
+                        android:id="@+id/jobs_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:background="@color/smsp_transparent_color">
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical"
+                            android:visibility="visible"
+                            android:background="@color/white">
+                        <!--@drawable/curved_white_border_filled_white-->
+                        <TextView
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginLeft="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:text="JOBS"/>
+                        <View android:layout_width="match_parent" android:layout_height="1dp"
+                                android:background="@color/lightestgrey"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/posts_recycler_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_marginTop="5dp"
+                                android:scrollbars="vertical"
+                                android:nestedScrollingEnabled="false"
+                                />
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:visibility="gone"
+                                android:orientation="vertical"
+                                android:layout_gravity="center"
+                                android:id="@+id/default_company_jobs">
+
+                            <TextView android:id="@+id/def_tex"
+                                    android:layout_marginTop="30dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:layout_gravity="center"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="20dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="No Jobs are found. we request you to follow company we will keep you posted."/>
+                            <Button android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/def_tex"
+                                    android:background="@color/green"
+                                    android:layout_marginBottom="20dp"
+                                    android:id="@+id/def_comp_follow"
+                                    android:paddingLeft="15dp"
+                                    android:paddingRight="15dp"
+                                    android:textAllCaps="false"
+                                    android:layout_gravity="center"
+                                    android:textColor="@color/white"
+                                    android:text="Follow company"/>
+                            <com.jobsforher.customviews.CustomFontButton
+                                    android:visibility="visible"
+                                    android:id="@+id/def_comp_unfollow"
+                                    android:layout_width="wrap_content"
+                                    android:text="Unfollow company"
+                                    android:layout_marginBottom="20dp"
+                                    android:textColor="@color/black"
+                                    android:paddingLeft="15dp"
+                                    android:paddingRight="15dp"
+                                    android:textAllCaps="false"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/curved_grey_without_border"
+                                    android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+                        <TextView
+                                android:id="@+id/seemore_jobs"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginLeft="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/blue"
+                                android:singleLine="true"
+                                android:text="See More"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--Groups layout design-->
+                <LinearLayout
+                        android:id="@+id/groups_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:background="@color/smsp_transparent_color">
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical"
+                            android:visibility="visible"
+                            android:background="@color/white">
+                        <!--@drawable/curved_white_border_filled_white-->
+                        <TextView
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginLeft="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:text="GROUPS"/>
+                        <View android:layout_width="match_parent" android:layout_height="1dp"
+                                android:background="@color/lightestgrey"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/groups_recycler_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"
+                                android:scrollbars="vertical"
+                                android:nestedScrollingEnabled="false"
+                                />
+                        <TextView
+                                android:id="@+id/default_company_groups"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginBottom="30dp"
+                                android:layout_gravity="center"
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="No groups found"/>
+                        <TextView
+                                android:id="@+id/seemore_groups"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginLeft="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/blue"
+                                android:singleLine="true"
+                                android:text="See More"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--Events layout design-->
+                <LinearLayout
+                        android:id="@+id/events_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:background="@color/smsp_transparent_color">
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical"
+                            android:visibility="visible"
+                            android:background="@color/white">
+                        <!--@drawable/curved_white_border_filled_white-->
+                        <TextView
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginLeft="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:text="EVENTS"/>
+                        <View android:layout_width="match_parent" android:layout_height="1dp"
+                                android:background="@color/lightestgrey"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/events_recycler_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"
+                                android:scrollbars="vertical"
+                                android:nestedScrollingEnabled="false"
+                                />
+                        <TextView
+                                android:id="@+id/default_company_events"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginBottom="30dp"
+                                android:layout_gravity="center"
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="No events found"/>
+                        <TextView
+                                android:id="@+id/seemore_events"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginLeft="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/blue"
+                                android:singleLine="true"
+                                android:text="See More"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--Blogs layout design-->
+                <LinearLayout
+                        android:id="@+id/blogs_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:background="@color/smsp_transparent_color">
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical"
+                            android:visibility="visible"
+                            android:background="@color/white">
+                        <!--@drawable/curved_white_border_filled_white-->
+                        <TextView
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginLeft="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:text="BLOGS"/>
+                        <View android:layout_width="match_parent" android:layout_height="1dp"
+                                android:background="@color/lightestgrey"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/blogs_recycler_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"
+                                android:scrollbars="vertical"
+                                android:nestedScrollingEnabled="false"
+                                />
+                        <TextView
+                                android:id="@+id/default_company_blogs"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginBottom="30dp"
+                                android:layout_gravity="center"
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="No blogs found"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--Address layout design-->
+                <LinearLayout
+                        android:id="@+id/address_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:background="@color/smsp_transparent_color">
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical"
+                            android:visibility="visible"
+                            android:background="@color/white">
+                        <!--@drawable/curved_white_border_filled_white-->
+                        <TextView
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginLeft="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:text="ADDRESS"/>
+                        <View android:layout_width="match_parent" android:layout_height="1dp"
+                                android:background="@color/lightestgrey"/>
+                        <TextView
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginLeft="14dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:singleLine="true"
+                                android:text="Headquarters"/>
+                        <TextView
+                                android:id="@+id/head_quarter"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Headquarter"/>
+                        <LinearLayout
+                                android:id="@+id/address_layout3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+                                android:background="@color/white">
+                        </LinearLayout>
+                        <LinearLayout
+                                android:id="@+id/address_layout4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:orientation="vertical"
+                                android:visibility="visible"
+                                android:background="@color/white">
+                        </LinearLayout>
+                        <TextView android:id="@+id/branches_default"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="14dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="    Branches \n    No branches added"/>
+                        <TextView android:id="@+id/seemore_branches"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/blue"
+                                android:singleLine="true"
+                                android:text="See More"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <!--Testimonials laayout design-->
+                <LinearLayout
+                        android:id="@+id/testimonials_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:background="@color/smsp_transparent_color">
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical"
+                            android:visibility="visible"
+                            android:background="@color/white">
+                        <!--@drawable/curved_white_border_filled_white-->
+                        <TextView
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginLeft="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:text="testimonials"/>
+                        <View android:layout_width="match_parent" android:layout_height="1dp"
+                                android:background="@color/lightestgrey"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/testimonials_recycler_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"
+                                android:scrollbars="vertical"
+                                android:nestedScrollingEnabled="false"
+                                />
+                        <TextView
+                                android:id="@+id/default_company_testimonials"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginBottom="30dp"
+                                android:layout_gravity="center"
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="No Testimonials found"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:id="@+id/view_main1"
+            android:scrollbars="none"
+            android:visibility="visible"
+            android:background="@drawable/curved_white_border_filled_white"
+            android:fillViewport="true">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <Button android:id="@+id/comp_aboutus1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textAllCaps="false"
+                    android:text="About Us" />
+            <View android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/profileview_grey"/>
+            <Button android:id="@+id/comp_jobs1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textAllCaps="false"
+                    android:background="@null"
+                    android:text="Jobs" />
+            <View android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/profileview_grey"/>
+            <Button android:id="@+id/comp_events1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textAllCaps="false"
+                    android:background="@null"
+                    android:text="Events" />
+            <View android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/profileview_grey"/>
+            <!--<Button android:id="@+id/comp_mentors"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:background="@null"-->
+            <!--android:text="Mentors" />-->
+            <!--<View android:layout_width="1dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:background="@color/profileview_grey"/>-->
+            <Button android:id="@+id/comp_blogs1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textAllCaps="false"
+                    android:background="@null"
+                    android:text="Blogs" />
+            <View android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/profileview_grey"/>
+            <Button android:id="@+id/comp_groups1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textAllCaps="false"
+                    android:background="@null"
+                    android:text="Groups" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/bottombar"
+            android:orientation="vertical"
+            android:id="@+id/button_action">
+        <Button
+                android:id="@+id/button_apply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:background="@color/green"
+                android:textColor="@color/white"
+                android:text="Follow"/>
+        <Button
+                android:id="@+id/button_applied"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:background="@null"
+                android:textColor="@color/greyseparator"
+                android:text="Following"/>
+    </LinearLayout>
+
+    <include
+            android:id="@+id/bottombar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            layout="@layout/activity_footer" />
+</RelativeLayout>

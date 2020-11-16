@@ -1,0 +1,15 @@
+<vector android:height="24dp" android:viewportHeight="50"
+    android:viewportWidth="50" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#fff" android:pathData="M25,0A1.465,1.465 0,0 0,23.534 1.465v9.414a1.465,1.465 0,0 0,2.93 0L26.464,1.465A1.465,1.465 0,0 0,25 0Z"/>
+    <path android:fillColor="#fff" android:pathData="M25,37.655A1.465,1.465 0,0 0,23.534 39.121v9.414a1.465,1.465 0,0 0,2.93 0v-9.414A1.465,1.465 0,0 0,25 37.655Z"/>
+    <path android:fillColor="#fff" android:pathData="M19.208,12.039l-4.707,-8.153a1.465,1.465 0,0 0,-2.537 1.465l4.707,8.153a1.465,1.465 0,1 0,2.537 -1.465Z"/>
+    <path android:fillColor="#fff" android:pathData="M38.037,44.65l-4.707,-8.153a1.465,1.465 0,1 0,-2.537 1.465l4.707,8.153a1.465,1.465 0,0 0,2.537 -1.465Z"/>
+    <path android:fillColor="#fff" android:pathData="M13.503,16.671l-8.153,-4.707a1.465,1.465 0,1 0,-1.465 2.537l8.153,4.707a1.465,1.465 0,1 0,1.465 -2.537Z"/>
+    <path android:fillColor="#fff" android:pathData="M46.114,35.497l-8.153,-4.707a1.465,1.465 0,0 0,-1.465 2.537l8.153,4.707a1.465,1.465 0,1 0,1.465 -2.537Z"/>
+    <path android:fillColor="#fff" android:pathData="M10.879,23.533L1.465,23.533a1.465,1.465 0,0 0,0 2.93h9.414a1.465,1.465 0,1 0,0 -2.93Z"/>
+    <path android:fillColor="#fff" android:pathData="M48.535,23.533h-9.414a1.465,1.465 0,1 0,0 2.93h9.414a1.465,1.465 0,0 0,0 -2.93Z"/>
+    <path android:fillColor="#fff" android:pathData="M14.039,31.329a1.464,1.464 0,0 0,-2 -0.536L3.886,35.498a1.465,1.465 0,1 0,1.465 2.537l8.153,-4.707A1.465,1.465 0,0 0,14.039 31.329Z"/>
+    <path android:fillColor="#fff" android:pathData="M46.651,12.5a1.465,1.465 0,0 0,-2 -0.536l-8.153,4.707a1.465,1.465 0,1 0,1.465 2.537l8.153,-4.707A1.465,1.465 0,0 0,46.651 12.5Z"/>
+    <path android:fillColor="#fff" android:pathData="M18.668,35.961a1.464,1.464 0,0 0,-2 0.536l-4.707,8.153a1.465,1.465 0,1 0,2.537 1.465l4.707,-8.153A1.465,1.465 0,0 0,18.668 35.961Z"/>
+    <path android:fillColor="#fff" android:pathData="M37.497,3.35a1.464,1.464 0,0 0,-2 0.536L30.797,12.039a1.465,1.465 0,1 0,2.537 1.465l4.707,-8.153A1.465,1.465 0,0 0,37.497 3.35Z"/>
+</vector>

@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.firebase:firebase-core:17.5.1@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d8d13496930d610ab3c916528646f188/jetified-firebase-core-17.5.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bbf5d5dd901450264e36b24045f4dabe/jetified-firebase-core-17.5.1/res" />
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/bbf5d5dd901450264e36b24045f4dabe/jetified-firebase-core-17.5.1/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/bbf5d5dd901450264e36b24045f4dabe/jetified-firebase-core-17.5.1/res" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/bbf5d5dd901450264e36b24045f4dabe/jetified-firebase-core-17.5.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/modules-2/files-2.1/com.google.firebase/firebase-core/17.5.1/6a8b08d2a93001c8d089863beda57683994fb63d/firebase-core-17.5.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

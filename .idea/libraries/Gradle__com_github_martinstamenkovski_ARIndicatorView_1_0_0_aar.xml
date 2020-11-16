@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.martinstamenkovski:ARIndicatorView:1.0.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3eb9d2588be44d8e0e8ef0cbe7414a70/jetified-ARIndicatorView-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3eb9d2588be44d8e0e8ef0cbe7414a70/jetified-ARIndicatorView-1.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3eb9d2588be44d8e0e8ef0cbe7414a70/jetified-ARIndicatorView-1.0.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/1684d61fc3e382d65458b3b68e13b1e1/jetified-ARIndicatorView-1.0.0/res" />
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/1684d61fc3e382d65458b3b68e13b1e1/jetified-ARIndicatorView-1.0.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/1684d61fc3e382d65458b3b68e13b1e1/jetified-ARIndicatorView-1.0.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/modules-2/files-2.1/com.github.martinstamenkovski/ARIndicatorView/1.0.0/9186c4ba2ccc4f563e8b3571082fe87896db0e44/ARIndicatorView-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

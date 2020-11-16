@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/mainScroll_jobss"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/button_action"
+            android:visibility="visible"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:background="@color/lightestgrey"
+            android:orientation="vertical">
+        <LinearLayout
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <LinearLayout
+                    android:id="@+id/layout_0"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <ImageView android:layout_width="match_parent"
+                               android:layout_height="210dp"
+                               android:layout_marginTop="0dp"
+                               android:id="@+id/event_logo"
+                               android:scaleType="fitXY"
+                               android:background="@drawable/event_default_banner"/>
+
+                    <LinearLayout
+                            android:id="@+id/mainlayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="230dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/curved_white_border_filled_white"
+                            android:orientation="vertical">
+                        <TextView
+                                android:id="@+id/compname"
+                                android:layout_marginTop="50dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="4dp"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:singleLine="false"
+                                android:text="Name"/>
+                        <!--<ImageView android:layout_width="match_parent"-->
+                        <!--android:id="@+id/event_logo"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="0dp"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:visibility="gone"-->
+                        <!--android:background="@null"/>-->
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/curved_white_border_filled_white">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:orientation="vertical">
+
+                                <TextView
+                                        android:id="@+id/event_company"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableStart="@drawable/ic_companies"
+                                        android:textColor="@color/lightgrey"
+                                        android:textSize="14sp"
+                                        android:padding="2dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:textAlignment="center"
+                                        android:drawablePadding="2dp"
+                                        android:text="Thoughtworks"
+                                        android:singleLine="true"/>
+
+                                <LinearLayout android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content"
+                                              android:layout_gravity="center_horizontal"
+                                              android:orientation="horizontal">
+                                    <TextView
+                                            android:id="@+id/event_time"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/lightgrey"
+                                            android:textAlignment="center"
+                                            android:drawablePadding="2dp"
+                                            android:drawableStart="@drawable/ic_clockk"
+                                            android:textSize="14sp"
+                                            android:text="Hello world"
+                                            android:layout_weight="1"
+                                            android:visibility="visible"
+                                            android:padding="2dp"
+                                            android:singleLine="true"/>
+
+                                    <TextView
+                                            android:id="@+id/addtocalendar"
+                                            android:textColor="#2680EB"
+                                            android:drawablePadding="3dp"
+                                            android:layout_gravity="left"
+                                            android:textStyle="bold"
+                                            android:visibility="gone"
+                                            android:textSize="14dp"
+                                            android:layout_weight="1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Add to calander"/>
+                                </LinearLayout>
+
+
+                                <TextView
+                                        android:id="@+id/event_date"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:textColor="@color/lightgrey"
+                                        android:drawablePadding="2dp"
+                                        android:drawableStart="@drawable/ic_briefcase_job"
+                                        android:textSize="14sp"
+                                        android:layout_weight="1"
+                                        android:visibility="gone"
+                                        android:gravity="center_vertical"
+                                        android:padding="2dp"
+                                        android:singleLine="true"/>
+                                <TextView
+                                        android:id="@+id/eventlocation"
+                                        android:layout_marginTop="3dp"
+                                        android:textColor="@color/black"
+                                        android:layout_gravity="center_horizontal"
+                                        android:drawableLeft="@drawable/ic_location"
+                                        android:drawablePadding="3dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Location"/>
+
+
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:background="@drawable/curved_white_border_filled_white">
+                                    <LinearLayout android:layout_width="wrap_content"
+                                                  android:layout_height="wrap_content"
+                                                  android:layout_weight="1"
+                                                  android:orientation="vertical">
+                                        <TextView
+                                                android:id="@+id/event_price"
+                                                android:layout_marginTop="8dp"
+                                                android:drawablePadding="3dp"
+                                                android:textStyle="bold"
+                                                android:gravity="right"
+                                                android:textSize="16dp"
+                                                android:layout_marginRight="12dp"
+                                                android:layout_width="match_parent"
+                                                android:layout_weight="1"
+                                                android:layout_height="wrap_content"
+                                                android:text="15,000 Onwards"/>
+                                        <TextView
+                                                android:id="@+id/event_original_price"
+                                                android:layout_marginTop="2dp"
+                                                android:gravity="right"
+                                                android:textSize="14dp"
+                                                android:layout_marginRight="12dp"
+                                                android:layout_width="match_parent"
+                                                android:layout_weight="1"
+                                                android:layout_height="wrap_content"
+                                                android:text="15,000"/>
+                                    </LinearLayout>
+
+                                    <ImageView android:layout_width="wrap_content"
+                                               android:layout_height="wrap_content"
+                                               android:padding="5dp"
+                                               android:layout_weight="1"
+                                               android:id="@+id/share"
+                                               android:layout_marginRight="25dp"
+                                               android:backgroundTint="@color/lightestgrey1"
+                                               android:src="@drawable/ic_share_new"/>
+                                    <LinearLayout android:layout_width="wrap_content"
+                                                  android:layout_height="wrap_content"
+                                                  android:layout_marginRight="12dp"
+                                                  android:layout_gravity="end"
+                                                  android:layout_weight="1"
+                                                  android:orientation="vertical">
+                                        <com.jobsforher.customviews.CustomFontButton
+                                                android:visibility="visible"
+                                                android:id="@+id/btnApplied"
+                                                android:layout_width="match_parent"
+                                                android:textColor="@color/black"
+                                                android:text="Registered"
+                                                android:layout_gravity="center_horizontal"
+                                                android:textSize="12sp"
+                                                android:padding="2dp"
+                                                android:textAllCaps="false"
+                                                android:background="@drawable/curved_grey_without_border"
+                                                android:layout_height="35dp"/>
+
+                                        <Button
+                                                android:id="@+id/apply_job"
+                                                android:visibility="visible"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="33dp"
+                                                android:textColor="@color/white"
+                                                android:text="Register"
+                                                android:layout_gravity="center_horizontal"
+                                                android:textSize="12sp"
+                                                android:textAllCaps="false"
+                                                android:background="@drawable/curved_green_border_filled_white_adapter"/>
+
+                                        <TextView
+                                                android:id="@+id/registration_closed"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:drawablePadding="2dp"
+                                                android:textSize="14sp"
+                                                android:padding="2dp"
+                                                android:text="Registration closed"
+                                                android:visibility="gone"
+                                                android:gravity="center_horizontal"
+                                                android:singleLine="false"/>
+
+                                        <TextView
+                                                android:id="@+id/row_interested"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_horizontal"
+                                                android:textColor="@color/green"
+                                                android:textStyle="bold"
+                                                android:layout_marginLeft="3dp"
+                                                android:drawablePadding="2dp"
+                                                android:textSize="14sp"
+                                                android:padding="2dp"
+                                                android:text="Interested"
+                                                android:visibility="visible"
+                                                android:singleLine="true"/>
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="2dp"
+                                        android:background="@drawable/curved_white_border_filled_white">
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+                        <View android:layout_width="match_parent" android:layout_height="20dp"
+                              android:background="@color/lightestgrey"/>
+                        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                                              android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:id="@+id/view_main"
+                                              android:scrollbars="none"
+                                              android:background="@drawable/curved_white_border_filled_white"
+                                              android:fillViewport="true">
+                            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          android:orientation="horizontal"
+                                          android:layout_width="match_parent"
+                                          android:layout_height="match_parent">
+                                <Button android:id="@+id/aboutevent"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:textAllCaps="false"
+                                        android:text="About Event" />
+                                <View android:layout_width="1dp"
+                                      android:layout_height="20dp"
+                                      android:layout_gravity="center_vertical"
+                                      android:background="@color/profileview_grey"/>
+                                <Button android:id="@+id/agenda"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:textAllCaps="false"
+                                        android:background="@null"
+                                        android:text="Agenda" />
+                                <View android:layout_width="1dp"
+                                      android:layout_height="20dp"
+                                      android:layout_gravity="center_vertical"
+                                      android:background="@color/profileview_grey"/>
+                                <Button android:id="@+id/pricing"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:textAllCaps="false"
+                                        android:background="@null"
+                                        android:text="Pricing and Venue" />
+                                <View android:layout_width="1dp"
+                                      android:layout_height="20dp"
+                                      android:layout_gravity="center_vertical"
+                                      android:background="@color/profileview_grey"/>
+                                <!--<Button android:id="@+id/comp_mentors"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:paddingLeft="10dp"-->
+                                <!--android:paddingRight="10dp"-->
+                                <!--android:textAllCaps="false"-->
+                                <!--android:background="@null"-->
+                                <!--android:text="Mentors" />-->
+                                <!--<View android:layout_width="1dp"-->
+                                <!--android:layout_height="20dp"-->
+                                <!--android:layout_gravity="center_vertical"-->
+                                <!--android:background="@color/profileview_grey"/>-->
+                                <Button android:id="@+id/gallery"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:textAllCaps="false"
+                                        android:background="@null"
+                                        android:text="Image Gallery" />
+
+                            </LinearLayout>
+                        </HorizontalScrollView>
+                        <View android:layout_width="match_parent" android:layout_height="20dp"
+                              android:background="@color/lightestgrey"/>
+                        <LinearLayout
+                                android:id="@+id/mainlayout1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginBottom="30dp"
+                                android:background="@drawable/curved_white_border_filled_white"
+                                android:orientation="vertical">
+                            <TextView
+                                    android:id="@+id/abutus"
+                                    android:layout_marginTop="8dp"
+                                    android:drawablePadding="3dp"
+                                    android:textStyle="bold"
+                                    android:textSize="16dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="About Us"/>
+                            <TextView
+                                    android:id="@+id/abutus_text"
+                                    android:layout_marginTop="8dp"
+                                    android:drawablePadding="3dp"
+                                    android:textSize="14dp"
+                                    android:autoLink="web"
+                                    android:visibility="gone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="AbuotUs"/>
+                            <WebView
+                                    android:layout_width="match_parent"
+                                    android:layout_marginBottom="10dp"
+                                    android:nestedScrollingEnabled="true"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/abutus_web"/>
+                        </LinearLayout>
+                        <TextView android:id="@+id/pricing_text"
+                                  android:layout_marginTop="8dp"
+                                  android:textColor="@color/black"
+                                  android:drawablePadding="3dp"
+                                  android:textStyle="bold"
+                                  android:layout_marginLeft="10dp"
+                                  android:textSize="16dp"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:text="Pricing and Venue"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/my_recycler_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"
+                                android:scrollbars="vertical"
+                                android:nestedScrollingEnabled="false"/>
+                        <TextView
+                                android:id="@+id/imagegallery"
+                                android:layout_marginTop="8dp"
+                                android:drawablePadding="3dp"
+                                android:textStyle="bold"
+                                android:layout_marginLeft="10dp"
+                                android:textSize="16dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Image Gallery"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/gridview_aboutus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="8dp"/>
+
+                    </LinearLayout>
+
+                    <ImageView android:id="@+id/event_logo1"
+                               android:layout_width="80dp"
+                               android:layout_height="80dp"
+                               android:layout_marginTop="180dp"
+                               android:scaleType="fitXY"
+                               android:adjustViewBounds="true"
+                               android:src="@drawable/event_default"
+                               android:layout_gravity="center_horizontal"
+                               android:background="@drawable/curved_grey_border_nofill"/>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                    android:id="@+id/layout_1"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:visibility="visible"
+                        android:orientation="vertical">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/curved_white_border_filled_white"
+                            android:layout_height="wrap_content">
+
+                        <ImageView android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:layout_marginTop="10dp"
+                                   android:layout_gravity="center_horizontal"
+                                   android:src="@drawable/ic_success_applied"/>
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center_horizontal"
+                                android:paddingLeft="20dp"
+                                android:paddingRight="20dp"
+                                android:text="Registered Successfully!!"
+                                android:textSize="14dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/lightgrey"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/robotoregular"/>
+
+                        <TextView android:id="@+id/dis_text"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_gravity="center_horizontal"
+                                  android:gravity="center_horizontal"
+                                  android:paddingLeft="20dp"
+                                  android:paddingRight="20dp"
+                                  android:text="Hi your packages for Diageo Business Service, India — Meet and Greet for Women Professionals - Bangalore is successfully booked and sent to your registered email ID."
+                                  android:textSize="12dp"
+                                  android:textColor="@color/lightgrey"
+                                  android:layout_marginTop="5dp"
+                                  android:fontFamily="@font/robotoregular"/>
+
+                        <Button android:id="@+id/find_morejobs11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:paddingLeft="40dp"
+                                android:paddingRight="40dp"
+                                android:layout_gravity="center_horizontal"
+                                android:textAllCaps="false"
+                                android:text="Check other events"
+                                android:background="@color/green"
+                                android:textColor="@color/white"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:visibility="visible"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/curved_white_border_filled_white"
+                        android:orientation="vertical">
+                    <ImageView android:layout_width="match_parent"
+                               android:id="@+id/event_logo_success"
+                               android:layout_height="200dp"
+                               android:layout_marginTop="0dp"
+                               android:layout_marginLeft="10dp"
+                               android:layout_marginRight="10dp"
+                               android:scaleType="fitXY"
+                               android:visibility="visible"
+                               android:adjustViewBounds="true"
+                               android:background="@drawable/companies_banner"/>
+                    <TextView
+                            android:layout_marginTop="3dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:padding="10dp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:singleLine="false"
+                            android:text="Reference ID: JFH000215DBSI"/>
+                    <TextView
+                            android:layout_marginTop="8dp"
+                            android:textColor="@color/black"
+                            android:drawablePadding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="16dp"
+                            android:paddingLeft="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Venue:"/>
+                    <TextView
+                            android:id="@+id/event_venue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/lightgrey"
+                            android:drawablePadding="2dp"
+                            android:textSize="14sp"
+                            android:gravity="center_vertical"
+                            android:padding="2dp"
+                            android:singleLine="true"/>
+                    <!--<LinearLayout-->
+                    <!--android:id="@+id/locationlist"-->
+                    <!--android:paddingLeft="10dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--</LinearLayout>-->
+                    <TextView
+                            android:layout_marginTop="8dp"
+                            android:textColor="@color/black"
+                            android:drawablePadding="3dp"
+                            android:textStyle="bold"
+                            android:textSize="16dp"
+                            android:paddingLeft="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Date and Time:"/>
+                    <TextView
+                            android:id="@+id/event_date_success"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/lightgrey"
+                            android:drawablePadding="2dp"
+                            android:textSize="14sp"
+                            android:gravity="center_vertical"
+                            android:padding="2dp"
+                            android:singleLine="true"/>
+
+                    <TextView
+                            android:id="@+id/event_time_success"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/lightgrey"
+                            android:drawablePadding="2dp"
+                            android:textSize="14sp"
+                            android:visibility="visible"
+                            android:gravity="center_vertical"
+                            android:padding="2dp"
+                            android:singleLine="true"/>
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/addtocalendar_success"-->
+                    <!--android:layout_marginTop="8dp"-->
+                    <!--android:textColor="#2680EB"-->
+                    <!--android:paddingLeft="10dp"-->
+                    <!--android:visibility="gone"-->
+                    <!--android:drawablePadding="3dp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:textSize="16dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Add to Calender"/>-->
+
+                    <!--<TextView-->
+                    <!--android:layout_marginTop="8dp"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:drawablePadding="3dp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:paddingLeft="10dp"-->
+                    <!--android:textSize="16dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Packages bought:"/>-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/event_pkg_details"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="start"-->
+                    <!--android:textColor="@color/lightgrey"-->
+                    <!--android:drawablePadding="2dp"-->
+                    <!--android:textSize="14sp"-->
+                    <!--android:paddingLeft="10dp"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:paddingTop="4dp"-->
+                    <!--android:text="Package details: Royal Table, Gold Table"-->
+                    <!--android:singleLine="true"/>-->
+                    <!--<TextView-->
+                    <!--android:id="@+id/event_pkg_qty"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="start"-->
+                    <!--android:textColor="@color/lightgrey"-->
+                    <!--android:drawablePadding="2dp"-->
+                    <!--android:textSize="14sp"-->
+                    <!--android:paddingLeft="10dp"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:paddingTop="4dp"-->
+                    <!--android:text="Quantity: 2 (Royal Table x1, Gold Table x1)"-->
+                    <!--android:singleLine="true"/>-->
+
+                    <Button android:id="@+id/goto_events"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:paddingLeft="40dp"
+                            android:paddingRight="40dp"
+                            android:layout_gravity="center_horizontal"
+                            android:textAllCaps="false"
+                            android:text="Go to events"
+                            android:background="@color/green"
+                            android:textColor="@color/white"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!--<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="0dp"-->
+    <!--android:id="@+id/view_main1"-->
+    <!--android:scrollbars="none"-->
+    <!--android:visibility="visible"-->
+    <!--android:background="@drawable/curved_white_border_filled_white"-->
+    <!--android:fillViewport="true">-->
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:visibility="gone"-->
+    <!--android:layout_height="match_parent">-->
+    <!--<Button android:id="@+id/comp_aboutus1"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@null"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--android:textAllCaps="false"-->
+    <!--android:text="About Us" />-->
+    <!--<View android:layout_width="1dp"-->
+    <!--android:layout_height="20dp"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:background="@color/profileview_grey"/>-->
+    <!--<Button android:id="@+id/comp_jobs1"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--android:textAllCaps="false"-->
+    <!--android:background="@null"-->
+    <!--android:text="Jobs" />-->
+    <!--<View android:layout_width="1dp"-->
+    <!--android:layout_height="20dp"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:background="@color/profileview_grey"/>-->
+    <!--<Button android:id="@+id/comp_events1"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--android:textAllCaps="false"-->
+    <!--android:background="@null"-->
+    <!--android:text="Events" />-->
+    <!--<View android:layout_width="1dp"-->
+    <!--android:layout_height="20dp"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:background="@color/profileview_grey"/>-->
+    <!--&lt;!&ndash;<Button android:id="@+id/comp_mentors"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:paddingLeft="10dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:paddingRight="10dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:textAllCaps="false"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:background="@null"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:text="Mentors" />&ndash;&gt;-->
+    <!--&lt;!&ndash;<View android:layout_width="1dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="20dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_gravity="center_vertical"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:background="@color/profileview_grey"/>&ndash;&gt;-->
+    <!--<Button android:id="@+id/comp_blogs1"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--android:textAllCaps="false"-->
+    <!--android:background="@null"-->
+    <!--android:text="Blogs" />-->
+    <!--<View android:layout_width="1dp"-->
+    <!--android:layout_height="20dp"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:background="@color/profileview_grey"/>-->
+    <!--<Button android:id="@+id/comp_groups1"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--android:textAllCaps="false"-->
+    <!--android:background="@null"-->
+    <!--android:text="Groups" />-->
+
+    <!--</LinearLayout>-->
+    <!--</HorizontalScrollView>-->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/bottombar"
+            android:orientation="vertical"
+            android:id="@+id/button_action">
+        <Button
+                android:id="@+id/button_apply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:background="@color/green"
+                android:textColor="@color/white"
+                android:text="Register"/>
+        <Button
+                android:id="@+id/button_applied"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:background="@null"
+                android:textColor="@color/greyseparator"
+                android:text="Registered"/>
+    </LinearLayout>
+
+    <include
+            android:id="@+id/bottombar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            layout="@layout/activity_footer" />
+</RelativeLayout>

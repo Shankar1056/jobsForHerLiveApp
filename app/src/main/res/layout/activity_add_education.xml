@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:TagsEditText="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:background="@color/green"-->
+    <!--android:padding="10dp"-->
+    <!--android:weightSum="1">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight=".2"-->
+    <!--android:layout_marginLeft="-10dp"-->
+    <!--android:src="@drawable/ic_arrow_back_white"/>-->
+
+    <!--<women.jobs.jobsforher.customviews.CustomFontTextView-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_weight=".7"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="18sp"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:text="@string/add_education_"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textAllCaps="false"/>-->
+
+    <!--<women.jobs.jobsforher.customviews.CustomBoldFontTextView-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_weight=".2"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/save"-->
+    <!--android:textSize="16sp"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textAllCaps="true"/>-->
+
+
+    <!--</LinearLayout>-->
+
+    <!--<women.jobs.jobsforher.customviews.CustomBoldFontTextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="12sp"-->
+    <!--android:text="@string/degree"-->
+    <!--android:layout_marginLeft="22dp"-->
+    <!--android:textColor="@color/darkestgrey"-->
+    <!--android:textAllCaps="false"-->
+    <!--android:layout_marginRight="22dp"-->
+    <!--android:layout_marginTop="32dp" />-->
+
+    <!--&lt;!&ndash;<women.jobs.jobsforher.customviews.CustomFontEditText&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="52dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:hint="@string/degree"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:background="@drawable/curved_grey_border"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:inputType="textCapWords"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:drawableEnd="@drawable/ic_expand_more"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_marginLeft="22dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_marginRight="22dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_marginTop="5dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:textSize="12sp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:padding="13dp"/>&ndash;&gt;-->
+
+    <!--<women.jobs.jobsforher.customviews.CustomBoldFontTextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="12sp"-->
+    <!--android:text="@string/college_university"-->
+    <!--android:layout_marginLeft="22dp"-->
+    <!--android:textColor="@color/darkestgrey"-->
+    <!--android:textAllCaps="false"-->
+    <!--android:layout_marginRight="22dp"-->
+    <!--android:layout_marginTop="12dp" />-->
+
+    <!--<women.jobs.jobsforher.customviews.CustomFontEditText-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="52dp"-->
+    <!--android:hint="@string/college_university"-->
+    <!--android:background="@drawable/curved_grey_border"-->
+    <!--android:inputType="textCapWords"-->
+    <!--android:drawableEnd="@drawable/ic_expand_more"-->
+    <!--android:layout_marginLeft="22dp"-->
+    <!--android:layout_marginRight="22dp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:textSize="12sp"-->
+    <!--android:padding="13dp"/>-->
+
+    <!--<women.jobs.jobsforher.customviews.CustomBoldFontTextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="12sp"-->
+    <!--android:text="@string/start_date"-->
+    <!--android:layout_marginLeft="22dp"-->
+    <!--android:textColor="@color/darkestgrey"-->
+    <!--android:textAllCaps="false"-->
+    <!--android:layout_marginRight="22dp"-->
+    <!--android:layout_marginTop="12dp" />-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<women.jobs.jobsforher.customviews.CustomFontEditText-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="52dp"-->
+    <!--android:hint="@string/ex_date"-->
+    <!--android:background="@drawable/curved_grey_border"-->
+    <!--android:inputType="textCapWords"-->
+    <!--android:drawableEnd="@drawable/ic_expand_more"-->
+    <!--android:layout_marginStart="22dp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:textSize="12sp"-->
+    <!--android:padding="13dp"/>-->
+
+    <!--<women.jobs.jobsforher.customviews.CustomFontEditText-->
+    <!--android:layout_width="150dp"-->
+    <!--android:layout_height="52dp"-->
+    <!--android:hint="@string/ex_month"-->
+    <!--android:background="@drawable/curved_grey_border"-->
+    <!--android:inputType="textCapWords"-->
+    <!--android:drawableEnd="@drawable/ic_expand_more"-->
+    <!--android:layout_marginStart="5dp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:textSize="12sp"-->
+    <!--android:padding="13dp"/>-->
+
+    <!--<women.jobs.jobsforher.customviews.CustomFontEditText-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="52dp"-->
+    <!--android:hint="@string/ex_year"-->
+    <!--android:background="@drawable/curved_grey_border"-->
+    <!--android:inputType="textCapWords"-->
+    <!--android:drawableRight="@drawable/ic_expand_more"-->
+    <!--android:layout_marginLeft="5dp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:textSize="12sp"-->
+    <!--android:padding="13dp"/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<women.jobs.jobsforher.customviews.CustomBoldFontTextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="12sp"-->
+    <!--android:text="@string/end_date"-->
+    <!--android:layout_marginLeft="22dp"-->
+    <!--android:textColor="@color/darkestgrey"-->
+    <!--android:textAllCaps="false"-->
+    <!--android:layout_marginRight="22dp"-->
+    <!--android:layout_marginTop="12dp" />-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<women.jobs.jobsforher.customviews.CustomFontEditText-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="52dp"-->
+    <!--android:hint="@string/ex_date"-->
+    <!--android:background="@drawable/curved_grey_border"-->
+    <!--android:inputType="textCapWords"-->
+    <!--android:drawableRight="@drawable/ic_expand_more"-->
+    <!--android:layout_marginLeft="22dp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:textSize="12sp"-->
+    <!--android:padding="13dp"/>-->
+
+    <!--<women.jobs.jobsforher.customviews.CustomFontEditText-->
+    <!--android:layout_width="150dp"-->
+    <!--android:layout_height="52dp"-->
+    <!--android:hint="@string/ex_month"-->
+    <!--android:background="@drawable/curved_grey_border"-->
+    <!--android:inputType="textCapWords"-->
+    <!--android:drawableRight="@drawable/ic_expand_more"-->
+    <!--android:layout_marginLeft="5dp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:textSize="12sp"-->
+    <!--android:padding="13dp"/>-->
+
+    <!--<women.jobs.jobsforher.customviews.CustomFontEditText-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="52dp"-->
+    <!--android:hint="@string/ex_year"-->
+    <!--android:background="@drawable/curved_grey_border"-->
+    <!--android:inputType="textCapWords"-->
+    <!--android:drawableRight="@drawable/ic_expand_more"-->
+    <!--android:layout_marginLeft="5dp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:textSize="12sp"-->
+    <!--android:padding="13dp"/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<women.jobs.jobsforher.customviews.CustomBoldFontTextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="12sp"-->
+    <!--android:text="@string/location_city"-->
+    <!--android:layout_marginLeft="22dp"-->
+    <!--android:textColor="@color/darkestgrey"-->
+    <!--android:textAllCaps="false"-->
+    <!--android:layout_marginRight="22dp"-->
+    <!--android:layout_marginTop="12dp" />-->
+
+    <!--<women.jobs.jobsforher.customviews.CustomFontEditText-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="52dp"-->
+    <!--android:hint="@string/location_city"-->
+    <!--android:background="@drawable/curved_grey_border"-->
+    <!--android:inputType="textCapWords"-->
+    <!--android:drawableRight="@drawable/ic_expand_more"-->
+    <!--android:layout_marginLeft="22dp"-->
+    <!--android:layout_marginRight="22dp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:textSize="12sp"-->
+    <!--android:padding="13dp"/>-->
+
+    <!--<women.jobs.jobsforher.customviews.CustomBoldFontTextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="12sp"-->
+    <!--android:text="@string/skills"-->
+    <!--android:layout_marginLeft="22dp"-->
+    <!--android:textColor="@color/darkestgrey"-->
+    <!--android:textAllCaps="false"-->
+    <!--android:layout_marginRight="22dp"-->
+    <!--android:layout_marginTop="12dp" />-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="22dp"-->
+    <!--android:layout_marginRight="22dp"-->
+    <!--android:background="@drawable/curved_grey_border"-->
+    <!--android:layout_marginTop="5dp">-->
+
+    <!--<women.jobs.jobsforher.customviews.CustomFontEditText-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:id="@+id/etSkill"-->
+    <!--android:layout_height="42dp"-->
+    <!--android:background="@drawable/curved_grey_border_dark"-->
+    <!--android:textSize="12sp"-->
+    <!--android:maxLines="1"-->
+    <!--android:text="                     "-->
+    <!--android:singleLine="true"-->
+    <!--android:padding="5dp"/>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/imageAddSkill"-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="30dp"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_alignRight="@+id/etSkill"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:src="@drawable/ic_add_black" />-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<com.plumillonforge.android.chipview.ChipView-->
+    <!--android:id="@+id/text_chip_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:layout_marginLeft="22dp"-->
+    <!--android:layout_marginRight="22dp"/>-->
+
+
+    <!--<women.jobs.jobsforher.customviews.CustomBoldFontTextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="12sp"-->
+    <!--android:text="@string/description"-->
+    <!--android:layout_marginLeft="22dp"-->
+    <!--android:textColor="@color/darkestgrey"-->
+    <!--android:textAllCaps="false"-->
+    <!--android:layout_marginRight="22dp"-->
+    <!--android:layout_marginTop="12dp" />-->
+
+    <!--<studio.carbonylgroup.textfieldboxes.TextFieldBoxes-->
+    <!--android:id="@+id/text_field_boxes"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:maxCharacters="150"-->
+    <!--app:panelBackgroundColor="#fff"-->
+    <!--app:primaryColor="#fff"-->
+    <!--android:background="@drawable/curved_grey_border"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:layout_marginLeft="22dp"-->
+    <!--android:layout_marginRight="22dp">-->
+
+    <!--<studio.carbonylgroup.textfieldboxes.ExtendedEditText-->
+    <!--android:id="@+id/extended_edit_text"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:hint="@string/write_some_des"-->
+    <!--android:maxLines="3"-->
+    <!--android:minLines="3"-->
+    <!--android:gravity="top|left"-->
+    <!--android:padding="13dp"/>-->
+
+    <!--</studio.carbonylgroup.textfieldboxes.TextFieldBoxes>-->
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--&lt;!&ndash;<com.mikhaellopez.circularimageview.CircularImageView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="80dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="80dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:src="@drawable/ic_uploadnew"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:civ_border_color="#201919"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:civ_border_width="4dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:civ_shadow="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:civ_shadow_radius="10"&ndash;&gt;-->
+    <!--&lt;!&ndash;app:civ_shadow_color="#8BC34A"/>&ndash;&gt;-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:padding="10dp"-->
+    <!--android:weightSum="1">-->
+
+    <!--<women.jobs.jobsforher.customviews.CustomFontTextView-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_weight=".8"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="18sp"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:text="@string/upload_image"-->
+    <!--android:textColor="@color/greyseparator"-->
+    <!--android:textAllCaps="false"/>-->
+
+    <!--<ImageView android:layout_width="0dp"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:layout_weight=".2"/>-->
+    <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+</ScrollView>

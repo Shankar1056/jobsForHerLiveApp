@@ -1,0 +1,156 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
+
+android {
+    signingConfigs {
+        jobsforher {
+            storeFile file('E:\\shankar\\JobsForHer\\project\\bitbucket\\06_10_2020\\herrising-app\\jobsforher-app.jks')
+            storePassword 'JobsForHer!@#$%12345.com'
+            keyPassword 'JobsForHer!@#$%12345.com'
+            keyAlias 'jobsforher'
+        }
+    }
+    compileSdkVersion 29
+    archivesBaseName = "Jobsforher"
+
+    defaultConfig {
+        applicationId "com.jobsforher"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 3
+        versionName "1.2"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        multiDexEnabled true
+        resConfigs "en"
+        signingConfig signingConfigs.jobsforher
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+//            shrinkResources true
+            //useProguard true
+//            minifyEnabled true
+            useProguard true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            /*debuggable false
+            jniDebuggable false
+            renderscriptDebuggable false
+            pseudoLocalesEnabled false
+            zipAlignEnabled true*/
+        }
+    }
+    lintOptions {
+
+        checkReleaseBuilds false
+
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+
+        dataBinding  true
+    }
+}
+
+dependencies {
+
+
+    configurations {
+        all*.exclude group: 'com.android.support', module: 'support-v13'
+       // all*.exclude group: 'com.android.volley'
+    }
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //noinspection GradleCompatible
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.1'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.1'
+
+    implementation project(':linkedin-sdk')
+    //implementation 'com.msg91.sendotpandroid.library:library:1.2.2'
+    implementation 'com.google.firebase:firebase-analytics:17.6.0'
+    implementation 'com.google.firebase:firebase-core:17.5.1'
+
+    implementation 'com.github.aliab:circular-music-progressbar:v1.4.0'
+
+//    implementation 'com.instabug.library:instabug:2.1.6'
+//    implementation 'ch.acra:acra:4.6.2'
+    implementation 'com.google.firebase:firebase-auth:19.4.0'
+    implementation 'com.google.firebase:firebase-messaging:20.3.0'
+
+    //Cryshlytics
+    implementation 'com.google.firebase:firebase-crashlytics:17.2.2'
+
+    implementation 'com.facebook.android:facebook-login:4.40.0'
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
+   // implementation 'com.google.android.gms:play-services-auth-api-phone:16.0.0'
+    //implementation 'com.google.android.gms:play-services:10.0.1'
+
+    implementation 'com.github.koushikcse:LinkedIn:1.1'
+
+    implementation 'com.squareup.retrofit2:retrofit'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.1'
+
+    implementation 'androidx.browser:browser:1.0.0'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+
+    implementation 'com.github.HITGIF:TextFieldBoxes:1.4.4'
+
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+
+ //   implementation 'com.github.Plumillon:ChipView:1.2.0'
+
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    implementation 'com.github.chivorns:smartmaterialspinner:1.1.0'
+
+    implementation 'com.google.android.gms:play-services-safetynet:15.0.1'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+
+//    implementation 'com.alexzh:circleimageview:1.2.0'
+
+
+    implementation 'com.github.martinstamenkovski:ARIndicatorView:1.0.0'
+    implementation 'com.basgeekball:awesome-validation:4.0'
+    implementation 'com.google.android:flexbox:1.0.0'
+    implementation 'com.github.mahimrocky:TagView:1.0.3'
+    implementation 'co.lujun:androidtagview:1.1.7'
+    implementation 'com.github.Plumillon:ChipView:1.2.0'
+    implementation 'com.hkm.taglib:tag:1.7.1'
+    //implementation 'com.google.firebase:firebase-messaging:17.1.0'
+    api 'com.theartofdev.edmodo:android-image-cropper:2.5.1'
+
+    implementation 'at.blogc:expandabletextview:1.0.5'
+//    implementation 'com.payumoney.sdkui:plug-n-play:1.5.0'
+    implementation project(':sdkui')
+
+
+}
+//com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true

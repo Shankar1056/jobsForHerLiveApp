@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="52dp">
+
+    <ImageView android:layout_width="48dp"
+               android:layout_height="48dp"
+               android:padding="10dp"
+               android:id="@+id/ivBack"
+               android:visibility="gone"
+               android:layout_alignParentLeft="true"
+               android:src="@drawable/backarrowgreen"
+               android:layout_centerVertical="true"/>
+
+    <com.jobsforher.customviews.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt;&lt;Go back"
+            android:paddingLeft="5dp"
+            android:textColor="@color/green"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+    />
+
+    <ImageView android:layout_width="110dp"
+               android:layout_height="48dp"
+               android:src="@drawable/jfhhorizontallogo"
+               android:layout_centerInParent="true"
+               android:adjustViewBounds="true"
+    />
+
+    <ImageView android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/ic_user"
+               android:paddingRight="55dp"
+               android:layout_alignParentRight="true"
+               android:layout_centerVertical="true"
+    />
+
+    <ImageView android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/ic_notification"
+               android:paddingRight="5dp"
+               android:layout_alignParentRight="true"
+               android:layout_centerVertical="true"
+    />
+
+
+    >
+</RelativeLayout>

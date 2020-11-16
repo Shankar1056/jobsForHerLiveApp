@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="380dp"
+        android:orientation="vertical"
+              android:layout_height="wrap_content"
+              android:gravity="bottom"
+              android:background="@color/white">
+
+    <!--Add work experience-->
+    <LinearLayout
+            android:id="@+id/add_workexperience_layout_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="60dp"
+            android:orientation="horizontal">
+        <RelativeLayout android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:layout_marginBottom="10dp">
+            <ImageView
+                    android:id="@+id/add_workexperience"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_briefcase"
+                    android:scaleType="fitXY"
+                    android:padding="5dp"
+                    android:layout_centerInParent="true"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/bg_circle_briefcase"
+                    android:layout_alignParentStart="true" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Add Work Experience"
+                    android:layout_toRightOf="@+id/add_workexperience"
+                    android:layout_marginStart="10dp"/>
+
+        </RelativeLayout>
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:tint="@color/comments_gray"
+                android:src="@drawable/ic_right_arrow"/>
+
+
+    </LinearLayout>
+
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/lightestgrey1"/>
+
+    <!--Add Life Experience-->
+    <LinearLayout
+            android:id="@+id/add_lifeexperience_layout_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="60dp"
+            android:orientation="horizontal">
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:layout_marginBottom="10dp">
+            <ImageView
+                    android:id="@+id/add_lifeexperience"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_favorite_heart_button"
+                    android:scaleType="fitXY"
+                    android:padding="5dp"
+                    android:layout_centerInParent="true"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/bg_circle_heart"
+                    android:layout_alignParentStart="true" />
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Add Life Experience"
+                    android:layout_toRightOf="@+id/add_lifeexperience"
+                    android:layout_marginStart="10dp"/>
+
+        </RelativeLayout>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:tint="@color/comments_gray"
+                android:src="@drawable/ic_right_arrow"/>
+
+
+    </LinearLayout>
+
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/lightestgrey1"/>
+
+    <!--Add Education-->
+    <LinearLayout
+            android:id="@+id/add_education_layout_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="60dp"
+            android:orientation="horizontal">
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:layout_marginBottom="10dp">
+            <ImageView
+                    android:id="@+id/add_education"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_college_graduation"
+                    android:scaleType="fitXY"
+                    android:padding="5dp"
+                    android:layout_centerInParent="true"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/bg_circle_graduation"
+                    android:layout_alignParentStart="true" />
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Add Education"
+                    android:layout_toRightOf="@+id/add_education"
+                    android:layout_marginStart="10dp"/>
+
+        </RelativeLayout>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:tint="@color/comments_gray"
+                android:src="@drawable/ic_right_arrow"/>
+
+
+    </LinearLayout>
+
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/lightestgrey1"/>
+
+    <!--Add Certificates-->
+    <LinearLayout
+            android:id="@+id/add_certificates_layout_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="60dp"
+            android:orientation="horizontal">
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:layout_marginBottom="10dp">
+            <ImageView
+                    android:id="@+id/add_certificates"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_certificates"
+                    android:scaleType="fitXY"
+                    android:padding="5dp"
+                    android:layout_centerInParent="true"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/bg_circle_file"
+                    android:layout_alignParentStart="true" />
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Add Certification"
+                    android:layout_toRightOf="@+id/add_certificates"
+                    android:layout_marginStart="10dp"/>
+
+        </RelativeLayout>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:tint="@color/comments_gray"
+                android:src="@drawable/ic_right_arrow"/>
+
+
+    </LinearLayout>
+
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/lightestgrey1"/>
+
+    <!--Add Recognitions-->
+    <LinearLayout
+            android:id="@+id/add_awards_layout_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="60dp"
+            android:orientation="horizontal">
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="left"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="10dp">
+            <ImageView
+                    android:id="@+id/add_awards"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_trophy"
+                    android:scaleType="fitXY"
+                    android:padding="5dp"
+                    android:layout_centerInParent="true"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/bg_circle_trophy"
+                    android:layout_alignParentStart="true" />
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add Awards and Recognition"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/add_awards"
+                    android:layout_marginStart="10dp"/>
+
+        </RelativeLayout>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:tint="@color/comments_gray"
+                android:src="@drawable/ic_right_arrow"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

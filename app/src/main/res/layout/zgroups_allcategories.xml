@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.ZActivityGroupsAllCategories"
+        android:background="@color/lightestgrey"
+        android:orientation="vertical">
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:showIn="@layout/zactivity_groups"
+            tools:context=".activities.ZActivityGroups"
+            android:background="@color/lightestgrey"
+            android:orientation="vertical">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <include layout="@layout/activity_jfh_banner"/>
+            <LinearLayout
+                    android:id="@+id/layout1"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/curved_white_border_filled_white"
+                    android:layout_height="wrap_content">
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Groups"
+                          android:gravity="left"
+                          android:textSize="14dp"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginLeft="10dp"
+                          android:textColor="@color/black"
+                          android:fontFamily="@font/robotoregular"
+                          android:id="@+id/groups"
+                          android:textStyle="bold"/>
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="@string/all_categories"
+                          android:textSize="12dp"
+                          android:textStyle="bold"
+                          android:textColor="@color/black"
+                          android:layout_marginTop="5dp"
+                          android:layout_marginLeft="10dp"
+                          android:fontFamily="@font/robotoregular" />
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/my_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:scrollbars="none"
+                        android:nestedScrollingEnabled="false"
+                >
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

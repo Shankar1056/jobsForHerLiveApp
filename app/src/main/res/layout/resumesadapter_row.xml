@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="5dp"
+        android:elevation="1dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:id="@+id/mainlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/cardview_border">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/row_circular_image"
+                android:layout_margin="10dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:civ_border_width="1dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                app:civ_border_color="@color/lightestgrey1"/>
+        <ImageView
+                android:id="@+id/sub_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="66dp"
+                android:layout_marginLeft="-30dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/pdf"/>
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:orientation="horizontal">
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+                <TextView
+                        android:id="@+id/row_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/blue"
+                        android:text="Hello"
+                        android:textSize="14dp"
+                        android:padding="2dp"
+                        android:singleLine="true"
+                        android:layout_weight="1"/>
+                <TextView
+                        android:id="@+id/row_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:text="Hello"
+                        android:textSize="12dp"
+                        android:padding="2dp"
+                        android:singleLine="true"
+                        android:layout_weight="1"/>
+                <TextView
+                        android:id="@+id/row_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:text="Hello"
+                        android:textSize="12dp"
+                        android:padding="2dp"
+                        android:singleLine="true"
+                        android:layout_weight="1"/>
+
+                <TextView
+                        android:id="@+id/row_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/blue"
+                        android:textStyle="bold"
+                        android:text="Hello"
+                        android:textSize="12dp"
+                        android:padding="2dp"
+                        android:singleLine="true"
+                        android:layout_weight="1"/>
+            </LinearLayout>
+            <ImageView
+                    android:id="@+id/delete_resume"
+                    android:layout_width="17dp"
+                    android:layout_height="20dp"
+                    android:backgroundTint="@color/green"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_dustbin"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

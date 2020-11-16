@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".activities.LoginActivity">
+
+
+    <include layout="@layout/toolbar_back" />
+
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <com.jobsforher.customviews.CustomBoldFontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="22dp"
+                    android:gravity="center"
+                    android:text="@string/welcome_back_great_to_see_you_again"
+                    android:textColor="@color/green"
+                    android:textSize="22sp" />
+
+
+            <com.jobsforher.customviews.CustomBoldFontTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="22dp"
+                    android:text="@string/email_or_mobile_number"
+                    android:textAllCaps="false"
+                    android:textColor="@color/darkestgrey"
+                    android:textSize="12sp" />
+
+            <com.jobsforher.customviews.CustomFontEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginRight="22dp"
+                    android:background="@drawable/curved_grey_border"
+                    android:hint="@string/email_id"
+                    android:inputType="textEmailAddress"
+                    android:padding="13dp"
+                    android:textSize="12sp" />
+
+
+            <com.jobsforher.customviews.CustomBoldFontTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="22dp"
+                    android:text="@string/password"
+                    android:textAllCaps="false"
+                    android:textColor="@color/darkestgrey"
+                    android:textSize="12sp" />
+
+
+            <com.jobsforher.customviews.CustomFontEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginRight="22dp"
+                    android:background="@drawable/curved_grey_border"
+                    android:gravity="center_vertical"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:padding="13dp"
+                    android:textSize="12sp" />
+
+
+            <com.jobsforher.customviews.CustomBoldFontTextView
+                    android:id="@+id/tvForgotPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="22dp"
+                    android:padding="5dp"
+                    android:text="@string/forgot_password"
+                    android:textAllCaps="false"
+                    android:textColor="@color/green"
+                    android:textSize="12sp" />
+
+            <com.jobsforher.customviews.CustomFontButton
+                    android:id="@+id/btnNormalLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="22dp"
+                    android:background="@drawable/curved_green"
+                    android:text="@string/sign_in"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+
+            <com.jobsforher.customviews.CustomFontTextView
+                    android:id="@+id/tvSignup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="22dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/not_a_member_sign_up_here"
+                    android:textAllCaps="false"
+                    android:textColor="@color/darkestgrey"
+                    android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

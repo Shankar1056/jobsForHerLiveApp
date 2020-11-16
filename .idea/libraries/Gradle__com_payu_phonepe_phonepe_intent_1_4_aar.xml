@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: com.payu.phonepe:phonepe-intent:1.4@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/63cc956147f622528f322002383f519a/jetified-phonepe-intent-1.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/63cc956147f622528f322002383f519a/jetified-phonepe-intent-1.4/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/63cc956147f622528f322002383f519a/jetified-phonepe-intent-1.4/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/65c0abcc8a4b426e4ace98ed0e07fd27/jetified-phonepe-intent-1.4/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/65c0abcc8a4b426e4ace98ed0e07fd27/jetified-phonepe-intent-1.4/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/65c0abcc8a4b426e4ace98ed0e07fd27/jetified-phonepe-intent-1.4/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/modules-2/files-2.1/com.payu.phonepe/phonepe-intent/1.4/59e7334a8810c513f3608bc82573a6ccb601a9fa/phonepe-intent-1.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/modules-2/files-2.1/com.payu.phonepe/phonepe-intent/1.4/726be726095d67ce7e413934fc9cb199741cfae/phonepe-intent-1.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

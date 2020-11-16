@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.payu.samsungpay:samsungpay:1.0@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/56f1a093dd8126a552268d121edaadd4/jetified-samsungpay-1.0/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/56f1a093dd8126a552268d121edaadd4/jetified-samsungpay-1.0/jars/libs/walletsdk-unspecified.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/56f1a093dd8126a552268d121edaadd4/jetified-samsungpay-1.0/res" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/56f1a093dd8126a552268d121edaadd4/jetified-samsungpay-1.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/modules-2/files-2.1/com.payu.samsungpay/samsungpay/1.0/aa37570aae66a5c5d45873f5df17b674b0220562/samsungpay-1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/modules-2/files-2.1/com.payu.samsungpay/samsungpay/1.0/3d336c72294bd52973565e96ba11f53e6ea3b556/samsungpay-1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

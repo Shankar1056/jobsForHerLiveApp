@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@drawable/background_gradient">
+
+    <!-- HEADER -->
+    <include
+            android:id="@+id/top_header"
+            layout="@layout/toolbar_stages_with_buttons"/>
+
+    <!-- FOOTER -->
+    <LinearLayout
+            android:id="@+id/bottom_menu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true">
+
+        <!-- menu bar -->
+        <include
+                layout="@layout/layout_bottom"/>
+
+    </LinearLayout>
+
+    <!-- MAIN PART -->
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_header"
+            android:layout_above="@id/bottom_menu"
+            android:scrollbars="none">
+
+        <LinearLayout
+                android:id="@+id/sub_content_view"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:id="@+id/linear_ques_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_margin="30dp"
+                    android:orientation="vertical">
+
+                <com.jobsforher.customviews.CustomBoldFontTextView
+                        android:layout_width="match_parent"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        android:text="@string/starter_ques_skills"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:lines="2"
+                        android:textAlignment="textStart"
+                        android:layout_height="wrap_content"
+                        tools:ignore="RtlCompat"/>
+
+                <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:background="@drawable/curved_grey_border_new"
+                        android:layout_marginTop="5dp">
+
+                    <com.jobsforher.customviews.CustomFontEditText
+                            android:layout_width="wrap_content"
+                            android:id="@+id/etSkill"
+                            android:layout_height="42dp"
+                            android:textSize="12sp"
+                            android:maxLines="1"
+                            android:text="Product Design"
+                            android:textColor="@color/white"
+                            android:background="@null"
+                            android:singleLine="true"
+                            android:padding="5dp"/>
+
+                    <ImageView
+                            android:id="@+id/imageAddSkill"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="100dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_add_white" />
+
+                </RelativeLayout>
+
+                <com.plumillonforge.android.chipview.ChipView
+                        android:id="@+id/text_chip_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"/>
+
+                <Button
+                        android:id="@+id/btnOkThree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ok"
+                        android:backgroundTint="@color/white"
+                        android:textColor="#73F057"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:drawableEnd="@drawable/ic_checked"
+                        android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

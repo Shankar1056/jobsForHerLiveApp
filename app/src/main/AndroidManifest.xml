@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.jobsforher">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+
+    <permission
+            android:name="android.permission.INTERACT_ACROSS_USERS"
+            android:protectionLevel="signature" />
+
+    <uses-feature
+            android:name="android.hardware.camera.any"
+            android:required="true" />
+    <uses-feature
+            android:name="android.hardware.camera.autofocus"
+            android:required="false" />
+
+    <application
+            android:allowBackup="true"
+            android:fullBackupContent="@xml/backup_descriptor"
+            android:hardwareAccelerated="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:networkSecurityConfig="@xml/network_security_config"
+            android:roundIcon="@mipmap/ic_launcher"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <meta-data
+                android:name="com.google.firebase.messaging.default_notification_icon"
+                android:resource="@mipmap/ic_launcher" />
+        <meta-data
+                android:name="com.google.firebase.messaging.default_notification_color"
+                android:resource="@color/blue" />
+
+
+
+
+        <activity
+                android:name=".activities.ProfileView"
+                android:screenOrientation="portrait"></activity>
+        <activity
+                android:name=".activities.MyAlertDialog"
+                android:theme="@android:style/Theme.Translucent"></activity>
+        <activity
+                android:name=".activities.EmailLoginActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+                android:name=".activities.SignupActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+                android:name=".activities.ForgotPasswordActivity"
+                android:screenOrientation="portrait"></activity>
+        <!--<activity android:name=".activities.FPActivityNew">-->
+        <!--</activity>-->
+        <activity
+                android:name=".activities.ResetPasswordActivity"
+                android:screenOrientation="portrait"></activity>
+        <activity
+                android:name=".activities.OTPActivity"
+                android:screenOrientation="portrait"></activity>
+        <activity
+                android:name=".activities.SuccessPasswordActivity"
+                android:screenOrientation="portrait"></activity>
+        <activity
+                android:name=".activities.WelcomeActivity"
+                android:screenOrientation="portrait"></activity>
+        <activity
+                android:name=".activities.StageOfLifeActivity"
+                android:screenOrientation="portrait"></activity>
+        <activity
+                android:name=".activities.UploadPhotoActivity"
+                android:screenOrientation="portrait"></activity>
+        <activity
+                android:name=".activities.ShareDataActivity"
+                android:screenOrientation="portrait"></activity>
+
+        <meta-data
+                android:name="com.facebook.sdk.ApplicationId"
+                android:value="@string/facebook_app_id" />
+
+        <activity
+                android:name="com.facebook.FacebookActivity"
+                android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+                android:label="@string/app_name" />
+        <activity
+                android:name="com.facebook.CustomTabActivity"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".activities.LoginActivity"
+                android:screenOrientation="portrait" /> <!-- SplashActivity -->
+        <activity
+                android:name=".activities.ZActivityGroups"
+                android:screenOrientation="portrait"></activity>
+        <activity
+                android:name=".activities.ZActivityGroupsAllCategories"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.ZSplashActivity"
+                android:screenOrientation="portrait"></activity>
+        <activity
+                android:name=".activities.ZSplashActivityNew"
+                android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".activities.ViewPagerActivity"
+                android:screenOrientation="portrait"></activity>
+        <activity
+                android:name=".activities.ZActivityGroupsDetails"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
+                android:name=".activities.ZNotificationActivity"
+                android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name=".ZNotificationActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".activities.SignUpProcessActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.ZCreatePostActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+                android:name=".activities.ZActivityCommentPage"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.GroupInfoActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.GroupsCategoryPage"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.GroupCreateActivity"
+                android:windowSoftInputMode="stateVisible|adjustResize"></activity>
+        <activity
+                android:name=".activities.SignUpWelcomeActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustResize" />
+        <activity
+                android:name=".activities.SignInActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustResize" />
+        <activity
+                android:name=".activities.ZEditPostActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.ZEditPostHistoryActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.ZEditCommentActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.ZEditComentHistoryActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.ZEditReplyHistoryActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.SelectingLocationActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustResize" />
+        <activity
+                android:name=".activities.EducationActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustResize" />
+        <activity
+                android:name=".activities.LifeExperienceActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustResize" />
+        <activity
+                android:name=".activities.WorkExperienceActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustResize" />
+        <activity
+                android:name=".activities.AddProfileActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustResize" />
+        <activity
+                android:name=".activities.RestarterActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustResize" />
+        <activity
+                android:name=".activities.AwardsEdit"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustResize" />
+        <activity
+                android:name=".activities.CertificationEdit"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustResize" />
+        <activity
+                android:name=".activities.WebActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.ProfileSummaryEdit"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.WorkingEdit"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.ZActivityRepliesPage"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.EducationEdit"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustResize" />
+        <activity
+                android:name=".activities.LifeExperienceEdit"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustResize" />
+        <activity
+                android:name=".activities.ListViewActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.ZEditReplyActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.UpdateProfileActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+                android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+                android:name=".activities.ZActivityDashboard"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.ZActivityJobs"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+                android:name=".activities.ZActivityJobDetails"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.ZActivityCompanies"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+                android:name=".activities.ZActivityCompanyDetails"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.ZActivityEvents"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.ZActivityEventDetails"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.PayUMoneyActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.PaymentStatusActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.MainActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.MerchantCheckoutActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.HomePage"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.HomePagePreferences"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.Notification"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.DetailsNotificationActivity"
+                android:screenOrientation="portrait" />
+
+        <activity
+                android:name=".expert_chat.ExpertChatActivity"
+                android:screenOrientation="portrait" />
+
+        <activity
+                android:name=".activities.TestActivity"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activities.NewsFeed"
+                android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name=".NewsFeed" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".activities.CommentReplyActivity"
+                android:screenOrientation="portrait" />
+
+        <service
+                android:name=".services.MyFirebaseMessagingService"
+                android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".services.FcmTokenRegistrationService" />
+
+
+        <provider
+                android:name="androidx.core.content.FileProvider"
+                android:grantUriPermissions="true"
+                android:exported="false"
+                android:authorities="${applicationId}">
+
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/file_provider_paths"/>
+
+        </provider>
+
+
+    </application>
+
+</manifest>

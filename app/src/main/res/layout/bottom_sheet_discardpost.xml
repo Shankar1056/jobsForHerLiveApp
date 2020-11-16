@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="380dp"
+        android:orientation="vertical"
+              android:layout_height="wrap_content"
+              android:gravity="bottom"
+              android:background="@color/white">
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:padding="15dp">
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textStyle="bold"
+                  android:text="Are you sure?"/>
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="You want to exit from create post"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/discard_post"
+                  android:padding="15dp">
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:drawableLeft="@drawable/ic_dustbin"
+                  android:drawablePadding="10dp"
+                  android:text="Discard post"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/continue_post"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:padding="15dp">
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:drawableLeft="@drawable/ic_tick"
+                  android:textColor="@color/green"
+                  android:gravity="center_vertical"
+                  android:drawablePadding="10dp"
+                  android:text="Continue Editing"/>
+    </LinearLayout>
+
+
+</LinearLayout>

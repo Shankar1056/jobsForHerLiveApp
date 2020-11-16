@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:card_view="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        app:cardCornerRadius="3dp"
+        app:cardBackgroundColor="@color/white"
+        android:elevation="1dp"
+        app:cardElevation="1dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="10dp"
+        card_view:cardCornerRadius="3dp">
+
+    <LinearLayout
+            android:id="@+id/llCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lightestgrey"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/row_icon"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    app:civ_border_width="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="10dp"
+                    app:civ_border_color="@color/smsp_transparent_color"/>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/row_name"
+                        android:layout_weight="1"
+                        android:lines="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:paddingRight="8dp"
+                        android:text="Name"
+                        android:singleLine="true"/>
+                <TextView
+                        android:id="@+id/row_designation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/lightgrey"
+                        android:textSize="14sp"
+                        android:padding="2dp"
+                        android:text="Research"
+                        android:drawablePadding="2dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <at.blogc.android.views.ExpandableTextView
+                android:id="@+id/row_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/lightgrey"
+                android:text="DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription"
+                android:maxLines="1"
+                android:ellipsize="end"
+                app:animation_duration="750"/>
+
+        <TextView
+                android:id="@+id/seemore_test"
+                android:layout_marginTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue"
+                android:visibility="invisible"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"
+                android:singleLine="true"
+                android:text="See More"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+

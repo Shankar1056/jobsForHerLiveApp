@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/green">
+
+
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:src="@drawable/jfh_new_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/notifLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/img_profile_toolbar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_default_profile_icon"
+            app:civ_border_width="1dp"
+            android:layout_marginRight="10dp"
+            app:civ_border_color="@color/smsp_transparent_color"
+            android:layout_toStartOf="@+id/notifLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    <FrameLayout
+            style="?attr/actionButtonStyle"
+            android:id="@+id/notifLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:focusable="true"
+            app:layout_constraintEnd_toStartOf="@+id/img_profile_toolbar">
+
+        <ImageView
+                android:id="@+id/notificaton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/img_profile_toolbar"
+                android:paddingRight="5dp"
+                android:src="@drawable/ic_bell"
+                android:visibility="visible" />
+
+        <TextView
+                android:id="@+id/cart_badge"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right|end|top"
+                android:layout_marginEnd="-5dp"
+                android:layout_marginRight="-5dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/badge_background"
+                android:gravity="center"
+                android:visibility="visible"
+                android:padding="3dp"
+                android:textColor="@android:color/white"
+                android:text="0"
+                android:textSize="10sp" />
+
+    </FrameLayout>
+
+    <Button
+            android:id="@+id/sign_in"
+            android:layout_height="35dp"
+            android:layout_width="wrap_content"
+            android:text="SIGN IN"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:background="@drawable/curved_green_border_filled_white_adapter"
+            android:paddingLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

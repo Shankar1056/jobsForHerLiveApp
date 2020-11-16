@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.chivorns:smartmaterialspinner:1.1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c2534a1878ca41cbe65e197a3c6ef6a5/jetified-smartmaterialspinner-1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c2534a1878ca41cbe65e197a3c6ef6a5/jetified-smartmaterialspinner-1.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c2534a1878ca41cbe65e197a3c6ef6a5/jetified-smartmaterialspinner-1.1.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/6c1e938ad3dbe1fca64376361294de52/jetified-smartmaterialspinner-1.1.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/6c1e938ad3dbe1fca64376361294de52/jetified-smartmaterialspinner-1.1.0/res" />
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/6c1e938ad3dbe1fca64376361294de52/jetified-smartmaterialspinner-1.1.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/modules-2/files-2.1/com.github.chivorns/smartmaterialspinner/1.1.0/5e7931c9fa389a796cf7b4a0b70f02e5ece36962/smartmaterialspinner-1.1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/modules-2/files-2.1/com.github.chivorns/smartmaterialspinner/1.1.0/ca33bb209aa5402c31a05777fb482cd49fbaa9d6/smartmaterialspinner-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

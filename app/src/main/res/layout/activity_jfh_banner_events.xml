@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:background="@drawable/events_banner"
+             android:layout_height="wrap_content">
+    <!--<ImageView android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:scaleType="fitXY"-->
+    <!--android:id="@+id/image_banner"-->
+    <!--android:src="@drawable/jobs_banner"/>-->
+    <View
+            android:id="@+id/overlay"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:visibility="gone"
+            android:focusableInTouchMode="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+        <TextView
+                android:id="@+id/banner_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="JOBS for you to\n START, RESTART and RISE"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="Search by keyword, category,\n location, designation and company"/>
+
+        <EditText android:id="@+id/keyword"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@color/white"
+                  android:drawableRight="@drawable/ic_down_arrow"
+                  android:drawableTint="@color/menu_grey"
+                  android:layout_marginBottom="5dp"
+                  android:paddingRight="8dp"
+                  android:paddingLeft="15dp"
+                  android:paddingTop="5dp"
+                  android:paddingBottom="5dp"
+                  android:hint="Enter your keyword"/>
+        <EditText android:id="@+id/city"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@color/white"
+                  android:paddingRight="8dp"
+                  android:layout_marginBottom="5dp"
+                  android:drawableRight="@drawable/ic_down_arrow"
+                  android:drawableTint="@color/menu_grey"
+                  android:paddingLeft="15dp"
+                  android:paddingTop="5dp"
+                  android:paddingBottom="5dp"
+                  android:hint="City"/>
+        <MultiAutoCompleteTextView  android:id="@+id/functionalarea"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white"
+                                    android:visibility="gone"
+                                    android:paddingRight="8dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:drawableRight="@drawable/ic_down_arrow"
+                                    android:drawableTint="@color/menu_grey"
+                                    android:paddingLeft="15dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingBottom="5dp"
+                                    android:hint="Functional Area"/>
+        <MultiAutoCompleteTextView android:id="@+id/industry"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:background="@color/white"
+                                   android:visibility="gone"
+                                   android:paddingRight="8dp"
+                                   android:layout_marginBottom="5dp"
+                                   android:drawableRight="@drawable/ic_down_arrow"
+                                   android:drawableTint="@color/menu_grey"
+                                   android:paddingLeft="15dp"
+                                   android:paddingTop="5dp"
+                                   android:paddingBottom="5dp"
+                                   android:hint="Industry"/>
+        <EditText android:id="@+id/salary"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@color/white"
+                  android:visibility="gone"
+                  android:paddingRight="8dp"
+                  android:layout_marginBottom="5dp"
+                  android:drawableRight="@drawable/ic_down_arrow"
+                  android:drawableTint="@color/menu_grey"
+                  android:paddingLeft="15dp"
+                  android:paddingTop="5dp"
+                  android:paddingBottom="5dp"
+                  android:hint="Salary"/>
+        <EditText android:id="@+id/experience"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@color/white"
+                  android:visibility="gone"
+                  android:paddingRight="8dp"
+                  android:layout_marginBottom="5dp"
+                  android:drawableRight="@drawable/ic_down_arrow"
+                  android:drawableTint="@color/menu_grey"
+                  android:paddingLeft="15dp"
+                  android:paddingTop="5dp"
+                  android:paddingBottom="5dp"
+                  android:hint="Experience"/>
+        <LinearLayout
+                android:id="@+id/search_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@color/green"
+                android:orientation="horizontal">
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:background="@color/green"
+                      android:textColor="@color/white"
+                      android:padding="8dp"
+                      android:gravity="center"
+                      android:paddingTop="5dp"
+                      android:paddingBottom="5dp"
+                      android:drawableTint="@color/white"
+                      android:textAlignment="center"
+                      android:drawableLeft="@drawable/ic_search_24px"
+                      android:text="Search"/>
+        </LinearLayout>
+
+        <TextView android:id="@+id/search_toggle"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/white"
+                  android:layout_marginTop="10dp"
+                  android:layout_gravity="right"
+                  android:text="Advanced Search"/>
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+                name="model"
+                type="com.jobsforher.data.model.ExpertChatBody" />
+
+        <import type="com.jobsforher.helpers.HelperMethods"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/joinChat"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/curved_green"
+            android:fontFamily="@font/opensansregular"
+            android:text="@string/title_join_chat"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensansregular"
+            android:text="@{HelperMethods.getDateInMonthDay(model.date) + `|` + model.start_time + `to`+ model.end_time}"
+            android:textColor="@color/green"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/joinChat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/joinChat" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:background="@color/green"
+            app:layout_constraintEnd_toEndOf="@+id/dateTime"
+            app:layout_constraintStart_toStartOf="@+id/dateTime"
+            app:layout_constraintTop_toBottomOf="@+id/dateTime" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensanssemibold"
+            android:text="@{model.title}"
+            android:textColor="@color/text_black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/joinChat" />
+
+        <TextView
+            android:id="@+id/speaker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/opensansregular"
+            android:text="@{model.speaker + ` , `+ model.designation}"
+            android:textColor="@color/lightgrey"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <TextView
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensansregular"
+            android:text="On Group: "
+            android:textColor="@color/lightgrey"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/speaker" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:fontFamily="@font/opensansregular"
+            android:text="@{model.group_name}"
+            android:textColor="@color/text_black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/group"
+            app:layout_constraintTop_toBottomOf="@+id/speaker" />
+
+        <TextView
+            android:id="@+id/viewDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/title_view_details"
+            android:textColor="@color/blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/group" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/grey"
+            app:layout_constraintTop_toBottomOf="@+id/viewDetails" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

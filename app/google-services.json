@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "526681985993",
+    "firebase_url": "https://test-67a4a.firebaseio.com",
+    "project_id": "test-67a4a",
+    "storage_bucket": "test-67a4a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526681985993:android:44291b3f6cec244abb4e18",
+        "android_client_info": {
+          "package_name": "com.herleap.jobsforher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "526681985993-foj3sf3kumqus4aob3bhuvbph1sbr7fo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.herleap.jobsforher",
+            "certificate_hash": "3963e06b5dd4a962663ad7fe8f055ab61b8bb4fe"
+          }
+        },
+        {
+          "client_id": "526681985993-fm2jruagu6kbfs5ie5emo1fasp2rn78n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwkfNY1hN5K3eNT4IS9ijZnp1up8oqdj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "526681985993-fm2jruagu6kbfs5ie5emo1fasp2rn78n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526681985993:android:2d055c22c0ee587abb4e18",
+        "android_client_info": {
+          "package_name": "com.jobsforher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "526681985993-0frfqodqnrp56cds9ndbjnikr7ccav5s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jobsforher",
+            "certificate_hash": "12ae45f9ebef9e2adb46c508a38f73e72bd64b99"
+          }
+        },
+        {
+          "client_id": "526681985993-3eq8f7g0ohvh9oe2gb0r74ao5f9m4scm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jobsforher",
+            "certificate_hash": "9e8091c660f64ad195ac2d70038a429223eb3087"
+          }
+        },
+        {
+          "client_id": "526681985993-fm2jruagu6kbfs5ie5emo1fasp2rn78n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwkfNY1hN5K3eNT4IS9ijZnp1up8oqdj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "526681985993-fm2jruagu6kbfs5ie5emo1fasp2rn78n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

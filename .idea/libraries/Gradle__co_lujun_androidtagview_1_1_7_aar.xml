@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: co.lujun:androidtagview:1.1.7@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/19a5e722e3d03c46cf48fa6ab42db31f/jetified-androidtagview-1.1.7/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/19a5e722e3d03c46cf48fa6ab42db31f/jetified-androidtagview-1.1.7/res" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/19a5e722e3d03c46cf48fa6ab42db31f/jetified-androidtagview-1.1.7/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/modules-2/files-2.1/co.lujun/androidtagview/1.1.7/3bb5a31aa1616dd129731c8d085ac8a89d13499d/androidtagview-1.1.7-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/modules-2/files-2.1/co.lujun/androidtagview/1.1.7/e496bb3cdef0d46e8443e8806a17e207c7931092/androidtagview-1.1.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

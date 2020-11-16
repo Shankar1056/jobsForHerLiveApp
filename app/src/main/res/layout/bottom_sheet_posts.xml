@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="380dp"
+        android:orientation="vertical"
+              android:layout_height="wrap_content"
+              android:gravity="bottom"
+              android:background="@color/white">
+    <LinearLayout android:id="@+id/edit_report"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:padding="15dp">
+        <TextView android:id="@+id/reportedtext"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:drawableLeft="@drawable/ic_flag"
+                  android:drawablePadding="10dp"
+                  android:text="Report"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:visibility="gone"
+                  android:padding="15dp">
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:drawableLeft="@drawable/ic_unlink"
+                  android:drawablePadding="10dp"
+                  android:text="Copy Link"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:visibility="gone"
+                  android:padding="15dp">
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:drawableLeft="@drawable/ic_school_bell"
+                  android:drawablePadding="10dp"
+                  android:text="Turn On Post Notification"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:visibility="gone"
+                  android:padding="15dp">
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:drawableLeft="@drawable/ic_share_new"
+                  android:drawablePadding="10dp"
+                  android:text="Share Link"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/edit_post"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:padding="15dp">
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:drawableLeft="@drawable/ic_edit"
+                  android:drawablePadding="10dp"
+                  android:text="Edit Post"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/edit_post_history"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:padding="15dp">
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:drawableLeft="@drawable/ic_edit"
+                  android:drawablePadding="10dp"
+                  android:text="View Edit History"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:visibility="gone"
+                  android:padding="15dp">
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:drawableLeft="@drawable/ic_dustbin"
+                  android:drawablePadding="10dp"
+                  android:text="Delete Post"/>
+    </LinearLayout>
+</LinearLayout>

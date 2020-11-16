@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/herrising-app.iml" filepath="$PROJECT_DIR$/.idea/modules/herrising-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/herrising-app.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/herrising-app.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/linkedin-sdk/herrising-app.linkedin-sdk.iml" filepath="$PROJECT_DIR$/.idea/modules/linkedin-sdk/herrising-app.linkedin-sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sdkui/herrising-app.sdkui.iml" filepath="$PROJECT_DIR$/.idea/modules/sdkui/herrising-app.sdkui.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <!-- HEADER -->
+    <LinearLayout
+            android:id="@+id/top_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:padding="15dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+        <ImageView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close_white"
+                android:layout_weight=".1"/>
+
+        <TextView android:id="@+id/toptext"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Edit Post"
+                  android:textSize="18sp"
+                  android:textColor="@color/white"
+                  android:layout_weight=".7"/>
+
+        <TextView
+                android:id="@+id/create_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/post"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:textAlignment="textEnd"
+                android:layout_weight=".2"/>
+
+    </LinearLayout>
+
+    <!-- MAIN PART -->
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/top_header"
+            android:clipToPadding="false"
+            android:scrollbars="none">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                <!--<ImageView-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:padding="10dp"-->
+                <!--android:src="@drawable/ic_user"/>-->
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/group_icon_createpost"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_default_profile_icon"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_circle"
+                        android:layout_centerHorizontal="true"/>
+
+                <LinearLayout
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                    <com.jobsforher.customviews.CustomBoldFontTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ex_name"
+                            android:textColor="@android:color/holo_purple"
+                            android:textSize="22sp"
+                            android:id="@+id/createpost_username"/>
+
+
+                    <com.jobsforher.customviews.CustomFontTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="GroupName"
+                            android:lines="2"
+                            android:textSize="14sp"
+                            android:id="@+id/createpost_groupname"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <CheckBox android:id="@+id/pinned_id"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Pin this Post"
+                      android:checked="false"
+                      android:textColor="@color/lightgrey"
+                      android:textColorHint="@color/lightgrey"
+            />
+            <EditText
+                    android:id="@+id/textdescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/smsp_transparent_color"
+                    android:hint="@string/write_something_here"
+                    android:textSize="18sp"/>
+
+            <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"
+                    android:id="@+id/pick_image"/>
+
+            <EditText
+                    android:id="@+id/videoURL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    android:background="@color/smsp_transparent_color"
+                    android:hint="@string/add_video_url"
+                    android:textSize="18sp"/>
+
+            <Button android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/green"
+                    android:textColor="@color/white"
+                    android:text="Remove media"
+                    android:id="@+id/remove_media"/>
+
+            <!--<VideoView-->
+            <!--android:layout_width="250dp"-->
+            <!--android:layout_height="250dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:visibility="gone"-->
+            <!--android:id="@+id/pick_video"/>-->
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <!-- FOOTER -->
+    <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="0dp"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+        <!--<LinearLayout android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:visibility="gone"-->
+        <!--android:id="@+id/horizontal_bottom_menu" >-->
+        <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:src="@drawable/ic_post_image"/>-->
+        <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:src="@drawable/ic_post_video"/>-->
+        <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:src="@drawable/ic_camera"/>-->
+        <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:src="@drawable/ic_post_document"/>-->
+        <!--</LinearLayout>-->
+
+        <LinearLayout
+                android:id="@+id/bottom_menu"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#CFCACA"/>
+
+            <LinearLayout
+                    android:id="@+id/layout_pickimage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_post_image"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:paddingStart="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/add_photo_image"/>
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#9FCFCACA"/>
+
+            <LinearLayout
+                    android:id="@+id/layout_pickvideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_post_video"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:paddingStart="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/add_video"/>
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#9FCFCACA"/>
+
+            <LinearLayout
+                    android:id="@+id/layout_pickcolor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:padding="10dp">
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_camera"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:paddingStart="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/add_bg_colour"/>
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#9FCFCACA"/>
+
+            <LinearLayout
+                    android:id="@+id/layout_pickdocument"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_post_document"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:paddingStart="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/add_document"/>
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#CFCACA"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

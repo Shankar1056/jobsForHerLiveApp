@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:id="@+id/main"
+                android:layout_marginTop="55dp"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+    <androidx.core.widget.NestedScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:chip="http://schemas.android.com/tools"
+            android:id="@+id/mainScroll_jobss"
+            android:fillViewport="true"
+            android:layout_below="@id/login_view1"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:showIn="@layout/zactivity_companies"
+            tools:context=".activities.ZActivityCompanies"
+            android:layout_above="@id/bottombar"
+            android:background="@color/lightestgrey"
+            android:orientation="vertical">
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/curved_white_border_filled_white"
+                        android:layout_height="wrap_content">
+
+
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/lightestgrey"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="10dp"/>
+                </LinearLayout>
+                <androidx.core.widget.NestedScrollView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/mainScroll_jobs"
+                        tools:showIn="@layout/zactivity_groups"
+                        tools:context=".activities.ZActivityJobs"
+                        android:background="@color/lightestgrey"
+                        android:orientation="vertical">
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <!--commenting for new design-->
+                        <include layout="@layout/activity_jfh_banner_companies"
+                                android:visibility="gone"/>
+                        <!--comment over-->
+                        <LinearLayout
+                                android:id="@+id/filer_default_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:visibility="gone"
+                                android:orientation="vertical">
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                <EditText android:id="@+id/search_default"
+                                          android:layout_width="match_parent"
+                                          android:layout_height="35dp"
+                                          android:textSize="16dp"
+                                          android:paddingLeft="5dp"
+                                          android:padding="5dp"
+                                          android:layout_weight="1"
+                                          android:layout_marginTop="10dp"
+                                          android:layout_marginLeft="15dp"
+                                          android:hint="Search by Keywords"
+                                          android:background="@drawable/curved_border_white_3"
+                                />
+                                <ImageView
+                                        android:id="@+id/search_default_button"
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:layout_marginRight="15dp"
+                                        android:layout_marginTop="10dp"
+                                        android:src="@drawable/ic_search_button"/>
+
+
+                            </LinearLayout>
+
+
+                            <TextView android:id="@+id/complisting_tag"
+                                      android:layout_width="wrap_content"
+                                      android:layout_height="wrap_content"
+                                      android:text="'Java' not found!"
+                                      android:gravity="start"
+                                      android:textSize="16dp"
+                                      android:paddingLeft="10dp"
+                                      android:paddingRight="10dp"
+                                      android:layout_marginTop="10dp"
+                                      android:layout_marginStart="10dp"
+                                      android:textColor="@color/black"
+                                      android:fontFamily="@font/robotoregular"
+                                      android:textStyle="bold"/>
+
+                            <com.plumillonforge.android.chipview.ChipView
+                                    android:id="@+id/tag_group_comp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginBottom="10dp"
+                                    app:chip_background="@color/white"
+                                    app:chip_corner_radius="1dp"
+                                    app:chip_spacing="5dp"
+                                    app:chip_padding="5dp"
+                                    app:chip_side_padding="10dp"
+                                    chip:chip_background="@color/deep_orange"
+                                    chip:chip_background_selected="@color/blue_grey"
+                                    chip:chip_corner_radius="1dp"
+                                    chip:chip_line_spacing="20dp"
+                                    chip:chip_padding="10dp"
+                                    chip:chip_side_padding="10dp"
+                                    chip:chip_spacing="16dp"
+                                    chip:chip_background_res="@drawable/chip_selector" />
+
+                            <LinearLayout
+                                    android:id="@+id/layoutdefaultjob"
+                                    android:layout_width="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@drawable/curved_white_border_filled_white"
+                                    android:layout_height="wrap_content">
+
+                                <TextView android:id="@+id/def_text_comp"
+                                          android:layout_width="match_parent"
+                                          android:layout_height="wrap_content"
+                                          android:paddingLeft="10dp"
+                                          android:paddingRight="20dp"
+                                          android:textAlignment="center"
+                                          android:text="we haven't got any matches for your search at the moment. However, we have found some companies you might like:"
+                                          android:textSize="12dp"
+                                          android:textColor="@color/lightgrey"
+                                          android:layout_marginTop="5dp"
+                                          android:layout_marginStart="10dp"
+                                          android:fontFamily="@font/robotoregular"/>
+
+                                <Button android:id="@+id/find_morejobs"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:textAllCaps="false"
+                                        android:text="Find more"
+                                        android:background="@color/green"
+                                        android:textColor="@color/white"/>
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+                        <!--commenting for new design-->
+                        <LinearLayout
+                                android:id="@+id/layouttop"
+                                android:layout_width="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:visibility="gone"
+                                android:background="@drawable/curved_white_border_filled_white"
+                                android:layout_height="wrap_content">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Company"
+                                    android:gravity="start"
+                                    android:textSize="16dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="@font/robotoregular"
+                                    android:textStyle="bold"/>
+
+                            <at.blogc.android.views.ExpandableTextView
+                                    android:id="@+id/jobstext"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:textColor="@color/lightgrey"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginStart="10dp"
+                                    android:fontFamily="@font/robotoregular"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="20dp"
+                                    android:maxLines="5"
+                                    android:ellipsize="end"
+                                    android:justificationMode="inter_word"
+                                    app:animation_duration="750"
+                                    android:text="Find jobs in the best places to work in India, right here on JobsForHer. We have partnered with 6,500+ companies that are committed to increasing their workforce with talented and skilled women professionals, to offer you the most ideal jobs with a range of family-friendly benefits. Take your pick from the most popular and trending jobs in companies ranging from startups to large and medium enterprises. No matter what field you’re looking to enter, JobsForHer’s Companies platform has the right fit for you. Choose from IT (Information Technology) and Software companies, ITES (Information Technology Enabled Services), BFSI (Banking, Financial Service and Insurance), FMCG (Fast Moving Consumer Goods), Medical and Healthcare companies, E-Commerce companies and more. When you apply to the companies that have tied up with JobsForHer to offer work opportunities exclusively to women, you can be sure you get the best roles matching your skills and qualifications. Whether its teaching jobs, recruitment jobs, management consulting or even jobs in wellness/fitness/sports, JobsForHer’s Companies platform will have the right fit for you. Find out all you need to know about your dream company’s work culture and family-friendly policies on their specialised company page. Then, follow as many of your dream companies as you want to get instant updates on new jobs posted."/>
+
+                            <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/seemore_text"
+                                    android:layout_marginTop="3dp"
+                                    android:textSize="14dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:textColor="@color/blue"
+                                    android:singleLine="true"
+                                    android:text="See More"/>
+
+                            <!--<TextView-->
+                            <!--android:id="@+id/jobstext"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:paddingLeft="10dp"-->
+                            <!--android:paddingRight="20dp"-->
+                            <!--android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit,-->
+                            <!--sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.-->
+                            <!--Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea-->
+                            <!--commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum-->
+                            <!--dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,-->
+                            <!--sunt in culpa qui officia deserunt mollit anim id est laborum."-->
+                            <!--android:textSize="12dp"-->
+                            <!--android:textColor="@color/lightgrey"-->
+                            <!--android:layout_marginTop="5dp"-->
+                            <!--android:layout_marginStart="10dp"-->
+                            <!--android:fontFamily="@font/robotoregular"/>-->
+
+                        </LinearLayout>
+                        <!--comment over-->
+
+                        <LinearLayout
+                                android:id="@+id/layoutadd"
+                                android:layout_width="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@null"
+                                android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                <EditText android:id="@+id/search_companies"
+                                          android:layout_width="match_parent"
+                                          android:layout_height="35dp"
+                                          android:textSize="16dp"
+                                          android:paddingLeft="5dp"
+                                          android:padding="5dp"
+                                          android:layout_weight="1"
+                                          android:layout_marginTop="10dp"
+                                          android:layout_marginLeft="5dp"
+                                          android:hint="Search by Keywords"
+                                          android:background="@drawable/curved_border_white_3"
+                                />
+                                <ImageView
+                                        android:id="@+id/search_companies_button"
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_marginTop="10dp"
+                                        android:src="@drawable/ic_search_button"/>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/curved_white_border_filled_white"
+                                android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                    android:id="@+id/login_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginTop="5dp"
+                                    android:padding="10dp"
+                                    android:layout_marginStart="5dp">
+
+                                <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                    <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Featured"
+                                            android:textSize="16sp"
+                                            android:textAllCaps="true"
+                                            android:visibility="visible"
+                                            android:fontFamily="@font/robotoregular"
+                                            android:id="@+id/mygroups"/>
+
+                                    <View
+                                            android:id="@+id/mygroups_selected"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="3dp"
+                                            android:layout_marginTop="3dp"
+                                            android:visibility="visible"
+                                            android:background="@color/green"/>
+
+                                </LinearLayout>
+
+                                <View android:layout_width="1dp"
+                                      android:layout_height="match_parent"
+                                      android:layout_marginLeft="5dp"
+                                      android:background="@color/lightestgrey"/>
+
+                                <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                    <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Other"
+                                            android:textSize="16sp"
+                                            android:textAllCaps="true"
+                                            android:layout_marginStart="10dp"
+                                            android:fontFamily="@font/robotoregular"
+                                            android:visibility="visible"
+                                            android:id="@+id/featured"/>
+
+                                    <View
+                                            android:id="@+id/featured_selected"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="3dp"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="3dp"
+                                            android:visibility="gone"
+                                            android:background="@color/green"/>
+
+                                </LinearLayout>
+
+                                <!--<View android:layout_width="1dp"-->
+                                <!--android:layout_height="match_parent"-->
+                                <!--android:layout_marginLeft="5dp"-->
+                                <!--android:background="@color/lightestgrey"/>-->
+
+                                <!--<LinearLayout-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:orientation="vertical">-->
+
+                                <!--<TextView-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:text="@string/all"-->
+                                <!--android:textSize="16sp"-->
+                                <!--android:textAllCaps="true"-->
+                                <!--android:layout_marginStart="10dp"-->
+                                <!--android:fontFamily="@font/robotoregular"-->
+                                <!--android:visibility="visible"-->
+                                <!--android:id="@+id/all"/>-->
+
+                                <!--<View-->
+                                <!--android:id="@+id/all_selected"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="3dp"-->
+                                <!--android:layout_marginTop="3dp"-->
+                                <!--android:layout_marginStart="10dp"-->
+                                <!--android:visibility="gone"-->
+                                <!--android:background="@color/green"/>-->
+
+                                <!--</LinearLayout>-->
+
+                                <View
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"/>
+
+                                <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/filter"
+                                        android:textSize="16sp"
+                                        android:layout_gravity="end"
+                                        android:gravity="end"
+                                        android:textStyle="bold"
+                                        android:textAllCaps="true"
+                                        android:drawableStart="@drawable/ic_filter_groups"
+                                        android:drawablePadding="3dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:fontFamily="@font/robotoregular"
+                                        android:visibility="gone"
+                                        android:id="@+id/filter"/>
+
+                            </LinearLayout>
+
+                            <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/lightestgrey"
+                                    android:layout_marginStart="12dp"
+                                    android:layout_marginEnd="10dp"/>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recycler_view_groups"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:scrollbars="vertical"
+                                    android:nestedScrollingEnabled="false">
+
+                            </androidx.recyclerview.widget.RecyclerView>
+                            <TextView
+                                    android:id="@+id/empty_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:visibility="gone"
+                                    android:text="No data available" />
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginRight="4dp"
+                                    android:weightSum="2">
+                                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                                          android:text="Previous"
+                                          android:id="@+id/loadprev"
+                                          android:visibility="gone"
+                                          android:gravity="left"
+                                          android:textColor="@color/green"
+                                          android:layout_weight="1"/>
+                                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                                          android:text="Loading..."
+                                          android:id="@+id/loadnext"
+                                          android:visibility="visible"
+                                          android:gravity="right"
+                                          android:textColor="@color/green"
+                                          android:layout_weight="1"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+            </LinearLayout>
+            <!--</RelativeLayout>-->
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout
+            android:id="@+id/login_view1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="1dp"
+            android:visibility="gone"
+            android:padding="10dp"
+            android:animateLayoutChanges="true"
+            android:layout_marginStart="5dp">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FEATURED"
+                    android:textSize="16sp"
+                    android:textAllCaps="true"
+                    android:visibility="visible"
+                    android:fontFamily="@font/robotoregular"
+                    android:id="@+id/mygroups1"/>
+
+            <View
+                    android:id="@+id/mygroups_selected1"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="3dp"
+                    android:visibility="visible"
+                    android:background="@color/green"/>
+
+        </LinearLayout>
+
+        <View android:layout_width="1dp"
+              android:layout_height="match_parent"
+              android:layout_marginLeft="5dp"
+              android:background="@color/lightestgrey"/>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OTHER"
+                    android:textSize="16sp"
+                    android:textAllCaps="true"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:visibility="visible"
+                    android:id="@+id/featured1"/>
+
+            <View
+                    android:id="@+id/featured_selected1"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:visibility="gone"
+                    android:background="@color/green"/>
+
+        </LinearLayout>
+
+        <!--<View android:layout_width="1dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginLeft="5dp"-->
+        <!--android:background="@color/lightestgrey"/>-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/all"-->
+        <!--android:textSize="16sp"-->
+        <!--android:textAllCaps="true"-->
+        <!--android:layout_marginStart="10dp"-->
+        <!--android:fontFamily="@font/robotoregular"-->
+        <!--android:visibility="visible"-->
+        <!--android:id="@+id/all1"/>-->
+
+        <!--<View-->
+        <!--android:id="@+id/all_selected1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="3dp"-->
+        <!--android:layout_marginTop="3dp"-->
+        <!--android:layout_marginStart="10dp"-->
+        <!--android:visibility="gone"-->
+        <!--android:background="@color/green"/>-->
+
+        <!--</LinearLayout>-->
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filter"
+                android:textSize="16sp"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:textAllCaps="true"
+                android:drawableStart="@drawable/ic_filter_groups"
+                android:drawablePadding="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/robotoregular"
+                android:visibility="gone"
+                android:id="@+id/filter1"/>
+
+    </LinearLayout>
+    <RelativeLayout android:id="@+id/filter_bottom"
+                    android:gravity="bottom"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="40dp"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="0dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/green">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:drawableLeft="@drawable/ic_filter_groups"
+                  android:drawablePadding="8dp"
+                  android:textSize="15dp"
+                  android:drawableTint="@color/white"
+                  android:layout_centerInParent="true"
+                  android:layout_centerVertical="true"
+                  android:layout_marginBottom="12dp"
+                  android:textColor="@color/white"
+                  android:text="FILTER"/>
+    </RelativeLayout>
+    <include
+            android:id="@+id/bottombar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            layout="@layout/activity_footer" />
+</RelativeLayout>

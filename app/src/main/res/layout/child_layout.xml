@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent" android:layout_width="match_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView android:layout_height="wrap_content"
+              android:layout_width="match_parent"
+              android:id="@+id/child_txt"
+              android:paddingBottom="10dp"
+              android:paddingTop="10dp"
+              android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
+              android:text="child" android:textSize="20sp"
+              android:textColor="@color/menu_grey"/>
+
+</LinearLayout>

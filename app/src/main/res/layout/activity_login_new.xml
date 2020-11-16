@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        tools:context=".activities.EmailLoginActivity">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+                android:id="@+id/iv_Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back_dark_grey"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:contentDescription="@string/todo"/>
+
+        <TextView
+                android:id="@+id/headline1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:textAlignment="center"
+                android:text="@string/sign_up_as"
+                android:textColor="@color/darkgrey"
+                android:textSize="20sp"
+                android:lines="1"
+                android:layout_marginStart="-60dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp">
+
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/background_gradient">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="13dp"
+                            android:layout_height="wrap_content">
+
+                        <ImageView
+                                android:layout_width="84dp"
+                                android:src="@drawable/singuppic"
+                                android:scaleType="centerCrop"
+                                android:layout_height="84dp"/>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingStart="15dp"
+                                android:orientation="vertical">
+
+
+                            <com.jobsforher.customviews.CustomBoldFontTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/woman_accelator"
+                                    android:textColor="@color/text_dark_grey"
+                                    android:textSize="18sp"/>
+
+
+                            <com.jobsforher.customviews.CustomFontTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/who_wants_to_start"
+                                    android:textColor="@color/darkestgrey"
+                                    android:lines="2"
+                                    android:layout_marginTop="10dp"
+                                    android:textSize="14sp"/>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="230dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/ll_FacebookLogin"
+                            android:orientation="horizontal"
+                            android:background="@color/white">
+
+                        <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_margin="10dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/com_facebook_button_icon_blue"/>
+
+
+                        <com.jobsforher.customviews.CustomFontTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:text="@string/continue_with_facebook"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="230dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/ll_GoogleLogin"
+                            android:orientation="horizontal"
+                            android:background="@color/white">
+
+                        <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_margin="10dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/googleg_standard_color_18"/>
+
+
+                        <com.jobsforher.customviews.CustomFontTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:text="@string/continue_with_google"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/ll_LinkedInLogin"
+                            android:orientation="horizontal"
+                            android:background="@color/white">
+
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_linked_in_logo_of_two_letters"/>
+
+
+                        <com.jobsforher.customviews.CustomFontTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:text="@string/continue_with_linedin"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/btnSignUpWithEmail"
+                            android:orientation="horizontal"
+                            android:background="@color/white">
+
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_mail"/>
+
+
+                        <com.jobsforher.customviews.CustomFontTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:text="@string/signup_with_email"/>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                        <com.jobsforher.customviews.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:textColor="@color/text_dark_grey"
+                                android:text="@string/already_an_accelherator_"
+                        />
+                        <com.jobsforher.customviews.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="15dp"
+                                android:paddingBottom="15dp"
+                                android:textSize="14sp"
+                                android:id="@+id/tvSignInHere"
+                                android:layout_marginLeft="5dp"
+                                android:textColor="@color/text_dark_grey"
+                                android:text="@string/sign_in_here"/>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="13dp"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginRight="13dp"
+                        android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="13dp"
+                            android:layout_height="wrap_content">
+
+                        <ImageView
+                                android:layout_width="84dp"
+                                android:src="@drawable/backgroundimg"
+                                android:scaleType="centerCrop"
+                                android:layout_height="84dp"/>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="13dp"
+                                android:layout_gravity="center_vertical"
+                                android:orientation="vertical">
+
+
+                            <com.jobsforher.customviews.CustomFontTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/employ_her"
+                                    android:textColor="@color/black"
+                                    android:textSize="22sp"/>
+
+                            <com.jobsforher.customviews.CustomFontTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="7dp"
+                                    android:text="@string/who_wants_hire_top_woman"
+                                    android:textColor="@color/darkestgrey"
+                                    android:textSize="14sp"/>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="13dp"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginRight="13dp"
+                        android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="13dp"
+                            android:layout_height="wrap_content">
+
+                        <ImageView
+                                android:layout_width="84dp"
+                                android:src="@drawable/background_img_skill"
+                                android:scaleType="centerCrop"
+                                android:layout_height="84dp"/>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="13dp"
+                                android:layout_gravity="center_vertical"
+                                android:orientation="vertical">
+
+
+                            <com.jobsforher.customviews.CustomFontTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/reskillher"
+                                    android:textColor="@color/black"
+                                    android:textSize="22sp"
+                            />
+
+                            <com.jobsforher.customviews.CustomFontTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="7dp"
+                                    android:text="@string/who_wants_to_reskill"
+                                    android:textColor="@color/darkestgrey"
+                                    android:textSize="14sp"
+                            />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="13dp"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginRight="13dp"
+                        android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="13dp"
+                            android:layout_height="wrap_content">
+
+                        <ImageView
+                                android:layout_width="84dp"
+                                android:src="@drawable/backgroung_image"
+                                android:scaleType="centerCrop"
+                                android:layout_height="84dp"/>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="13dp"
+                                android:layout_gravity="center_vertical"
+                                android:orientation="vertical">
+
+
+                            <com.jobsforher.customviews.CustomFontTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/mentorher"
+                                    android:textColor="@color/black"
+                                    android:textSize="22sp"
+                            />
+
+                            <com.jobsforher.customviews.CustomFontTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="7dp"
+                                    android:text="@string/who_wants_to_guide"
+                                    android:textColor="@color/darkestgrey"
+                                    android:textSize="14sp"
+                            />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

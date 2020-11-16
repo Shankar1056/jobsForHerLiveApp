@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <include
+                    layout="@layout/toolbar_with_icon"/>
+
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:adjustViewBounds="true"
+                    android:layout_height="200dp"
+                    android:src="@drawable/woman"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/curved_grey_border_dark"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="-30dp"
+                    android:weightSum="1">
+
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:adjustViewBounds="true"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/mentor"
+                        android:padding="10dp"
+                        android:layout_weight=".3"/>
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="10dp">
+
+
+                    <com.jobsforher.customviews.CustomFontTextView
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="25sp"
+                            android:text="@string/women_in_tech"
+                            android:layout_gravity="left"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:layout_height="wrap_content"/>
+
+                    <com.jobsforher.customviews.CustomFontTextView
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:text="@string/open_group"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:padding="10dp"
+                            android:drawablePadding="10dp"
+                            android:drawableLeft="@drawable/ic_internet"
+                            android:layout_height="wrap_content"/>
+
+                    <com.jobsforher.customviews.CustomFontTextView
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:text="@string/members_550"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:padding="10dp"
+                            android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        <com.jobsforher.customviews.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:text="@string/invite"
+                                android:layout_gravity="left"
+                                android:background="@drawable/curved_grey_border_dark"
+                                android:gravity="left"
+                                android:padding="15dp"
+                                android:drawableRight="@drawable/ic_forward"
+                                android:drawablePadding="10dp"
+                                android:layout_height="wrap_content"/>
+
+                        <com.jobsforher.customviews.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:text="@string/joined"
+                                android:background="@drawable/curved_grey_border_filled_grey"
+                                android:layout_gravity="left"
+                                android:gravity="left"
+                                android:layout_marginLeft="5dp"
+                                android:drawableRight="@drawable/ic_drop_down_arrow"
+                                android:drawablePadding="10dp"
+                                android:padding="15dp"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="30dp"
+                    android:weightSum="4">
+
+                <com.jobsforher.customviews.CustomFontTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:text="@string/about_us"
+                        android:background="@drawable/curved_border"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:padding="15dp"
+                        android:layout_height="wrap_content"/>
+
+                <com.jobsforher.customviews.CustomFontTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:text="@string/posts"
+                        android:background="@drawable/curved_border"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:padding="15dp"
+                        android:layout_height="wrap_content"/>
+
+                <com.jobsforher.customviews.CustomFontTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:text="@string/photos"
+                        android:background="@drawable/curved_border"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:padding="15dp"
+                        android:layout_height="wrap_content"/>
+
+                <com.jobsforher.customviews.CustomFontTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:text="@string/videos"
+                        android:background="@drawable/curved_border"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:padding="15dp"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <com.jobsforher.customviews.CustomFontTextView
+                    android:layout_width="match_parent"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:text="@string/back"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:background="@color/lightgrey"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@drawable/ic_arrow_back_black"
+                    android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/curved_grey_border_dark"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="1">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/grey_border_background"
+                        android:padding="10dp"
+                        android:weightSum="1">
+
+                    <com.jobsforher.customviews.CustomFontTextView
+                            android:layout_width="0dp"
+                            android:layout_weight=".8"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:text="@string/create_post"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:background="@color/lightgrey"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="wrap_content"/>
+
+                    <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_close_black"
+                            android:layout_weight=".2"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:weightSum="1">
+
+                    <com.jobsforher.customviews.CustomFontEditText
+                            android:layout_width="0dp"
+                            android:layout_weight=".8"
+                            android:layout_height="52dp"
+                            android:hint="@string/write_something_here"
+                            android:textSize="12sp"
+                            android:padding="13dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:weightSum="1">
+
+                    <com.jobsforher.customviews.CustomFontTextView
+                            android:layout_width="0dp"
+                            android:layout_weight=".2"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:text="@string/add"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:background="@color/lightgrey"
+                            android:padding="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".4"
+                            android:orientation="vertical">
+
+                        <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                        <RadioButton
+                                android:id="@+id/radio_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="@color/green"
+                                android:text="@string/text"
+                                android:onClick="onRadioButtonClicked"
+                                android:textSize="14sp" />
+
+                        <RadioButton
+                                android:id="@+id/radio_video"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="@color/green"
+                                android:text="@string/video"
+                                android:onClick="onRadioButtonClicked"
+                                android:textSize="14sp" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".4"
+                            android:orientation="vertical">
+
+                        <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                            <RadioButton
+                                    android:id="@+id/radio_image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/green"
+                                    android:text="@string/image"
+                                    android:onClick="onRadioButtonClicked"
+                                    android:textSize="14sp" />
+                            <RadioButton
+                                    android:id="@+id/radio_document"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/green"
+                                    android:text="@string/document"
+                                    android:onClick="onRadioButtonClicked"
+                                    android:textSize="14sp" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:weightSum="1">
+
+
+                    <com.jobsforher.customviews.CustomFontTextView
+                            android:id="@+id/uploadText"
+                            android:layout_width="0dp"
+                            android:layout_weight=".4"
+                            android:textColor="#45090808"
+                            android:textSize="20sp"
+                            android:text="@string/upload"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:background="@drawable/curved_grey_border_dark"
+                            android:padding="10dp"
+                            android:drawablePadding="15dp"
+                            android:drawableLeft="@drawable/ic_uploadnew_"
+                            android:layout_height="wrap_content"/>
+
+                    <com.jobsforher.customviews.CustomFontTextView
+                            android:id="@+id/fileNameText"
+                            android:layout_width="0dp"
+                            android:layout_weight=".6"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:text="@string/filename_doc"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:padding="10dp"
+                            android:drawablePadding="15dp"
+                            android:drawableLeft="@drawable/ic_doc"
+                            android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+
+
+                <com.jobsforher.customviews.CustomFontTextView
+                        android:layout_width="match_parent"
+                        android:textColor="#45090808"
+                        android:textSize="14sp"
+                        android:text="@string/filetype_text"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:padding="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:weightSum="1">
+
+                    <com.jobsforher.customviews.CustomFontButton
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:textColor="@color/white"
+                            android:text="@string/post"
+                            android:layout_gravity="center"
+                            android:textSize="12sp"
+                            android:padding="15dp"
+                            android:textAllCaps="false"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/curved_green"
+                            android:layout_height="wrap_content"/>
+
+                    <com.jobsforher.customviews.CustomFontButton
+                            android:id="@+id/btnCancel"
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:textColor="@color/black"
+                            android:text="@string/cancel"
+                            android:layout_gravity="center"
+                            android:textSize="12sp"
+                            android:padding="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:textAllCaps="false"
+                            android:background="@drawable/curved_grey_border_dark"
+                            android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <com.jobsforher.customviews.CustomBoldFontTextView
+                    android:layout_width="match_parent"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:text="@string/posts"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content"/>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/curved_grey_border_dark"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:weightSum="1">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+            <ImageView android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+            android:layout_weight=".2"/>
+
+            <LinearLayout android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:orientation="vertical">
+
+                <com.jobsforher.customviews.CustomBoldFontTextView
+                        android:layout_width="match_parent"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:text="@string/ex_name"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:padding="5dp"
+                        android:layout_height="wrap_content"/>
+
+                <com.jobsforher.customviews.CustomFontTextView
+                        android:layout_width="match_parent"
+                        android:textColor="#70090808"
+                        android:textSize="14sp"
+                        android:text="@string/ex_post_time"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:padding="5dp"
+                        android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_more_horiz_black"/>
+
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#70090808"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+        <com.jobsforher.customviews.CustomFontTextView
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginTop="20dp"
+                android:text="@string/ex_post_text"
+                android:layout_gravity="left"
+                android:gravity="left"
+                android:padding="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/curved_grey_border_filled_">
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#5BB9B4B4"
+                    android:padding="15dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".2"
+                        android:src="@drawable/ic_doc"/>
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"
+                        android:orientation="vertical">
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+        </LinearLayout>
+
+</ScrollView>

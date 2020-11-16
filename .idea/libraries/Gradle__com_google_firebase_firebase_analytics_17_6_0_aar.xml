@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.firebase:firebase-analytics:17.6.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7005a25708699cf946bb4091d839e637/jetified-firebase-analytics-17.6.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cad1e770dcb027104d5f9ed64f611fa6/jetified-firebase-analytics-17.6.0/res" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/cad1e770dcb027104d5f9ed64f611fa6/jetified-firebase-analytics-17.6.0/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/cad1e770dcb027104d5f9ed64f611fa6/jetified-firebase-analytics-17.6.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/cad1e770dcb027104d5f9ed64f611fa6/jetified-firebase-analytics-17.6.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/modules-2/files-2.1/com.google.firebase/firebase-analytics/17.6.0/6a8b08d2a93001c8d089863beda57683994fb63d/firebase-analytics-17.6.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

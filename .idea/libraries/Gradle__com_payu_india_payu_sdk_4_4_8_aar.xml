@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.payu.india:payu-sdk:4.4.8@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/d511adf012a894c61f45f2dd56881699/jetified-payu-sdk-4.4.8/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/d511adf012a894c61f45f2dd56881699/jetified-payu-sdk-4.4.8/res" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/d511adf012a894c61f45f2dd56881699/jetified-payu-sdk-4.4.8/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/modules-2/files-2.1/com.payu.india/payu-sdk/4.4.8/260e9d1cdec55986c2940d94c3dd1b30719fcb02/payu-sdk-4.4.8-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/modules-2/files-2.1/com.payu.india/payu-sdk/4.4.8/73b99854f7d6f591024f1af40f7511d0c9a0d04e/payu-sdk-4.4.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

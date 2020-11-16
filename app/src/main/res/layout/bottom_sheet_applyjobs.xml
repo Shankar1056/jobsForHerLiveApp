@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:orientation="vertical"
+                  android:layout_height="wrap_content"
+                  android:gravity="bottom"
+            android:focusableInTouchMode="true"
+                  android:background="@color/white">
+
+        <TextView android:id="@+id/reportedtext"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textSize="16dp"
+                  android:padding="10dp"
+                  android:textStyle="bold"
+                  android:textColor="@color/greyseparator"
+                  android:drawableRight="@drawable/ic_close_black"
+                  android:text="Select Resume"/>
+        <View android:layout_width="match_parent" android:layout_height="2dp"
+              android:background="@color/lightestgrey1"/>
+        <LinearLayout android:id="@+id/edit_post"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:paddingLeft="15dp"
+                      android:paddingTop="15dp"
+                      android:paddingRight="15dp"
+                      android:orientation="vertical">
+            <TextView android:id="@+id/jobname"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textSize="14dp"
+                      android:textColor="#484848"
+                      android:lines="2"
+                      android:fontFamily="@font/opensansbold"
+                      android:text="JobName"/>
+            <LinearLayout android:id="@+id/add_resume"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical">
+
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:textSize="12dp"
+                          android:fontFamily="@font/opensansregular"
+                          android:textStyle="bold"
+                          android:textColor="#484848"
+                          android:lines="2"
+                          android:text="Use the options below to upload your resume"/>
+                <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left">
+
+                    <RadioButton
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Saved on phone"
+                            android:checked="false"
+                            android:textSize="12dp" />
+
+                    <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Saved in Google Drive"
+                            android:checked="false"
+                            android:textSize="12dp"/>
+                    <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Saved in Dropbox"
+                            android:checked="false"
+                            android:textSize="12dp"/>
+                </RadioGroup>
+
+                <RelativeLayout
+                        android:id="@+id/upload_doc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/curved_grey_border_nofill"
+                        android:padding="10dp"
+                        android:orientation="horizontal">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:drawableTint="@color/green"
+                            android:drawableLeft="@drawable/ic_upload"
+                            android:layout_centerHorizontal="true"
+                            android:drawablePadding="15dp"
+                            android:text="Upload Resume*"/>
+                </RelativeLayout>
+                <!--<Button android:id="@+id/upload_doc"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:background="@drawable/curved_grey_border_filled"-->
+                <!--android:text="Upload Resume*"/>-->
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text=""
+                        android:visibility="visible"/>
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/resume_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:visibility="gone"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:nestedScrollingEnabled="false"
+                    android:fadeScrollbars="false"
+                    android:scrollbars="vertical"
+            />
+
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/add_resume_title"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:visibility="visible"
+                      android:paddingLeft="15dp"
+                      android:paddingTop="15dp"
+                      android:paddingRight="15dp"
+                      android:orientation="vertical">
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:drawablePadding="10dp"
+                      android:id="@+id/title"
+                      android:textColor="@color/lightgrey"
+                      android:text="Add Resume Title*"/>
+            <EditText android:id="@+id/resumeTitle"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:drawablePadding="10dp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:visibility="visible"
+                      android:id="@+id/mobile_layout"
+                      android:paddingLeft="15dp"
+                      android:paddingTop="5dp"
+                      android:paddingRight="15dp"
+                      android:orientation="vertical">
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:drawablePadding="10dp"
+                      android:textColor="@color/lightgrey"
+                      android:text="Enter Mobile Number*"/>
+            <EditText android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:drawablePadding="10dp"
+                      android:inputType="number"
+                      android:id="@+id/mobile"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:visibility="visible"
+                      android:id="@+id/note_layout"
+                      android:paddingLeft="15dp"
+                      android:paddingTop="5dp"
+                      android:paddingRight="15dp"
+                      android:orientation="vertical">
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:drawablePadding="10dp"
+                      android:textColor="@color/lightgrey"
+                      android:text="Add a note to employer (Optional)"/>
+            <EditText android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:lines="2"
+                      android:id="@+id/note"
+                      android:drawablePadding="10dp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:visibility="gone"
+                      android:paddingTop="15dp"
+                      android:paddingBottom="15dp"
+                      android:layout_gravity="center_horizontal"
+                      android:orientation="horizontal">
+            <Button android:id="@+id/cancel_pref"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_marginRight="30dp"
+                    android:textColor="@color/greyseparator"
+                    android:text="Cancel"/>
+            <Button android:id="@+id/save_pref"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:background="@color/green"
+                    android:text="Save"/>
+        </LinearLayout>
+        <Button android:id="@+id/apply_pref"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:visibility="visible"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@color/green"
+                android:text="Apply"/>
+    </LinearLayout>
+</ScrollView>

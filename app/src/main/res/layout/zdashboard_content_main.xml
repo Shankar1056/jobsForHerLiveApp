@@ -1,0 +1,2312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:id="@+id/main"
+                android:layout_marginTop="55dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+    <androidx.core.widget.NestedScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:chip="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/mainScroll_jobss"
+            android:layout_above="@id/bottombar"
+            android:fillViewport="true"
+            android:layout_below="@id/emailverify_bottom"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:showIn="@layout/zactivity_jobs"
+            tools:context=".activities.ZActivityJobs"
+            android:background="@color/lightestgrey"
+            android:orientation="vertical">
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <androidx.core.widget.NestedScrollView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/mainScroll_jobs"
+                        tools:showIn="@layout/zactivity_dashboard"
+                        tools:context=".activities.ZActivityDashboard"
+                        android:background="@color/lightestgrey"
+                        android:orientation="vertical">
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <!--Dashboard-->
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:layout_margin="10dp"
+                                      android:layout_marginTop="6dp"
+                                      android:padding="12dp"
+                                      android:background="@drawable/curved_white_border_filled_white"
+                                      android:orientation="horizontal">
+
+                            <TextView android:id="@+id/dashboard"
+                                      android:layout_marginTop="3dp"
+                                      android:layout_width="wrap_content"
+                                      android:layout_height="wrap_content"
+                                      android:drawableLeft="@drawable/ic_dashboard_fill"
+                                      android:drawablePadding="5dp"
+                                      android:textSize="16dp"
+                                      android:layout_weight="1"
+                                      android:textColor="@color/menu_grey"
+                                      android:textStyle="bold"
+                                      android:singleLine="true"
+                                      android:text="Dashboard"/>
+
+                            <Button android:id="@+id/edit_profile"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="right"
+                                    android:layout_marginRight="5dp"
+                                    android:textSize="10dp"
+                                    android:textAllCaps="false"
+                                    android:text="Edit Profile"
+                                    android:background="@drawable/curved_grey_border_nofill"
+                                    android:textColor="@color/menu_grey"/>
+
+                            <Button android:id="@+id/view_profile"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="right"
+                                    android:textSize="10dp"
+                                    android:textAllCaps="false"
+                                    android:text="View Profile"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@color/green"
+                                    android:textColor="@color/white"/>
+
+                            <Button
+                                    android:layout_width="15dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="right"
+                                    android:visibility="gone"
+                                    android:textAllCaps="false"
+                                    android:text="&#8942;"
+                                    android:background="@drawable/curved_grey_border_nofill"
+                                    android:textColor="@color/menu_grey"/>
+                        </LinearLayout>
+
+                        <!--Profile Information-->
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/curved_white_border_filled_white">
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:orientation="horizontal"
+                            >
+                                <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:orientation="vertical">
+                                    <!--<RelativeLayout-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:background="#00000000"-->
+                                    <!--android:padding="10dp">-->
+
+<!--                                    <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                                            android:id="@+id/group_icon"-->
+<!--                                            android:layout_marginRight="5dp"-->
+<!--                                            android:layout_marginTop="15dp"-->
+<!--                                            android:layout_marginLeft="5dp"-->
+<!--                                            android:src="@drawable/ic_user"-->
+<!--                                            android:layout_width="80dp"-->
+<!--                                            android:layout_height="80dp"-->
+<!--                                            android:layout_gravity="center"-->
+<!--                                            android:background="@drawable/bg_circle"-->
+<!--                                            android:layout_centerHorizontal="true"/>-->
+
+                                    <info.abdolahi.CircularMusicProgressBar
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:id="@+id/group_icon"
+                                            android:layout_marginRight="5dp"
+                                            android:layout_marginTop="15dp"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_width="80dp"
+                                            android:layout_height="80dp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/ic_user"
+                                            app:border_color="@color/white"
+                                            app:border_width="3dp"
+                                            app:centercircle_diammterer="5"
+                                            app:progress_color="@color/green"
+                                            app:progress_startAngle="270"
+                                            app:draw_anticlockwise="false"
+                                            app:enable_touch="false"/>
+                                    <!--<ProgressBar-->
+                                    <!--android:id="@+id/progressBar"-->
+                                    <!--android:layout_width="80dp"-->
+                                    <!--android:layout_height="80dp"-->
+                                    <!--android:indeterminate="true"-->
+                                    <!--android:padding="1dp"-->
+                                    <!--android:backgroundTint="@color/green"-->
+                                    <!--android:indeterminateDrawable="@drawable/progress"-->
+                                    <!--android:progressDrawable="@drawable/circular_progress_bar"-->
+                                    <!--android:max="100"-->
+                                    <!--android:progress="65"-->
+                                    <!--android:layout_alignLeft="@+id/group_icon"-->
+                                    <!--android:layout_alignTop="@+id/group_icon"-->
+                                    <!--/>-->
+
+
+                                    <ImageView
+                                            android:layout_width="15dp"
+                                            android:layout_height="15dp"
+                                            android:visibility="gone"
+                                            android:layout_marginTop="-26dp"
+                                            android:layout_marginLeft="38dp"
+                                            android:tint="@color/white"
+                                            android:src="@drawable/ic_edit"/>
+                                    <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="10dp"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_marginTop="10dp"
+                                            android:id="@+id/percentage_text"
+                                            android:text="100% Complete"/>
+                                    <!--</RelativeLayout>-->
+                                    <!--<TextView android:id="@+id/stagetype"-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_marginTop="10dp"-->
+                                    <!--android:gravity="center"-->
+                                    <!--android:text="Restarter"/>-->
+                                </LinearLayout>
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginRight="15dp"
+                                        android:orientation="vertical">
+                                    <LinearLayout android:layout_width="match_parent"
+                                                  android:layout_height="22dp"
+                                                  android:layout_marginTop="10dp"
+                                                  android:orientation="horizontal">
+
+                                        <TextView android:id="@+id/stagetype"
+                                                  android:layout_width="wrap_content"
+                                                  android:layout_height="wrap_content"
+                                                  android:layout_weight="1"
+                                                  android:textStyle="bold"
+                                                  android:textAllCaps="true"
+                                                  android:textColor="#f5a442"
+                                                  android:gravity="start"
+                                                  android:text="Restarter"/>
+                                        <ImageView
+                                                android:id="@+id/edit_icon"
+                                                android:layout_width="15dp"
+                                                android:layout_height="15dp"
+                                                android:layout_marginRight="2dp"
+                                                android:tint="@color/green"
+                                                android:layout_weight="0.1"
+                                                android:layout_marginTop="16dp"
+                                                android:layout_gravity="right|end"
+                                                android:src="@drawable/ic_edit"/>
+                                    </LinearLayout>
+                                    <!--<ImageView-->
+                                    <!--android:id="@+id/edit_icon"-->
+                                    <!--android:layout_width="15dp"-->
+                                    <!--android:layout_height="15dp"-->
+                                    <!--android:layout_marginRight="2dp"-->
+                                    <!--android:tint="@color/green"-->
+                                    <!--android:layout_marginTop="6dp"-->
+                                    <!--android:layout_gravity="right|end"-->
+                                    <!--android:src="@drawable/ic_edit"/>-->
+                                    <!--<TextView android:id="@+id/stagetype"-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_marginTop="10dp"-->
+                                    <!--android:textStyle="bold"-->
+                                    <!--android:textAllCaps="true"-->
+                                    <!--android:textColor="#f5a442"-->
+                                    <!--android:gravity="start"-->
+                                    <!--android:text="Restarter"/>-->
+                                    <TextView
+                                            android:id="@+id/groupname"
+                                            android:layout_marginTop="3dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/black"
+                                            android:layout_marginBottom="1dp"
+                                            android:textSize="14dp"
+                                            android:textStyle="bold"
+                                            android:singleLine="true"
+                                            android:text="Name"/>
+                                    <TextView
+                                            android:id="@+id/degree"
+                                            android:layout_marginTop="3dp"
+                                            android:textColor="@color/profileview_grey"
+                                            android:layout_width="match_parent"
+                                            android:textSize="10dp"
+                                            android:drawablePadding="3dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Degree"/>
+                                    <TextView
+                                            android:id="@+id/degreeValue"
+                                            android:textColor="@color/profileview_textgrey"
+                                            android:layout_width="match_parent"
+                                            android:textSize="12dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Engineering"/>
+                                    <TextView
+                                            android:id="@+id/instittion"
+                                            android:layout_marginTop="3dp"
+                                            android:textColor="@color/profileview_grey"
+                                            android:layout_width="match_parent"
+                                            android:textSize="10dp"
+                                            android:drawablePadding="3dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Institution"/>
+                                    <TextView
+                                            android:id="@+id/institutionValue"
+                                            android:textColor="@color/profileview_textgrey"
+                                            android:layout_width="match_parent"
+                                            android:textSize="12dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Bangalore University"/>
+                                    <TextView
+                                            android:id="@+id/caption"
+                                            android:layout_marginTop="3dp"
+                                            android:textColor="@color/profileview_grey"
+                                            android:layout_width="match_parent"
+                                            android:textSize="10dp"
+                                            android:drawablePadding="3dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Caption"/>
+                                    <TextView
+                                            android:id="@+id/captionValue"
+                                            android:textColor="@color/profileview_textgrey"
+                                            android:layout_width="match_parent"
+                                            android:textSize="12dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Caption......"/>
+                                    <TextView
+                                            android:id="@+id/previous"
+                                            android:layout_marginTop="3dp"
+                                            android:textColor="@color/profileview_grey"
+                                            android:layout_width="match_parent"
+                                            android:textSize="10dp"
+                                            android:drawablePadding="3dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Previous"/>
+                                    <TextView
+                                            android:id="@+id/previousValue"
+                                            android:textColor="@color/profileview_textgrey"
+                                            android:layout_width="match_parent"
+                                            android:textSize="12dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="CEO, Founder"/>
+                                    <TextView
+                                            android:id="@+id/designation"
+                                            android:layout_marginTop="3dp"
+                                            android:textColor="@color/profileview_grey"
+                                            android:layout_width="match_parent"
+                                            android:textSize="10dp"
+                                            android:drawablePadding="3dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Designation"/>
+                                    <TextView
+                                            android:id="@+id/designationValue"
+                                            android:textColor="@color/profileview_textgrey"
+                                            android:layout_width="match_parent"
+                                            android:textSize="12dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="CEO, Founder"/>
+                                    <TextView
+                                            android:id="@+id/company"
+                                            android:layout_marginTop="3dp"
+                                            android:textColor="@color/profileview_grey"
+                                            android:layout_width="match_parent"
+                                            android:textSize="10dp"
+                                            android:drawablePadding="3dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Company"/>
+                                    <TextView
+                                            android:id="@+id/companyValue"
+                                            android:textColor="@color/profileview_textgrey"
+                                            android:layout_width="match_parent"
+                                            android:textSize="12dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="TCS"/>
+                                    <TextView
+                                            android:id="@+id/location"
+                                            android:layout_marginTop="3dp"
+                                            android:textColor="@color/profileview_grey"
+                                            android:layout_width="match_parent"
+                                            android:textSize="10dp"
+                                            android:drawablePadding="3dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Location"/>
+                                    <TextView
+                                            android:id="@+id/locationValue"
+                                            android:textColor="@color/profileview_textgrey"
+                                            android:layout_width="match_parent"
+                                            android:textSize="12dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Bangalore"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                            >
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginRight="10dp">
+                                    <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginRight="15dp"
+                                            android:orientation="vertical">
+                                        <TextView
+                                                android:id="@+id/followers_id"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textColor="@color/black"
+                                                android:textSize="14dp"
+                                                android:textStyle="bold"
+                                                android:text="0"/>
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textSize="12dp"
+                                                android:text="Followers"/>
+
+                                    </LinearLayout>
+                                    <View android:layout_width="2dp"
+                                          android:layout_height="match_parent"
+                                          android:layout_marginTop="2dp"
+                                          android:layout_marginBottom="2dp"
+                                          android:layout_marginRight="15dp"
+                                          android:background="@color/lightestgrey1"/>
+                                    <LinearLayout
+                                            android:id="@+id/following_id_layout"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+                                        <TextView
+                                                android:id="@+id/following_id"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textColor="@color/black"
+                                                android:textSize="14dp"
+                                                android:textStyle="bold"
+                                                android:text="0"/>
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textSize="12dp"
+                                                android:text="Following"/>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <!--Horizontal scrollview-->
+                        <HorizontalScrollView android:id="@+id/horizontal_layout"
+                                              android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:layout_marginTop="10dp"
+                                              android:scrollbars="none"
+                                              android:layout_marginLeft="10dp"
+                                              android:layout_marginRight="10dp"
+                                              android:background="@drawable/curved_white_border_filled_white"
+                                              android:fillViewport="true">
+                            <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                <LinearLayout android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content"
+                                              android:orientation="vertical">
+                                    <Button android:id="@+id/dash_myjobs"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@null"
+                                            android:textColor="@color/green"
+                                            android:paddingLeft="10dp"
+                                            android:paddingRight="10dp"
+                                            android:textAllCaps="false"
+                                            android:text="My Jobs" />
+                                    <View android:layout_width="match_parent"
+                                          android:layout_height="3dp"
+                                          android:id="@+id/dash_myjobs_selected"
+                                          android:visibility="visible"
+                                          android:background="@color/green"/>
+                                </LinearLayout>
+
+                                <View android:layout_width="1dp"
+                                      android:layout_height="20dp"
+                                      android:layout_gravity="center_vertical"
+                                      android:background="@color/lightestgrey1"/>
+                                <LinearLayout android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content"
+                                              android:orientation="vertical">
+                                    <Button android:id="@+id/dash_mygroups"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:paddingLeft="10dp"
+                                            android:paddingRight="10dp"
+                                            android:textAllCaps="false"
+                                            android:background="@null"
+                                            android:text="My Groups" />
+                                    <View android:layout_width="match_parent"
+                                          android:layout_height="3dp"
+                                          android:id="@+id/dash_mygroups_selected"
+                                          android:visibility="gone"
+                                          android:background="@color/green"/>
+                                </LinearLayout>
+
+                                <View android:layout_width="1dp"
+                                      android:layout_height="20dp"
+                                      android:layout_gravity="center_vertical"
+                                      android:background="@color/lightestgrey1"/>
+                                <LinearLayout android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content"
+                                              android:orientation="vertical">
+                                    <Button android:id="@+id/dash_mycompanies"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:paddingLeft="10dp"
+                                            android:paddingRight="10dp"
+                                            android:textAllCaps="false"
+                                            android:background="@null"
+                                            android:text="My Companies" />
+                                    <View android:layout_width="match_parent"
+                                          android:layout_height="3dp"
+                                          android:id="@+id/dash_mycompanies_selected"
+                                          android:visibility="gone"
+                                          android:background="@color/green"/>
+                                </LinearLayout>
+
+                                <View android:layout_width="1dp"
+                                      android:layout_height="20dp"
+                                      android:layout_gravity="center_vertical"
+                                      android:background="@color/lightestgrey1"/>
+                                <LinearLayout android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content"
+                                              android:visibility="gone"
+                                              android:orientation="vertical">
+                                    <Button android:id="@+id/dash_mymentors"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:paddingLeft="10dp"
+                                            android:paddingRight="10dp"
+                                            android:textAllCaps="false"
+                                            android:background="@null"
+                                            android:text="My Mentors" />
+                                    <View android:layout_width="match_parent"
+                                          android:layout_height="3dp"
+                                          android:id="@+id/dash_mymentors_selected"
+                                          android:visibility="gone"
+                                          android:background="@color/green"/>
+                                </LinearLayout>
+
+                                <View android:layout_width="1dp"
+                                      android:layout_height="20dp"
+                                      android:layout_gravity="center_vertical"
+                                      android:background="@color/lightestgrey1"/>
+                                <LinearLayout android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content"
+                                              android:orientation="vertical">
+                                    <Button android:id="@+id/dash_myevents"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:paddingLeft="10dp"
+                                            android:paddingRight="10dp"
+                                            android:textAllCaps="false"
+                                            android:background="@null"
+                                            android:text="My Events" />
+                                    <View android:layout_width="match_parent"
+                                          android:layout_height="3dp"
+                                          android:id="@+id/dash_myevents_selected"
+                                          android:visibility="gone"
+                                          android:background="@color/green"/>
+                                </LinearLayout>
+
+                                <View android:layout_width="1dp"
+                                      android:layout_height="20dp"
+                                      android:layout_gravity="center_vertical"
+                                      android:background="@color/lightestgrey1"/>
+                                <LinearLayout android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content"
+                                              android:orientation="vertical">
+                                    <Button android:id="@+id/dash_accnt_settings"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:paddingLeft="10dp"
+                                            android:paddingRight="10dp"
+                                            android:textAllCaps="false"
+                                            android:background="@null"
+                                            android:text="My Account Settings" />
+                                    <View android:layout_width="match_parent"
+                                          android:layout_height="3dp"
+                                          android:id="@+id/dash_accnt_settings_selected"
+                                          android:visibility="gone"
+                                          android:background="@color/green"/>
+                                </LinearLayout>
+
+                                <View android:layout_width="1dp"
+                                      android:layout_height="20dp"
+                                      android:layout_gravity="center_vertical"
+                                      android:background="@color/lightestgrey1"/>
+                                <LinearLayout android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content"
+                                              android:orientation="vertical">
+                                    <Button android:id="@+id/dash_my_preferences"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:paddingLeft="10dp"
+                                            android:paddingRight="10dp"
+                                            android:textAllCaps="false"
+                                            android:background="@null"
+                                            android:text="My Preferences" />
+                                    <View android:layout_width="match_parent"
+                                          android:layout_height="3dp"
+                                          android:id="@+id/dash_my_preferences_selected"
+                                          android:visibility="gone"
+                                          android:background="@color/green"/>
+                                </LinearLayout>
+
+                                <View android:layout_width="1dp"
+                                      android:layout_height="20dp"
+                                      android:layout_gravity="center_vertical"
+                                      android:background="@color/lightestgrey1"/>
+                                <LinearLayout android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content"
+                                              android:orientation="vertical">
+                                    <Button android:id="@+id/dash_manage_resume"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:paddingLeft="10dp"
+                                            android:paddingRight="10dp"
+                                            android:textAllCaps="false"
+                                            android:background="@null"
+                                            android:text="Manage Resume" />
+                                    <View android:layout_width="match_parent"
+                                          android:layout_height="3dp"
+                                          android:id="@+id/dash_manage_resume_selected"
+                                          android:visibility="gone"
+                                          android:background="@color/green"/>
+                                </LinearLayout>
+
+                                <View android:layout_width="1dp"
+                                      android:layout_height="20dp"
+                                      android:layout_gravity="center_vertical"
+                                      android:background="@color/lightestgrey1"/>
+                                <LinearLayout android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content"
+                                              android:orientation="vertical">
+                                    <Button android:id="@+id/dash_manage_jobalert"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:paddingLeft="10dp"
+                                            android:paddingRight="10dp"
+                                            android:textAllCaps="false"
+                                            android:background="@null"
+                                            android:text="Manage Job Alert" />
+                                    <View android:layout_width="match_parent"
+                                          android:layout_height="3dp"
+                                          android:id="@+id/dash_manage_jobalert_selected"
+                                          android:visibility="gone"
+                                          android:background="@color/green"/>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </HorizontalScrollView>
+
+                        <!--Jobs layout design-->
+                        <LinearLayout
+                                android:id="@+id/jobs_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="vertical"
+                                android:visibility="visible"
+                                android:background="@color/smsp_transparent_color">
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="vertical"
+                                    android:visibility="visible"
+                                    android:background="@color/white">
+                                <!--@drawable/curved_white_border_filled_white-->
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+                                    <TextView
+                                            android:layout_marginBottom="8dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/black"
+                                            android:text="JOBS"/>
+                                    <TextView
+                                            android:id="@+id/postsheader1"
+                                            android:layout_marginBottom="8dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_marginRight="12dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="#2680EB"
+                                            android:text="Find more jobs"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+                                    <LinearLayout android:id="@+id/rec_myjobs"
+                                                  android:layout_width="wrap_content"
+                                                  android:layout_height="wrap_content"
+                                                  android:layout_weight="1"
+                                                  android:background="@drawable/cardview_border"
+                                                  android:backgroundTint="@null"
+                                                  android:orientation="horizontal">
+                                        <Button android:id="@+id/rec_myjobs_button"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textColor="@color/green"
+                                                android:background="@null"
+                                                android:layout_weight="1"
+                                                android:textAllCaps="false"
+                                                android:text="Recommended Jobs" />
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="4"
+                                                android:textSize="12dp"
+                                                android:background="@drawable/circle_dashboard"
+                                                android:textColor="@android:color/white"
+                                                android:gravity="center"
+                                                android:id="@+id/mark1" />
+
+                                    </LinearLayout>
+                                    <LinearLayout android:id="@+id/app_myjobs"
+                                                  android:layout_width="wrap_content"
+                                                  android:layout_height="wrap_content"
+                                                  android:layout_weight="1"
+                                                  android:layout_marginLeft="2dp"
+                                                  android:background="@drawable/cardview_border"
+                                                  android:backgroundTint="@color/greyseparator_company"
+                                                  android:orientation="horizontal">
+                                        <Button android:id="@+id/app_myjobs_button"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:background="@null"
+                                                android:textAllCaps="false"
+                                                android:text="Applied Jobs" />
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="4"
+                                                android:textSize="12dp"
+                                                android:background="@drawable/greycircle_dashboard"
+                                                android:textColor="@android:color/white"
+                                                android:gravity="center"
+                                                android:id="@+id/mark2" />
+                                    </LinearLayout>
+                                    <LinearLayout android:id="@+id/sav_myjobs"
+                                                  android:layout_width="wrap_content"
+                                                  android:layout_height="wrap_content"
+                                                  android:layout_weight="1"
+                                                  android:layout_marginLeft="2dp"
+                                                  android:background="@drawable/cardview_border"
+                                                  android:backgroundTint="@color/greyseparator_company"
+                                                  android:orientation="horizontal">
+                                        <Button android:id="@+id/sav_myjobs_button"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:backgroundTint="@null"
+                                                android:layout_weight="1"
+                                                android:background="@null"
+                                                android:textAllCaps="false"
+                                                android:text="Saved Jobs" />
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="4"
+                                                android:textSize="12dp"
+                                                android:background="@drawable/greycircle_dashboard"
+                                                android:textColor="@android:color/white"
+                                                android:gravity="center"
+                                                android:id="@+id/mark3" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                                <View android:layout_width="match_parent" android:layout_height="1dp"
+                                      android:background="@color/lightestgrey"/>
+                                <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/posts_recycler_view"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="1dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:scrollbars="vertical"
+                                        android:nestedScrollingEnabled="false"
+                                />
+                                <TextView
+                                        android:id="@+id/default_company_jobs"
+                                        android:layout_marginTop="50dp"
+                                        android:layout_marginBottom="50dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_gravity="center"
+                                        android:textAlignment="center"
+                                        android:visibility="gone"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="There are no recommended jobs for you at the moment. Update your preferences to see jobs that are right for you."/>
+                                <TextView
+                                        android:id="@+id/seemore_jobs"
+                                        android:layout_marginBottom="8dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/blue"
+                                        android:singleLine="true"
+                                        android:text="See More"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--Groups layout design-->
+                        <LinearLayout
+                                android:id="@+id/groups_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="vertical"
+                                android:visibility="visible"
+                                android:background="@color/smsp_transparent_color">
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="vertical"
+                                    android:visibility="visible"
+                                    android:background="@color/white">
+                                <!--@drawable/curved_white_border_filled_white-->
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+                                    <TextView
+                                            android:layout_marginBottom="8dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/black"
+                                            android:text="GROUPS"/>
+                                    <TextView
+                                            android:id="@+id/groupssheader1"
+                                            android:layout_marginBottom="8dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_marginRight="12dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="#2680EB"
+                                            android:text="Join Groups"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+                                    <LinearLayout android:id="@+id/rec_groups"
+                                                  android:layout_width="wrap_content"
+                                                  android:layout_height="wrap_content"
+                                                  android:layout_weight="1"
+                                                  android:paddingRight="5dp"
+                                                  android:background="@drawable/cardview_border"
+                                                  android:backgroundTint="@null"
+                                                  android:orientation="horizontal">
+                                        <Button android:id="@+id/rec_groups_button"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:backgroundTint="@null"
+                                                android:textColor="@color/green"
+                                                android:layout_weight="1"
+                                                android:background="@null"
+                                                android:textAllCaps="false"
+                                                android:text="Recommended Groups" />
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="4"
+                                                android:textSize="12dp"
+                                                android:background="@drawable/circle_dashboard"
+                                                android:textColor="@android:color/white"
+                                                android:gravity="center"
+                                                android:id="@+id/mark4" />
+                                    </LinearLayout>
+                                    <LinearLayout android:id="@+id/app_groups"
+                                                  android:layout_width="wrap_content"
+                                                  android:layout_height="wrap_content"
+                                                  android:layout_weight="1"
+                                                  android:layout_marginLeft="2dp"
+                                                  android:background="@drawable/cardview_border"
+                                                  android:backgroundTint="@color/greyseparator_company"
+                                                  android:orientation="horizontal">
+                                        <Button android:id="@+id/app_groups_button"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:paddingLeft="10dp"
+                                                android:paddingRight="10dp"
+                                                android:textAllCaps="false"
+                                                android:background="@null"
+                                                android:text="My Groups" />
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="4"
+                                                android:textSize="12dp"
+                                                android:background="@drawable/greycircle_dashboard"
+                                                android:textColor="@android:color/white"
+                                                android:gravity="center"
+                                                android:id="@+id/mark5" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                                <View android:layout_width="match_parent" android:layout_height="1dp"
+                                      android:background="@color/lightestgrey"/>
+                                <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/groups_recycler_view"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="1dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="5dp"
+                                        android:scrollbars="vertical"
+                                        android:nestedScrollingEnabled="false"
+                                />
+                                <TextView
+                                        android:id="@+id/default_company_groups"
+                                        android:layout_marginTop="50dp"
+                                        android:layout_marginBottom="50dp"
+                                        android:textAlignment="center"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_gravity="center"
+                                        android:visibility="gone"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="No groups found"/>
+                                <TextView
+                                        android:id="@+id/seemore_groups"
+                                        android:layout_marginBottom="8dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/blue"
+                                        android:singleLine="true"
+                                        android:text="See More"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--Companies layout design-->
+                        <LinearLayout
+                                android:id="@+id/companies_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="vertical"
+                                android:visibility="visible"
+                                android:background="@color/smsp_transparent_color">
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="vertical"
+                                    android:visibility="visible"
+                                    android:background="@color/white">
+                                <!--@drawable/curved_white_border_filled_white-->
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+                                    <TextView
+                                            android:layout_marginBottom="8dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textStyle="bold"
+                                            android:layout_weight="1"
+                                            android:textAllCaps="true"
+                                            android:textColor="@color/black"
+                                            android:text="companies"/>
+                                    <TextView
+                                            android:id="@+id/companiessheader1"
+                                            android:layout_marginBottom="8dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_marginRight="12dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="#2680EB"
+                                            android:text="Follow companies"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+                                    <LinearLayout android:id="@+id/rec_companies"
+                                                  android:layout_width="wrap_content"
+                                                  android:layout_height="wrap_content"
+                                                  android:layout_weight="1"
+                                                  android:paddingRight="5dp"
+                                                  android:background="@drawable/cardview_border"
+                                                  android:backgroundTint="@null"
+                                                  android:orientation="horizontal">
+                                        <Button android:id="@+id/rec_companies_button"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:backgroundTint="@null"
+                                                android:textColor="@color/green"
+                                                android:layout_weight="1"
+                                                android:background="@null"
+                                                android:textAllCaps="false"
+                                                android:text="Recommended Companies" />
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="4"
+                                                android:textSize="12dp"
+                                                android:background="@drawable/circle_dashboard"
+                                                android:textColor="@android:color/white"
+                                                android:gravity="center"
+                                                android:id="@+id/mark6" />
+                                    </LinearLayout>
+                                    <LinearLayout android:id="@+id/app_copanies"
+                                                  android:layout_width="wrap_content"
+                                                  android:layout_height="wrap_content"
+                                                  android:layout_weight="1"
+                                                  android:layout_marginLeft="2dp"
+                                                  android:background="@drawable/cardview_border"
+                                                  android:backgroundTint="@color/greyseparator_company"
+                                                  android:orientation="horizontal">
+                                        <Button android:id="@+id/app_copanies_button"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:paddingLeft="10dp"
+                                                android:paddingRight="10dp"
+                                                android:textAllCaps="false"
+                                                android:background="@null"
+                                                android:text="My Companies" />
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="4"
+                                                android:textSize="12dp"
+                                                android:background="@drawable/greycircle_dashboard"
+                                                android:textColor="@android:color/white"
+                                                android:gravity="center"
+                                                android:id="@+id/mark7" />
+
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <View android:layout_width="match_parent" android:layout_height="1dp"
+                                      android:background="@color/lightestgrey"/>
+                                <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/companies_recycler_view"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="1dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="5dp"
+                                        android:scrollbars="vertical"
+                                        android:nestedScrollingEnabled="false"
+                                />
+                                <TextView
+                                        android:id="@+id/default_company_companies"
+                                        android:layout_marginTop="50dp"
+                                        android:textAlignment="center"
+                                        android:layout_marginBottom="50dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_gravity="center"
+                                        android:visibility="gone"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="No groups found"/>
+                                <TextView
+                                        android:id="@+id/seemore_companies"
+                                        android:layout_marginBottom="8dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/blue"
+                                        android:singleLine="true"
+                                        android:text="See More"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--Mentors layout design-->
+                        <LinearLayout
+                                android:id="@+id/mentors_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+                                android:background="@color/smsp_transparent_color">
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="vertical"
+                                    android:visibility="visible"
+                                    android:background="@color/white">
+                                <!--@drawable/curved_white_border_filled_white-->
+                                <TextView
+                                        android:layout_marginBottom="8dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginLeft="12dp"
+                                        android:textStyle="bold"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/black"
+                                        android:text="MEntors"/>
+                                <View android:layout_width="match_parent" android:layout_height="1dp"
+                                      android:background="@color/lightestgrey"/>
+                                <androidx.recyclerview.widget.RecyclerView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="1dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="5dp"
+                                        android:scrollbars="vertical"
+                                        android:nestedScrollingEnabled="false"
+                                />
+                                <TextView
+                                        android:layout_marginTop="30dp"
+                                        android:layout_marginBottom="30dp"
+                                        android:layout_gravity="center"
+                                        android:visibility="gone"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="No mentors found"/>
+                                <TextView
+                                        android:layout_marginBottom="8dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/blue"
+                                        android:singleLine="true"
+                                        android:text="See More"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--Events layout design-->
+                        <LinearLayout
+                                android:id="@+id/events_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="vertical"
+                                android:visibility="visible"
+                                android:background="@color/smsp_transparent_color">
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="vertical"
+                                    android:visibility="visible"
+                                    android:background="@color/white">
+                                <!--@drawable/curved_white_border_filled_white-->
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+                                    <TextView
+                                            android:layout_marginBottom="8dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textStyle="bold"
+                                            android:layout_weight="1"
+                                            android:textAllCaps="true"
+                                            android:textColor="@color/black"
+                                            android:text="Events"/>
+                                    <TextView
+                                            android:id="@+id/eventssheader1"
+                                            android:layout_marginBottom="8dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_marginRight="12dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="#2680EB"
+                                            android:text="Join Events"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+                                    <LinearLayout android:id="@+id/rec_events"
+                                                  android:layout_width="wrap_content"
+                                                  android:layout_height="wrap_content"
+                                                  android:layout_weight="1"
+                                                  android:paddingRight="5dp"
+                                                  android:background="@drawable/cardview_border"
+                                                  android:backgroundTint="@null"
+                                                  android:orientation="horizontal">
+                                        <Button android:id="@+id/rec_events_button"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:backgroundTint="@null"
+                                                android:textColor="@color/green"
+                                                android:layout_weight="1"
+                                                android:background="@null"
+                                                android:textAllCaps="false"
+                                                android:text="Recommended Events" />
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="4"
+                                                android:textSize="12dp"
+                                                android:background="@drawable/circle_dashboard"
+                                                android:textColor="@android:color/white"
+                                                android:gravity="center"
+                                                android:id="@+id/mark8" />
+                                    </LinearLayout>
+                                    <LinearLayout android:id="@+id/app_events"
+                                                  android:layout_width="wrap_content"
+                                                  android:layout_height="wrap_content"
+                                                  android:layout_weight="1"
+                                                  android:layout_marginLeft="2dp"
+                                                  android:background="@drawable/cardview_border"
+                                                  android:backgroundTint="@color/greyseparator_company"
+                                                  android:orientation="horizontal">
+                                        <Button android:id="@+id/app_events_button"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:paddingLeft="10dp"
+                                                android:paddingRight="10dp"
+                                                android:textAllCaps="false"
+                                                android:background="@null"
+                                                android:text="My Events" />
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="4"
+                                                android:textSize="12dp"
+                                                android:background="@drawable/greycircle_dashboard"
+                                                android:textColor="@android:color/white"
+                                                android:gravity="center"
+                                                android:id="@+id/mark9" />
+
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <View android:layout_width="match_parent" android:layout_height="1dp"
+                                      android:background="@color/lightestgrey"/>
+                                <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/events_recycler_view"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="1dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="5dp"
+                                        android:scrollbars="vertical"
+                                        android:nestedScrollingEnabled="false"
+                                />
+                                <TextView
+                                        android:id="@+id/default_events_companies"
+                                        android:layout_marginTop="50dp"
+                                        android:textAlignment="center"
+                                        android:layout_marginBottom="50dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_gravity="center"
+                                        android:visibility="gone"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="No groups found"/>
+                                <TextView
+                                        android:id="@+id/seemore_events"
+                                        android:layout_marginBottom="8dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/blue"
+                                        android:singleLine="true"
+                                        android:text="See More"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--Account Settings layout design-->
+                        <LinearLayout
+                                android:id="@+id/accountsettings_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+                                android:background="@color/smsp_transparent_color">
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="vertical"
+                                    android:visibility="visible"
+                                    android:background="@color/white">
+                                <!--@drawable/curved_white_border_filled_white-->
+                                <TextView
+                                        android:layout_marginBottom="8dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:text="My Account settings"/>
+                                <View android:layout_width="match_parent" android:layout_height="1dp"
+                                      android:layout_marginLeft="14dp"
+                                      android:layout_marginRight="14dp"
+                                      android:background="@color/lightestgrey"/>
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+                                    <TextView
+                                            android:layout_marginBottom="8dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="14dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="#B2B2B2"
+                                            android:singleLine="true"
+                                            android:text="Full Name"/>
+
+                                    <TextView android:id="@+id/fullname"
+                                              android:layout_marginBottom="8dp"
+                                              android:layout_marginTop="8dp"
+                                              android:layout_marginLeft="14dp"
+                                              android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content"
+                                              android:textColor="#404040"
+                                              android:singleLine="true"
+                                              android:text="Full Name"/>
+
+                                    <TextView android:id="@+id/fullnameClick"
+                                              android:layout_marginBottom="8dp"
+                                              android:layout_marginTop="8dp"
+                                              android:layout_marginLeft="14dp"
+                                              android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content"
+                                              android:textColor="#2680EB"
+                                              android:singleLine="true"
+                                              android:text="Change"/>
+
+                                </LinearLayout>
+                                <View android:layout_width="match_parent" android:layout_height="1dp"
+                                      android:layout_marginLeft="14dp"
+                                      android:layout_marginRight="14dp"
+                                      android:background="@color/lightestgrey"/>
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+                                    <TextView
+                                            android:layout_marginBottom="8dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="14dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="#B2B2B2"
+                                            android:singleLine="true"
+                                            android:text="Email Id"/>
+
+                                    <TextView android:id="@+id/email"
+                                              android:layout_marginBottom="8dp"
+                                              android:layout_marginTop="8dp"
+                                              android:layout_marginLeft="14dp"
+                                              android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content"
+                                              android:textColor="#404040"
+                                              android:singleLine="true"
+                                              android:text="Email Id"/>
+
+                                    <TextView android:id="@+id/emailClick"
+                                              android:layout_marginBottom="8dp"
+                                              android:layout_marginTop="8dp"
+                                              android:layout_marginLeft="14dp"
+                                              android:visibility="gone"
+                                              android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content"
+                                              android:textColor="#2680EB"
+                                              android:singleLine="true"
+                                              android:text="Change"/>
+
+                                </LinearLayout>
+                                <TextView android:id="@+id/textemailp"
+                                          android:layout_marginBottom="8dp"
+                                          android:layout_marginTop="3dp"
+                                          android:layout_marginLeft="14dp"
+                                          android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content"
+                                          android:textColor="#B2B2B2"
+                                          android:singleLine="true"
+                                          android:text="Verify your email id. Verification mail has been sent."/>
+                                <Button android:id="@+id/email_resendp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:minHeight="0dp"
+                                        android:padding="10dp"
+                                        android:layout_marginLeft="14dp"
+                                        android:text="Resend"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/white"
+                                        android:background="@color/green"/>
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+                                    <TextView
+                                            android:layout_marginBottom="5dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="14dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="#B2B2B2"
+                                            android:singleLine="true"
+                                            android:text="Secondary Email Id"/>
+
+                                    <TextView android:id="@+id/secemail"
+                                              android:layout_marginBottom="5dp"
+                                              android:layout_marginTop="8dp"
+                                              android:layout_marginLeft="14dp"
+                                              android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content"
+                                              android:textColor="#404040"
+                                              android:singleLine="true"
+                                              android:text="Secondary Email Id"/>
+
+                                    <TextView android:id="@+id/secemailClick"
+                                              android:layout_marginBottom="5dp"
+                                              android:layout_marginTop="8dp"
+                                              android:layout_marginLeft="14dp"
+                                              android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content"
+                                              android:visibility="visible"
+                                              android:textColor="#2680EB"
+                                              android:singleLine="true"
+                                              android:text="Change"/>
+
+                                    <TextView android:id="@+id/secemailAdd"
+                                              android:layout_marginBottom="5dp"
+                                              android:layout_marginTop="8dp"
+                                              android:layout_marginLeft="14dp"
+                                              android:visibility="gone"
+                                              android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content"
+                                              android:textColor="#2680EB"
+                                              android:singleLine="true"
+                                              android:text="Add"/>
+
+                                </LinearLayout>
+                                <LinearLayout android:id="@+id/secemail_layout"
+                                              android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:visibility="gone"
+                                              android:orientation="horizontal">
+
+                                    <TextView android:id="@+id/removeemail"
+                                              android:layout_marginBottom="8dp"
+                                              android:layout_marginTop="3dp"
+                                              android:layout_marginLeft="14dp"
+                                              android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content"
+                                              android:textColor="#2680EB"
+                                              android:singleLine="true"
+                                              android:text="Remove"/>
+
+                                    <TextView android:id="@+id/binaryemailClick"
+                                              android:layout_marginBottom="8dp"
+                                              android:layout_marginTop="3dp"
+                                              android:layout_marginLeft="14dp"
+                                              android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content"
+                                              android:textColor="#2680EB"
+                                              android:singleLine="true"
+                                              android:text="Mark as primary"/>
+
+                                </LinearLayout>
+                                <TextView android:id="@+id/textemail"
+                                          android:layout_marginBottom="8dp"
+                                          android:layout_marginTop="3dp"
+                                          android:layout_marginLeft="14dp"
+                                          android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content"
+                                          android:textColor="#B2B2B2"
+                                          android:singleLine="true"
+                                          android:text="Verify your email id. Verification mail has been sent."/>
+                                <Button android:id="@+id/email_resend"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:minHeight="0dp"
+                                        android:padding="10dp"
+                                        android:layout_marginLeft="14dp"
+                                        android:text="Resend"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/white"
+                                        android:background="@color/green"/>
+                                <View android:layout_width="match_parent" android:layout_height="1dp"
+                                      android:layout_marginTop="8dp"
+                                      android:layout_marginLeft="14dp"
+                                      android:layout_marginRight="14dp"
+                                      android:background="@color/lightestgrey"/>
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+                                    <TextView
+                                            android:layout_marginBottom="8dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="14dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="#B2B2B2"
+                                            android:singleLine="true"
+                                            android:text="Mobile"/>
+
+                                    <TextView android:id="@+id/mobile"
+                                              android:layout_marginBottom="8dp"
+                                              android:layout_marginTop="8dp"
+                                              android:layout_marginLeft="14dp"
+                                              android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content"
+                                              android:textColor="#404040"
+                                              android:singleLine="true"
+                                              android:text="Mobile"/>
+
+                                    <TextView android:id="@+id/mobileClick"
+                                              android:layout_marginBottom="8dp"
+                                              android:layout_marginTop="8dp"
+                                              android:layout_marginLeft="14dp"
+                                              android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content"
+                                              android:textColor="#2680EB"
+                                              android:singleLine="true"
+                                              android:text="Change"/>
+
+                                </LinearLayout>
+                                <TextView android:id="@+id/textmobile"
+                                          android:layout_marginBottom="8dp"
+                                          android:layout_marginTop="3dp"
+                                          android:layout_marginLeft="14dp"
+                                          android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content"
+                                          android:textColor="#B2B2B2"
+                                          android:singleLine="true"
+                                          android:text="Your mobile number is not verified"/>
+                                <Button android:id="@+id/mmobile_verify"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:minHeight="0dp"
+                                        android:padding="10dp"
+                                        android:textAllCaps="false"
+                                        android:layout_marginLeft="14dp"
+                                        android:text="Verify"
+                                        android:textColor="@color/white"
+                                        android:background="@color/green"/>
+                                <View android:layout_width="match_parent" android:layout_height="1dp"
+                                      android:layout_marginTop="8dp"
+                                      android:layout_marginLeft="14dp"
+                                      android:layout_marginRight="14dp"
+                                      android:background="@color/lightestgrey"/>
+                                <TextView android:id="@+id/changePassword"
+                                          android:layout_marginBottom="8dp"
+                                          android:layout_marginTop="8dp"
+                                          android:layout_marginLeft="14dp"
+                                          android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content"
+                                          android:textColor="#2680EB"
+                                          android:singleLine="true"
+                                          android:text="Change password"/>
+                                <TextView android:id="@+id/deactivateAccnt"
+                                          android:layout_marginBottom="8dp"
+                                          android:layout_marginTop="8dp"
+                                          android:layout_marginLeft="14dp"
+                                          android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content"
+                                          android:textColor="#2680EB"
+                                          android:singleLine="true"
+                                          android:text="Deactivate account"/>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <!--Preferences layout design-->
+                        <LinearLayout
+                                android:id="@+id/preference_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+                                android:background="@color/smsp_transparent_color">
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="vertical"
+                                    android:visibility="visible"
+                                    android:background="@color/white">
+                                <!--@drawable/curved_white_border_filled_white-->
+                                <TextView
+                                        android:layout_marginBottom="8dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:text="PREFERENCES"/>
+                                <View android:layout_width="match_parent" android:layout_height="1dp"
+                                      android:background="@color/lightestgrey"/>
+                                <LinearLayout android:id="@+id/edit_post"
+                                              android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:paddingLeft="15dp"
+                                              android:paddingTop="15dp"
+                                              android:visibility="gone"
+                                              android:paddingRight="15dp"
+                                              android:orientation="vertical">
+                                    <TextView android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:textColor="@color/lightgrey"
+                                              android:text="Title"/>
+                                    <EditText android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:id="@+id/title"/>
+                                </LinearLayout>
+
+                                <LinearLayout android:id="@+id/edit_post_history"
+                                              android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:paddingLeft="15dp"
+                                              android:paddingTop="5dp"
+                                              android:paddingRight="15dp"
+                                              android:orientation="vertical">
+                                    <TextView android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:drawablePadding="10dp"
+                                              android:textColor="@color/lightgrey"
+                                              android:text="Preferred Location"/>
+
+                                    <MultiAutoCompleteTextView
+                                            android:id="@+id/pref_location_multiAutoCompleteTextView"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:drawablePadding="10dp"
+                                            android:ems="10"
+                                            android:hint="Enter here"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:visibility="gone"
+                                              android:paddingLeft="15dp"
+                                              android:paddingTop="5dp"
+                                              android:paddingRight="15dp"
+                                              android:orientation="vertical">
+                                    <TextView android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:drawablePadding="10dp"
+                                              android:textColor="@color/lightgrey"
+                                              android:text="Title"/>
+                                    <EditText android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:drawablePadding="10dp"/>
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:visibility="visible"
+                                              android:paddingLeft="15dp"
+                                              android:paddingTop="5dp"
+                                              android:paddingRight="15dp"
+                                              android:orientation="vertical">
+                                    <TextView android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:drawablePadding="10dp"
+                                              android:textColor="@color/lightgrey"
+                                              android:text="Job Types"/>
+                                    <!--<EditText android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:drawablePadding="10dp"/>-->
+                                    <MultiAutoCompleteTextView
+                                            android:id="@+id/jobtype_multiAutoCompleteTextView"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:ems="10"
+                                            android:hint="Enter here" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:visibility="visible"
+                                              android:paddingLeft="15dp"
+                                              android:paddingTop="5dp"
+                                              android:paddingRight="15dp"
+                                              android:orientation="vertical">
+                                    <TextView android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:drawablePadding="10dp"
+                                              android:textColor="@color/lightgrey"
+                                              android:text="Functional Area"/>
+                                    <MultiAutoCompleteTextView android:id="@+id/farea_multiAutoCompleteTextView"
+                                                               android:layout_width="match_parent"
+                                                               android:layout_height="wrap_content"
+                                                               android:drawablePadding="10dp"
+                                                               android:ems="10"
+                                                               android:hint="Enter here" />
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:visibility="visible"
+                                              android:paddingLeft="15dp"
+                                              android:paddingTop="5dp"
+                                              android:paddingRight="15dp"
+                                              android:orientation="vertical">
+                                    <TextView android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:drawablePadding="10dp"
+                                              android:textColor="@color/lightgrey"
+                                              android:text="Preferred Industries"/>
+                                    <MultiAutoCompleteTextView android:id="@+id/industry_multiAutoCompleteTextView"
+                                                               android:layout_width="match_parent"
+                                                               android:layout_height="wrap_content"
+                                                               android:drawablePadding="10dp"
+                                                               android:ems="10"
+                                                               android:hint="Enter here"/>
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:visibility="visible"
+                                              android:paddingLeft="15dp"
+                                              android:paddingTop="5dp"
+                                              android:paddingRight="15dp"
+                                              android:orientation="vertical">
+                                    <TextView android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:drawablePadding="10dp"
+                                              android:textColor="@color/lightgrey"
+                                              android:text="Years of Experience"/>
+                                    <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+                                        <Spinner
+                                                android:id="@+id/experience_multiAutoCompleteTextView"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:drawablePadding="10dp"
+                                                android:inputType="number"
+                                                android:maxLength="2"
+                                                android:layout_weight="1"
+                                                android:ems="10"
+                                                android:hint="From"/>
+                                        <Spinner
+                                                android:id="@+id/experienceto_multiAutoCompleteTextView"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:inputType="number"
+                                                android:layout_weight="1"
+                                                android:maxLength="2"
+                                                android:drawablePadding="10dp"
+                                                android:ems="10"
+                                                android:hint="To"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:visibility="gone"
+                                              android:paddingLeft="15dp"
+                                              android:paddingTop="5dp"
+                                              android:paddingRight="15dp"
+                                              android:orientation="vertical">
+                                    <TextView android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:drawablePadding="10dp"
+                                              android:textColor="@color/lightgrey"
+                                              android:text="Preferred CTC"/>
+                                    <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+                                        <Spinner
+                                                android:id="@+id/ctc_multiAutoCompleteTextView"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:drawablePadding="10dp"
+                                                android:visibility="gone"
+                                                android:inputType="number"
+                                                android:maxLength="2"
+                                                android:layout_weight="1"
+                                                android:ems="10"
+                                                android:hint="Lacs"/>
+                                        <Spinner
+                                                android:id="@+id/ctc1_multiAutoCompleteTextView"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:drawablePadding="10dp"
+                                                android:visibility="gone"
+                                                android:inputType="number"
+                                                android:maxLength="2"
+                                                android:layout_weight="1"
+                                                android:ems="10"
+                                                android:hint="Thousand"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:visibility="visible"
+                                              android:paddingLeft="15dp"
+                                              android:paddingTop="5dp"
+                                              android:paddingRight="15dp"
+                                              android:orientation="vertical">
+                                    <TextView android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:drawablePadding="10dp"
+                                              android:textColor="@color/lightgrey"
+                                              android:text="Skills"/>
+                                    <EditText android:id="@+id/pref_keyword"
+                                              android:hint="Eg. Java,PHP"
+                                              android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"/>
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:visibility="visible"
+                                              android:paddingTop="15dp"
+                                              android:paddingBottom="15dp"
+                                              android:paddingLeft="25dp"
+                                              android:paddingRight="25dp"
+                                              android:layout_gravity="center_horizontal"
+                                              android:orientation="horizontal">
+                                    <Button android:id="@+id/cancel_pref"
+                                            android:layout_weight="1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/curved_grey_border_nofill"
+                                            android:layout_marginRight="10dp"
+                                            android:textColor="@color/greyseparator"
+                                            android:text="Cancel"/>
+                                    <Button android:id="@+id/save_pref"
+                                            android:layout_weight="1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:textColor="@color/white"
+                                            android:background="@color/green"
+                                            android:text="Save"/>
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <!--Resumes layout design-->
+                        <LinearLayout
+                                android:id="@+id/resumes_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+                                android:background="@color/smsp_transparent_color">
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="vertical"
+                                    android:visibility="visible"
+                                    android:background="@color/white">
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+                                    <TextView
+                                            android:layout_marginBottom="8dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:textStyle="bold"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/black"
+                                            android:text="Manage Resume"/>
+
+                                    <TextView
+                                            android:id="@+id/resumesupload"
+                                            android:layout_marginBottom="8dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_marginRight="12dp"
+                                            android:textStyle="bold"
+                                            android:padding="10dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAllCaps="false"
+                                            android:background="@color/green"
+                                            android:textColor="@color/white"
+                                            android:text="+ Upload new resume"/>
+                                </LinearLayout>
+
+
+                                <View android:layout_width="match_parent" android:layout_height="1dp"
+                                      android:background="@color/lightestgrey"/>
+                                <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/resumes_recycler_view"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="1dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="5dp"
+                                        android:scrollbars="vertical"
+                                        android:nestedScrollingEnabled="false"
+                                />
+                                <TextView
+                                        android:id="@+id/default_resumes_companies"
+                                        android:layout_marginTop="30dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="22dp"
+                                        android:layout_marginRight="22dp"
+                                        android:textAlignment="center"
+                                        android:visibility="gone"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Upload your latest resume to get notifications and updates on job posts.Uploading your resume boosts your chances of getting a job."/>
+                                <TextView
+                                        android:id="@+id/resumesupload1"
+                                        android:layout_marginBottom="8dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_marginRight="12dp"
+                                        android:textStyle="bold"
+                                        android:layout_gravity="center"
+                                        android:padding="10dp"
+                                        android:visibility="gone"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAllCaps="false"
+                                        android:background="@color/green"
+                                        android:textColor="@color/white"
+                                        android:text="+ Upload new resume"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--JobAlert layout design-->
+                        <LinearLayout
+                                android:id="@+id/jobalert_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+                                android:background="@color/smsp_transparent_color">
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="vertical"
+                                    android:visibility="visible"
+                                    android:background="@color/white">
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+                                    <TextView
+                                            android:layout_marginBottom="8dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:textStyle="bold"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/black"
+                                            android:text="Manage job alert(s)"/>
+
+                                    <TextView
+                                            android:id="@+id/jobalertupload"
+                                            android:layout_marginBottom="8dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_marginRight="12dp"
+                                            android:textStyle="bold"
+                                            android:padding="10dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAllCaps="false"
+                                            android:background="@color/green"
+                                            android:textColor="@color/white"
+                                            android:text="+ Add new"/>
+                                </LinearLayout>
+
+
+                                <View android:layout_width="match_parent" android:layout_height="1dp"
+                                      android:background="@color/lightestgrey"/>
+                                <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/jobalert_recycler_view"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="1dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="5dp"
+                                        android:scrollbars="vertical"
+                                        android:nestedScrollingEnabled="false"
+                                />
+                                <TextView
+                                        android:id="@+id/default_jobalert_companies"
+                                        android:layout_marginTop="30dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_gravity="center"
+                                        android:visibility="gone"
+                                        android:textAlignment="center"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Please Create New Job Alert"/>
+                                <TextView
+                                        android:id="@+id/jobalertupload1"
+                                        android:layout_marginBottom="8dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_marginRight="12dp"
+                                        android:textStyle="bold"
+                                        android:padding="10dp"
+                                        android:layout_gravity="center"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAllCaps="false"
+                                        android:background="@color/green"
+                                        android:textColor="@color/white"
+                                        android:text="+ Add new"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--Followers layout design-->
+                        <LinearLayout
+                                android:id="@+id/following_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+                                android:background="@color/smsp_transparent_color">
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="vertical"
+                                    android:visibility="visible"
+                                    android:background="@color/white">
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+                                    <TextView
+                                            android:id="@+id/followingheader"
+                                            android:layout_marginBottom="8dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:textStyle="bold"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:textColor="@color/black"
+                                            android:text="Following"/>
+
+                                </LinearLayout>
+                                <View android:layout_width="match_parent" android:layout_height="1dp"
+                                      android:background="@color/lightestgrey"/>
+                                <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/following_recycler_view"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="1dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="5dp"
+                                        android:scrollbars="vertical"
+                                        android:nestedScrollingEnabled="false"
+                                />
+                                <TextView
+                                        android:id="@+id/default_following_companies"
+                                        android:layout_marginTop="30dp"
+                                        android:layout_marginBottom="30dp"
+                                        android:layout_gravity="center"
+                                        android:visibility="gone"
+                                        android:textAlignment="center"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="No followers found"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+            </LinearLayout>
+
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+            android:id="@+id/login_view1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="1dp"
+            android:visibility="gone"
+            android:padding="10dp"
+            android:background="@drawable/curved_white_border_filled_white"
+            android:animateLayoutChanges="true"
+            android:layout_marginStart="5dp">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hot Jobs"
+                    android:textSize="16sp"
+                    android:textAllCaps="true"
+                    android:visibility="visible"
+                    android:fontFamily="@font/robotoregular"
+                    android:id="@+id/mygroups1"/>
+
+            <View
+                    android:id="@+id/mygroups_selected1"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="3dp"
+                    android:visibility="visible"
+                    android:background="@color/green"/>
+
+        </LinearLayout>
+
+        <View android:layout_width="1dp"
+              android:layout_height="match_parent"
+              android:layout_marginLeft="5dp"
+              android:background="@color/lightestgrey"/>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other jobs"
+                    android:textSize="16sp"
+                    android:textAllCaps="true"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:visibility="visible"
+                    android:id="@+id/featured1"/>
+
+            <View
+                    android:id="@+id/featured_selected1"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:visibility="gone"
+                    android:background="@color/green"/>
+
+        </LinearLayout>
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filter"
+                android:textSize="16sp"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:textAllCaps="true"
+                android:drawableStart="@drawable/ic_filter_groups"
+                android:drawablePadding="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/robotoregular"
+                android:visibility="visible"
+                android:id="@+id/filter1"/>
+
+    </LinearLayout>
+    <RelativeLayout android:id="@+id/emailverify_bottom"
+                    android:gravity="bottom"
+                    android:layout_alignParentTop="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:background="@color/white">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_centerVertical="true"
+                      android:paddingTop="5dp"
+                      android:paddingBottom="5dp"
+                      android:gravity="center_vertical"
+                      android:orientation="horizontal">
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="8dp"
+                      android:drawableTint="@color/green"
+                      android:textColor="@color/green"
+                      android:layout_weight="1"
+                      android:text="Attention! You have not verified your email Id. Do it now to make sure you don't miss out on important updates about jobs, companies, mentors, and events."
+            />
+
+            <Button android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/resend_down_button"
+                    android:textColor="@color/white"
+                    android:background="@color/green"
+                    android:textAllCaps="false"
+                    android:minHeight="0dp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="14dp"
+                    android:text="Resend"/>
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginRight="5dp"
+                       android:layout_marginLeft="5dp"
+                       android:id="@+id/emailresend_close"
+                       android:background="@drawable/ic_close_green"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <include
+            android:id="@+id/bottombar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            layout="@layout/activity_footer" />
+</RelativeLayout>

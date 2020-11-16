@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:card_view="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        app:cardCornerRadius="3dp"
+        app:cardBackgroundColor="@color/white"
+        android:elevation="0dp"
+        app:cardElevation="0dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="5dp"
+        card_view:cardCornerRadius="3dp">
+
+    <ImageView
+            android:id="@+id/row_icon"
+            android:src="@drawable/ic_default_profile_icon"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/curved_grey_border_filled"
+            android:elevation="1dp"/>
+
+    <!--android:scaleType="fitCenter"
+                android:adjustViewBounds="true"-->
+
+    <LinearLayout
+            android:id="@+id/llCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:background="@drawable/cardview_border"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:paddingLeft="30dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="2dp"
+                    android:orientation="vertical"
+                    android:layout_weight="0.8">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                    <TextView
+                            android:id="@+id/row_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            android:textSize="14sp"
+                            android:layout_weight="1"
+                            android:paddingRight="8dp"
+                            android:text="Name Name Name Name"
+                            android:singleLine="false"/>
+
+                    <!--<ImageView android:id="@+id/hotjobs_icon"-->
+                    <!--android:layout_width="20dp"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--android:layout_gravity="bottom"-->
+                    <!--android:src="@drawable/ic_hot_job"/>-->
+                    <TextView
+                            android:id="@+id/row_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:gravity="right"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            android:textSize="14sp"
+                            android:layout_weight="1"
+                            android:paddingRight="2dp"
+                            android:text="1hr"
+                            android:singleLine="false"/>
+                </LinearLayout>
+
+                <TextView
+                        android:id="@+id/row_noOfMembers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:textSize="14sp"
+                        android:padding="2dp"
+                        android:lines="3"
+                        android:ellipsize="end"
+                        android:text="JobsForHer Pvt Ltd Unable to resolve Lokhttp3/Response; annotation class 3429 Unable to resolve Lokhttp3/Response; annotation class 3429"
+                        android:drawablePadding="2dp"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+

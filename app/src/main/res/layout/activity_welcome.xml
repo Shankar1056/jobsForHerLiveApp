@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        tools:context=".activities.EmailLoginActivity">
+
+
+    <include
+        layout="@layout/toolbar_back"/>
+
+    <ScrollView android:layout_width="match_parent"
+                android:scrollbars="none"
+                android:layout_height="wrap_content">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_margin="25dp"
+                      android:orientation="vertical">
+
+            <com.jobsforher.customviews.CustomBoldFontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:text="Neha, you are IN."
+                    android:textColor="@color/black"
+                    android:textSize="22sp"/>
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_marginTop="15dp"
+                      android:layout_height="match_parent"
+                      android:padding="15dp"
+                      android:background="@drawable/curved_grey_border_nofill"
+                      android:orientation="vertical">
+
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:orientation="horizontal"
+                          android:layout_height="wrap_content">
+
+            <com.jobsforher.customviews.CustomBoldFontTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Your exclusive JobsForHer URL"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+            />
+
+                <ImageView android:layout_width="30dp"
+                           android:padding="5dp"
+                           android:src="@drawable/ic_info"
+                           android:layout_gravity="center"
+                           android:layout_height="30dp"/>
+
+            </LinearLayout>
+
+            <com.jobsforher.customviews.CustomFontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_height="wrap_content"
+                    android:text="Elevate your personal-professional brand by creating a custom URL for your JobsForHer public profile"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+            />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="52dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/curved_grey_border_filled"
+            >
+
+
+                <com.jobsforher.customviews.CustomFontTextView
+                        android:layout_width="wrap_content"
+                        android:text="@string/www_jobsforher_com"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="12sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"/>
+
+
+
+                <com.jobsforher.customviews.CustomFontEditText
+                        android:layout_width="match_parent"
+                        android:lines="1"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        android:background="@null"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:text="nehabagaria"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"/>
+
+
+                <LinearLayout android:layout_width="wrap_content"
+                              android:orientation="horizontal"
+                              android:layout_height="match_parent">
+
+
+
+                <com.jobsforher.customviews.CustomBoldFontTextView
+                        android:layout_width="wrap_content"
+                        android:text="@string/edit"
+                        android:textSize="12sp"
+
+                        android:padding="15dp"
+                        android:textColor="@color/green"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"/>
+
+                    <View android:layout_width="1dp"
+                          android:background="@color/bordergrey"
+                          android:layout_height="match_parent"/>
+
+
+                    <ImageView android:layout_width="wrap_content"
+                               android:src="@drawable/ic_tick"
+                               android:layout_margin="15dp"
+                               android:layout_gravity="center_vertical"
+                               android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_marginTop="25dp"
+                          android:layout_height="match_parent"
+                          android:padding="15dp"
+                          android:background="@drawable/curved_blue"
+                          android:orientation="vertical">
+
+
+                <com.jobsforher.customviews.CustomBoldFontTextView
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:text="@string/customize_to_strategize"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                />
+
+                <com.jobsforher.customviews.CustomFontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/your_profile_is_in_your_control_always_just_like_your_career_and_life_should_be_now_get_behind_the_wheel"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                />
+
+            </LinearLayout>
+
+
+
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginBottom="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                    <com.jobsforher.customviews.CustomFontButton
+                            android:layout_width="130dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@color/green"
+                            android:text="@string/i_ll_do_it_later"
+                            android:textSize="12sp"
+                            android:padding="15dp"
+                            android:textAllCaps="false"
+                            android:background="@drawable/curved_green_border"
+                            android:layout_height="wrap_content"/>
+
+                    <com.jobsforher.customviews.CustomFontButton
+                            android:layout_width="130dp"
+                                                                         android:layout_marginRight="15dp"
+                                                                         android:layout_marginLeft="5dp"
+                                                                         android:textColor="@color/white"
+                                                                         android:text="@string/save_amp_continue"
+                                                                         android:textSize="12sp"
+                                                                         android:padding="15dp"
+                                                                         android:textAllCaps="false"
+                                                                         android:background="@drawable/curved_green"
+                                                                         android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+
+
+
+
+
+        </LinearLayout> </ScrollView>
+        </LinearLayout>

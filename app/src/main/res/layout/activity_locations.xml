@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <!-- HEADER -->
+    <LinearLayout
+            android:id="@+id/top_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#71EF51"
+            android:padding="15dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+        <ImageView
+                android:id="@+id/closeDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_close_white"
+                android:layout_weight=".1"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/location"
+                android:textSize="18sp"
+                android:fontFamily="@font/opensanssemibold"
+                android:textColor="@color/white"
+                android:layout_weight=".7"/>
+
+        <TextView
+                android:id="@+id/tvSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textAlignment="textEnd"
+                android:layout_weight=".2"/>
+
+    </LinearLayout>
+
+    <!-- MAIN PART -->
+    <!--<ScrollView-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="fill_parent"-->
+    <!--android:layout_below="@id/top_header"-->
+    <!--android:scrollbars="none">-->
+
+    <LinearLayout
+            android:layout_below="@id/top_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+        <!--<women.jobs.jobsforher.customviews.CustomFontEditText-->
+        <!--android:id="@+id/etAlertLocation"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="52dp"-->
+        <!--android:hint="@string/type_ur_location_here"-->
+        <!--android:inputType="textCapWords"-->
+        <!--android:textColor="#5B5B5B"-->
+        <!--android:textColorHint="#484848"-->
+        <!--android:backgroundTint="#5B5B5B"-->
+        <!--android:focusable="true"-->
+        <!--android:drawablePadding="10dp"-->
+        <!--android:drawableStart="@drawable/ic_location_new"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:textSize="12sp"/>-->
+
+        <EditText android:id="@+id/etAlertLocation"
+                  android:layout_width="match_parent"
+                  android:layout_height="52dp"
+                  android:hint="@string/type_ur_location_here"
+                  android:inputType="textCapWords"
+                  android:textColor="#5B5B5B"
+                  android:textColorHint="#484848"
+                  android:backgroundTint="#5B5B5B"
+                  android:focusable="true"
+                  android:drawablePadding="10dp"
+                  android:drawableStart="@drawable/ic_location_new"
+                  android:layout_marginTop="5dp"
+                  android:textSize="12sp"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:text="@string/popular_locations"
+                android:fontFamily="@font/opensansregular"/>
+
+        <!--<androidx.recyclerview.widget.RecyclerView-->
+        <!--android:id="@+id/locationRecyclerView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:scrollbars="vertical"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent">-->
+
+        <!--</androidx.recyclerview.widget.RecyclerView>-->
+
+        <ExpandableListView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:dividerHeight="0.5dp"
+                android:divider="#A4C739"
+                android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+                android:id="@+id/locationRecyclerView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+
+    </LinearLayout>
+
+
+    <!--</ScrollView>-->
+
+</RelativeLayout>

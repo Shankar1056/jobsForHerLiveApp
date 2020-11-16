@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="5dp"
+        android:elevation="1dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:id="@+id/comment_block">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+            <!--<ImageView-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:src="@drawable/ic_user"-->
+            <!--android:id="@+id/commenticon"/>-->
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/commenticon"
+                    android:src="@drawable/ic_user"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_circle"
+                    android:layout_centerHorizontal="true"/>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/curved_border_comments"
+                        android:orientation="vertical">
+                    <TextView
+                            android:id="@+id/commentusername"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/comments_pink"
+                            android:text="Name"
+                            android:textStyle="bold"
+                            android:textSize="14dp"/>
+                    <TextView
+                            android:id="@+id/commentdatetime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/lightgrey"
+                            android:layout_marginLeft="10dp"
+                            android:text="Name"
+                            android:textStyle="normal"
+                            android:textSize="10dp"/>
+                    <TextView
+                            android:id="@+id/commentdata"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Description of the comment..."
+                            android:textStyle="bold"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="12dp"/>
+
+                    <ImageView
+                            android:layout_width="250dp"
+                            android:layout_height="250dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:scaleType="fitXY"
+                            android:visibility="visible"
+                            android:id="@+id/pick_image"/>
+                    <WebView
+                            android:layout_width="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:nestedScrollingEnabled="true"
+                            android:layout_height="200dp"
+                            android:id="@+id/postdocument"/>
+                    <ProgressBar
+                            android:layout_width="wrap_content"
+                            android:id="@+id/progressbar"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

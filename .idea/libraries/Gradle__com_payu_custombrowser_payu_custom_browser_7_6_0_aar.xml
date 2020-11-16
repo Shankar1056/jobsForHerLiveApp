@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="Gradle: com.payu.custombrowser:payu-custom-browser:7.6.0@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/36478f6df80516f1ffe8835c49a94b9f/jetified-payu-custom-browser-7.6.0/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/7c79c7e37ccfa04fe78763813a5576c9/jetified-payu-custom-browser-7.6.0/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/36478f6df80516f1ffe8835c49a94b9f/jetified-payu-custom-browser-7.6.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/36478f6df80516f1ffe8835c49a94b9f/jetified-payu-custom-browser-7.6.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/36478f6df80516f1ffe8835c49a94b9f/jetified-payu-custom-browser-7.6.0/res" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/7c79c7e37ccfa04fe78763813a5576c9/jetified-payu-custom-browser-7.6.0/res" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/7c79c7e37ccfa04fe78763813a5576c9/jetified-payu-custom-browser-7.6.0/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/7c79c7e37ccfa04fe78763813a5576c9/jetified-payu-custom-browser-7.6.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/modules-2/files-2.1/com.payu.custombrowser/payu-custom-browser/7.6.0/ff448ff5c7c3083a445b78f4b6c8de681b90ce9b/payu-custom-browser-7.6.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/modules-2/files-2.1/com.payu.custombrowser/payu-custom-browser/7.6.0/bdac7ad92a144d171c87d44618277b0abfbc47b6/payu-custom-browser-7.6.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

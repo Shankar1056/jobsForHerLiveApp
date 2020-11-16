@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+            android:id="@+id/action_leave"
+            android:title="@string/leave_group"
+            android:icon="@null"
+            app:showAsAction="never"/>
+
+    <item
+            android:id="@+id/action_reported"
+            android:title="Reported"
+            android:icon="@drawable/ic_flag"
+            app:showAsAction="always|withText"/>
+
+</menu>

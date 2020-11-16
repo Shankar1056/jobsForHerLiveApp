@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@drawable/background_gradient">
+
+
+    <ImageView
+            android:id="@+id/iv_Back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="back"
+            android:src="@drawable/ic_arrow_back_black"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"/>
+
+    <TextView android:id="@+id/headline1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="20dp"
+              android:text="If you're her"
+              android:layout_centerHorizontal="true"
+              android:textColor="@color/darkgrey"
+              android:textSize="22sp"
+              android:lines="1"
+              android:gravity="center_horizontal"
+              android:textStyle="bold"/>
+
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/headline1"
+            android:scrollbars="none">
+
+        <LinearLayout
+                android:id="@+id/ll_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+            <TextView
+                    android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="10dp"
+                      android:text="Sign up easily using"
+                      android:layout_centerHorizontal="true"
+                      android:textColor="@color/darkgrey"
+                      android:textSize="18sp"
+                      android:gravity="center_horizontal"/>
+
+            <LinearLayout
+                    android:id="@+id/layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_facebook"
+                        android:contentDescription="facebook"
+                        android:background="@null"
+                        android:padding="20dp"
+                        android:id="@+id/fb_button"/>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_search"
+                        android:contentDescription="gmail"
+                        android:background="@null"
+                        android:padding="20dp"
+                        android:id="@+id/gplus_button"/>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_linkedin"
+                        android:contentDescription="linkedin"
+                        android:background="@null"
+                        android:padding="20dp"
+                        android:id="@+id/linkedin_button"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:weightSum="2">
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="4dp"
+                        android:background="@color/darkgrey"
+                        android:layout_weight="1"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/using_email"
+                        android:textColor="@color/darkgrey"
+                        android:textSize="16sp"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="4dp"
+                        android:background="@color/darkgrey"
+                        android:layout_weight="1"/>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:textColorHint="@color/darkgrey"
+                    android:orientation="horizontal"
+                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <EditText
+                        android:id="@+id/etFullname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="4dp"
+                        android:contentDescription="fullname"
+                        android:textColorHint="@color/darkgrey"
+                        android:textColor="@color/darkgrey"
+                        android:hint="@string/full_name"
+                        android:singleLine="true"
+                        android:drawableRight="@drawable/ic_checked_green"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:textColorHint="@color/darkgrey"
+                    android:orientation="horizontal"
+                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <EditText
+                        android:id="@+id/etMobileNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/darkgrey"
+                        android:paddingTop="4dp"
+                        android:contentDescription="mobile"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textColor="@color/darkgrey"
+                        android:hint="@string/mobile_number"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:textColorHint="@color/darkgrey"
+                    android:orientation="horizontal"
+                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <EditText
+                        android:id="@+id/etEmail_Id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/darkgrey"
+                        android:paddingTop="4dp"
+                        android:textColor="@color/darkgrey"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:hint="@string/email_id"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/white"
+                    android:textColorHint="@color/darkgrey"
+                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <EditText
+                        android:id="@+id/etPassword_"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/password_hint"
+                        android:contentDescription="password"
+                        android:paddingTop="4dp"
+                        android:textColorHint="@color/darkgrey"
+                        android:textColor="@color/darkgrey"
+                        android:backgroundTint="@color/darkgrey"
+                        android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView android:id="@+id/forgotpasswordid"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:gravity="center_horizontal"
+                      android:layout_marginRight="15dp"
+                      android:layout_marginLeft="15dp"
+                      android:layout_marginTop="10dp"
+                      android:text="@string/by_signing_up_i_agree_to_the_certify"
+                      android:textColor="@color/darkgrey"
+                      android:backgroundTint="@color/darkgrey"
+                      android:textSize="16sp"/>
+
+            <Button android:id="@+id/btnSign_Up"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="SIGN UP"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/darkgrey"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:textAllCaps="true"/>
+
+            <RelativeLayout
+                    android:id="@+id/rl_already_login"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btnSign_Up">
+
+                <TextView android:id="@+id/new_to_jobsforher"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginLeft="15dp"
+                          android:paddingTop="20dp"
+                          android:text="Already a member?"
+                          android:textColor="@color/darkgrey"
+                          android:textSize="16sp"/>
+
+                <com.jobsforher.customviews.CustomFontTextView
+                        android:id="@+id/tvLogin_Here"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="false"
+                        android:layout_marginRight="15dp"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/new_to_jobsforher"
+                        android:text="Sign In now"
+                        android:textColor="@color/blue"
+                        android:textSize="16sp" android:layout_marginTop="0dp" android:layout_alignParentTop="true"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/rl_already_login">
+
+                <TextView android:id="@+id/not_a_woman"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:gravity="center_horizontal"
+                          android:layout_marginLeft="15dp"
+                          android:paddingTop="15dp"
+                          android:paddingBottom="10dp"
+                          android:text="@string/not_a_woman_acc"
+                          android:textColor="@color/darkgrey"
+                          android:textSize="16sp"/>
+
+                <TextView android:id="@+id/signuphere"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:gravity="center_horizontal"
+                          android:layout_marginRight="15dp"
+                          android:layout_marginLeft="5dp"
+                          android:paddingTop="15dp"
+                          android:paddingBottom="10dp"
+                          android:layout_toRightOf="@id/not_a_woman"
+                          android:text="@string/click_here_u"
+                          android:textColor="@color/blue"
+                          android:textSize="16sp"/>
+            </RelativeLayout>
+
+            <ImageView android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:src="@drawable/jfhhorizontallogo"
+                       android:visibility="gone"
+                       android:layout_marginTop="30dp"
+                       android:layout_marginBottom="20dp"
+                       android:layout_alignParentBottom="true"
+                       android:layout_centerHorizontal="true"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

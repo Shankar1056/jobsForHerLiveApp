@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        tools:context=".activities.EmailLoginActivity">
+
+
+    <include
+            layout="@layout/toolbar_back"/>
+
+
+        <com.jobsforher.customviews.CustomBoldFontTextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/green"
+                android:textSize="25sp"
+                android:text="@string/upload_photo"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="22dp"
+                android:layout_height="wrap_content"/>
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/mentor"
+            android:id="@+id/circleView"
+    />
+
+
+    <com.jobsforher.customviews.CustomBoldFontTextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+
+            android:text="@string/one_line_about_yourself"
+            android:layout_marginLeft="40dp"
+            android:gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_height="wrap_content"/>
+
+
+    <com.jobsforher.customviews.CustomFontButton
+            android:layout_width="130dp"
+            android:textColor="@color/green"
+            android:text="@string/save_continue"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:textSize="12sp"
+            android:padding="15dp"
+            android:textAllCaps="false"
+            android:background="@drawable/curved_green_border"
+            android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>

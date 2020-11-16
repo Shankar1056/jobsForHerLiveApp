@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".activities.LoginActivity">
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+        <include
+                layout="@layout/toolbar_back"/>
+
+
+
+<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+
+
+    <com.jobsforher.customviews.CustomBoldFontTextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:text="@string/otp_headline"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="22dp"
+            android:layout_height="wrap_content"/>
+
+
+        <com.jobsforher.customviews.CustomFontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="@string/otp_subline"
+                android:layout_marginLeft="52dp"
+                android:textColor="@color/darkestgrey"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:layout_marginRight="52dp"
+                android:layout_marginTop="22dp" />
+        <com.jobsforher.customviews.CustomFontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="@string/now_s_the_time_to_use_it"
+                android:layout_marginLeft="52dp"
+                android:textColor="@color/darkestgrey"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:layout_marginRight="52dp"
+                android:layout_marginTop="12dp" />
+
+
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="52dp"
+                      android:layout_marginLeft="22dp"
+                      android:layout_marginRight="22dp"
+                      android:layout_marginTop="16dp"
+                      android:layout_gravity="center_horizontal"
+                      android:orientation="horizontal"
+        >
+
+            <com.jobsforher.customviews.CustomFontEditText
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:maxLength="1"
+                    android:id="@+id/etOTPBox_One"
+                    android:background="@drawable/curved_grey_border"
+            />
+
+            <com.jobsforher.customviews.CustomFontEditText
+                    android:layout_width="52dp"
+                    android:maxLength="1"
+                    android:layout_height="52dp"
+                    android:id="@+id/etOTPBox_Two"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/curved_grey_border"
+            />
+
+
+            <com.jobsforher.customviews.CustomFontEditText
+                    android:layout_width="52dp"
+                    android:maxLength="1"
+                    android:id="@+id/etOTPBox_Three"
+                    android:layout_height="52dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/curved_grey_border"
+            />
+
+
+            <com.jobsforher.customviews.CustomFontEditText
+                    android:layout_width="52dp"
+                    android:maxLength="1"
+                    android:id="@+id/etOTPBox_Four"
+                    android:layout_height="52dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/curved_grey_border"
+            />
+
+
+            <com.jobsforher.customviews.CustomFontEditText
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:maxLength="1"
+                    android:id="@+id/etOTPBox_Five"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/curved_grey_border"
+            />
+
+
+            <com.jobsforher.customviews.CustomFontEditText
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:maxLength="1"
+                    android:id="@+id/etOTPBox_Six"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/curved_grey_border"
+            />
+
+
+        </LinearLayout>
+
+
+
+
+
+
+        <com.jobsforher.customviews.CustomFontButton
+                android:id="@+id/btnLetMeIn"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="@string/let_me_in_already"
+                android:layout_marginLeft="22dp"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:layout_marginRight="22dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/curved_green" />
+
+
+
+        <com.jobsforher.customviews.CustomBoldFontTextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/green"
+                android:textSize="12sp"
+                android:text="@string/resend_otp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="22dp"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</ScrollView>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

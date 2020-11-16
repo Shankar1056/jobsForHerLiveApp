@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group>
+        <item
+                android:id="@+id/action_dashboard"
+                android:icon="@drawable/ic_sidemenu_dashboard"
+                android:title="Dashboard"
+        />
+        <item
+                android:id="@+id/action_groups"
+                android:icon = "@drawable/ic_groups"
+                android:title="Groups"
+        />
+        <item
+                android:id="@+id/action_jobs"
+                android:icon="@drawable/ic_briefcase1"
+                android:title="Jobs"
+        />
+        <item
+                android:id="@+id/action_companies"
+                android:icon="@drawable/ic_companies"
+                android:title="Companies"
+        />
+        <item
+                android:id="@+id/action_reskilling"
+                android:visible="false"
+                android:title="Reskilling"
+        />
+        <item
+                android:id="@+id/action_mentors"
+                android:visible="false"
+                android:title="Mentors" />
+        <item
+                android:id="@+id/action_events"
+                android:icon="@drawable/ic_newsfeed_events"
+                android:title="Events" />
+        <item
+                android:id="@+id/action_share"
+                android:icon="@drawable/ic_share_new"
+                android:title="Share App" />
+
+        <item
+                android:id="@+id/action_sett"
+                android:icon="@drawable/ic_user"
+                android:title="Settings" />
+
+        <item
+                android:id="@+id/action_blogs"
+                android:visible="false"
+                android:title="Blogs" />
+        <item
+                android:id="@+id/action_settings"
+                android:title="Settings"/>
+
+        <item
+                android:id="@+id/action_logout"
+                android:visible="false"
+                android:title="Logout"
+        />
+        <item
+                android:id="@+id/action_signup"
+                app:actionLayout="@layout/menu_signup"
+                android:title=""
+        />
+        <item
+                android:id="@+id/action_login"
+                app:actionLayout="@layout/menu_login"
+                android:title=""
+        />
+
+
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/appVersion"
+                android:title="" />
+    </group>
+
+    <group>
+        <item
+                android:id="@+id/action_employerzone"
+                android:title="Employer Zone"
+        />
+    </group>
+    <group>
+        <item
+                android:id="@+id/action_mentorzone"
+                android:title="Mentor Zone"
+        />
+    </group>
+    <group>
+        <item
+                android:id="@+id/action_partnerzone"
+                android:title="Partner Zone"
+        />
+    </group>
+</menu>

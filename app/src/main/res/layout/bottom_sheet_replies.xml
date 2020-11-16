@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="380dp"
+        android:orientation="vertical"
+              android:layout_height="wrap_content"
+              android:gravity="bottom"
+              android:background="@color/white">
+
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:visibility="gone"
+                  android:padding="15dp">
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Copy Link"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/edit_comment"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:padding="15dp">
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:drawableLeft="@drawable/ic_edit"
+                  android:drawablePadding="10dp"
+                  android:text="Edit"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/report_comment"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:padding="15dp">
+        <TextView android:layout_width="match_parent"
+                  android:id="@+id/reporttextcomment"
+                  android:layout_height="wrap_content"
+                  android:drawableLeft="@drawable/ic_flag"
+                  android:drawablePadding="10dp"
+                  android:text="Report this reply"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/edit_comment_history"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:visibility="visible"
+                  android:padding="15dp">
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:drawableLeft="@drawable/ic_edit"
+                  android:drawablePadding="10dp"
+                  android:text="View Edit History"/>
+    </LinearLayout>
+
+
+    <LinearLayout android:id="@+id/cancel"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:padding="15dp">
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:drawableLeft="@drawable/ic_close_black"
+                  android:drawablePadding="10dp"
+                  android:text="Cancel"/>
+    </LinearLayout>
+</LinearLayout>
