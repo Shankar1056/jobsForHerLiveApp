@@ -1,10 +1,12 @@
-package com.bigappcompany.healthtunnel.data.repository
+package com.jobsforher.data.repository
 
-import com.jobsforher.data.model.ExpertChatReq
-import com.jobsforher.data.model.ExpertChatResponse
-import com.jobsforher.data.model.RecommendedJobsResponse
+import com.jobsforher.data.model.*
+import com.jobsforher.network.responsemodels.Company
+import com.jobsforher.network.responsemodels.Featured_Group
+import com.jobsforher.network.responsemodels.NewsDetails
 import com.jobsforher.network.retrofithelpers.EndPoints
 import io.reactivex.Observable
+import retrofit2.Call
 import retrofit2.http.*
 import java.util.*
 
@@ -15,7 +17,7 @@ interface ApiServices {
     fun getExpertChat(
         @Header("Authorization") auth: String,
         @Body request: ExpertChatReq
-    ): Observable<ExpertChatResponse>
+    ): Call<ExpertChatResponse>
 
 
     @Headers("clientid:" + EndPoints.CLIENT_ID)
@@ -24,5 +26,26 @@ interface ApiServices {
         @Header("Authorization") accesstoken: String,
         @QueryMap groupCredentials: HashMap<String, String>
     ): Observable<RecommendedJobsResponse>
+
+    @Headers("clientid:" + EndPoints.CLIENT_ID)
+    @GET("/api/v3.0/es_recommended_companies")
+    fun getRecommendedCompanies(
+        @Header("Authorization") accesstoken: String,
+        @QueryMap groupCredentials: HashMap<String, String>
+    ): Observable<RecommendedCompaniesResponse>
+
+    @Headers("clientid:" + EndPoints.CLIENT_ID)
+    @GET("/api/v3.0/es_recommended_groups")
+    fun getRecommendedMyGroupData(
+        @Header("Authorization") accesstoken: String,
+        @QueryMap groupCredentials: HashMap<String, String>
+    ): Observable<RecommendedGropsResponse>
+
+    @Headers("clientid:" + EndPoints.CLIENT_ID)
+    @GET("/api/v3.0/news_feed")
+    fun getNewsPostData(
+        @Header("Authorization") accesstoken: String,
+        @QueryMap signInCredentials: HashMap<String, String>
+    ): Call<NewsDetails>
 
 }

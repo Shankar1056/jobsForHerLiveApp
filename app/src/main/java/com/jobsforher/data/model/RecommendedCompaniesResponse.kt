@@ -1,5 +1,9 @@
 package com.jobsforher.data.model
 
+import android.widget.ImageView
+import androidx.databinding.BindingAdapter
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.jobsforher.data.model.common_response.JobsForHerAuth
 import com.jobsforher.data.model.common_response.JobsForHerPagination
 import com.jobsforher.data.model.common_response.JobsForHerPreferences
@@ -28,3 +32,10 @@ data class RecommendedCompaniesBody(
     var status: String? = null,
     var industry: List<String>? = null
 )
+
+@BindingAdapter("companyLogo")
+fun loadCompanyLogo(view: ImageView, imageUrl: String?) {
+    Glide.with(view.context)
+        .load(imageUrl).apply(RequestOptions().circleCrop())
+        .into(view)
+}

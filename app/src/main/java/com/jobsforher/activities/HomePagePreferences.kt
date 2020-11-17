@@ -23,6 +23,7 @@ import com.jobsforher.network.responsemodels.*
 import com.jobsforher.network.retrofithelpers.EndPoints
 import com.jobsforher.network.retrofithelpers.RetrofitClient
 import com.jobsforher.network.retrofithelpers.RetrofitInterface
+import com.jobsforher.ui.newsfeed.NewsFeedActivity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_homepage_preferences.*
 import org.json.JSONArray
@@ -846,7 +847,8 @@ class HomePagePreferences : AppCompatActivity() {
             override fun run() {
                 try {
                     Thread.sleep(1800)
-                    intent = Intent(applicationContext, NewsFeed::class.java)
+//                    intent = Intent(applicationContext, NewsFeed::class.java)
+                    intent = Intent(applicationContext, NewsFeedActivity::class.java)
                     startActivity(intent)
                     finish()
                 } catch (e: InterruptedException) {

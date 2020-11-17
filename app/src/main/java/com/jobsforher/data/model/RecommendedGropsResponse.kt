@@ -1,5 +1,9 @@
 package com.jobsforher.data.model
 
+import android.widget.ImageView
+import androidx.databinding.BindingAdapter
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.jobsforher.data.model.common_response.JobsForHerAuth
 import com.jobsforher.data.model.common_response.JobsForHerPagination
 
@@ -30,3 +34,10 @@ data class GroupCategories(
     var category_id: Int? = null,
     var category: String? = null
 )
+
+@BindingAdapter("groupUrl")
+fun loadGroupUrl(view: ImageView, imageUrl: String?) {
+    Glide.with(view.context)
+        .load(imageUrl).apply(RequestOptions().circleCrop())
+        .into(view)
+}

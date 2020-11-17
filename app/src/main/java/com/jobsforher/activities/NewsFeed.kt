@@ -121,7 +121,7 @@ class NewsFeed : Footer(), NavigationView.OnNavigationItemSelectedListener {
             this, drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close
         )
         Log.d("TAGG", groupId.toString())
-        toggle.getDrawerArrowDrawable().setColor(Color.WHITE);
+        toggle.getDrawerArrowDrawable().setColor(Color.WHITE)
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
@@ -1853,7 +1853,7 @@ class NewsFeed : Footer(), NavigationView.OnNavigationItemSelectedListener {
         listOfhotJobsdata.clear()
         //listOfhotJobsdataTrimmed.clear()
         //listOfCompareJoineddata.clear()
-        val params = java.util.HashMap<String, String>()
+        val params = HashMap<String, String>()
 
         params["page_no"] = pageno.toString()
         params["page_size"] = 2.toString()

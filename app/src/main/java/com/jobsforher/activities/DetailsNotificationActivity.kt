@@ -178,10 +178,6 @@ class DetailsNotificationActivity : AppCompatActivity() {
                 call: Call<GroupCommentsNew>,
                 response: Response<GroupCommentsNew>
             ) {
-                Logger.d("CODE", response.code().toString() + "")
-                Logger.d("MESSAGE", response.message() + "")
-                Logger.d("URL", "" + response)
-                Logger.d("RESPONSE comments", "" + Gson().toJson(response))
 
                 val body = response.body()?.body
                 if (body != null) {

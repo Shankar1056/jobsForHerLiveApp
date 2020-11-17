@@ -68,7 +68,10 @@ android {
 }
 
 dependencies {
-
+    def lifecycle_version = "2.1.0"
+    def rxandroid_version = "2.1.1"
+    def rxjava_version = "2.2.11"
+    def retrofit_version = "2.6.1"
 
     configurations {
         all*.exclude group: 'com.android.support', module: 'support-v13'
@@ -112,7 +115,9 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit'
     implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
     implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.1'
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    //RxAndroid
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
 
     implementation 'androidx.browser:browser:1.0.0'
 
