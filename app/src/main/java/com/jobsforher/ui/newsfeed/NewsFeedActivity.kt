@@ -8,6 +8,7 @@ import com.jobsforher.R
 import com.jobsforher.ui.newsfeed.adapter.CompaniesAdapter
 import com.jobsforher.ui.newsfeed.adapter.GroupsAdapter
 import com.jobsforher.ui.newsfeed.adapter.JobsAdapter
+import com.jobsforher.ui.newsfeed.adapter.NewsFeedAdapter
 import com.jobsforher.util.Utility
 import kotlinx.android.synthetic.main.activity_newsfeed.*
 
@@ -34,6 +35,10 @@ class NewsFeedActivity : AppCompatActivity() {
 
         viewModel.groupsResponseList.observe(this, Observer {
             groups_recycler_view.adapter = GroupsAdapter(it)
+        })
+
+        viewModel.newsPostResponseList.observe(this, Observer {
+            posts_recycler_view.adapter = NewsFeedAdapter(it)
         })
 
         viewModel.errorMessage.observe(this, Observer {

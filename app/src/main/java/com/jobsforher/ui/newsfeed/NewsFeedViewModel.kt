@@ -22,6 +22,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
     var jobsResponseList = MutableLiveData<ArrayList<RecommendedJobsBody>>()
     var companiesResponseList = MutableLiveData<ArrayList<RecommendedCompaniesBody>>()
     var groupsResponseList = MutableLiveData<ArrayList<RecommendedGropsBody>>()
+    var newsPostResponseList = MutableLiveData<ArrayList<NewsPostBody>>()
 
     init {
         loadRecommendedJobs()
@@ -31,7 +32,14 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
     }
 
     private fun loadGroupPosts() {
+        if (Utility.isInternetConnected(app)) {
+            groupReq["page_no"] = "1"
+            groupReq["page_size"] = "2"
 
+            getNewsPostObservable.subscribeWith(getNewsPostObserver)
+        } else {
+            errorMessage.value = app.resources.getString(R.string.no_internet_connection)
+        }
     }
 
     private fun loadRecommendedMyGroupData() {
@@ -67,6 +75,33 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
         }
     }
 
+
+    private val getNewsPostObservable: Observable<NewsPostResponse>
+        get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
+            .getNewsPostData("Bearer " + EndPoints.ACCESS_TOKEN, groupReq)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+
+    private val getNewsPostObserver: DisposableObserver<NewsPostResponse>
+        get() = object : DisposableObserver<NewsPostResponse>() {
+            override fun onNext(@NonNull response: NewsPostResponse) {
+                if (Utility.isSuccessCode(response.response_code)) {
+                    newsPostResponseList.value = response.body
+                    if (response.body.isNullOrEmpty()) {
+                        errorMessage.value = response.message
+                    }
+                } else {
+                    errorMessage.value = response.message
+                }
+            }
+
+            override fun onError(@NonNull e: Throwable) {
+                e.printStackTrace()
+                errorMessage.value = e.message
+            }
+
+            override fun onComplete() {}
+        }
 
     private val getGroupsObservable: Observable<RecommendedGropsResponse>
         get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)

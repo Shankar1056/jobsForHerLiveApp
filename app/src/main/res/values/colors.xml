@@ -10,8 +10,8 @@
     <color name="darkgrey">#7E7E7E</color>
     <color name="lightgrey">#6F6E6E</color>
     <color name="comments_gray">#DFDFDF</color>
-    <color name="bordergrey">#E5E5E5</color>
-    <color name="widgetgrey">#FBFBFB</color>
+    <color name="bordergrey">#DFDFDF</color>
+    <color name="widgetgrey">#EBEBEB</color>
     <color name="white">#FFFFFF</color>
     <color name="menu_grey">#6A6A6A</color>
     <color name="text_dark_grey">#6D6D6D</color>

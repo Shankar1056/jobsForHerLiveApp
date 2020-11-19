@@ -7,5 +7,5 @@ data class JobsForHerPagination(
     var total_items: Int? = null,
     var has_next: Boolean? = null,
     var next_page: Int? = null,
-    var prev_page: Int? = null
+    var prev_page: String? = null
 )

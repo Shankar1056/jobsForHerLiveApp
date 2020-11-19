@@ -46,6 +46,6 @@ interface ApiServices {
     fun getNewsPostData(
         @Header("Authorization") accesstoken: String,
         @QueryMap signInCredentials: HashMap<String, String>
-    ): Call<NewsDetails>
+    ): Observable<NewsPostResponse>
 
 }
