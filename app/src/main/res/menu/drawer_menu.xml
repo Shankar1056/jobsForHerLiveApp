@@ -53,7 +53,8 @@
                 android:title="Blogs" />
         <item
                 android:id="@+id/action_settings"
-                android:title="Settings"/>
+                android:title="Settings"
+                android:visible="false"/>
 
         <item
                 android:id="@+id/action_logout"
@@ -64,38 +65,45 @@
                 android:id="@+id/action_signup"
                 app:actionLayout="@layout/menu_signup"
                 android:title=""
+                android:visible="false"
         />
         <item
                 android:id="@+id/action_login"
                 app:actionLayout="@layout/menu_login"
                 android:title=""
+                android:visible="false"
         />
 
 
     </group>
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
+            >
         <item
                 android:id="@+id/appVersion"
-                android:title="" />
+                android:title=""
+                android:visible="false"/>
     </group>
 
     <group>
         <item
                 android:id="@+id/action_employerzone"
                 android:title="Employer Zone"
+                android:visible="false"
         />
     </group>
     <group>
         <item
                 android:id="@+id/action_mentorzone"
                 android:title="Mentor Zone"
+                android:visible="false"
         />
     </group>
     <group>
         <item
                 android:id="@+id/action_partnerzone"
                 android:title="Partner Zone"
+                android:visible="false"
         />
     </group>
 </menu>

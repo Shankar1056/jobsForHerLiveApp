@@ -3,7 +3,6 @@ package com.jobsforher.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.ColorStateList;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -23,6 +22,7 @@ import com.jobsforher.models.FunctionalAreaView;
 import com.jobsforher.network.retrofithelpers.EndPoints;
 import com.jobsforher.network.retrofithelpers.RetrofitClient;
 import com.jobsforher.network.retrofithelpers.RetrofitInterface;
+import com.jobsforher.ui.newsfeed.NewsFeedActivity;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
@@ -86,7 +86,7 @@ public class Footer extends AppCompatActivity implements View.OnClickListener {
                     "You are refering null object. "
                             + "Please check weather you had called super class method mappingWidgets() or not");
         if (v == btnHome) {
-            Intent intent = new Intent(this, NewsFeed.class);
+            Intent intent = new Intent(this, NewsFeedActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             intent.putExtra("isLoggedIn",true);
             finish();

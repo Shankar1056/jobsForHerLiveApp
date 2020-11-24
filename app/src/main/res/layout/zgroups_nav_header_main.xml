@@ -68,7 +68,8 @@
             android:id="@+id/nologgedin_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
         <ImageView android:layout_width="260dp"
                    android:layout_height="48dp"
                    android:src="@drawable/accelherate_logo_srt"

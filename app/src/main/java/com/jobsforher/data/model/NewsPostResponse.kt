@@ -1,10 +1,7 @@
 package com.jobsforher.data.model
 
 import android.text.Html
-import android.webkit.WebResourceError
-import android.webkit.WebResourceRequest
-import android.webkit.WebView
-import android.webkit.WebViewClient
+import android.webkit.*
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.text.HtmlCompat
@@ -54,6 +51,14 @@ data class NewsPostBody(
 @BindingAdapter("setWebViewClient")
 fun setWebViewClient(view: WebView, client: WebViewClient?) {
     view.setWebViewClient(client)
+    view.settings.javaScriptEnabled = true
+    view.settings.javaScriptCanOpenWindowsAutomatically = true
+    view.getSettings().setPluginState(WebSettings.PluginState.ON)
+    view.getSettings().mediaPlaybackRequiresUserGesture = false
+
+    view.settings.builtInZoomControls = true
+    view.isHorizontalScrollBarEnabled = true
+    view.isVerticalScrollBarEnabled = true
 }
 
 @BindingAdapter("loadDocumentVideoUrl")

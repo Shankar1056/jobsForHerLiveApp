@@ -10,6 +10,7 @@
         <import type="android.view.View" />
 
         <import type="android.text.Html" />
+        <import type="com.jobsforher.util.Utility" />
     </data>
 
     <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -111,11 +112,11 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="8dp"
                     android:nestedScrollingEnabled="true"
-                    android:visibility="@{model.post_type.equals(`text`) || model.post_type.equals(`image`) ? View.GONE : View.VISIBLE}"
+                    android:visibility="@{model.post_type.equals(`text`) ? (model.post_type.equals(`image`) ? View.INVISIBLE : View.GONE) : View.VISIBLE}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/posticon"
                     app:layout_constraintTop_toBottomOf="@+id/postdata"
-                    app:loadUrl="@{model.url}"
+                    app:loadUrl="@{Utility.getVideoDocumentUrl(model.url, model.post_type)}"
                     app:setWebViewClient="@{model.webViewClient}" />
 
             <ProgressBar

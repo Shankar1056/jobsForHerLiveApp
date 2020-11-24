@@ -7,8 +7,10 @@ import android.content.SharedPreferences
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
+import android.util.Log
 import android.widget.Toast
 import com.jobsforher.activities.SplashActivity
+import java.util.regex.Pattern
 
 class Utility {
 
@@ -61,9 +63,9 @@ class Utility {
             Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
         }
 
-        fun doLogoutPopup(context: Context) {
+        fun doLogoutPopup(context: Context, message : String) {
             val builder = AlertDialog.Builder(context)
-            builder.setMessage("Do you really want to logout of the app ?")
+            builder.setMessage(message)
             builder.setPositiveButton("YES") { dialog, which ->
                 val sharedPref: SharedPreferences = context.getSharedPreferences(
                     "mysettings",
@@ -81,6 +83,57 @@ class Utility {
             dialog.show()
         }
 
+        fun sessionExpiredPopup(context: Context, message : String) {
+            val builder = AlertDialog.Builder(context)
+            builder.setMessage(message)
+            builder.setPositiveButton("OK") { dialog, which ->
+                val sharedPref: SharedPreferences = context.getSharedPreferences(
+                    "mysettings",
+                    Context.MODE_PRIVATE
+                )
+                sharedPref.edit().clear().commit();
+                val intent = Intent(context, SplashActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                context.startActivity(intent)
+            }
+
+            val dialog: AlertDialog = builder.create()
+            dialog.show()
+        }
+
+        @JvmStatic
+        fun getVideoDocumentUrl(data: String, docType : String): String {
+            if (docType == "document"){
+                return "http://docs.google.com/gview?embedded=true&url=$data"
+            }
+            if (docType == "video") {
+                var text = data.replace("watch?", "embed/")
+                var t = extractYTId(text)
+                return if (t!!.contains("v=")) {
+                    val splitText = t!!.split("v=")
+                    val v =
+                        splitText[1].split("&".toRegex()).dropLastWhile({ it.isEmpty() })
+                            .toTypedArray()
+                    "https://www.youtube.com/embed/" + v[0]
+                } else {
+                    "https://www.youtube.com/embed/$t"
+                }
+            }
+            return data
+        }
+
+        private fun extractYTId(ytUrl: String): String? {
+                var vId: String? = null
+                val pattern = Pattern.compile(
+                    "^https?://.*(?:youtu.be/|v/|u/\\w/|embed/|watch?v=)([^#&?]*).*$",
+                    Pattern.CASE_INSENSITIVE
+                )
+                val matcher = pattern.matcher(ytUrl)
+                if (matcher.matches()) {
+                    vId = matcher.group(1)
+                }
+                return vId
+        }
 
     }
 

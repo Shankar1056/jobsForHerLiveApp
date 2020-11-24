@@ -6,6 +6,6 @@ data class JobsForHerPagination(
     var pages: Int? = null,
     var total_items: Int? = null,
     var has_next: Boolean? = null,
-    var next_page: Int? = null,
+    var next_page: String? = null,
     var prev_page: String? = null
 )

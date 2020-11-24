@@ -306,6 +306,8 @@
     <string name="no_internet_connection">No internet connection</string>
     <string name="text_apply">Apply</string>
     <string name="text_follow">Follow</string>
+    <string name="logout_warning_message">Do you really want to logout of the app ?</string>
+    <string name="server412Message">Session Expired, Please Login</string>
 
 
     <!--<string name="app_name">Android Spinner</string>-->

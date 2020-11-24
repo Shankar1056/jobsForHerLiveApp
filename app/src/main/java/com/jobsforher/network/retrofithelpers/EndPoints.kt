@@ -21,6 +21,8 @@ object EndPoints {
     const val allgroups = "groups"
 
     const val vote = "vote"
+    const val NEWSFEED = "news_feed"
+    const val NOTIFICATION = "notification_bubble"
 
     const val CLIENT_ID = "NQtAuLKzeYVOFe7b3kmqBSNP"
 

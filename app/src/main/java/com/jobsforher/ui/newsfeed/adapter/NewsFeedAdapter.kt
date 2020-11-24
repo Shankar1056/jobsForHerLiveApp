@@ -34,7 +34,7 @@ class NewsFeedAdapter(
     }
 
     override fun getItemCount(): Int {
-        return list.size
+        return if (list.size > 2) 2 else list.size
     }
 
     inner class ViewHolder(private var itemRowBinding: ItemNewsFeedBinding) :

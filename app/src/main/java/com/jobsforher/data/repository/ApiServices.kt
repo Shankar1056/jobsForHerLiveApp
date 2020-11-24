@@ -1,10 +1,7 @@
 package com.jobsforher.data.repository
 
 import com.jobsforher.data.model.*
-import com.jobsforher.network.responsemodels.Company
-import com.jobsforher.network.responsemodels.Featured_Group
-import com.jobsforher.network.responsemodels.NewsDetails
-import com.jobsforher.network.responsemodels.VoteResponse
+import com.jobsforher.network.responsemodels.NotificationBubbleResponse
 import com.jobsforher.network.retrofithelpers.EndPoints
 import io.reactivex.Observable
 import retrofit2.Call
@@ -22,28 +19,28 @@ interface ApiServices {
 
 
     @Headers("clientid:" + EndPoints.CLIENT_ID)
-    @GET("/api/v3.0/es_recommended_jobs")
+    @GET("es_recommended_jobs")
     fun getRecommendedJobs(
         @Header("Authorization") accesstoken: String,
         @QueryMap groupCredentials: HashMap<String, String>
     ): Observable<RecommendedJobsResponse>
 
     @Headers("clientid:" + EndPoints.CLIENT_ID)
-    @GET("/api/v3.0/es_recommended_companies")
+    @GET("es_recommended_companies")
     fun getRecommendedCompanies(
         @Header("Authorization") accesstoken: String,
         @QueryMap groupCredentials: HashMap<String, String>
     ): Observable<RecommendedCompaniesResponse>
 
     @Headers("clientid:" + EndPoints.CLIENT_ID)
-    @GET("/api/v3.0/es_recommended_groups")
+    @GET("es_recommended_groups")
     fun getRecommendedMyGroupData(
         @Header("Authorization") accesstoken: String,
         @QueryMap groupCredentials: HashMap<String, String>
     ): Observable<RecommendedGropsResponse>
 
     @Headers("clientid:" + EndPoints.CLIENT_ID)
-    @GET("/api/v3.0/news_feed")
+    @GET(EndPoints.NEWSFEED)
     fun getNewsPostData(
         @Header("Authorization") accesstoken: String,
         @QueryMap signInCredentials: HashMap<String, String>
@@ -63,5 +60,10 @@ interface ApiServices {
         @Body signInCredentials: HashMap<String, String>
     ): Observable<VoteResponseModel>
 
+    @Headers("clientid:" + EndPoints.CLIENT_ID)
+    @GET(EndPoints.NOTIFICATION)
+    fun getNotificationBubble(
+        @Header("Authorization") accesstoken: String
+    ): Observable<NotificationBubbleResponse>
 
 }

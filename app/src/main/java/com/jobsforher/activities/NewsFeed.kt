@@ -108,7 +108,7 @@ class NewsFeed : Footer(), NavigationView.OnNavigationItemSelectedListener {
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-
+TODO("pending")
         isLoggedIn = intent.getBooleanExtra("isLoggedIn", false)
         groupId = intent.getIntExtra("group_Id", 0)
         isMyGroup = intent.getIntExtra("isMygroup", 0)
@@ -129,6 +129,8 @@ class NewsFeed : Footer(), NavigationView.OnNavigationItemSelectedListener {
         mRecyclerViewJobs = findViewById(R.id.jobs_recycler_view)
         mRecyclerViewGroups = findViewById(R.id.groups_recycler_view)
 
+
+        TODO("Pending")
         val sharedPref: SharedPreferences = getSharedPreferences(
             "mysettings",
             Context.MODE_PRIVATE
@@ -233,7 +235,7 @@ class NewsFeed : Footer(), NavigationView.OnNavigationItemSelectedListener {
                     .into(img_profile_toolbar)
             }
 
-
+TODO("Pending")
             loggedin_header.setOnClickListener {
                 intent = Intent(applicationContext, SignUpWelcomeActivity::class.java)
                 startActivity(intent)
@@ -340,6 +342,7 @@ class NewsFeed : Footer(), NavigationView.OnNavigationItemSelectedListener {
             //loadGroupPosts(prev_page_no_posts, "2")
         }
 
+        TODO("Pending")
         loadnext.setOnClickListener {
             listOfPostdata.clear()
             loadGroupPosts(Constants.MAXIMUM_PAGINATION_COUNT)

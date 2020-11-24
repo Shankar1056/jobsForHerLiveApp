@@ -1,19 +1,16 @@
 package com.jobsforher.ui.newsfeed
 
-import android.app.AlertDialog
 import android.app.Application
-import android.content.Context
-import android.content.Intent
-import android.content.SharedPreferences
 import androidx.annotation.NonNull
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.bigappcompany.healthtunnel.data.repository.RetroClient
 import com.jobsforher.R
-import com.jobsforher.activities.SplashActivity
 import com.jobsforher.data.model.*
+import com.jobsforher.data.model.common_response.JobsForHerPagination
 import com.jobsforher.data.repository.ApiServices
 import com.jobsforher.helpers.Constants
+import com.jobsforher.network.responsemodels.NotificationBubbleResponse
 import com.jobsforher.network.retrofithelpers.EndPoints
 import com.jobsforher.util.Utility
 import io.reactivex.Observable
@@ -29,15 +26,17 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
     var companiesResponseList = MutableLiveData<ArrayList<RecommendedCompaniesBody>>()
     var groupsResponseList = MutableLiveData<ArrayList<RecommendedGropsBody>>()
     var newsPostResponseList = MutableLiveData<ArrayList<NewsPostBody>>()
+    var newsPostpagination = JobsForHerPagination()
     var voteResponse = MutableLiveData<VoteBody>()
     var homeBannerResponse = MutableLiveData<ArrayList<HomeBannerData>>()
+    var notificationCount = MutableLiveData<Int>()
 
     init {
         loadHomeBanner()
         loadRecommendedJobs()
         loadRecommendedCompanies()
         loadRecommendedMyGroupData()
-        loadGroupPosts()
+        loadGroupPosts("1", Constants.MAXIMUM_PAGINATION_COUNT)
     }
 
     private fun loadHomeBanner() {
@@ -50,10 +49,10 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
         homeBannerResponse.value = bannerList
     }
 
-    private fun loadGroupPosts() {
+    fun loadGroupPosts(pageNo: String, maxRecordToLoad: String) {
         if (Utility.isInternetConnected(app)) {
-            groupReq["page_no"] = "1"
-            groupReq["page_size"] = "2"
+            groupReq["page_no"] = pageNo
+            groupReq["page_size"] = maxRecordToLoad
 
             getNewsPostObservable.subscribeWith(getNewsPostObserver)
         } else {
@@ -118,7 +117,39 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
         }
     }
 
+    fun loadNotificationbubble() {
+        if (Utility.isInternetConnected(app)) {
+            notificationObservable.subscribeWith(notificationObserver)
+        } else {
+            errorMessage.value = app.resources.getString(R.string.no_internet_connection)
+        }
+    }
 
+
+    private val notificationObservable: Observable<NotificationBubbleResponse>
+        get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
+            .getNotificationBubble("Bearer " + EndPoints.ACCESS_TOKEN)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+
+    private val notificationObserver: DisposableObserver<NotificationBubbleResponse>
+        get() = object : DisposableObserver<NotificationBubbleResponse>() {
+            override fun onNext(@NonNull response: NotificationBubbleResponse) {
+                if (Utility.isSuccessCode(response.response_code)) {
+
+                    notificationCount.value = response.body?.new_notification
+                } else {
+                    errorMessage.value = response.message
+                }
+            }
+
+            override fun onError(@NonNull e: Throwable) {
+                e.printStackTrace()
+                errorMessage.value = e.message
+            }
+
+            override fun onComplete() {}
+        }
 
     private val doDownVoteObservable: Observable<VoteResponseModel>
         get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
@@ -188,6 +219,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
             override fun onNext(@NonNull response: NewsPostResponse) {
                 if (Utility.isSuccessCode(response.response_code)) {
                     newsPostResponseList.value = response.body
+                    newsPostpagination = response.pagination!!
                     if (response.body.isNullOrEmpty()) {
                         errorMessage.value = response.message
                     }

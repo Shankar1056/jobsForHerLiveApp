@@ -1,37 +1,44 @@
 package com.jobsforher.ui.newsfeed
 
-import android.app.AlertDialog
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
 import android.view.MenuItem
+import android.view.View
+import android.view.ViewTreeObserver
+import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.navigation.NavigationView
+import com.jobsforher.BuildConfig
 import com.jobsforher.R
 import com.jobsforher.activities.*
 import com.jobsforher.data.model.NewsPostBody
+import com.jobsforher.helpers.Constants
 import com.jobsforher.helpers.HelperMethods
+import com.jobsforher.network.retrofithelpers.EndPoints
 import com.jobsforher.ui.newsfeed.adapter.*
 import com.jobsforher.util.Utility
+import com.squareup.picasso.Picasso
+import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.activity_newsfeed.*
+import kotlinx.android.synthetic.main.toolbar_groups.*
 import kotlinx.android.synthetic.main.zactivity_newsfeed.*
 
 class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListener {
     val viewModel: NewsFeedViewModel by viewModels()
     private var clickedPos: Int? = null
     lateinit var newsPostAdapter: NewsFeedAdapter
+    lateinit var allNewsPostAdapter: AllNewsFeedAdapter
     var newsPostList = ArrayList<NewsPostBody>()
+    private var loading = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,8 +46,13 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
 
         initWidgit()
 
+        clickListener()
+
+        handleBackgrounds(btnHome)
+
         listenViewModelData()
     }
+
 
     private fun listenViewModelData() {
         viewModel.jobsResponseList.observe(this, Observer {
@@ -61,17 +73,22 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
                     newsPostList[clickedPos!!].upvote_count = it.upvote_count
                     newsPostList[clickedPos!!].downvote_count = it.downvote_count
                     newsPostAdapter.notifyDataSetChanged()
+                    allNewsPostAdapter.notifyDataSetChanged()
                 }
             }
         })
 
         viewModel.newsPostResponseList.observe(this, Observer {
-            newsPostList.clear()
             newsPostList.addAll(it)
-            Log.i("response :::", newsPostList[0].post_type)
 
-            newsPostAdapter.notifyDataSetChanged()
-
+            if (newsPostList.size <= 10) {
+                newsPostAdapter.notifyDataSetChanged()
+            }
+            allNewsPostAdapter.notifyDataSetChanged()
+            if (my_swipeRefresh_Layout.isRefreshing) {
+                my_swipeRefresh_Layout.isRefreshing = false
+            }
+            loading = true
         })
 
         viewModel.homeBannerResponse.observe(this, Observer {
@@ -92,6 +109,14 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
 
         viewModel.errorMessage.observe(this, Observer {
             Utility.showToast(this@NewsFeedActivity, it)
+            Utility.sessionExpiredPopup(
+                this@NewsFeedActivity,
+                resources.getString(R.string.server412Message)
+            )
+        })
+
+        viewModel.notificationCount.observe(this, Observer {
+            cart_badge.text = it.toString()
         })
     }
     var position: Int = 0
@@ -106,6 +131,8 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
     }
 
     private fun initWidgit() {
+        mappingWidgets()
+
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
@@ -116,7 +143,24 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
         toggle.getDrawerArrowDrawable().color = Color.WHITE
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
-        nav_view.setNavigationItemSelectedListener(this)
+        val hView = nav_view.getHeaderView(0)
+
+        val profile_name = hView.findViewById(R.id.profile_name) as TextView
+        val img_profile_sidemenu =
+            hView.findViewById(R.id.img_profile_sidemenu) as CircleImageView
+        profile_name.setText(EndPoints.USERNAME)
+        if (EndPoints.PROFILE_ICON.length > 4) {
+            Picasso.with(applicationContext)
+                .load(EndPoints.PROFILE_ICON)
+                .placeholder(R.drawable.ic_launcher_foreground)
+                .into(img_profile_sidemenu)
+            Picasso.with(applicationContext)
+                .load(EndPoints.PROFILE_ICON)
+                .placeholder(R.drawable.ic_launcher_foreground)
+                .into(img_profile_toolbar)
+        }
+
+        version.text = "Version - " + BuildConfig.VERSION_NAME
 
         newsPostAdapter = NewsFeedAdapter(newsPostList, object : NewsFeedClickLietener {
             override fun onUpVoteClicked(pos: Int) {
@@ -130,16 +174,123 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
             }
 
             override fun onCommentCountClicked(pos: Int) {
-                TODO("Not yet implemented")
+                startActivity(
+                    Intent(this@NewsFeedActivity, ZActivityCommentPage::class.java)
+                        .putExtra("comment_Id", newsPostList[pos].id)
+                )
+
             }
 
             override fun onCommentClicked(pos: Int, comment: String) {
-                TODO("Not yet implemented")
+                startActivity(
+                    Intent(this@NewsFeedActivity, ZActivityCommentPage::class.java)
+                        .putExtra("comment_Id", newsPostList[pos].id)
+                )
             }
         })
 
-
         posts_recycler_view.adapter = newsPostAdapter
+
+        allNewsPostAdapter = AllNewsFeedAdapter(newsPostList, object : NewsFeedClickLietener {
+            override fun onUpVoteClicked(pos: Int) {
+                clickedPos = pos
+                viewModel.upVoteClicked(newsPostList[pos].id)
+            }
+
+            override fun onDownVoteClicked(pos: Int) {
+                clickedPos = pos
+                viewModel.downVoteClicked(newsPostList[pos].id)
+            }
+
+            override fun onCommentCountClicked(pos: Int) {
+                startActivity(
+                    Intent(this@NewsFeedActivity, ZActivityCommentPage::class.java)
+                        .putExtra("comment_Id", newsPostList[pos].id)
+                )
+            }
+
+            override fun onCommentClicked(pos: Int, comment: String) {
+                startActivity(
+                    Intent(this@NewsFeedActivity, ZActivityCommentPage::class.java)
+                        .putExtra("comment_Id", newsPostList[pos].id)
+                )
+            }
+        })
+
+        posts_recycler_view1.adapter = allNewsPostAdapter
+    }
+
+    private fun clickListener() {
+
+        nav_view.setNavigationItemSelectedListener(this)
+
+        notifLayout.setOnClickListener {
+            cart_badge.setText("0")
+            startActivity(Intent(applicationContext, Notification::class.java))
+        }
+
+        jobssheader1.setOnClickListener {
+            startActivity(
+                Intent(applicationContext, ZActivityJobs::class.java)
+                    .putExtra("isLoggedIn", true)
+            )
+        }
+        companiessheader1.setOnClickListener {
+            startActivity(
+                Intent(applicationContext, ZActivityCompanies::class.java)
+                    .putExtra("isLoggedIn", true)
+            )
+        }
+        groupssheader1.setOnClickListener {
+            startActivity(
+                Intent(applicationContext, ZActivityGroups::class.java)
+                    .putExtra("isLoggedIn", true)
+            )
+        }
+
+        img_profile_toolbar.setOnClickListener {
+            startActivity(
+                Intent(applicationContext, ZActivityDashboard::class.java)
+                    .setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                    .putExtra("isLoggedIn", true)
+                    .putExtra("pagetype", 0)
+            )
+        }
+        my_swipeRefresh_Layout.setOnRefreshListener {
+            newsPostList.clear()
+            viewModel.loadGroupPosts("1", Constants.MAXIMUM_PAGINATION_COUNT)
+            onResume()
+        }
+
+        mainScroll_grpdetails.getViewTreeObserver()
+            .addOnScrollChangedListener(object : ViewTreeObserver.OnScrollChangedListener {
+                override fun onScrollChanged() {
+                    if (!loading) {
+                        return
+                    }
+
+                    Log.d("TAGG", "END EFORE")
+                    val view: View =
+                        mainScroll_grpdetails.getChildAt(mainScroll_grpdetails.getChildCount() - 1);
+
+                    val diff: Int =
+                        (view.getBottom() - (mainScroll_grpdetails.getHeight() + mainScroll_grpdetails.getScrollY()));
+
+                    if (diff == 0 && loading) {
+                        if (viewModel.newsPostpagination != null && viewModel.newsPostpagination.has_next != null) {
+                            if (viewModel.newsPostpagination.has_next!!) {
+                                viewModel.loadGroupPosts(
+                                    viewModel.newsPostpagination.next_page!!,
+                                    Constants.MAXIMUM_PAGINATION_COUNT
+                                )
+                                loading = false
+                            }
+                        }
+
+                    }
+                }
+            })
+
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -149,7 +300,7 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
         when (item.itemId) {
 
             R.id.action_dashboard -> {
-               goToTargetActivity(ZActivityDashboard())
+                goToTargetActivity(ZActivityDashboard())
             }
             R.id.action_groups -> {
                 goToTargetActivity(ZActivityGroups())
@@ -177,24 +328,20 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
                 goToTargetActivity(ZActivityEvents())
 
             }
-            R.id.action_blogs -> {
-                intent = Intent(applicationContext, WebActivity::class.java)
-                intent.putExtra("value", "https://www.jobsforher.com/blogs")
-                startActivity(intent)
-                closeDrawer()
-            }
             R.id.action_sett -> {
                 if (m.findItem(R.id.action_logout).isVisible == true)
                     m.findItem(R.id.action_logout).setVisible(false)
                 else
                     m.findItem(R.id.action_logout).setVisible(true)
-                //m.findItem(R.id.action_logout).setVisible(true)
             }
             R.id.action_logout -> {
                 val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
                 drawerLayout.closeDrawer(GravityCompat.START)
 
-                Utility.doLogoutPopup(this@NewsFeedActivity)
+                Utility.doLogoutPopup(
+                    this@NewsFeedActivity,
+                    resources.getString(R.string.logout_warning_message)
+                )
 
             }
             R.id.action_share -> {
@@ -219,5 +366,10 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
     private fun closeDrawer() {
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         drawerLayout.closeDrawer(GravityCompat.START)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        viewModel.loadNotificationbubble()
     }
 }

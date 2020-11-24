@@ -90,6 +90,7 @@ class PostsNewsAdapter(private val mDataList: ArrayList<GroupsPostModel>, val is
         }
         Log.d("TAGG", "ADAPTER..." + holder.row_description.text)
 
+        TODO("Pending")
         holder.view_all_comments.setOnClickListener {
             val intent = Intent(context, ZActivityCommentPage::class.java)
             intent.putExtra("comment_Id", mDataList[position].id)
