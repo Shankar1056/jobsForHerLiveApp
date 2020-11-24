@@ -1,8 +1,6 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.documentfile:documentfile:1.0.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f92603ca1ea66a27895f293cb0c14d53/documentfile-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ac1cf5bbf8ccf7f2bad61d5f043151ee/documentfile-1.0.0/res" />
       <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/ac1cf5bbf8ccf7f2bad61d5f043151ee/documentfile-1.0.0/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/ac1cf5bbf8ccf7f2bad61d5f043151ee/documentfile-1.0.0/res" />
       <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/ac1cf5bbf8ccf7f2bad61d5f043151ee/documentfile-1.0.0/AndroidManifest.xml" />

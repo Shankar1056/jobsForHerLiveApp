@@ -1,11 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-measurement:17.6.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/09fc3339c144f25e74d68c7fba64fdcf/jetified-play-services-measurement-17.6.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cbc8d18ebd114204b1c5275111f4745a/jetified-play-services-measurement-17.6.0/res" />
       <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/cbc8d18ebd114204b1c5275111f4745a/jetified-play-services-measurement-17.6.0/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/cbc8d18ebd114204b1c5275111f4745a/jetified-play-services-measurement-17.6.0/AndroidManifest.xml" />
       <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/cbc8d18ebd114204b1c5275111f4745a/jetified-play-services-measurement-17.6.0/res" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/cbc8d18ebd114204b1c5275111f4745a/jetified-play-services-measurement-17.6.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/modules-2/files-2.1/com.google.android.gms/play-services-measurement/17.6.0/89833cf6684398d49d77d1b143b8b8bb3161665c/play-services-measurement-17.6.0-javadoc.jar!/" />

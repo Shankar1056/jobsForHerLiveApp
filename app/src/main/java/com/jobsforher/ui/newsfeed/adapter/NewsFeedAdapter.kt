@@ -11,7 +11,10 @@ import com.jobsforher.R
 import com.jobsforher.data.model.NewsPostBody
 import com.jobsforher.databinding.ItemNewsFeedBinding
 
-class NewsFeedAdapter(private val list: ArrayList<NewsPostBody>) :
+class NewsFeedAdapter(
+    private val list: ArrayList<NewsPostBody>,
+    private val listener: NewsFeedClickLietener
+) :
     RecyclerView.Adapter<NewsFeedAdapter.ViewHolder>() {
     @NonNull
     override fun onCreateViewHolder(@NonNull parent: ViewGroup, viewType: Int): ViewHolder {
@@ -40,7 +43,40 @@ class NewsFeedAdapter(private val list: ArrayList<NewsPostBody>) :
         fun bind(obj: Any) {
             itemRowBinding.setVariable(BR.model, obj)
             itemRowBinding.executePendingBindings()
+            handleClickListener(itemRowBinding, adapterPosition)
+
         }
     }
 
+    private fun handleClickListener(itemRowBinding: ItemNewsFeedBinding, position: Int) {
+        itemRowBinding.upvote.setOnClickListener {
+            listener.onUpVoteClicked(position)
+        }
+        itemRowBinding.upvoteText.setOnClickListener {
+            listener.onUpVoteClicked(position)
+        }
+        itemRowBinding.downvote.setOnClickListener {
+            listener.onDownVoteClicked(position)
+        }
+        itemRowBinding.downvoteText.setOnClickListener {
+            listener.onDownVoteClicked(position)
+        }
+        itemRowBinding.comment.setOnClickListener {
+            listener.onCommentCountClicked(position)
+        }
+        itemRowBinding.commentText.setOnClickListener {
+            listener.onCommentCountClicked(position)
+        }
+        itemRowBinding.sendComment.setOnClickListener {
+            listener.onCommentClicked(position, itemRowBinding.comentEdittext.text.toString())
+        }
+    }
+
+}
+
+interface NewsFeedClickLietener {
+    fun onUpVoteClicked(pos: Int)
+    fun onDownVoteClicked(pos: Int)
+    fun onCommentCountClicked(pos: Int)
+    fun onCommentClicked(pos: Int, comment: String)
 }

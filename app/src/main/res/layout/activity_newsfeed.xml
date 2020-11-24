@@ -159,19 +159,24 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <androidx.cardview.widget.CardView
+                <!--<androidx.cardview.widget.CardView
                         android:id="@+id/news_layout"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         app:layout_constraintEnd_toEndOf="@+id/jobsAds_recycler_view"
                         app:layout_constraintStart_toStartOf="@+id/jobsAds_recycler_view"
-                        app:layout_constraintTop_toBottomOf="@+id/companies_layout">
+                        app:layout_constraintTop_toBottomOf="@+id/companies_layout">-->
 
                     <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
+                            android:id="@+id/news_layout"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:paddingBottom="10dp">
+                            android:paddingBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintEnd_toEndOf="@+id/jobsAds_recycler_view"
+                            app:layout_constraintStart_toStartOf="@+id/jobsAds_recycler_view"
+                            app:layout_constraintTop_toBottomOf="@+id/companies_layout">
 
                         <TextView
                                 android:id="@+id/newsTv"
@@ -198,15 +203,15 @@
                                 android:id="@+id/posts_recycler_view"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="13dp"
+                                android:layout_marginTop="3dp"
                                 android:nestedScrollingEnabled="false"
                                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                                app:layout_constraintEnd_toEndOf="@+id/newsTv"
-                                app:layout_constraintStart_toStartOf="@+id/newsTv"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/newsTv" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
-                </androidx.cardview.widget.CardView>
+               <!-- </androidx.cardview.widget.CardView>-->
 
                 <androidx.cardview.widget.CardView
                         android:id="@+id/groups_layout"

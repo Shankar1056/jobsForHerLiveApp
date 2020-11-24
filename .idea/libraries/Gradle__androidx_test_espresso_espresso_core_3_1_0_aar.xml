@@ -1,10 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.test.espresso:espresso-core:3.1.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/499dc07cbb987c3c2a82649d7683b937/espresso-core-3.1.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c669d5a30e05c0df5cfe80e16f844a8/espresso-core-3.1.0/res" />
-      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/8c669d5a30e05c0df5cfe80e16f844a8/espresso-core-3.1.0/res" />
       <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/8c669d5a30e05c0df5cfe80e16f844a8/espresso-core-3.1.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/8c669d5a30e05c0df5cfe80e16f844a8/espresso-core-3.1.0/res" />
       <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/8c669d5a30e05c0df5cfe80e16f844a8/espresso-core-3.1.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>

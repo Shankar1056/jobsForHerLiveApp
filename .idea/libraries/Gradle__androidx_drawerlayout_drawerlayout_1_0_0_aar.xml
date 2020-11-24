@@ -4,11 +4,9 @@
       <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/d407c03c29c7bcc2cee5fa9ba8c8233b/drawerlayout-1.0.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d677d20f954a94cf522e57f3ae6f7079/drawerlayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d407c03c29c7bcc2cee5fa9ba8c8233b/drawerlayout-1.0.0/res" />
-      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/d407c03c29c7bcc2cee5fa9ba8c8233b/drawerlayout-1.0.0/AndroidManifest.xml" />
-      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/d407c03c29c7bcc2cee5fa9ba8c8233b/drawerlayout-1.0.0/res" />
       <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/d407c03c29c7bcc2cee5fa9ba8c8233b/drawerlayout-1.0.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/d407c03c29c7bcc2cee5fa9ba8c8233b/drawerlayout-1.0.0/res" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/d407c03c29c7bcc2cee5fa9ba8c8233b/drawerlayout-1.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

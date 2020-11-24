@@ -1,12 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: phonepe.intentsdk.android.release:IntentSDK:0.1.5.2@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/31132271f43eafff86ad9df46e922596/jetified-IntentSDK-0.1.5.2/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/31132271f43eafff86ad9df46e922596/jetified-IntentSDK-0.1.5.2/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/31132271f43eafff86ad9df46e922596/jetified-IntentSDK-0.1.5.2/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/bc7836343ccf90595df70dd79500f40c/jetified-IntentSDK-0.1.5.2/AndroidManifest.xml" />
       <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/bc7836343ccf90595df70dd79500f40c/jetified-IntentSDK-0.1.5.2/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/bc7836343ccf90595df70dd79500f40c/jetified-IntentSDK-0.1.5.2/res" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/bc7836343ccf90595df70dd79500f40c/jetified-IntentSDK-0.1.5.2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

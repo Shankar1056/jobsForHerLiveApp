@@ -1,10 +1,14 @@
 package com.jobsforher.util
 
+import android.app.AlertDialog
 import android.content.Context
+import android.content.Intent
+import android.content.SharedPreferences
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
 import android.widget.Toast
+import com.jobsforher.activities.SplashActivity
 
 class Utility {
 
@@ -43,11 +47,38 @@ class Utility {
         }
 
         fun isSuccessCode(responseCode: Int?): Boolean {
-            return true
+            if (responseCode != null) {
+                if (responseCode in 10000..10999) {
+                    return true
+                } else if (responseCode in 11000..11999) {
+                    return false
+                }
+            }
+            return false
         }
 
-        fun showToast(context: Context, message : String) {
+        fun showToast(context: Context, message: String) {
             Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+        }
+
+        fun doLogoutPopup(context: Context) {
+            val builder = AlertDialog.Builder(context)
+            builder.setMessage("Do you really want to logout of the app ?")
+            builder.setPositiveButton("YES") { dialog, which ->
+                val sharedPref: SharedPreferences = context.getSharedPreferences(
+                    "mysettings",
+                    Context.MODE_PRIVATE
+                )
+                sharedPref.edit().clear().commit();
+                val intent = Intent(context, SplashActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                context.startActivity(intent)
+            }
+            builder.setNegativeButton("No") { dialog, which ->
+                dialog.cancel()
+            }
+            val dialog: AlertDialog = builder.create()
+            dialog.show()
         }
 
 

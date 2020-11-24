@@ -4,6 +4,7 @@ import com.jobsforher.data.model.*
 import com.jobsforher.network.responsemodels.Company
 import com.jobsforher.network.responsemodels.Featured_Group
 import com.jobsforher.network.responsemodels.NewsDetails
+import com.jobsforher.network.responsemodels.VoteResponse
 import com.jobsforher.network.retrofithelpers.EndPoints
 import io.reactivex.Observable
 import retrofit2.Call
@@ -47,5 +48,20 @@ interface ApiServices {
         @Header("Authorization") accesstoken: String,
         @QueryMap signInCredentials: HashMap<String, String>
     ): Observable<NewsPostResponse>
+
+    @Headers("clientid:" + EndPoints.CLIENT_ID)
+    @POST(EndPoints.vote)
+    fun upVoteData(
+        @Header("Authorization") accesstoken: String,
+        @Body signInCredentials: HashMap<String, String>
+    ): Observable<VoteResponseModel>
+
+    @Headers("clientid:" + EndPoints.CLIENT_ID)
+    @HTTP(method = "DELETE", path = EndPoints.vote, hasBody = true)
+    fun downVoteData(
+        @Header("Authorization") accesstoken: String,
+        @Body signInCredentials: HashMap<String, String>
+    ): Observable<VoteResponseModel>
+
 
 }

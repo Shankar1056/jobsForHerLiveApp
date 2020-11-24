@@ -1,14 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-safetynet:15.0.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/70bcb03ff6391c4d64cb72644c5fad49/jetified-play-services-safetynet-15.0.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e7f4e7ce08be4f5dab83a94989c2783d/jetified-play-services-safetynet-15.0.1/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9ffb5c8cee9effe573240a8ce7cc1954/jetified-play-services-safetynet-15.0.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9ffb5c8cee9effe573240a8ce7cc1954/jetified-play-services-safetynet-15.0.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9ffb5c8cee9effe573240a8ce7cc1954/jetified-play-services-safetynet-15.0.1/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/ba7e14fa12ed22f7ed35e8eaeb8720e0/jetified-play-services-safetynet-15.0.1/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/ba7e14fa12ed22f7ed35e8eaeb8720e0/jetified-play-services-safetynet-15.0.1/res" />
       <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/ba7e14fa12ed22f7ed35e8eaeb8720e0/jetified-play-services-safetynet-15.0.1/AndroidManifest.xml" />
-      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/ba7e14fa12ed22f7ed35e8eaeb8720e0/jetified-play-services-safetynet-15.0.1/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

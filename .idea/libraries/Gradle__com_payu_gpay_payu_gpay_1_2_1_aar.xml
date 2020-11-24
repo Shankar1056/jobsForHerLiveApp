@@ -1,13 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.payu.gpay:payu-gpay:1.2.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/da83c7111636ba509ec8bb153c15c0b4/jetified-payu-gpay-1.2.1/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/da83c7111636ba509ec8bb153c15c0b4/jetified-payu-gpay-1.2.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/da83c7111636ba509ec8bb153c15c0b4/jetified-payu-gpay-1.2.1/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/da83c7111636ba509ec8bb153c15c0b4/jetified-payu-gpay-1.2.1/jars/libs/r-classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/4c1ff3b38e3aaf61e4e37d4ea0fc91cc/jetified-payu-gpay-1.2.1/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/4c1ff3b38e3aaf61e4e37d4ea0fc91cc/jetified-payu-gpay-1.2.1/res" />
       <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/4c1ff3b38e3aaf61e4e37d4ea0fc91cc/jetified-payu-gpay-1.2.1/AndroidManifest.xml" />
-      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/4c1ff3b38e3aaf61e4e37d4ea0fc91cc/jetified-payu-gpay-1.2.1/jars/classes.jar!/" />
       <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/4c1ff3b38e3aaf61e4e37d4ea0fc91cc/jetified-payu-gpay-1.2.1/jars/libs/r-classes.jar!/" />
     </CLASSES>
     <JAVADOC>

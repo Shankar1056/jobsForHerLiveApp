@@ -1,11 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.firebase:firebase-auth:19.4.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9f8a90e25bd55bc3657ba4e739b6b39d/jetified-firebase-auth-19.4.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f49d4a138e8b2b55a89df4ad9c8f0010/jetified-firebase-auth-19.4.0/res" />
-      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/f49d4a138e8b2b55a89df4ad9c8f0010/jetified-firebase-auth-19.4.0/AndroidManifest.xml" />
       <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/f49d4a138e8b2b55a89df4ad9c8f0010/jetified-firebase-auth-19.4.0/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/f49d4a138e8b2b55a89df4ad9c8f0010/jetified-firebase-auth-19.4.0/res" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/f49d4a138e8b2b55a89df4ad9c8f0010/jetified-firebase-auth-19.4.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/modules-2/files-2.1/com.google.firebase/firebase-auth/19.4.0/ed1a1d774472db1eeb19ba1379e823356696db23/firebase-auth-19.4.0-javadoc.jar!/" />

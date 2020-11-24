@@ -1,14 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.facebook.android:facebook-core:4.40.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5d0c671dab3f8cf5a065757bedfc32ba/jetified-facebook-core-4.40.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b83532cb61cd86c81b949101a428885b/jetified-facebook-core-4.40.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ac3625bb5002cb7a6aade401e69131dc/jetified-facebook-core-4.40.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ac3625bb5002cb7a6aade401e69131dc/jetified-facebook-core-4.40.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ac3625bb5002cb7a6aade401e69131dc/jetified-facebook-core-4.40.0/res" />
-      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/3820a62ccff41f1268de18c2609e52af/jetified-facebook-core-4.40.0/AndroidManifest.xml" />
-      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/3820a62ccff41f1268de18c2609e52af/jetified-facebook-core-4.40.0/res" />
       <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/3820a62ccff41f1268de18c2609e52af/jetified-facebook-core-4.40.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/3820a62ccff41f1268de18c2609e52af/jetified-facebook-core-4.40.0/res" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/3820a62ccff41f1268de18c2609e52af/jetified-facebook-core-4.40.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/modules-2/files-2.1/com.facebook.android/facebook-core/4.40.0/169adfb18e960a987d5aa8d58761a86149e693a0/facebook-core-4.40.0-javadoc.jar!/" />

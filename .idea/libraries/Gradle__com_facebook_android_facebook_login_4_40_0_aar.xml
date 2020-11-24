@@ -1,11 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.facebook.android:facebook-login:4.40.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d3df7aa962baa71e79f64bc837b9f9ae/jetified-facebook-login-4.40.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d3df7aa962baa71e79f64bc837b9f9ae/jetified-facebook-login-4.40.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d3df7aa962baa71e79f64bc837b9f9ae/jetified-facebook-login-4.40.0/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/1f6da068271150b4381199ee4ab73b9d/jetified-facebook-login-4.40.0/res" />
       <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/1f6da068271150b4381199ee4ab73b9d/jetified-facebook-login-4.40.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/1f6da068271150b4381199ee4ab73b9d/jetified-facebook-login-4.40.0/res" />
       <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/1f6da068271150b4381199ee4ab73b9d/jetified-facebook-login-4.40.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>

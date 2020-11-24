@@ -1,12 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.koushikcse:LinkedIn:1.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f625fa850c6b15ace9535bd48e234f6a/jetified-LinkedIn-1.1/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f625fa850c6b15ace9535bd48e234f6a/jetified-LinkedIn-1.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f625fa850c6b15ace9535bd48e234f6a/jetified-LinkedIn-1.1/res" />
+      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/ee6156355f0aa75bff546697e04b7ae3/jetified-LinkedIn-1.1/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/ee6156355f0aa75bff546697e04b7ae3/jetified-LinkedIn-1.1/res" />
       <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/ee6156355f0aa75bff546697e04b7ae3/jetified-LinkedIn-1.1/AndroidManifest.xml" />
-      <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/ee6156355f0aa75bff546697e04b7ae3/jetified-LinkedIn-1.1/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

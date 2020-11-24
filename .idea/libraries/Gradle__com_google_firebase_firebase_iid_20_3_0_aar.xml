@@ -1,11 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.firebase:firebase-iid:20.3.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/26b227e5f8f66dbde58826cd34aeb934/jetified-firebase-iid-20.3.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1e71735f0a3fca55a9fefd32eca79989/jetified-firebase-iid-20.3.0/res" />
-      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/1e71735f0a3fca55a9fefd32eca79989/jetified-firebase-iid-20.3.0/AndroidManifest.xml" />
       <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/1e71735f0a3fca55a9fefd32eca79989/jetified-firebase-iid-20.3.0/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/1e71735f0a3fca55a9fefd32eca79989/jetified-firebase-iid-20.3.0/res" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/1e71735f0a3fca55a9fefd32eca79989/jetified-firebase-iid-20.3.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/modules-2/files-2.1/com.google.firebase/firebase-iid/20.3.0/f2f5dc4c7b25352679af072cc54b46124a5a52dc/firebase-iid-20.3.0-javadoc.jar!/" />

@@ -8506,10 +8506,6 @@ class ZActivityDashboard : Footer(), NavigationView.OnNavigationItemSelectedList
                 response: Response<GetCategoryResponse>
             ) {
 
-                Log.d("TAG", "CODE" + response.code().toString() + "")
-                Log.d("TAG", "MESSAGE" + response.message() + "")
-                Log.d("TAG", "RESPONSE" + "" + Gson().toJson(response))
-                Log.d("TAG", "URL" + "" + response)
                 //var str_response = Gson().toJson(response)
                 val gson = GsonBuilder().serializeNulls().create()
                 var str_response = gson.toJson(response)
@@ -8570,10 +8566,6 @@ class ZActivityDashboard : Footer(), NavigationView.OnNavigationItemSelectedList
                 response: Response<GetCityResponse>
             ) {
 
-                Log.d("TAG", "CODE" + response.code().toString() + "")
-                Log.d("TAG", "MESSAGE" + response.message() + "")
-                Log.d("TAG", "RESPONSE" + "" + Gson().toJson(response))
-                Log.d("TAG", "URL" + "" + response)
                 //var str_response = Gson().toJson(response)
                 val gson = GsonBuilder().serializeNulls().create()
                 var str_response = gson.toJson(response)

@@ -1,19 +1,14 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.aliab:circular-music-progressbar:v1.4.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0412a5a8348c6147ebaedb6bfabb6ed7/jetified-circular-music-progressbar-v1.4.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0412a5a8348c6147ebaedb6bfabb6ed7/jetified-circular-music-progressbar-v1.4.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0412a5a8348c6147ebaedb6bfabb6ed7/jetified-circular-music-progressbar-v1.4.0/AndroidManifest.xml" />
-      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/cb6e47f9440227bc0218100b37181621/jetified-circular-music-progressbar-v1.4.0/res" />
       <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/cb6e47f9440227bc0218100b37181621/jetified-circular-music-progressbar-v1.4.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/cb6e47f9440227bc0218100b37181621/jetified-circular-music-progressbar-v1.4.0/res" />
       <root url="file://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/transforms-2/files-2.1/cb6e47f9440227bc0218100b37181621/jetified-circular-music-progressbar-v1.4.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.aliab/circular-music-progressbar/v1.4.0/cc1390abdcdbf41a59eeb203eb9e95897f47b0fe/circular-music-progressbar-v1.4.0-javadoc.jar!/" />
       <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/modules-2/files-2.1/com.github.aliab/circular-music-progressbar/v1.4.0/cc1390abdcdbf41a59eeb203eb9e95897f47b0fe/circular-music-progressbar-v1.4.0-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.aliab/circular-music-progressbar/v1.4.0/7b4ed9136d10892d742f8eecee8cf8423fc03341/circular-music-progressbar-v1.4.0-sources.jar!/" />
       <root url="jar://$PROJECT_DIR$/../../updated/herrising-app/gradle/wrapper/caches/modules-2/files-2.1/com.github.aliab/circular-music-progressbar/v1.4.0/7b4ed9136d10892d742f8eecee8cf8423fc03341/circular-music-progressbar-v1.4.0-sources.jar!/" />
     </SOURCES>
   </library>

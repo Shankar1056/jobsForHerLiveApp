@@ -94,7 +94,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
                     android:gravity="center"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     android:orientation="horizontal">
 
 

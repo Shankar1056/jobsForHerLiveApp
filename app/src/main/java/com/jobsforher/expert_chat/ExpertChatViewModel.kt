@@ -10,13 +10,13 @@ import android.widget.ArrayAdapter
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.bigappcompany.healthtunnel.data.network.ApiCallback
+import com.jobsforher.data.model.ExpertChatBody
 import com.jobsforher.data.model.ExpertChatReq
+import com.jobsforher.data.model.ExpertChatResponse
 import com.jobsforher.helpers.HelperMethods
 import com.jobsforher.network.retrofithelpers.EndPoints
-import com.jobsforher.data.model.ExpertChatBody
-import com.jobsforher.data.model.ExpertChatResponse
-import java.lang.Exception
 import java.util.*
+import kotlin.collections.ArrayList
 import kotlin.properties.Delegates
 
 
@@ -29,6 +29,7 @@ class ExpertChatViewModel(val app: Application) : AndroidViewModel(app) {
     var selected4Week = MutableLiveData<String>()
     var selected5Week = MutableLiveData<String>()
     var expertChatList = MutableLiveData<ArrayList<ExpertChatBody>>()
+    var expertChatForFilter = ArrayList<ExpertChatBody>()
     var weekClicked = MutableLiveData<Int>(1)
     lateinit var context: Activity
     private var currentMonth by Delegates.notNull<Int>()
@@ -76,12 +77,33 @@ class ExpertChatViewModel(val app: Application) : AndroidViewModel(app) {
             object : ApiCallback() {
                 override fun onSuccess(obj: Any?) {
                     val response = obj as ExpertChatResponse
-                    expertChatList.value = response.body
+
+                    //expertChatList.value = response.body
+                    if (response.body != null) {
+                        expertChatForFilter = response.body!!
+                    }
                 }
 
                 override fun onHandledError() {
                 }
             })
+    }
+
+    fun getExpertChatWeekly(startDateOfTheWeek: Int, endDateOfTheWeek: Int) { //23 29
+        if (expertChatForFilter == null) {
+            return
+        }
+        for (data in (ArrayList<ExpertChatBody>(expertChatForFilter))) {
+            val last2Char = data.date?.substring(Math.max(data.date?.length!! - 2, 0)) //06
+            if (last2Char != null) {
+                if (last2Char.toInt() < startDateOfTheWeek || last2Char.toInt() > endDateOfTheWeek) {
+                    expertChatForFilter.remove(data)
+                }
+
+            }
+        }
+
+        expertChatList.value = expertChatForFilter
     }
 
 
