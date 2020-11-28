@@ -5,6 +5,7 @@ import android.app.Activity
 import android.app.AlertDialog
 import android.app.Application
 import android.content.DialogInterface
+import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
 import androidx.lifecycle.AndroidViewModel
@@ -16,7 +17,6 @@ import com.jobsforher.data.model.ExpertChatResponse
 import com.jobsforher.helpers.HelperMethods
 import com.jobsforher.network.retrofithelpers.EndPoints
 import java.util.*
-import kotlin.collections.ArrayList
 import kotlin.properties.Delegates
 
 
@@ -63,12 +63,12 @@ class ExpertChatViewModel(val app: Application) : AndroidViewModel(app) {
 
     }
 
-    fun getExpertChat() {
+    fun getExpertChat(startDateOfTheWeek: Int, endDateOfTheWeek: Int) {
         val model = ExpertChatReq()
         model.month = HelperMethods.getMonthsInInt(selectedMonth.value)
         try {
             model.year = selectedYear.value?.toInt()
-        } catch (e : Exception){
+        } catch (e: Exception) {
             e.printStackTrace()
         }
 
@@ -77,10 +77,11 @@ class ExpertChatViewModel(val app: Application) : AndroidViewModel(app) {
             object : ApiCallback() {
                 override fun onSuccess(obj: Any?) {
                     val response = obj as ExpertChatResponse
+//                    expertChatList.value = response.body
 
-                    //expertChatList.value = response.body
                     if (response.body != null) {
                         expertChatForFilter = response.body!!
+                        getExpertChatWeekly(startDateOfTheWeek, endDateOfTheWeek)
                     }
                 }
 
@@ -90,6 +91,8 @@ class ExpertChatViewModel(val app: Application) : AndroidViewModel(app) {
     }
 
     fun getExpertChatWeekly(startDateOfTheWeek: Int, endDateOfTheWeek: Int) { //23 29
+
+        Log.d("TAGG", "" + startDateOfTheWeek + " " + endDateOfTheWeek)
         if (expertChatForFilter == null) {
             return
         }
@@ -104,8 +107,9 @@ class ExpertChatViewModel(val app: Application) : AndroidViewModel(app) {
         }
 
         expertChatList.value = expertChatForFilter
-    }
 
+
+    }
 
     fun onMonthClicked(view: View) {
         monthClicked("Months", HelperMethods.getMonths())
@@ -163,7 +167,6 @@ class ExpertChatViewModel(val app: Application) : AndroidViewModel(app) {
     }
 
     fun onGoClicked(view: View) {
-        getExpertChat()
+        getExpertChat(1, 30)
     }
-
 }

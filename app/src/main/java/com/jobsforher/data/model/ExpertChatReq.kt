@@ -2,7 +2,7 @@ package com.jobsforher.data.model
 
 import com.bigappcompany.healthtunnel.data.network.ApiCallback
 import com.jobsforher.data.repository.ApiServices
-import com.bigappcompany.healthtunnel.data.repository.RetroClient
+import com.jobsforher.data.repository.RetroClient
 import com.jobsforher.data.network.BackoffCallback
 import retrofit2.Response
 

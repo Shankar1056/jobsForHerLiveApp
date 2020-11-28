@@ -1,4 +1,4 @@
-package com.jobsforher.ui.expert_chat.adapter
+package com.jobsforher.expert_chat.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

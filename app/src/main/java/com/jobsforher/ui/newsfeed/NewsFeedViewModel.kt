@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.annotation.NonNull
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import com.bigappcompany.healthtunnel.data.repository.RetroClient
+import com.jobsforher.data.repository.RetroClient
 import com.jobsforher.R
 import com.jobsforher.data.model.*
 import com.jobsforher.data.model.common_response.JobsForHerPagination

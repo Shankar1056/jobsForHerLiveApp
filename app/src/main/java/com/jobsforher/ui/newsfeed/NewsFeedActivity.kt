@@ -109,10 +109,12 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
 
         viewModel.errorMessage.observe(this, Observer {
             Utility.showToast(this@NewsFeedActivity, it)
-            Utility.sessionExpiredPopup(
-                this@NewsFeedActivity,
-                resources.getString(R.string.server412Message)
-            )
+            if (it == "HTTP 412 PRECONDITION FAILED") {
+                Utility.sessionExpiredPopup(
+                    this@NewsFeedActivity,
+                    resources.getString(R.string.server412Message)
+                )
+            }
         })
 
         viewModel.notificationCount.observe(this, Observer {

@@ -1,4 +1,4 @@
-package com.bigappcompany.healthtunnel.data.repository
+package com.jobsforher.data.repository
 
 import com.google.gson.GsonBuilder
 import com.jobsforher.helpers.Constants

@@ -86,6 +86,7 @@ class Utility {
         fun sessionExpiredPopup(context: Context, message : String) {
             val builder = AlertDialog.Builder(context)
             builder.setMessage(message)
+            builder.setCancelable(false)
             builder.setPositiveButton("OK") { dialog, which ->
                 val sharedPref: SharedPreferences = context.getSharedPreferences(
                     "mysettings",
