@@ -474,6 +474,7 @@ class HomePagePreferences : AppCompatActivity() {
             }
         })
 
+
         val farea_multiAutoCompleteTextView = dialog.findViewById(R.id.farea_multiAutoCompleteTextView) as MultiAutoCompleteTextView
         val functionalareaList: ArrayList<String> = ArrayList()
         Log.d("TAGGLIST"," "+listOfJobFArea.size)

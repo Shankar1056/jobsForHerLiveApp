@@ -37,6 +37,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
     var voteResponse = MutableLiveData<VoteBody>()
     var homeBannerResponse = MutableLiveData<ArrayList<HomeBannerData>>()
     var notificationCount = MutableLiveData<Int>()
+    var switchPreferenceName = MutableLiveData<PreferenceName>()
 
     init {
         loadHomeBanner()
@@ -44,6 +45,15 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
         loadRecommendedCompanies()
         loadRecommendedMyGroupData()
         loadGroupPosts("1", Constants.MAXIMUM_PAGINATION_COUNT)
+        loadPreference()
+    }
+
+    private fun loadPreference() {
+        if (Utility.isInternetConnected(app)) {
+            getPreferenceObservable.subscribeWith(getPreferenceObserver)
+        } else {
+            errorMessage.value = app.resources.getString(R.string.no_internet_connection)
+        }
     }
 
     private fun loadHomeBanner() {
@@ -190,6 +200,60 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
         }
     }
 
+
+    private val getPreferenceObservable: Observable<PreferenceListResponse>
+        get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
+            .getPreference("Bearer " + EndPoints.ACCESS_TOKEN)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+
+    private val getPreferenceObserver: DisposableObserver<PreferenceListResponse>
+        get() = object : DisposableObserver<PreferenceListResponse>() {
+            override fun onNext(@NonNull response: PreferenceListResponse) {
+                if (Utility.isSuccessCode(response.response_code)) {
+                    checkNullPreference(response.body)
+                } else {
+                    errorMessage.value = response.message
+                }
+            }
+
+            override fun onError(@NonNull e: Throwable) {
+                e.printStackTrace()
+                errorMessage.value = e.message
+            }
+
+            override fun onComplete() {}
+        }
+
+    private fun checkNullPreference(body: java.util.ArrayList<PreferenceListBody>?) {
+        if (body != null && body.size > 0) {
+            val data = body?.get(0)
+            if (data.preferred_city.isNullOrEmpty()) {
+                switchPreferenceName.value = PreferenceName.PREFERRED_CITY
+            }
+            if (data.preferred_job_type.isNullOrEmpty()) {
+                switchPreferenceName.value = PreferenceName.PREFERRED_JOB_TYPE
+            }
+            if (data.preferred_salary.isNullOrEmpty()) {
+                switchPreferenceName.value = PreferenceName.PREFERRED_SALARY
+            }
+            if (data.preferred_functional_area.isNullOrEmpty()) {
+                switchPreferenceName.value = PreferenceName.PREFERRED_FUNCTIONAL_AREA
+            }
+            if (data.preferred_industry.isNullOrEmpty()) {
+                switchPreferenceName.value = PreferenceName.PREFERRED_INDUSTRIES
+            }
+            if (data.skills.isNullOrEmpty()) {
+                switchPreferenceName.value = PreferenceName.SKILLS
+            }
+            if (data.exp_from_year == 0) {
+                switchPreferenceName.value = PreferenceName.EXP_FROM_YEAR
+            }
+            if (data.exp_to_year == 0) {
+                switchPreferenceName.value = PreferenceName.EXP_TO_YEAR
+            }
+        }
+    }
 
     private val uploadResumeObservable: Observable<ResumeUploadResponse>
         get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
@@ -409,5 +473,17 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
 
     companion object {
         val GALLERY_PDF = 3
+    }
+
+    enum class PreferenceName {
+        PREFERRED_CITY,
+        PREFERRED_FUNCTIONAL_AREA,
+        PREFERRED_INDUSTRIES,
+        PREFERRED_JOB_TYPE,
+        PREFERRED_SALARY,
+        SKILLS,
+        EXP_TO_YEAR,
+        EXP_FROM_YEAR,
+
     }
 }

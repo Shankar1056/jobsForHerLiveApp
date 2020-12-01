@@ -2,7 +2,6 @@ package com.jobsforher.data.repository
 
 import com.jobsforher.data.model.*
 import com.jobsforher.network.responsemodels.NotificationBubbleResponse
-import com.jobsforher.network.responsemodels.UpdateReplyResponse
 import com.jobsforher.network.retrofithelpers.EndPoints
 import io.reactivex.Observable
 import retrofit2.Call
@@ -73,5 +72,24 @@ interface ApiServices {
         @Header("Authorization") accesstoken: String,
         @Body getSkillsCredentials: HashMap<String, String>
     ): Observable<ResumeUploadResponse>
+
+    @Headers("clientid:" + EndPoints.CLIENT_ID)
+    @GET("cities")
+    fun getCities(
+        @Header("Authorization") accesstoken: String
+    ): Observable<PreferenceCityResponse>
+
+    @Headers("clientid:" + EndPoints.CLIENT_ID)
+    @POST("/api/v3.0/candidate/preference")
+    fun saveCityPreference(
+        @Header("Authorization") accesstoken: String,
+        @Body getSkillsCredentials: HashMap<String, String>
+    ): Observable<PreferenceAddResponse>
+
+    @Headers("clientid:" + EndPoints.CLIENT_ID)
+    @GET("/api/v3.0/candidate/preference")
+    fun getPreference(
+        @Header("Authorization") accesstoken: String
+    ): Observable<PreferenceListResponse>
 
 }

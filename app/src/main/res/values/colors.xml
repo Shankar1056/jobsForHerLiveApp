@@ -41,5 +41,7 @@
     <color name="text_black">#484848</color>
     <color name="grey">#F3F3F3</color>
 
+    <color name="hintcolor">#404040</color>
+
 
 </resources>

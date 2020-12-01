@@ -14,6 +14,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.navigation.NavigationView
@@ -25,6 +26,7 @@ import com.jobsforher.helpers.Constants
 import com.jobsforher.helpers.HelperMethods
 import com.jobsforher.network.retrofithelpers.EndPoints
 import com.jobsforher.ui.newsfeed.adapter.*
+import com.jobsforher.ui.preference.CityFragment
 import com.jobsforher.util.Utility
 import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView
@@ -51,6 +53,8 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
         handleBackgrounds(btnHome)
 
         listenViewModelData()
+
+        goToFragment(CityFragment())
     }
 
 
@@ -146,7 +150,19 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
         viewModel.notificationCount.observe(this, Observer {
             cart_badge.text = it.toString()
         })
+
+       /* viewModel.switchPreferenceName.observe(this, Observer {
+            when (it) {
+                NewsFeedViewModel.PreferenceName.PREFERRED_CITY -> goToFragment(CityFragment())
+            }
+        })*/
     }
+
+    private fun goToFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.preferenceFrameLayout, fragment).commit()
+    }
+
     var position: Int = 0
     fun scroll(size: Int) {
         if (position == size) {
