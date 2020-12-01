@@ -2,6 +2,7 @@ package com.jobsforher.data.repository
 
 import com.jobsforher.data.model.*
 import com.jobsforher.network.responsemodels.NotificationBubbleResponse
+import com.jobsforher.network.responsemodels.UpdateReplyResponse
 import com.jobsforher.network.retrofithelpers.EndPoints
 import io.reactivex.Observable
 import retrofit2.Call
@@ -65,5 +66,12 @@ interface ApiServices {
     fun getNotificationBubble(
         @Header("Authorization") accesstoken: String
     ): Observable<NotificationBubbleResponse>
+
+    @Headers("clientid:" + EndPoints.CLIENT_ID)
+    @POST(EndPoints.RESUMEUPLOAD)
+    fun uploadResume(
+        @Header("Authorization") accesstoken: String,
+        @Body getSkillsCredentials: HashMap<String, String>
+    ): Observable<ResumeUploadResponse>
 
 }

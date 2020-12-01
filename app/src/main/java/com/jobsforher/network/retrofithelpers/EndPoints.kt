@@ -23,6 +23,7 @@ object EndPoints {
     const val vote = "vote"
     const val NEWSFEED = "news_feed"
     const val NOTIFICATION = "notification_bubble"
+    const val RESUMEUPLOAD = "candidate/resumes"
 
     const val CLIENT_ID = "NQtAuLKzeYVOFe7b3kmqBSNP"
 

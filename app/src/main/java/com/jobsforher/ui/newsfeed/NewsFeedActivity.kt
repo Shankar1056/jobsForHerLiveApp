@@ -56,7 +56,23 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
 
     private fun listenViewModelData() {
         viewModel.jobsResponseList.observe(this, Observer {
-            jobs_recycler_view.adapter = JobsAdapter(it)
+            jobs_recycler_view.adapter = JobsAdapter(it, object : JobsAdapter.JobsItemClicked {
+                override fun onApplyClicked(pos: Int) {
+
+                    startActivity(
+                        Intent(this@NewsFeedActivity, ZActivityJobDetails::class.java)
+                            .putExtra("isLoggedIn", false)
+                            .putExtra("group_Id", it[pos].id)
+                            .putExtra("isRequired", it[pos].resume_required)
+                            .putExtra("isboosted", it[pos].boosted)
+                            .putExtra("title", it[pos].title)
+                            .putExtra("page", "NewsFeed")
+                    )
+
+
+                }
+
+            })
         })
 
         viewModel.companiesResponseList.observe(this, Observer {
@@ -115,6 +131,16 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
                     resources.getString(R.string.server412Message)
                 )
             }
+        })
+
+        viewModel.successMessage.observe(this, Observer {
+            Utility.showToast(this@NewsFeedActivity, it)
+        })
+
+        viewModel.isResumeUploaded.observe(this, Observer {
+            // resume_layout.visibility = View.GONE
+            uploadNow.text = resources.getString(R.string.text_resume_uploaded)
+            later.visibility = View.GONE
         })
 
         viewModel.notificationCount.observe(this, Observer {
@@ -220,6 +246,22 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
         })
 
         posts_recycler_view1.adapter = allNewsPostAdapter
+
+        uploadNow.setOnClickListener {
+            if (uploadNow.text == resources.getString(R.string.text_upload_now)) {
+                viewModel.startIntentToOpenFile(this@NewsFeedActivity)
+            }
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == NewsFeedViewModel.GALLERY_PDF) {
+
+            if (data != null) {
+                viewModel.uploadResume(data, this@NewsFeedActivity)
+            }
+        }
     }
 
     private fun clickListener() {

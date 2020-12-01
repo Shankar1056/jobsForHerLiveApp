@@ -7,6 +7,9 @@
 
     <color name="green">#99CA3B</color>
     <color name="black">#000000</color>
+    <color name="black_resume">#3C3C3C</color>
+    <color name="green_resume">#92C139</color>
+    <color name="grey_resume">#929292</color>
     <color name="darkgrey">#7E7E7E</color>
     <color name="lightgrey">#6F6E6E</color>
     <color name="comments_gray">#DFDFDF</color>

@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material/icons/materialicons/arrow_back_ios/baseline_arrow_back_ios_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/cloud_upload/baseline_cloud_upload_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,8 +28,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="757575" />
-                            <entry key="outputName" value="ic_back_half_arrow" />
+                            <entry key="color" value="92c139" />
+                            <entry key="outputName" value="ic_upload_24" />
                             <entry key="sourceFile" value="E:\shankar\JobsForHer\project\bitbucket\06_10_2020\herrising-app" />
                           </map>
                         </option>

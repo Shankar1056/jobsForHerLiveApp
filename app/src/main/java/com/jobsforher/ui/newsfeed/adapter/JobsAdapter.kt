@@ -11,7 +11,10 @@ import com.jobsforher.R
 import com.jobsforher.data.model.RecommendedJobsBody
 import com.jobsforher.databinding.ItemJobsBinding
 
-class JobsAdapter(private val list: ArrayList<RecommendedJobsBody>) :
+class JobsAdapter(
+    private val list: ArrayList<RecommendedJobsBody>,
+    private val listener: JobsItemClicked
+) :
     RecyclerView.Adapter<JobsAdapter.ViewHolder>() {
     @NonNull
     override fun onCreateViewHolder(@NonNull parent: ViewGroup, viewType: Int): ViewHolder {
@@ -40,7 +43,14 @@ class JobsAdapter(private val list: ArrayList<RecommendedJobsBody>) :
         fun bind(obj: Any) {
             itemRowBinding.setVariable(BR.model, obj)
             itemRowBinding.executePendingBindings()
+            itemRowBinding.btnApplied.setOnClickListener {
+                listener.onApplyClicked(adapterPosition)
+            }
         }
+    }
+
+    interface JobsItemClicked {
+        fun onApplyClicked(pos: Int)
     }
 
 }

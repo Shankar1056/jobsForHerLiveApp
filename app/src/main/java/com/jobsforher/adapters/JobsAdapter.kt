@@ -325,7 +325,7 @@ class JobsAdapter(private val mDataList: ArrayList<JobsView>, isloggedin:Boolean
 
         holder.btnApply.setOnClickListener{
 
-            if(isRecommended ==0 && page.equals("Jobs"))
+            if(isRecommended == 0 && page.equals("Jobs")) //0 -> not recommended
                 (context as ZActivityJobs).hideSuccesLayout()
 
             Log.d("CODE", mDataList[position].status)
@@ -352,7 +352,7 @@ class JobsAdapter(private val mDataList: ArrayList<JobsView>, isloggedin:Boolean
                         mDataList[position]!!.resume_required!!
                     )
                 }
-                else if(isRecommended == 1 && page.equals("NewsFeed")){
+                else if(isRecommended == 1 && page.equals("NewsFeed")){ //It should not call another class, implement apply feature here
                     val intent = Intent(context, ZActivityJobDetails::class.java)
                     intent.putExtra("isLoggedIn",false)
                     intent.putExtra("group_Id", mDataList[position].id)
@@ -360,7 +360,7 @@ class JobsAdapter(private val mDataList: ArrayList<JobsView>, isloggedin:Boolean
                     intent.putExtra("isboosted",mDataList[position].boosted)
                     intent.putExtra("title", mDataList[position].title)
                     if (holder.btnApply.visibility == View.VISIBLE)
-                        intent.putExtra("isMygroup", 0)
+                        intent.putExtra("isMygroup", 0) // to check whether i have applied the job or not
                     else
                         intent.putExtra("isMygroup", 1)
                     intent.putExtra("page",page)

@@ -102,13 +102,99 @@
 
 
                 <androidx.cardview.widget.CardView
-                        android:id="@+id/companies_layout"
+                        android:id="@+id/resume_layout"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         app:layout_constraintEnd_toEndOf="@+id/jobsAds_recycler_view"
                         app:layout_constraintStart_toStartOf="@+id/jobsAds_recycler_view"
                         app:layout_constraintTop_toBottomOf="@+id/jobs_layout">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="10dp">
+
+                        <ImageView
+                                android:id="@+id/uploadIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@drawable/ic_upload_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                                android:id="@+id/uploadResume"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/opensanssemibold"
+                                android:paddingStart="10dp"
+                                android:paddingTop="12dp"
+                                android:text="@string/text_upload_resume"
+                                android:textColor="@color/black_resume"
+                                android:textSize="14sp"
+                                app:layout_constraintStart_toEndOf="@+id/uploadIcon"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                                android:id="@+id/upload_details"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:fontFamily="@font/robotoregular"
+                                android:paddingStart="10dp"
+                                android:paddingTop="5dp"
+                                android:text="@string/text_upload_resume_details"
+                                android:textColor="@color/black_resume"
+                                android:textSize="12sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/uploadIcon"
+                                app:layout_constraintTop_toBottomOf="@+id/uploadResume" />
+
+                        <TextView
+                                android:id="@+id/uploadNow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginEnd="10dp"
+                                android:fontFamily="@font/robotoregular"
+                                android:paddingStart="10dp"
+                                android:paddingTop="5dp"
+                                android:text="@string/text_upload_now"
+                                android:textColor="@color/green_resume"
+                                android:textSize="12sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/upload_details" />
+
+                        <TextView
+                                android:id="@+id/later"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginEnd="10dp"
+                                android:fontFamily="@font/robotoregular"
+                                android:paddingStart="10dp"
+                                android:paddingTop="5dp"
+                                android:text="@string/text_do_later"
+                                android:textColor="@color/grey_resume"
+                                android:textSize="12sp"
+                                app:layout_constraintEnd_toStartOf="@+id/uploadNow"
+                                app:layout_constraintTop_toBottomOf="@+id/upload_details" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/companies_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintEnd_toEndOf="@+id/jobsAds_recycler_view"
+                        app:layout_constraintStart_toStartOf="@+id/jobsAds_recycler_view"
+                        app:layout_constraintTop_toBottomOf="@+id/resume_layout">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"

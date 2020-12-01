@@ -308,6 +308,11 @@
     <string name="text_follow">Follow</string>
     <string name="logout_warning_message">Do you really want to logout of the app ?</string>
     <string name="server412Message">Session Expired, Please Login</string>
+    <string name="text_upload_resume">Upload your resume</string>
+    <string name="text_upload_resume_details">We\'ll match you with the best suitable jobs, Right away!</string>
+    <string name="text_upload_now">Upload Now</string>
+    <string name="text_do_later">I\'ll do later</string>
+    <string name="text_resume_uploaded">Resume Uploaded</string>
 
 
     <!--<string name="app_name">Android Spinner</string>-->

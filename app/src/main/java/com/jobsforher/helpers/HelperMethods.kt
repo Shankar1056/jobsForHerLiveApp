@@ -49,8 +49,11 @@ object HelperMethods
     }
 
         fun getFile(mContext: Activity?, documentUri: Uri, fileName: String): File {
-            val inputStream = mContext?.contentResolver?.openInputStream(documentUri)
             var file =  File("")
+            if (fileName == null){
+                return file
+            }
+            val inputStream = mContext?.contentResolver?.openInputStream(documentUri)
             inputStream.use { input ->
                 file =
                     File(mContext?.cacheDir, System.currentTimeMillis().toString() + fileName)
@@ -72,6 +75,9 @@ object HelperMethods
         }
 
     fun convertToBase64(attachment: File): String {
+        if (attachment == null){
+            return ""
+        }
         return Base64.encodeToString(attachment.readBytes(), Base64.NO_WRAP)
     }
 

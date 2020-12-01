@@ -1,15 +1,20 @@
 package com.jobsforher.ui.newsfeed
 
 import android.app.Application
+import android.content.Intent
+import android.util.Log
+import android.widget.Toast
 import androidx.annotation.NonNull
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import com.jobsforher.data.repository.RetroClient
 import com.jobsforher.R
 import com.jobsforher.data.model.*
 import com.jobsforher.data.model.common_response.JobsForHerPagination
 import com.jobsforher.data.repository.ApiServices
+import com.jobsforher.data.repository.RetroClient
 import com.jobsforher.helpers.Constants
+import com.jobsforher.helpers.HelperMethods
+import com.jobsforher.helpers.ToastHelper
 import com.jobsforher.network.responsemodels.NotificationBubbleResponse
 import com.jobsforher.network.retrofithelpers.EndPoints
 import com.jobsforher.util.Utility
@@ -17,11 +22,13 @@ import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.observers.DisposableObserver
 import io.reactivex.schedulers.Schedulers
+import java.io.IOException
 
 class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
     private var groupReq = HashMap<String, String>()
     var errorMessage = MutableLiveData<String>()
     var successMessage = MutableLiveData<String>()
+    var isResumeUploaded = MutableLiveData<Boolean>()
     var jobsResponseList = MutableLiveData<ArrayList<RecommendedJobsBody>>()
     var companiesResponseList = MutableLiveData<ArrayList<RecommendedCompaniesBody>>()
     var groupsResponseList = MutableLiveData<ArrayList<RecommendedGropsBody>>()
@@ -125,6 +132,89 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
         }
     }
 
+    fun startIntentToOpenFile(activity: NewsFeedActivity) {
+        val mimeTypes = arrayOf(
+            "application/msword",
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document", // .doc & .docx
+            "application/pdf"
+        )
+
+        val chooseFile: Intent
+        var intent: Intent = Intent()
+        chooseFile = Intent(Intent.ACTION_OPEN_DOCUMENT)
+        chooseFile.addCategory(Intent.CATEGORY_OPENABLE)
+        chooseFile.flags = Intent.FLAG_GRANT_READ_URI_PERMISSION
+        chooseFile.type = if (mimeTypes.size === 1) mimeTypes[0] else "*/*"
+        if (mimeTypes.size > 0) {
+            chooseFile.putExtra(Intent.EXTRA_MIME_TYPES, mimeTypes)
+        }
+        //chooseFile.type = ("application/pdf|application/msword")
+        intent = Intent.createChooser(chooseFile, "Choose a file")
+        activity.startActivityForResult(intent, GALLERY_PDF)
+
+    }
+
+    fun uploadResume(data: Intent, context: NewsFeedActivity) {
+        try {
+            val fileName = HelperMethods.getFilePath(context, data.data)
+            val file = data?.data?.let {
+                HelperMethods.getFile(
+                    context,
+                    it, fileName.toString()
+                )
+            }
+
+            if (file != null) {
+                val picturepath = fileName.toString()
+                val imageEncoded = HelperMethods.convertToBase64(file!!)
+
+                if (Utility.isInternetConnected(app)) {
+                    groupReq["title"] = Constants.POST
+                    groupReq["resume_filename"] = picturepath
+                    groupReq["resume_file"] = imageEncoded
+
+                    uploadResumeObservable.subscribeWith(uploadResumeObserver)
+                } else {
+                    errorMessage.value = app.resources.getString(R.string.no_internet_connection)
+                }
+
+
+            } else {
+                ToastHelper.makeToast(context, "Unable to convert as Base64")
+            }
+
+        } catch (e: IOException) {
+            e.printStackTrace()
+            Log.d("TAGG", "STACK" + e.printStackTrace())
+            Toast.makeText(context, "Failed!", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+
+    private val uploadResumeObservable: Observable<ResumeUploadResponse>
+        get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
+            .uploadResume("Bearer " + EndPoints.ACCESS_TOKEN, groupReq)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+
+    private val uploadResumeObserver: DisposableObserver<ResumeUploadResponse>
+        get() = object : DisposableObserver<ResumeUploadResponse>() {
+            override fun onNext(@NonNull response: ResumeUploadResponse) {
+                if (Utility.isSuccessCode(response.response_code)) {
+                    successMessage.value = response.message
+                    isResumeUploaded.value = true
+                } else {
+                    errorMessage.value = response.message
+                }
+            }
+
+            override fun onError(@NonNull e: Throwable) {
+                e.printStackTrace()
+                errorMessage.value = e.message
+            }
+
+            override fun onComplete() {}
+        }
 
     private val notificationObservable: Observable<NotificationBubbleResponse>
         get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
@@ -317,5 +407,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
             override fun onComplete() {}
         }
 
-
+    companion object {
+        val GALLERY_PDF = 3
+    }
 }

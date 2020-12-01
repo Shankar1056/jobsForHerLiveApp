@@ -516,7 +516,7 @@ class ZActivityJobDetails : Footer(), NavigationView.OnNavigationItemSelectedLis
                 Logger.d("URL", "" + response)
                 Logger.d("RESPONSE join group", "" + Gson().toJson(response))
 
-                if (response.isSuccessful && response.body()!!.responseCode == 11405) {
+                if (response.isSuccessful && response.body()!!.responseCode == 11405) { // preference not filed
                     //Toast.makeText(applicationContext, response.body()!!.message, Toast.LENGTH_LONG).show()
                     openBottomSheetPreferences()
 
@@ -549,7 +549,7 @@ class ZActivityJobDetails : Footer(), NavigationView.OnNavigationItemSelectedLis
                                 a = json_objectdetail.optInt("user_id")
                                 Log.d("TAGG", "PREf ID:" + json_objectdetail.optInt("user_id").toString())
                             }
-                            checkDefault(a, title, id, isRequired, isboosted)
+                            checkDefault(a, title, id, isRequired, isboosted) // TO CHECK DEFAULT RESUME
                         }
                     }
 
