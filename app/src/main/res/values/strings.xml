@@ -317,6 +317,12 @@
     <string name="hint_search_city">Search city</string>
     <string name="text_save_continue"><![CDATA[Save & Continue]]></string>
     <string name="select_city_to_add">Select any city to add</string>
+    <string name="text_update_your_preference">Update your preference</string>
+    <string name="type_functional_area">Search Functional Area</string>
+    <string name="type_functional_industries">Search Industries</string>
+    <string name="type_functional_job">Search Job Type</string>
+    <string name="my_hint">skills</string>
+    <string name="hint_type_skills">Type your skills</string>
 
 
     <!--<string name="app_name">Android Spinner</string>-->
@@ -339,6 +345,15 @@
         <item>January</item>
         <item>February</item>
         <item>March</item>
+    </string-array>
+
+    <string-array name="jobType">
+        <item>Full Time</item>
+        <item>Part Time</item>
+        <item>Work From Home</item>
+        <item>Returnee Program</item>
+        <item>Freelance/Projects</item>
+        <item>Volunteer</item>
     </string-array>
 
 

@@ -19,11 +19,16 @@ object EndPoints {
 
     const val mygroup = group + "/my_groups"
     const val allgroups = "groups"
+    const val EXPERT_CHAT_DETAILS = "expert_chat_details"
+    const val RECOMMENDED_JOBS = "es_recommended_jobs"
+    const val RECOMMENDED_COMPANIES = "es_recommended_companies"
+    const val RECOMMENDED_GROUPS = "es_recommended_groups"
 
     const val vote = "vote"
     const val NEWSFEED = "news_feed"
     const val NOTIFICATION = "notification_bubble"
     const val RESUMEUPLOAD = "candidate/resumes"
+    const val CITIES = "cities"
 
     const val CLIENT_ID = "NQtAuLKzeYVOFe7b3kmqBSNP"
 

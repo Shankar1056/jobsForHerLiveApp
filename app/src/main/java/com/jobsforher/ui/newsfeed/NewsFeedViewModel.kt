@@ -38,6 +38,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
     var homeBannerResponse = MutableLiveData<ArrayList<HomeBannerData>>()
     var notificationCount = MutableLiveData<Int>()
     var switchPreferenceName = MutableLiveData<PreferenceName>()
+    var allPreferenceUpdated = MutableLiveData<Boolean>()
 
     init {
         loadHomeBanner()
@@ -48,7 +49,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
         loadPreference()
     }
 
-    private fun loadPreference() {
+     fun loadPreference() {
         if (Utility.isInternetConnected(app)) {
             getPreferenceObservable.subscribeWith(getPreferenceObserver)
         } else {
@@ -230,28 +231,41 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
             val data = body?.get(0)
             if (data.preferred_city.isNullOrEmpty()) {
                 switchPreferenceName.value = PreferenceName.PREFERRED_CITY
+                return
             }
             if (data.preferred_job_type.isNullOrEmpty()) {
                 switchPreferenceName.value = PreferenceName.PREFERRED_JOB_TYPE
-            }
-            if (data.preferred_salary.isNullOrEmpty()) {
-                switchPreferenceName.value = PreferenceName.PREFERRED_SALARY
+                return
             }
             if (data.preferred_functional_area.isNullOrEmpty()) {
                 switchPreferenceName.value = PreferenceName.PREFERRED_FUNCTIONAL_AREA
+                return
             }
             if (data.preferred_industry.isNullOrEmpty()) {
                 switchPreferenceName.value = PreferenceName.PREFERRED_INDUSTRIES
+                return
+            }
+            else{
+                allPreferenceUpdated.value = true
+                return
+            }
+            if (data.preferred_salary.isNullOrEmpty()) {
+                // switchPreferenceName.value = PreferenceName.PREFERRED_SALARY
+                return
             }
             if (data.skills.isNullOrEmpty()) {
-                switchPreferenceName.value = PreferenceName.SKILLS
+                //switchPreferenceName.value = PreferenceName.SKILLS
+                return
             }
             if (data.exp_from_year == 0) {
-                switchPreferenceName.value = PreferenceName.EXP_FROM_YEAR
+               // switchPreferenceName.value = PreferenceName.EXP_FROM_YEAR
+                return
             }
             if (data.exp_to_year == 0) {
-                switchPreferenceName.value = PreferenceName.EXP_TO_YEAR
+               // switchPreferenceName.value = PreferenceName.EXP_TO_YEAR
+                return
             }
+
         }
     }
 

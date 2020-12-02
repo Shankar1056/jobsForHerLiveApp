@@ -11,7 +11,7 @@ import java.util.*
 
 interface ApiServices {
     @Headers("clientid:" + EndPoints.CLIENT_ID)
-    @POST("expert_chat_details")
+    @POST(EndPoints.EXPERT_CHAT_DETAILS)
     fun getExpertChat(
         @Header("Authorization") auth: String,
         @Body request: ExpertChatReq
@@ -19,21 +19,21 @@ interface ApiServices {
 
 
     @Headers("clientid:" + EndPoints.CLIENT_ID)
-    @GET("es_recommended_jobs")
+    @GET(EndPoints.RECOMMENDED_JOBS)
     fun getRecommendedJobs(
         @Header("Authorization") accesstoken: String,
         @QueryMap groupCredentials: HashMap<String, String>
     ): Observable<RecommendedJobsResponse>
 
     @Headers("clientid:" + EndPoints.CLIENT_ID)
-    @GET("es_recommended_companies")
+    @GET(EndPoints.RECOMMENDED_COMPANIES)
     fun getRecommendedCompanies(
         @Header("Authorization") accesstoken: String,
         @QueryMap groupCredentials: HashMap<String, String>
     ): Observable<RecommendedCompaniesResponse>
 
     @Headers("clientid:" + EndPoints.CLIENT_ID)
-    @GET("es_recommended_groups")
+    @GET(EndPoints.RECOMMENDED_GROUPS)
     fun getRecommendedMyGroupData(
         @Header("Authorization") accesstoken: String,
         @QueryMap groupCredentials: HashMap<String, String>
@@ -74,22 +74,34 @@ interface ApiServices {
     ): Observable<ResumeUploadResponse>
 
     @Headers("clientid:" + EndPoints.CLIENT_ID)
-    @GET("cities")
+    @GET(EndPoints.CITIES)
     fun getCities(
         @Header("Authorization") accesstoken: String
     ): Observable<PreferenceCityResponse>
 
     @Headers("clientid:" + EndPoints.CLIENT_ID)
-    @POST("/api/v3.0/candidate/preference")
+    @PUT("candidate/preference")
     fun saveCityPreference(
         @Header("Authorization") accesstoken: String,
         @Body getSkillsCredentials: HashMap<String, String>
     ): Observable<PreferenceAddResponse>
 
     @Headers("clientid:" + EndPoints.CLIENT_ID)
-    @GET("/api/v3.0/candidate/preference")
+    @GET("candidate/preference")
     fun getPreference(
         @Header("Authorization") accesstoken: String
     ): Observable<PreferenceListResponse>
+
+    @Headers("clientid:" + EndPoints.CLIENT_ID)
+    @GET("candidate/mobility/functional-area")
+    fun getFunctionalArea(
+        @Header("Authorization") accesstoken: String
+    ): Observable<PreferenceFunctionalArea>
+
+    @Headers("clientid:" + EndPoints.CLIENT_ID)
+    @GET("candidate/mobility/functional-industry")
+    fun getFunctionalIndustries(
+        @Header("Authorization") accesstoken: String
+    ): Observable<PreferenceFunctionalArea>
 
 }

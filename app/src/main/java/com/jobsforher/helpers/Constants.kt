@@ -16,4 +16,7 @@ object Constants {
 
     const val UPVOTE = "upvote"
     const val POST = "post"
+    const val TYPE_JOB = "job"
+    const val TYPE_INDUSTRIES = "industries"
+    const val TYPE_AREAS = "areas"
 }

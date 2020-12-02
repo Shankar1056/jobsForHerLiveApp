@@ -26,7 +26,8 @@ import com.jobsforher.helpers.Constants
 import com.jobsforher.helpers.HelperMethods
 import com.jobsforher.network.retrofithelpers.EndPoints
 import com.jobsforher.ui.newsfeed.adapter.*
-import com.jobsforher.ui.preference.CityFragment
+import com.jobsforher.ui.preference.fragment.CityFragment
+import com.jobsforher.ui.preference.fragment.FunctionalAreaFragment
 import com.jobsforher.util.Utility
 import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView
@@ -54,7 +55,6 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
 
         listenViewModelData()
 
-        goToFragment(CityFragment())
     }
 
 
@@ -151,11 +151,18 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
             cart_badge.text = it.toString()
         })
 
-       /* viewModel.switchPreferenceName.observe(this, Observer {
+        viewModel.switchPreferenceName.observe(this, Observer {
             when (it) {
                 NewsFeedViewModel.PreferenceName.PREFERRED_CITY -> goToFragment(CityFragment())
+                NewsFeedViewModel.PreferenceName.PREFERRED_FUNCTIONAL_AREA -> goToFragment(FunctionalAreaFragment(Constants.TYPE_AREAS))
+                NewsFeedViewModel.PreferenceName.PREFERRED_INDUSTRIES -> goToFragment(FunctionalAreaFragment(Constants.TYPE_INDUSTRIES))
+                NewsFeedViewModel.PreferenceName.PREFERRED_JOB_TYPE -> goToFragment(FunctionalAreaFragment(Constants.TYPE_JOB))
             }
-        })*/
+        })
+
+        viewModel.allPreferenceUpdated.observe(this, Observer {
+            preference_layout.visibility = View.GONE
+        })
     }
 
     private fun goToFragment(fragment: Fragment) {
