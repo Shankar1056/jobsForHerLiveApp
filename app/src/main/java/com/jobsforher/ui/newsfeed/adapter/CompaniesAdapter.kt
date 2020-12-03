@@ -11,7 +11,10 @@ import com.jobsforher.R
 import com.jobsforher.data.model.RecommendedCompaniesBody
 import com.jobsforher.databinding.ItemCompaniesBinding
 
-class CompaniesAdapter(private val list: ArrayList<RecommendedCompaniesBody>) :
+class CompaniesAdapter(
+    private val list: ArrayList<RecommendedCompaniesBody>,
+    val listener: CompanyListener
+) :
     RecyclerView.Adapter<CompaniesAdapter.ViewHolder>() {
     @NonNull
     override fun onCreateViewHolder(
@@ -42,7 +45,14 @@ class CompaniesAdapter(private val list: ArrayList<RecommendedCompaniesBody>) :
         fun bind(obj: Any) {
             itemRowBinding.setVariable(BR.model, obj)
             itemRowBinding.executePendingBindings()
+            itemRowBinding.btnApplied.setOnClickListener {
+                listener.onItemClicked(adapterPosition)
+            }
         }
+    }
+
+    interface CompanyListener {
+        fun onItemClicked(pos: Int)
     }
 
 }

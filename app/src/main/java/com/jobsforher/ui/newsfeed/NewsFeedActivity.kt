@@ -22,6 +22,8 @@ import com.jobsforher.BuildConfig
 import com.jobsforher.R
 import com.jobsforher.activities.*
 import com.jobsforher.data.model.NewsPostBody
+import com.jobsforher.data.model.RecommendedCompaniesBody
+import com.jobsforher.data.model.RecommendedGropsBody
 import com.jobsforher.helpers.Constants
 import com.jobsforher.helpers.HelperMethods
 import com.jobsforher.network.retrofithelpers.EndPoints
@@ -40,7 +42,11 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
     private var clickedPos: Int? = null
     lateinit var newsPostAdapter: NewsFeedAdapter
     lateinit var allNewsPostAdapter: AllNewsFeedAdapter
+    lateinit var groupsAdapter: GroupsAdapter
+    lateinit var companiesAdapter: CompaniesAdapter
     var newsPostList = ArrayList<NewsPostBody>()
+    var joinGroupList = ArrayList<RecommendedGropsBody>()
+    var companyList = ArrayList<RecommendedCompaniesBody>()
     private var loading = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,12 +55,110 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
 
         initWidgit()
 
+        initCompanyPostAdapter()
+        initAllNewsPostAdapter()
+        initNewsPostAdapter()
+        initJoinGroupAdapter()
+
         clickListener()
 
         handleBackgrounds(btnHome)
 
         listenViewModelData()
 
+    }
+
+    private fun initCompanyPostAdapter() {
+        companiesAdapter = CompaniesAdapter(companyList, object :
+            CompaniesAdapter.CompanyListener {
+            override fun onItemClicked(pos: Int) {
+                if (companyList[pos].follow_status == "Follow") {
+                    companyList[pos].follow_status = "UnFollow"
+                    viewModel.followUnFollowCompany(companyList[pos].id, Constants.FOLLOW)
+                } else {
+                    companyList[pos].follow_status = "Follow"
+                    viewModel.followUnFollowCompany(companyList[pos].id, Constants.UNFOLLOW)
+                }
+            }
+        })
+        companies_recycler_view.adapter = companiesAdapter
+    }
+
+    private fun initAllNewsPostAdapter() {
+        allNewsPostAdapter = AllNewsFeedAdapter(newsPostList, object : NewsFeedClickLietener {
+            override fun onUpVoteClicked(pos: Int) {
+                clickedPos = pos
+                viewModel.upVoteClicked(newsPostList[pos].id)
+            }
+
+            override fun onDownVoteClicked(pos: Int) {
+                clickedPos = pos
+                viewModel.downVoteClicked(newsPostList[pos].id)
+            }
+
+            override fun onCommentCountClicked(pos: Int) {
+                startActivity(
+                    Intent(this@NewsFeedActivity, ZActivityCommentPage::class.java)
+                        .putExtra("comment_Id", newsPostList[pos].id)
+                )
+            }
+
+            override fun onCommentClicked(pos: Int, comment: String) {
+                startActivity(
+                    Intent(this@NewsFeedActivity, ZActivityCommentPage::class.java)
+                        .putExtra("comment_Id", newsPostList[pos].id)
+                )
+            }
+        })
+
+        posts_recycler_view1.adapter = allNewsPostAdapter
+    }
+
+    private fun initNewsPostAdapter() {
+        newsPostAdapter = NewsFeedAdapter(newsPostList, object : NewsFeedClickLietener {
+            override fun onUpVoteClicked(pos: Int) {
+                clickedPos = pos
+                viewModel.upVoteClicked(newsPostList[pos].id)
+            }
+
+            override fun onDownVoteClicked(pos: Int) {
+                clickedPos = pos
+                viewModel.downVoteClicked(newsPostList[pos].id)
+            }
+
+            override fun onCommentCountClicked(pos: Int) {
+                startActivity(
+                    Intent(this@NewsFeedActivity, ZActivityCommentPage::class.java)
+                        .putExtra("comment_Id", newsPostList[pos].id)
+                )
+
+            }
+
+            override fun onCommentClicked(pos: Int, comment: String) {
+                startActivity(
+                    Intent(this@NewsFeedActivity, ZActivityCommentPage::class.java)
+                        .putExtra("comment_Id", newsPostList[pos].id)
+                )
+            }
+        })
+
+        posts_recycler_view.adapter = newsPostAdapter
+    }
+
+    private fun initJoinGroupAdapter() {
+
+        groupsAdapter = GroupsAdapter(joinGroupList, object : GroupsAdapter.GroupsListener {
+            override fun onJoinClicked(pos: Int) {
+                if (joinGroupList[pos].visiblity_type == Constants.PRIVATE) {
+                    joinGroupList[pos].request_status = Constants.REQUESTED
+                } else {
+                    joinGroupList[pos].request_status = Constants.APPROVED
+                }
+                viewModel.joinGroup(joinGroupList[pos].id)
+            }
+
+        })
+        groups_recycler_view.adapter = groupsAdapter
     }
 
 
@@ -77,14 +181,28 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
                 }
 
             })
+
         })
 
         viewModel.companiesResponseList.observe(this, Observer {
-            companies_recycler_view.adapter = CompaniesAdapter(it)
+            companyList.addAll(it)
+            companiesAdapter.notifyDataSetChanged()
+        })
+
+        viewModel.followCompanyResponse.observe(this, Observer {
+            companiesAdapter.notifyDataSetChanged()
         })
 
         viewModel.groupsResponseList.observe(this, Observer {
-            groups_recycler_view.adapter = GroupsAdapter(it)
+            joinGroupList.addAll(it)
+            for (item in joinGroupList) {
+                item.request_status = Constants.JOIN
+            }
+            groupsAdapter.notifyDataSetChanged()
+        })
+
+        viewModel.joinGroupResponse.observe(this, Observer {
+            groupsAdapter.notifyDataSetChanged()
         })
 
         viewModel.voteResponse.observe(this, Observer {
@@ -154,15 +272,22 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
         viewModel.switchPreferenceName.observe(this, Observer {
             when (it) {
                 NewsFeedViewModel.PreferenceName.PREFERRED_CITY -> goToFragment(CityFragment())
-                NewsFeedViewModel.PreferenceName.PREFERRED_FUNCTIONAL_AREA -> goToFragment(FunctionalAreaFragment(Constants.TYPE_AREAS))
-                NewsFeedViewModel.PreferenceName.PREFERRED_INDUSTRIES -> goToFragment(FunctionalAreaFragment(Constants.TYPE_INDUSTRIES))
-                NewsFeedViewModel.PreferenceName.PREFERRED_JOB_TYPE -> goToFragment(FunctionalAreaFragment(Constants.TYPE_JOB))
+                NewsFeedViewModel.PreferenceName.PREFERRED_FUNCTIONAL_AREA -> goToFragment(
+                    FunctionalAreaFragment(Constants.TYPE_AREAS)
+                )
+                NewsFeedViewModel.PreferenceName.PREFERRED_INDUSTRIES -> goToFragment(
+                    FunctionalAreaFragment(Constants.TYPE_INDUSTRIES)
+                )
+                NewsFeedViewModel.PreferenceName.PREFERRED_JOB_TYPE -> goToFragment(
+                    FunctionalAreaFragment(Constants.TYPE_JOB)
+                )
             }
         })
 
         viewModel.allPreferenceUpdated.observe(this, Observer {
             preference_layout.visibility = View.GONE
         })
+
     }
 
     private fun goToFragment(fragment: Fragment) {
@@ -213,62 +338,9 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
 
         version.text = "Version - " + BuildConfig.VERSION_NAME
 
-        newsPostAdapter = NewsFeedAdapter(newsPostList, object : NewsFeedClickLietener {
-            override fun onUpVoteClicked(pos: Int) {
-                clickedPos = pos
-                viewModel.upVoteClicked(newsPostList[pos].id)
-            }
 
-            override fun onDownVoteClicked(pos: Int) {
-                clickedPos = pos
-                viewModel.downVoteClicked(newsPostList[pos].id)
-            }
 
-            override fun onCommentCountClicked(pos: Int) {
-                startActivity(
-                    Intent(this@NewsFeedActivity, ZActivityCommentPage::class.java)
-                        .putExtra("comment_Id", newsPostList[pos].id)
-                )
 
-            }
-
-            override fun onCommentClicked(pos: Int, comment: String) {
-                startActivity(
-                    Intent(this@NewsFeedActivity, ZActivityCommentPage::class.java)
-                        .putExtra("comment_Id", newsPostList[pos].id)
-                )
-            }
-        })
-
-        posts_recycler_view.adapter = newsPostAdapter
-
-        allNewsPostAdapter = AllNewsFeedAdapter(newsPostList, object : NewsFeedClickLietener {
-            override fun onUpVoteClicked(pos: Int) {
-                clickedPos = pos
-                viewModel.upVoteClicked(newsPostList[pos].id)
-            }
-
-            override fun onDownVoteClicked(pos: Int) {
-                clickedPos = pos
-                viewModel.downVoteClicked(newsPostList[pos].id)
-            }
-
-            override fun onCommentCountClicked(pos: Int) {
-                startActivity(
-                    Intent(this@NewsFeedActivity, ZActivityCommentPage::class.java)
-                        .putExtra("comment_Id", newsPostList[pos].id)
-                )
-            }
-
-            override fun onCommentClicked(pos: Int, comment: String) {
-                startActivity(
-                    Intent(this@NewsFeedActivity, ZActivityCommentPage::class.java)
-                        .putExtra("comment_Id", newsPostList[pos].id)
-                )
-            }
-        })
-
-        posts_recycler_view1.adapter = allNewsPostAdapter
 
         uploadNow.setOnClickListener {
             if (uploadNow.text == resources.getString(R.string.text_upload_now)) {

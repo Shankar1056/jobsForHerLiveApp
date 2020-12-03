@@ -19,4 +19,12 @@ object Constants {
     const val TYPE_JOB = "job"
     const val TYPE_INDUSTRIES = "industries"
     const val TYPE_AREAS = "areas"
+    const val PUBLIC = "public"
+    const val PRIVATE = "private"
+    const val JOIN = "Join"
+    const val REQUESTED = "Requested"
+    const val APPROVED = "Approved"
+    const val FOLLOW = "follow"
+    const val UNFOLLOW = "unfollow"
+    const val COMPANY = "company"
 }

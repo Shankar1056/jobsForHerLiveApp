@@ -94,7 +94,7 @@
                 android:layout_marginTop="2dp"
                 android:background="@drawable/curved_green_border_filled_white_adapter"
                 android:fontFamily="@font/opensanssemibold"
-                android:text="@string/text_apply"
+                android:text="@{model.request_status}"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="12sp"

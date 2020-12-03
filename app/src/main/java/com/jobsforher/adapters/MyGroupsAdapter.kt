@@ -364,7 +364,7 @@ class MyGroupsAdapter(private val mDataList: ArrayList<GroupsView>, isloggedin:B
                         mDataList[position].groupType.toString(), holder.btnJoined
                     )
                 }
-                else if (isRecommended==1 && page.equals("NewsFeed")) {
+                else if (isRecommended==1 && page.equals("NewsFeed")) { //for newsFeed Screen
                     val bundle = Bundle()
                     val intent = Intent(context, ZActivityGroupsDetails::class.java)
                     bundle.putBoolean("isLoggedIn", true)

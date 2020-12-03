@@ -177,29 +177,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbdbd4d1-f502-4b83-b90d-5254bcc8f3fb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/herrising-app.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/herrising-app.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/adapters/CompaniesAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/adapters/CompaniesAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/adapters/MyGroupsAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/adapters/MyGroupsAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/data/model/RecommendedCompaniesResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/data/model/RecommendedCompaniesResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/data/model/RecommendedGropsResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/data/model/RecommendedGropsResponse.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/data/repository/ApiServices.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/data/repository/ApiServices.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/helpers/Constants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/helpers/Constants.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/network/retrofithelpers/EndPoints.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/network/retrofithelpers/EndPoints.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/NewsFeedActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/NewsFeedActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/NewsFeedViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/NewsFeedViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/preference/CityFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/preference/fragment/CityFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/preference/PrefereceViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/preference/PrefereceViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_newsfeed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_newsfeed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_city.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_city.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/adapter/CompaniesAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/adapter/CompaniesAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/adapter/GroupsAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/adapter/GroupsAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_companies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_companies.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_groups.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_groups.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -269,8 +260,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="resourceFile" />
-        <option value="Kotlin Class" />
         <option value="layoutResourceFile" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -533,10 +524,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="549" y="233" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1602580969979" />
-    <state x="591" y="145" key="#com.intellij.ide.util.MemberChooser" timestamp="1606818692576">
+    <state x="591" y="145" key="#com.intellij.ide.util.MemberChooser" timestamp="1606985114707">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="591" y="145" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1606818692576" />
+    <state x="591" y="145" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1606985114707" />
     <state x="267" y="354" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1605501305477">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -566,14 +557,14 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="380" y="185" width="840" height="487" key="AndroidCreateResourceFileDialog/0.0.1600.860@0.0.1600.860" timestamp="1606888551425" />
-    <state x="631" y="215" key="AndroidCreateXmlResourceDialog" timestamp="1606901976671">
+    <state x="631" y="215" key="AndroidCreateXmlResourceDialog" timestamp="1606968555096">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="631" y="215" key="AndroidCreateXmlResourceDialog/0.0.1600.860@0.0.1600.860" timestamp="1606901976671" />
-    <state x="655" y="195" key="AndroidProcessChooserDialog" timestamp="1606917229892">
+    <state x="631" y="215" key="AndroidCreateXmlResourceDialog/0.0.1600.860@0.0.1600.860" timestamp="1606968555096" />
+    <state x="655" y="195" key="AndroidProcessChooserDialog" timestamp="1606982975315">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="655" y="195" key="AndroidProcessChooserDialog/0.0.1600.860@0.0.1600.860" timestamp="1606917229892" />
+    <state x="655" y="195" key="AndroidProcessChooserDialog/0.0.1600.860@0.0.1600.860" timestamp="1606982975315" />
     <state x="369" y="0" key="CommitChangelistDialog2" timestamp="1603262384864">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -586,42 +577,42 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="650" y="130" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1606549684962" />
-    <state width="1557" height="122" key="GridCell.Tab.0.bottom" timestamp="1606917268845">
+    <state width="1557" height="159" key="GridCell.Tab.0.bottom" timestamp="1606983618708">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1491" height="224" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603260947703" />
-    <state width="1557" height="122" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1606917268845" />
-    <state width="1557" height="122" key="GridCell.Tab.0.center" timestamp="1606917268845">
+    <state width="1557" height="159" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1606983618708" />
+    <state width="1557" height="159" key="GridCell.Tab.0.center" timestamp="1606983618708">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1491" height="224" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603260947703" />
-    <state width="1557" height="122" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1606917268845" />
-    <state width="1557" height="122" key="GridCell.Tab.0.left" timestamp="1606917268844">
+    <state width="1557" height="159" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1606983618708" />
+    <state width="1557" height="159" key="GridCell.Tab.0.left" timestamp="1606983618708">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1491" height="224" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603260947703" />
-    <state width="1557" height="122" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1606917268844" />
-    <state width="1557" height="122" key="GridCell.Tab.0.right" timestamp="1606917268845">
+    <state width="1557" height="159" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1606983618708" />
+    <state width="1557" height="159" key="GridCell.Tab.0.right" timestamp="1606983618708">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1491" height="224" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603260947703" />
-    <state width="1557" height="122" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1606917268845" />
-    <state width="1557" height="122" key="GridCell.Tab.1.bottom" timestamp="1606917268846">
+    <state width="1557" height="159" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1606983618708" />
+    <state width="1557" height="159" key="GridCell.Tab.1.bottom" timestamp="1606983618709">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="122" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1606917268846" />
-    <state width="1557" height="122" key="GridCell.Tab.1.center" timestamp="1606917268845">
+    <state width="1557" height="159" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1606983618709" />
+    <state width="1557" height="159" key="GridCell.Tab.1.center" timestamp="1606983618708">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="122" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1606917268845" />
-    <state width="1557" height="122" key="GridCell.Tab.1.left" timestamp="1606917268845">
+    <state width="1557" height="159" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1606983618708" />
+    <state width="1557" height="159" key="GridCell.Tab.1.left" timestamp="1606983618708">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="122" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1606917268845" />
-    <state width="1557" height="122" key="GridCell.Tab.1.right" timestamp="1606917268846">
+    <state width="1557" height="159" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1606983618708" />
+    <state width="1557" height="159" key="GridCell.Tab.1.right" timestamp="1606983618709">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="122" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1606917268846" />
+    <state width="1557" height="159" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1606983618709" />
     <state x="407" y="173" key="MultipleFileMergeDialog" timestamp="1603172960286">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -921,7 +912,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/NewsFeedActivity.kt</url>
-          <line>346</line>
+          <line>418</line>
           <option name="timeStamp" value="141" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
@@ -931,27 +922,27 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/NewsFeedActivity.kt</url>
-          <line>326</line>
+          <line>398</line>
           <option name="timeStamp" value="158" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/NewsFeedViewModel.kt</url>
-          <line>454</line>
+          <line>531</line>
           <option name="timeStamp" value="165" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/NewsFeedViewModel.kt</url>
-          <line>427</line>
+          <line>504</line>
           <option name="timeStamp" value="166" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/NewsFeedViewModel.kt</url>
-          <line>372</line>
+          <line>449</line>
           <option name="timeStamp" value="167" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/NewsFeedViewModel.kt</url>
-          <line>222</line>
+          <line>225</line>
           <option name="timeStamp" value="168" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
@@ -971,17 +962,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/NewsFeedActivity.kt</url>
-          <line>283</line>
+          <line>355</line>
           <option name="timeStamp" value="178" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/NewsFeedActivity.kt</url>
-          <line>281</line>
+          <line>353</line>
           <option name="timeStamp" value="179" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/NewsFeedViewModel.kt</url>
-          <line>351</line>
+          <line>428</line>
           <option name="timeStamp" value="183" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
@@ -1026,12 +1017,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/NewsFeedActivity.kt</url>
-          <line>154</line>
+          <line>272</line>
           <option name="timeStamp" value="203" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/NewsFeedViewModel.kt</url>
-          <line>229</line>
+          <line>232</line>
           <option name="timeStamp" value="204" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
@@ -1051,13 +1042,38 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/NewsFeedActivity.kt</url>
-          <line>163</line>
+          <line>287</line>
           <option name="timeStamp" value="210" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/preference/fragment/FunctionalAreaFragment.kt</url>
           <line>90</line>
           <option name="timeStamp" value="211" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/NewsFeedViewModel.kt</url>
+          <line>275</line>
+          <option name="timeStamp" value="212" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/NewsFeedViewModel.kt</url>
+          <line>307</line>
+          <option name="timeStamp" value="213" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/NewsFeedViewModel.kt</url>
+          <line>316</line>
+          <option name="timeStamp" value="214" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/NewsFeedViewModel.kt</url>
+          <line>299</line>
+          <option name="timeStamp" value="215" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/jobsforher/ui/newsfeed/NewsFeedActivity.kt</url>
+          <line>204</line>
+          <option name="timeStamp" value="216" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/jobsforher/activities/MainActivity.java</url>

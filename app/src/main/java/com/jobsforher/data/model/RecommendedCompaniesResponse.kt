@@ -27,9 +27,10 @@ data class RecommendedCompaniesBody(
     var follow_count: Int? = null,
     var name: String? = null,
     var logo: String? = null,
-    var id: Long? = null,
+    var id: Int? = null,
     var banner_image: String? = null,
     var status: String? = null,
+    var follow_status: String? = "Follow",
     var industry: List<String>? = null
 )
 

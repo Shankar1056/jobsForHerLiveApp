@@ -2,6 +2,7 @@ package com.jobsforher.data.repository
 
 import com.jobsforher.data.model.*
 import com.jobsforher.network.responsemodels.NotificationBubbleResponse
+import com.jobsforher.network.responsemodels.UpdateReplyResponse
 import com.jobsforher.network.retrofithelpers.EndPoints
 import io.reactivex.Observable
 import retrofit2.Call
@@ -80,28 +81,42 @@ interface ApiServices {
     ): Observable<PreferenceCityResponse>
 
     @Headers("clientid:" + EndPoints.CLIENT_ID)
-    @PUT("candidate/preference")
+    @PUT(EndPoints.GET_PREFERENCE)
     fun saveCityPreference(
         @Header("Authorization") accesstoken: String,
         @Body getSkillsCredentials: HashMap<String, String>
     ): Observable<PreferenceAddResponse>
 
     @Headers("clientid:" + EndPoints.CLIENT_ID)
-    @GET("candidate/preference")
+    @GET(EndPoints.GET_PREFERENCE)
     fun getPreference(
         @Header("Authorization") accesstoken: String
     ): Observable<PreferenceListResponse>
 
     @Headers("clientid:" + EndPoints.CLIENT_ID)
-    @GET("candidate/mobility/functional-area")
+    @GET(EndPoints.GET_FUNCTIONAL_AREAS)
     fun getFunctionalArea(
         @Header("Authorization") accesstoken: String
     ): Observable<PreferenceFunctionalArea>
 
     @Headers("clientid:" + EndPoints.CLIENT_ID)
-    @GET("candidate/mobility/functional-industry")
+    @GET(EndPoints.GET_FUNCTIONAL_INDUSTRIES)
     fun getFunctionalIndustries(
         @Header("Authorization") accesstoken: String
     ): Observable<PreferenceFunctionalArea>
+
+    @Headers("clientid:" + EndPoints.CLIENT_ID)
+    @POST(EndPoints.JOINGROUP + "/{id}")
+    fun joinGroup(
+        @Path("id") id: Int,
+        @Header("Authorization") accesstoken: String
+    ): Observable<JoinGroup>
+
+    @Headers("clientid:" + EndPoints.CLIENT_ID)
+    @POST(EndPoints.FOLLOWCOMPANY)
+    fun FollowCompayny(
+        @Header("Authorization") accesstoken: String,
+        @Body getSkillsCredentials: HashMap<String, String>
+    ): Observable<CompanyFollow>
 
 }

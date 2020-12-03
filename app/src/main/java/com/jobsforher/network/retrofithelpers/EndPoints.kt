@@ -29,6 +29,11 @@ object EndPoints {
     const val NOTIFICATION = "notification_bubble"
     const val RESUMEUPLOAD = "candidate/resumes"
     const val CITIES = "cities"
+    const val JOINGROUP = "groups/join"
+    const val GET_FUNCTIONAL_INDUSTRIES = "candidate/mobility/functional-industry"
+    const val GET_FUNCTIONAL_AREAS = "candidate/mobility/functional-area"
+    const val GET_PREFERENCE = "candidate/preference"
+    const val FOLLOWCOMPANY = "followers"
 
     const val CLIENT_ID = "NQtAuLKzeYVOFe7b3kmqBSNP"
 

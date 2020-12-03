@@ -323,6 +323,7 @@
     <string name="type_functional_job">Search Job Type</string>
     <string name="my_hint">skills</string>
     <string name="hint_type_skills">Type your skills</string>
+    <string name="text_join">Join</string>
 
 
     <!--<string name="app_name">Android Spinner</string>-->

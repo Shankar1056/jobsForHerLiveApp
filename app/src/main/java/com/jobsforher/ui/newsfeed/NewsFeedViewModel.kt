@@ -29,6 +29,8 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
     var errorMessage = MutableLiveData<String>()
     var successMessage = MutableLiveData<String>()
     var isResumeUploaded = MutableLiveData<Boolean>()
+    var joinGroupResponse = MutableLiveData<JoinGroupBody>()
+    var followCompanyResponse = MutableLiveData<CompanyFollowBody>()
     var jobsResponseList = MutableLiveData<ArrayList<RecommendedJobsBody>>()
     var companiesResponseList = MutableLiveData<ArrayList<RecommendedCompaniesBody>>()
     var groupsResponseList = MutableLiveData<ArrayList<RecommendedGropsBody>>()
@@ -39,6 +41,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
     var notificationCount = MutableLiveData<Int>()
     var switchPreferenceName = MutableLiveData<PreferenceName>()
     var allPreferenceUpdated = MutableLiveData<Boolean>()
+    private var joinGroupId: Int = 0
 
     init {
         loadHomeBanner()
@@ -262,12 +265,86 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
                 return
             }
             if (data.exp_to_year == 0) {
-               // switchPreferenceName.value = PreferenceName.EXP_TO_YEAR
+                // switchPreferenceName.value = PreferenceName.EXP_TO_YEAR
                 return
             }
 
         }
     }
+
+    fun joinGroup(id: Int?) {
+        if (id != null) {
+            joinGroupId = id
+        }
+        if (Utility.isInternetConnected(app)) {
+            joinGroupObservable.subscribeWith(joinGroupObserver)
+        } else {
+            errorMessage.value = app.resources.getString(R.string.no_internet_connection)
+        }
+    }
+
+    fun followUnFollowCompany(id: Int?, followUnfollow: String) {
+
+        if (Utility.isInternetConnected(app)) {
+            groupReq["entity_id"] = id.toString()
+            groupReq["entity_type"] = Constants.COMPANY
+            groupReq["status"] = followUnfollow
+
+            followUnFollowObservable.subscribeWith(followUnFollowObserver)
+        } else {
+            errorMessage.value = app.resources.getString(R.string.no_internet_connection)
+        }
+    }
+
+    private val followUnFollowObservable: Observable<CompanyFollow>
+        get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
+            .FollowCompayny("Bearer " + EndPoints.ACCESS_TOKEN, groupReq)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+
+    private val followUnFollowObserver: DisposableObserver<CompanyFollow>
+        get() = object : DisposableObserver<CompanyFollow>() {
+            override fun onNext(@NonNull response: CompanyFollow) {
+                if (Utility.isSuccessCode(response.response_code)) {
+                    successMessage.value = response.message
+                    followCompanyResponse.value = response.body
+                } else {
+                    errorMessage.value = response.message
+                }
+            }
+
+            override fun onError(@NonNull e: Throwable) {
+                e.printStackTrace()
+                errorMessage.value = e.message
+            }
+
+            override fun onComplete() {}
+        }
+
+    private val joinGroupObservable: Observable<JoinGroup>
+        get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
+            .joinGroup(joinGroupId, "Bearer " + EndPoints.ACCESS_TOKEN)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+
+    private val joinGroupObserver: DisposableObserver<JoinGroup>
+        get() = object : DisposableObserver<JoinGroup>() {
+            override fun onNext(@NonNull response: JoinGroup) {
+                if (Utility.isSuccessCode(response.response_code)) {
+                    successMessage.value = response.message
+                    joinGroupResponse.value = response.body
+                } else {
+                    errorMessage.value = response.message
+                }
+            }
+
+            override fun onError(@NonNull e: Throwable) {
+                e.printStackTrace()
+                errorMessage.value = e.message
+            }
+
+            override fun onComplete() {}
+        }
 
     private val uploadResumeObservable: Observable<ResumeUploadResponse>
         get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
@@ -307,7 +384,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
 
                     notificationCount.value = response.body?.new_notification
                 } else {
-                    errorMessage.value = response.message
+                    // errorMessage.value = response.message
                 }
             }
 

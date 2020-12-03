@@ -27,6 +27,7 @@ data class RecommendedGropsBody(
     var excerpt: String? = null,
     var status: String? = null,
     var cities: List<Int>? = null,
+    var request_status: String? = "Join",
     var categories: List<GroupCategories>? = null
 )
 

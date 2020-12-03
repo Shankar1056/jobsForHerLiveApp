@@ -232,7 +232,7 @@ class CompaniesAdapter(private val mDataList: ArrayList<CompaniesView>, islogged
                     holder.btnApply.visibility = View.GONE
                     holder.btnApplied.visibility = View.VISIBLE
                 }
-                else if(isRecommended==1 && page.equals("NewsFeed")){
+                else if(isRecommended==1 && page.equals("NewsFeed")){ //this is for NewsFeed Screen
                     val intent = Intent(context, ZActivityCompanyDetails::class.java)
                     intent.putExtra("isLoggedIn", true)
                     intent.putExtra("group_Id", mDataList[position].id)

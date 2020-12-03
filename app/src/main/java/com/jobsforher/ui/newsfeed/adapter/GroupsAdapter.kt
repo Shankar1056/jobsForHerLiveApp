@@ -10,9 +10,11 @@ import com.jobsforher.BR
 import com.jobsforher.R
 import com.jobsforher.data.model.RecommendedGropsBody
 import com.jobsforher.databinding.ItemGroupsBinding
-import com.jobsforher.databinding.ItemJobsBinding
 
-class GroupsAdapter(private val list: ArrayList<RecommendedGropsBody>) :
+class GroupsAdapter(
+    private val list: ArrayList<RecommendedGropsBody>,
+    val listener: GroupsListener
+) :
     RecyclerView.Adapter<GroupsAdapter.ViewHolder>() {
     @NonNull
     override fun onCreateViewHolder(@NonNull parent: ViewGroup, viewType: Int): ViewHolder {
@@ -41,7 +43,14 @@ class GroupsAdapter(private val list: ArrayList<RecommendedGropsBody>) :
         fun bind(obj: Any) {
             itemRowBinding.setVariable(BR.model, obj)
             itemRowBinding.executePendingBindings()
+            itemRowBinding.btnApplied.setOnClickListener {
+                listener.onJoinClicked(adapterPosition)
+            }
         }
+    }
+
+    interface GroupsListener {
+        fun onJoinClicked(pos: Int)
     }
 
 }
