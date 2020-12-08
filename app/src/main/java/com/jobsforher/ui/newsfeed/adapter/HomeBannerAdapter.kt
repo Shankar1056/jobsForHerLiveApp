@@ -11,7 +11,10 @@ import com.jobsforher.R
 import com.jobsforher.data.model.HomeBannerData
 import com.jobsforher.databinding.ItemHomeBannerBinding
 
-class HomeBannerAdapter(private val list: ArrayList<HomeBannerData>) :
+class HomeBannerAdapter(
+    private val list: ArrayList<HomeBannerData>,
+    var listener: HomeBanneristener
+) :
     RecyclerView.Adapter<HomeBannerAdapter.ViewHolder>() {
     @NonNull
     override fun onCreateViewHolder(@NonNull parent: ViewGroup, viewType: Int): ViewHolder {
@@ -28,6 +31,10 @@ class HomeBannerAdapter(private val list: ArrayList<HomeBannerData>) :
     override fun onBindViewHolder(@NonNull holder: ViewHolder, position: Int) {
         val imageModelList = list[position]
         holder.bind(imageModelList)
+
+        holder.itemView.setOnClickListener {
+            listener.onBannerClicked(position)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -41,6 +48,10 @@ class HomeBannerAdapter(private val list: ArrayList<HomeBannerData>) :
             itemRowBinding.setVariable(BR.model, obj)
             itemRowBinding.executePendingBindings()
         }
+    }
+
+    interface HomeBanneristener {
+        fun onBannerClicked(pos: Int)
     }
 
 }

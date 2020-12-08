@@ -1,5 +1,6 @@
 package com.jobsforher.ui.newsfeed
 
+import android.app.Activity
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -234,7 +235,19 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
                 this, LinearLayoutManager.HORIZONTAL,
                 false
             )
-            jobsAds_recycler_view.adapter = HomeBannerAdapter(it)
+            jobsAds_recycler_view.adapter = HomeBannerAdapter(it, object :
+                HomeBannerAdapter.HomeBanneristener {
+                override fun onBannerClicked(pos: Int) {
+                    when(pos){
+                        0 -> goToActivity(ZActivityGroups())
+                        1 -> goToActivity(ZActivityJobs())
+                        2 -> goToActivity(SignUpWelcomeActivity())
+                        3 -> goToActivity(ZActivityCompanies())
+                        4 -> goToActivity(ZActivityEvents())
+                    }
+                }
+
+            })
 
             val handler = Handler()
             handler.postDelayed(object : Runnable {
@@ -288,6 +301,11 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
             preference_layout.visibility = View.GONE
         })
 
+    }
+
+    private fun goToActivity(activity : Activity) {
+        startActivity(Intent(this@NewsFeedActivity, activity::class.java)
+        .putExtra("isLoggedIn", true)) //this will be removed when we work on RespectedActivity
     }
 
     private fun goToFragment(fragment: Fragment) {
