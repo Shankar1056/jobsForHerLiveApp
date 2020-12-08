@@ -73,11 +73,11 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
         companiesAdapter = CompaniesAdapter(companyList, object :
             CompaniesAdapter.CompanyListener {
             override fun onItemClicked(pos: Int) {
-                if (companyList[pos].follow_status == "Follow") {
-                    companyList[pos].follow_status = "UnFollow"
+                if (companyList[pos].follow_status == Constants.FOLLOW_CAPS) {
+                    companyList[pos].follow_status = Constants.UNFOLLOW_CAPS
                     viewModel.followUnFollowCompany(companyList[pos].id, Constants.FOLLOW)
                 } else {
-                    companyList[pos].follow_status = "Follow"
+                    companyList[pos].follow_status = Constants.FOLLOW_CAPS
                     viewModel.followUnFollowCompany(companyList[pos].id, Constants.UNFOLLOW)
                 }
             }
@@ -153,7 +153,7 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
                 if (joinGroupList[pos].visiblity_type == Constants.PRIVATE) {
                     joinGroupList[pos].request_status = Constants.REQUESTED
                 } else {
-                    joinGroupList[pos].request_status = Constants.APPROVED
+                    joinGroupList[pos].request_status = Constants.JOINED
                 }
                 viewModel.joinGroup(joinGroupList[pos].id)
             }

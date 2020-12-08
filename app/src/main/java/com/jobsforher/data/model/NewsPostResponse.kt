@@ -56,9 +56,9 @@ fun setWebViewClient(view: WebView, client: WebViewClient?) {
     view.getSettings().setPluginState(WebSettings.PluginState.ON)
     view.getSettings().mediaPlaybackRequiresUserGesture = false
 
-    view.settings.builtInZoomControls = true
-    view.isHorizontalScrollBarEnabled = true
-    view.isVerticalScrollBarEnabled = true
+    view.settings.builtInZoomControls = false
+    view.isHorizontalScrollBarEnabled = false
+    view.isVerticalScrollBarEnabled = false
 }
 
 @BindingAdapter("loadDocumentVideoUrl")

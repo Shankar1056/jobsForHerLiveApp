@@ -6,6 +6,7 @@
         <variable
                 name="model"
                 type="com.jobsforher.data.model.RecommendedCompaniesBody" />
+        <import type="com.jobsforher.helpers.Constants" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -63,12 +64,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:layout_marginTop="2dp"
-                android:background="@drawable/curved_green_border_filled_white_adapter"
+                android:background="@{model.follow_status == Constants.FOLLOW_CAPS ? @drawable/curved_green_border_filled_white_adapter : @drawable/curved_green_border_filled_grey_adapter}"
                 android:fontFamily="@font/opensanssemibold"
                 android:gravity="center"
                 android:text="@{model.follow_status}"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
+                android:textColor="@{model.follow_status == Constants.FOLLOW_CAPS ? @color/white : @color/text_black}"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

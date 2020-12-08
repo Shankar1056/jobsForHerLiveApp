@@ -8,6 +8,7 @@
         <variable
                 name="model"
                 type="com.jobsforher.data.model.RecommendedGropsBody" />
+        <import type="com.jobsforher.helpers.Constants" />
 
         <import type="android.view.View" />
     </data>
@@ -92,11 +93,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:layout_marginTop="2dp"
-                android:background="@drawable/curved_green_border_filled_white_adapter"
                 android:fontFamily="@font/opensanssemibold"
                 android:text="@{model.request_status}"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
+                android:background="@{model.request_status == Constants.JOIN ? @drawable/curved_green_border_filled_white_adapter : @drawable/curved_green_border_filled_grey_adapter}"
+                android:textColor="@{model.request_status == Constants.JOIN ? @color/white : @color/text_black}"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"

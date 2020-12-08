@@ -15,6 +15,7 @@ object Constants {
     const val EXPERT_CHAT = "ExpertChat"
 
     const val UPVOTE = "upvote"
+    const val DOWNUPVOTE = "downvote"
     const val POST = "post"
     const val TYPE_JOB = "job"
     const val TYPE_INDUSTRIES = "industries"
@@ -23,8 +24,10 @@ object Constants {
     const val PRIVATE = "private"
     const val JOIN = "Join"
     const val REQUESTED = "Requested"
-    const val APPROVED = "Approved"
+    const val JOINED = "Joined"
     const val FOLLOW = "follow"
+    const val FOLLOW_CAPS = "Follow"
     const val UNFOLLOW = "unfollow"
+    const val UNFOLLOW_CAPS = "UnFollow"
     const val COMPANY = "company"
 }

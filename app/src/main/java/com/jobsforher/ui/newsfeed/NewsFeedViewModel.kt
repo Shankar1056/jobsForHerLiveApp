@@ -49,10 +49,22 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
         loadRecommendedCompanies()
         loadRecommendedMyGroupData()
         loadGroupPosts("1", Constants.MAXIMUM_PAGINATION_COUNT)
+        //loadRecommendedEvents("1", Constants.MAXIMUM_PAGINATION_COUNT)
         loadPreference()
     }
 
-     fun loadPreference() {
+    private fun loadRecommendedEvents(pageNo: String, maxRecordToLoad: String) {
+        groupReq["page_no"] = pageNo
+        groupReq["page_size"] = maxRecordToLoad
+        groupReq["payment_type"] = "both"
+        if (Utility.isInternetConnected(app)) {
+            getRecomEventsObservable.subscribeWith(getRecomEventsObserver)
+        } else {
+            errorMessage.value = app.resources.getString(R.string.no_internet_connection)
+        }
+    }
+
+    fun loadPreference() {
         if (Utility.isInternetConnected(app)) {
             getPreferenceObservable.subscribeWith(getPreferenceObserver)
         } else {
@@ -130,9 +142,10 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
         if (Utility.isInternetConnected(app)) {
             groupReq["entity_type"] = Constants.POST
             groupReq["entity_id"] = id.toString()
-            groupReq["vote_type"] = Constants.UPVOTE
+            groupReq["vote_type"] = Constants.DOWNUPVOTE
 
-            doDownVoteObservable.subscribeWith(doDownVoteObserver)
+            // doDownVoteObservable.subscribeWith(doDownVoteObserver)
+            doUpVoteObservable.subscribeWith(doUpVoteObserver)
         } else {
             errorMessage.value = app.resources.getString(R.string.no_internet_connection)
         }
@@ -204,6 +217,30 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
         }
     }
 
+
+    private val getRecomEventsObservable: Observable<RecommendedEventsResponse>
+        get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
+            .recommendedEvents("Bearer " + EndPoints.ACCESS_TOKEN, groupReq)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+
+    private val getRecomEventsObserver: DisposableObserver<RecommendedEventsResponse>
+        get() = object : DisposableObserver<RecommendedEventsResponse>() {
+            override fun onNext(@NonNull response: RecommendedEventsResponse) {
+                if (Utility.isSuccessCode(response.response_code)) {
+                    //checkNullPreference(response.body)
+                } else {
+                    errorMessage.value = response.message
+                }
+            }
+
+            override fun onError(@NonNull e: Throwable) {
+                e.printStackTrace()
+                errorMessage.value = e.message
+            }
+
+            override fun onComplete() {}
+        }
 
     private val getPreferenceObservable: Observable<PreferenceListResponse>
         get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)

@@ -55,7 +55,7 @@ interface ApiServices {
     ): Observable<VoteResponseModel>
 
     @Headers("clientid:" + EndPoints.CLIENT_ID)
-    @HTTP(method = "DELETE", path = EndPoints.vote, hasBody = true)
+    @POST(EndPoints.vote)
     fun downVoteData(
         @Header("Authorization") accesstoken: String,
         @Body signInCredentials: HashMap<String, String>
@@ -118,5 +118,12 @@ interface ApiServices {
         @Header("Authorization") accesstoken: String,
         @Body getSkillsCredentials: HashMap<String, String>
     ): Observable<CompanyFollow>
+
+    @Headers("clientid:" + EndPoints.CLIENT_ID)
+    @POST(EndPoints.RECOMMENDED_EVENTS)
+    fun recommendedEvents(
+        @Header("Authorization") accesstoken: String,
+        @Body getSkillsCredentials: HashMap<String, String>
+    ): Observable<RecommendedEventsResponse>
 
 }

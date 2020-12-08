@@ -34,6 +34,7 @@ object EndPoints {
     const val GET_FUNCTIONAL_AREAS = "candidate/mobility/functional-area"
     const val GET_PREFERENCE = "candidate/preference"
     const val FOLLOWCOMPANY = "followers"
+    const val RECOMMENDED_EVENTS = "es_recommended_events"
 
     const val CLIENT_ID = "NQtAuLKzeYVOFe7b3kmqBSNP"
 
