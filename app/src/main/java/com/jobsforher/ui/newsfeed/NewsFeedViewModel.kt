@@ -41,6 +41,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
     var notificationCount = MutableLiveData<Int>()
     var switchPreferenceName = MutableLiveData<PreferenceName>()
     var allPreferenceUpdated = MutableLiveData<Boolean>()
+    var recommendedEventsList = MutableLiveData<ArrayList<RecommendedEventsBody>>()
     private var joinGroupId: Int = 0
 
     init {
@@ -49,7 +50,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
         loadRecommendedCompanies()
         loadRecommendedMyGroupData()
         loadGroupPosts("1", Constants.MAXIMUM_PAGINATION_COUNT)
-        //loadRecommendedEvents("1", Constants.MAXIMUM_PAGINATION_COUNT)
+        loadRecommendedEvents("1", Constants.MAXIMUM_PAGINATION_COUNT)
         loadPreference()
     }
 
@@ -220,7 +221,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
 
     private val getRecomEventsObservable: Observable<RecommendedEventsResponse>
         get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
-            .recommendedEvents("Bearer " + EndPoints.ACCESS_TOKEN, groupReq)
+            .recommendedEvents("Bearer " + EndPoints.ACCESS_TOKEN/*, groupReq*/)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
 
@@ -228,7 +229,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
         get() = object : DisposableObserver<RecommendedEventsResponse>() {
             override fun onNext(@NonNull response: RecommendedEventsResponse) {
                 if (Utility.isSuccessCode(response.response_code)) {
-                    //checkNullPreference(response.body)
+                    recommendedEventsList.value = response.body
                 } else {
                     errorMessage.value = response.message
                 }

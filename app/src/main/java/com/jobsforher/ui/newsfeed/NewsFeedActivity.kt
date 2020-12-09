@@ -55,7 +55,7 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
         setContentView(R.layout.zactivity_newsfeed)
 
         initWidgit()
-
+        listenViewModelData()
         initCompanyPostAdapter()
         initAllNewsPostAdapter()
         initNewsPostAdapter()
@@ -65,7 +65,6 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
 
         handleBackgrounds(btnHome)
 
-        listenViewModelData()
 
     }
 
@@ -228,6 +227,10 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
                 my_swipeRefresh_Layout.isRefreshing = false
             }
             loading = true
+        })
+
+        viewModel.recommendedEventsList.observe(this, Observer {
+            events_recycler_view.adapter = EventsAdapter(it)
         })
 
         viewModel.homeBannerResponse.observe(this, Observer {
@@ -403,6 +406,10 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
                 Intent(applicationContext, ZActivityGroups::class.java)
                     .putExtra("isLoggedIn", true)
             )
+        }
+
+        eventsheader1.setOnClickListener {
+            goToTargetActivity(ZActivityEvents())
         }
 
         img_profile_toolbar.setOnClickListener {

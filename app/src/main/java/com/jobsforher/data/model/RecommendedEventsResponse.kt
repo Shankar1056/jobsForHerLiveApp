@@ -1,5 +1,9 @@
 package com.jobsforher.data.model
 
+import android.widget.ImageView
+import androidx.databinding.BindingAdapter
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.jobsforher.data.model.common_response.JobsForHerAuth
 import com.jobsforher.data.model.common_response.JobsForHerPagination
 
@@ -8,7 +12,7 @@ data class RecommendedEventsResponse(
     var message: String? = null,
     var auth: JobsForHerAuth? = null,
     var pagination: JobsForHerPagination? = null,
-    var body: RecommendedEventsBody? = null
+    var body: ArrayList<RecommendedEventsBody>? = null
 )
 
 data class RecommendedEventsBody(
@@ -108,4 +112,11 @@ data class EventsLocation(
 
 class EventsImages {
 
+}
+
+@BindingAdapter("image_url")
+fun loadEventImage(view: ImageView, imageUrl: String?) {
+    Glide.with(view.context)
+        .load(imageUrl).apply(RequestOptions().circleCrop())
+        .into(view)
 }

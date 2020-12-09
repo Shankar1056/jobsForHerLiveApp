@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="model"
+                type="com.jobsforher.data.model.RecommendedEventsBody" />
+
+
+        <import type="com.jobsforher.util.Utility" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rectangle_grey"
+            android:paddingStart="7dp"
+            android:paddingTop="7dp"
+            android:paddingEnd="7dp"
+            android:paddingBottom="10dp">
+
+
+        <ImageView
+                android:id="@+id/row_icon"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="5dp"
+                android:elevation="1dp"
+                app:groupUrl="@{model.image_url}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/jobs_default" />
+
+
+        <TextView
+                android:id="@+id/row_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/opensanssemibold"
+                android:text="@{model.title}"
+                android:textColor="@color/greyseparator"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/hotJobs"
+                app:layout_constraintStart_toEndOf="@+id/row_icon"
+                app:layout_constraintTop_toTopOf="@+id/row_icon" />
+
+        <ImageView
+                android:id="@+id/hotJobs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/row_name" />
+
+        <TextView
+                android:id="@+id/row_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/opensanssemibold"
+                android:singleLine="true"
+                android:text="@{model.events_category}"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/row_name"
+                app:layout_constraintTop_toBottomOf="@+id/row_name" />
+
+        <TextView
+                android:id="@+id/row_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/opensanssemibold"
+                android:singleLine="true"
+                android:text="@{Utility.getEventCity(model.events_locations)}"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/btnApplied"
+                app:layout_constraintStart_toStartOf="@+id/row_category"
+                app:layout_constraintTop_toBottomOf="@+id/row_category" />
+
+        <TextView
+                android:id="@+id/row_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/opensanssemibold"
+                android:singleLine="true"
+                android:text="@{Utility.getFromAndToDate(model.event_start_date_time) +` to `+ Utility.getFromAndToDate(model.event_end_date_time) }"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/btnApplied"
+                app:layout_constraintStart_toStartOf="@+id/row_location"
+                app:layout_constraintTop_toBottomOf="@+id/row_location" />
+
+        <TextView
+                android:id="@+id/row_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/opensanssemibold"
+                android:singleLine="true"
+                android:text="@{Utility.getFromAndToTime(model.event_start_date_time) +` to `+ Utility.getFromAndToTime(model.event_end_date_time) }"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/btnApplied"
+                app:layout_constraintStart_toStartOf="@+id/row_date"
+                app:layout_constraintTop_toBottomOf="@+id/row_date" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

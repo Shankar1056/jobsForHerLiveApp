@@ -7,9 +7,11 @@ import android.content.SharedPreferences
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
-import android.util.Log
 import android.widget.Toast
 import com.jobsforher.activities.SplashActivity
+import com.jobsforher.data.model.EventsLocation
+import java.text.SimpleDateFormat
+import java.util.*
 import java.util.regex.Pattern
 
 class Utility {
@@ -63,7 +65,7 @@ class Utility {
             Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
         }
 
-        fun doLogoutPopup(context: Context, message : String) {
+        fun doLogoutPopup(context: Context, message: String) {
             val builder = AlertDialog.Builder(context)
             builder.setMessage(message)
             builder.setPositiveButton("YES") { dialog, which ->
@@ -83,7 +85,7 @@ class Utility {
             dialog.show()
         }
 
-        fun sessionExpiredPopup(context: Context, message : String) {
+        fun sessionExpiredPopup(context: Context, message: String) {
             val builder = AlertDialog.Builder(context)
             builder.setMessage(message)
             builder.setCancelable(false)
@@ -103,8 +105,8 @@ class Utility {
         }
 
         @JvmStatic
-        fun getVideoDocumentUrl(data: String, docType : String): String {
-            if (docType == "document"){
+        fun getVideoDocumentUrl(data: String, docType: String): String {
+            if (docType == "document") {
                 return "http://docs.google.com/gview?embedded=true&url=$data"
             }
             if (docType == "video") {
@@ -124,18 +126,55 @@ class Utility {
         }
 
         private fun extractYTId(ytUrl: String): String? {
-                var vId: String? = null
-                val pattern = Pattern.compile(
-                    "^https?://.*(?:youtu.be/|v/|u/\\w/|embed/|watch?v=)([^#&?]*).*$",
-                    Pattern.CASE_INSENSITIVE
-                )
-                val matcher = pattern.matcher(ytUrl)
-                if (matcher.matches()) {
-                    vId = matcher.group(1)
+            var vId: String? = null
+            val pattern = Pattern.compile(
+                "^https?://.*(?:youtu.be/|v/|u/\\w/|embed/|watch?v=)([^#&?]*).*$",
+                Pattern.CASE_INSENSITIVE
+            )
+            val matcher = pattern.matcher(ytUrl)
+            if (matcher.matches()) {
+                vId = matcher.group(1)
+            }
+            return vId
+        }
+
+        @JvmStatic
+        fun getEventCity(eventLocations: ArrayList<EventsLocation>): String {
+            var city = ""
+            for (data in eventLocations) {
+                city = if (city == "") {
+                    data.city.toString()
+                } else {
+                    city + ", " + data.city.toString()
                 }
-                return vId
+            }
+
+            return city
+        }
+
+        @JvmStatic
+        fun getFromAndToDate(date: String): String {
+
+            var format = SimpleDateFormat("yyyy-mm-dd hh:mm:ss")
+            val newDate: Date = format.parse(date)
+
+            format = SimpleDateFormat("MMM dd,yyyy")
+            return format.format(newDate)
+
+        }
+
+        @JvmStatic
+        fun getFromAndToTime(time: String): String {
+
+            var format = SimpleDateFormat("yyyy-mm-dd hh:mm:ss")
+            val newTime: Date = format.parse(time)
+
+            format = SimpleDateFormat("hh:mm aa")
+            return format.format(newTime)
+
         }
 
     }
+
 
 }

@@ -941,7 +941,7 @@ TODO("Pending")
             override fun onFailure(call: Call<NewsDetails>, t: Throwable) {
                 Logger.d("TAGG", "FAILED : $t")
                // mainlayout.visibility = View.GONE
-                posts_layout3.visibility = View.GONE
+                //posts_layout3.visibility = View.GONE
                 Toast.makeText(applicationContext, "No Posts to load!!", Toast.LENGTH_LONG).show()
                 loadprev.visibility = View.GONE
                 loadnext.visibility = View.GONE

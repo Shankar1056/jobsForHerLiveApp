@@ -120,10 +120,10 @@ interface ApiServices {
     ): Observable<CompanyFollow>
 
     @Headers("clientid:" + EndPoints.CLIENT_ID)
-    @POST(EndPoints.RECOMMENDED_EVENTS)
+    @GET(EndPoints.RECOMMENDED_EVENTS)
     fun recommendedEvents(
-        @Header("Authorization") accesstoken: String,
-        @Body getSkillsCredentials: HashMap<String, String>
+        @Header("Authorization") accesstoken: String
+       // @Body getSkillsCredentials: HashMap<String, String>
     ): Observable<RecommendedEventsResponse>
 
 }

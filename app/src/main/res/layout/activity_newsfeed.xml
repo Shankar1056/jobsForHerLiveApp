@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-        android:layout_width="match_parent"
+<RelativeLayout android:layout_width="match_parent"
         android:layout_height="match_parent"
         xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -318,7 +318,6 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:paddingBottom="10dp"
-                            android:layout_marginTop="10dp"
                             app:layout_constraintEnd_toEndOf="@+id/jobsAds_recycler_view"
                             app:layout_constraintStart_toStartOf="@+id/jobsAds_recycler_view"
                             app:layout_constraintTop_toBottomOf="@+id/companies_layout">
@@ -331,6 +330,7 @@
                                 android:layout_marginTop="8dp"
                                 android:layout_marginEnd="12dp"
                                 android:text="News"
+                                android:visibility="gone"
                                 android:textColor="@color/black"
                                 android:textStyle="bold"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -342,7 +342,8 @@
                                 android:layout_height="1dp"
                                 android:layout_marginTop="8dp"
                                 android:background="@color/lightestgrey"
-                                app:layout_constraintTop_toBottomOf="@+id/newsTv" />
+                                android:visibility="gone"
+                                app:layout_constraintTop_toTopOf="parent" />
 
                         <androidx.recyclerview.widget.RecyclerView
                                 android:id="@+id/posts_recycler_view"
@@ -353,7 +354,7 @@
                                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/newsTv" />
+                                app:layout_constraintTop_toTopOf="parent" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                <!-- </androidx.cardview.widget.CardView>-->
@@ -362,7 +363,6 @@
                         android:id="@+id/groups_layout"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
                         app:layout_constraintEnd_toEndOf="@+id/jobsAds_recycler_view"
                         app:layout_constraintStart_toStartOf="@+id/jobsAds_recycler_view"
                         app:layout_constraintTop_toBottomOf="@+id/news_layout">
@@ -420,31 +420,95 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
 
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/events_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintEnd_toEndOf="@+id/jobsAds_recycler_view"
+                        app:layout_constraintStart_toStartOf="@+id/jobsAds_recycler_view"
+                        app:layout_constraintTop_toBottomOf="@+id/groups_layout">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="10dp">
+
+                        <TextView
+                                android:id="@+id/eventsTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/text_events_you_may_interested"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black"
+                                android:textStyle="normal"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                                android:id="@+id/eventsheader1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="12dp"
+                                android:text="@string/text_see_all"
+                                android:textColor="#2680EB"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@color/lightestgrey"
+                                app:layout_constraintTop_toBottomOf="@+id/eventsTv" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/events_recycler_view"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="13dp"
+                                android:nestedScrollingEnabled="false"
+                                android:scrollbars="vertical"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                app:layout_constraintEnd_toEndOf="@+id/eventsheader1"
+                                app:layout_constraintStart_toStartOf="@+id/eventsTv"
+                                app:layout_constraintTop_toBottomOf="@+id/eventsTv"
+                                tools:listitem="@layout/item_events"/>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
-            <LinearLayout
+
+           <!-- <LinearLayout
                     android:id="@+id/posts_layout3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="11dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
                     android:orientation="vertical"
-                    android:visibility="visible"
-                    android:background="@color/white">
+                    android:visibility="visible">
 
                 <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@color/lightestgrey" />
+                        android:visibility="gone"
+                        android:background="@color/lightestgrey" />-->
 
                 <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/posts_recycler_view1"
                         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
                         android:scrollbars="vertical"
                         android:nestedScrollingEnabled="false"
                 />
@@ -478,7 +542,7 @@
                               android:layout_weight="1"/>
                 </LinearLayout>
 
-            </LinearLayout>
+            <!--</LinearLayout>-->
 
 
         </LinearLayout>
