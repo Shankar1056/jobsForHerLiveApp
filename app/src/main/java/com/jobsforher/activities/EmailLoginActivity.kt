@@ -8,6 +8,7 @@ import com.jobsforher.helpers.ToastHelper
 import com.jobsforher.network.retrofithelpers.EndPoints
 import com.jobsforher.network.retrofithelpers.RetrofitClient
 import com.jobsforher.network.retrofithelpers.RetrofitInterface
+import com.jobsforher.ui.auth.LoginActivity
 import entertainment.minersinc.tfhy.network.responsemodels.LoginResponse
 import kotlinx.android.synthetic.main.activity_email_login.*
 import kotlinx.android.synthetic.main.toolbar_back.*
@@ -31,7 +32,7 @@ class EmailLoginActivity : BaseActivity() {
 
             if(etEmail.text!!.trim().length!=0 && etPassword.text!!.trim().length!=0) {
 
-                var intent = Intent(this, SignInActivity::class.java)
+                var intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
 //                doLogin(etEmail.text!!.trim().toString(), HelperMethods.md5(etPassword.text!!.trim().toString()))
             }

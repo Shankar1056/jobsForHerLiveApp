@@ -62,7 +62,7 @@
         <Button
                 android:id="@+id/btnApplied"
                 android:layout_width="wrap_content"
-                android:layout_height="35dp"
+                android:layout_height="37dp"
                 android:layout_marginTop="2dp"
                 android:background="@{model.follow_status == Constants.FOLLOW_CAPS ? @drawable/curved_green_border_filled_white_adapter : @drawable/curved_green_border_filled_grey_adapter}"
                 android:fontFamily="@font/opensanssemibold"

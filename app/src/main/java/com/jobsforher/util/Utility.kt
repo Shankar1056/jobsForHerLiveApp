@@ -7,10 +7,13 @@ import android.content.SharedPreferences
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
+import android.provider.Settings
 import android.widget.Toast
 import com.jobsforher.activities.SplashActivity
 import com.jobsforher.data.model.EventsLocation
+import com.jobsforher.helpers.Constants
 import java.text.SimpleDateFormat
+import java.time.LocalDateTime
 import java.util.*
 import java.util.regex.Pattern
 
@@ -69,13 +72,13 @@ class Utility {
             val builder = AlertDialog.Builder(context)
             builder.setMessage(message)
             builder.setPositiveButton("YES") { dialog, which ->
-                val sharedPref: SharedPreferences = context.getSharedPreferences(
+                /*val sharedPref: SharedPreferences = context.getSharedPreferences(
                     "mysettings",
                     Context.MODE_PRIVATE
                 )
-                sharedPref.edit().clear().commit();
+                sharedPref.edit().clear().commit();*/
+                Preference.clearPreference()
                 val intent = Intent(context, SplashActivity::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 context.startActivity(intent)
             }
             builder.setNegativeButton("No") { dialog, which ->
@@ -174,6 +177,31 @@ class Utility {
 
         }
 
+        @JvmStatic
+        fun getDeviceID(context: Context): String {
+            return Settings.Secure.getString(
+                context.getContentResolver(),
+                Settings.Secure.ANDROID_ID
+            )
+
+        }
+
+        @JvmStatic
+        fun isValidMobileNumber(number: String): Boolean {
+            if (!Pattern.compile(Constants.MOBILE_VALIDATION).matcher(number).matches()) {
+                return false
+            }
+            return true
+        }
+
+        fun getCurrentDateTime(): String {
+            return if (Build.VERSION.SDK_INT > Build.VERSION_CODES.O) {
+                LocalDateTime.now().toString()
+            } else {
+                val sdf = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault())
+                sdf.format(Date())
+            }
+        }
     }
 
 

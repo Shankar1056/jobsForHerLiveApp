@@ -3,6 +3,11 @@ package com.jobsforher.network.retrofithelpers
 import com.jobsforher.models.CityView
 import java.util.ArrayList
 
+class Test{
+    companion object{
+       var ACCESS_TOKEN_NEW = ""
+    }
+}
 object EndPoints {
 
     lateinit var CITY_LIST: ArrayList<CityView>
@@ -51,6 +56,10 @@ object EndPoints {
     var PHONE_NO=""
 
     var USERID=""
+
+    var PROFILE_PERC=""
+
+    var VERIFIED_EMAIL=""
 
     var MY_ROLES=""
 

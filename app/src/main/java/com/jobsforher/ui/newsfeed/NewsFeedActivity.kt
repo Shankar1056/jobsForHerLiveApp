@@ -73,7 +73,7 @@ class NewsFeedActivity : Footer(), NavigationView.OnNavigationItemSelectedListen
             CompaniesAdapter.CompanyListener {
             override fun onItemClicked(pos: Int) {
                 if (companyList[pos].follow_status == Constants.FOLLOW_CAPS) {
-                    companyList[pos].follow_status = Constants.UNFOLLOW_CAPS
+                    companyList[pos].follow_status = Constants.FOLLOWING_CAPS
                     viewModel.followUnFollowCompany(companyList[pos].id, Constants.FOLLOW)
                 } else {
                     companyList[pos].follow_status = Constants.FOLLOW_CAPS

@@ -27,7 +27,7 @@ class ForgotPasswordActivity : BaseActivity() {
 
         setContentView(R.layout.activity_forgotpassword_new)
 
-        iv_Back.setOnClickListener{
+        btn_Back.setOnClickListener{
 
             onBackPressed()
         }

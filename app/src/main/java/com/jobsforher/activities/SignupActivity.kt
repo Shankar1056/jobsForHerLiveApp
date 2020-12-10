@@ -49,6 +49,7 @@ import com.jobsforher.network.responsemodels.SignUpResponse
 import com.jobsforher.network.retrofithelpers.EndPoints
 import com.jobsforher.network.retrofithelpers.RetrofitClient
 import com.jobsforher.network.retrofithelpers.RetrofitInterface
+import com.jobsforher.ui.auth.LoginActivity
 import com.kusu.linkedinlogin.Linkedin
 import com.kusu.linkedinlogin.LinkedinLoginListener
 import com.kusu.linkedinlogin.model.SocialUser
@@ -178,12 +179,12 @@ class SignupActivity : BaseActivity() {
         }
 
         tvLogin_Here.setOnClickListener {
-            var intent = Intent(this, SignInActivity::class.java)
+            var intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 
         signuphere.setOnClickListener {
-            var intent = Intent(this, SignInActivity::class.java)
+            var intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 

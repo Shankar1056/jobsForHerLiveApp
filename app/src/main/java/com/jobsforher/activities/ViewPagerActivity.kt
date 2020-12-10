@@ -22,6 +22,7 @@ import com.jobsforher.network.responsemodels.RegisterIdResponse
 import com.jobsforher.network.retrofithelpers.EndPoints
 import com.jobsforher.network.retrofithelpers.RetrofitClient
 import com.jobsforher.network.retrofithelpers.RetrofitInterface
+import com.jobsforher.ui.auth.LoginActivity
 import java.util.HashMap
 
 class ViewPagerActivity : AppCompatActivity() {
@@ -64,7 +65,7 @@ class ViewPagerActivity : AppCompatActivity() {
 
         btnSignIn.setOnClickListener {
 
-            var intent = Intent(this, SignInActivity::class.java)
+            var intent = Intent(this, LoginActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
 
@@ -72,7 +73,7 @@ class ViewPagerActivity : AppCompatActivity() {
 
         btnSignUp.setOnClickListener {
 
-            var intent = Intent(this, SignInActivity::class.java)
+            var intent = Intent(this, LoginActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }

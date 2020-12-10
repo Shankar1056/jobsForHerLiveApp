@@ -17,12 +17,14 @@ import androidx.core.content.ContextCompat;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.jobsforher.R;
+import com.jobsforher.helpers.Constants;
 import com.jobsforher.models.CityView;
 import com.jobsforher.models.FunctionalAreaView;
 import com.jobsforher.network.retrofithelpers.EndPoints;
 import com.jobsforher.network.retrofithelpers.RetrofitClient;
 import com.jobsforher.network.retrofithelpers.RetrofitInterface;
 import com.jobsforher.ui.newsfeed.NewsFeedActivity;
+import com.jobsforher.util.Preference;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
@@ -151,7 +153,7 @@ public class Footer extends AppCompatActivity implements View.OnClickListener {
 
         RetrofitInterface retrofitInterface = (RetrofitInterface)var10001.create(RetrofitInterface.class);
 
-        Call call = retrofitInterface.getCities(EndPoints.CLIENT_ID, "Bearer " + EndPoints.INSTANCE.getACCESS_TOKEN());
+        Call call = retrofitInterface.getCities(EndPoints.CLIENT_ID, "Bearer " + Preference.INSTANCE.getPreferences(Constants.ACCESS_TOKEN));
         call.enqueue((Callback)(new Callback() {
             public void onResponse(@NotNull Call call, @NotNull Response response) {
 

@@ -2,11 +2,11 @@ package com.jobsforher.activities;
 
 import android.content.Context;
 import android.content.Intent;
-import android.view.LayoutInflater;
-import android.view.ViewGroup;
-import android.view.View;
-import android.widget.Button;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -15,6 +15,11 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.jobsforher.R;
+import com.jobsforher.helpers.Constants;
+import com.jobsforher.ui.auth.LoginActivity;
+import com.jobsforher.ui.newsfeed.NewsFeedActivity;
+import com.jobsforher.util.Preference;
+
 import women.jobs.jobsforher.activities.BaseActivity;
 
 public class ZSplashActivityNew extends BaseActivity {
@@ -57,35 +62,24 @@ public class ZSplashActivityNew extends BaseActivity {
         vp.addOnPageChangeListener(viewPagerPageChangeListener);
         if (!preferenceManager.FirstLaunch()) {
             launchMain();
-            finish();
         }
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //                String crashString = null;
 //                crashString.length();
-                Intent intent = new Intent(ZSplashActivityNew.this, SignupActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) ;
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent);
-                finish();
+                startActivity(new Intent(ZSplashActivityNew.this, LoginActivity.class)
+                        .putExtra("from", "signup"));
             }
         });
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                throw new RuntimeException("Test Crash set 2"); // Force a crash
-                Intent intent = new Intent(ZSplashActivityNew.this, SignInActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) ;
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent);
-                finish();
+                startActivity(new Intent(ZSplashActivityNew.this, LoginActivity.class)
+                        .putExtra("from", "login"));
             }
         });
-//        ColoredBars(0);
 
 
     }
@@ -122,9 +116,6 @@ public class ZSplashActivityNew extends BaseActivity {
         }
     }
 
-    public void skip(View view) {
-        launchMain();
-    }
 
 //    private void ColoredBars(int thisScreen) {
 //        int[] colorsInactive = getResources().getIntArray(R.array.dot_on_page_not_active);
@@ -148,9 +139,16 @@ public class ZSplashActivityNew extends BaseActivity {
     }
 
     private void launchMain() {
-        preferenceManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(ZSplashActivityNew.this, LoginActivity.class));
-        finish();
+        if (Preference.INSTANCE.getPreferences(Constants.EMAIL).isEmpty()){
+            preferenceManager.setFirstTimeLaunch(false);
+            startActivity(new Intent(ZSplashActivityNew.this, LoginActivity.class));
+            finishAffinity();
+        } else {
+            preferenceManager.setFirstTimeLaunch(false);
+            startActivity(new Intent(ZSplashActivityNew.this, NewsFeedActivity.class));
+            finishAffinity();
+        }
+
     }
 
     ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {

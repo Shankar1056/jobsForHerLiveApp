@@ -1,9 +1,7 @@
 package com.jobsforher.activities
 
 
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.os.Handler
@@ -23,6 +21,7 @@ import com.google.firebase.iid.FirebaseInstanceId
 import com.google.gson.Gson
 import com.jobsforher.BuildConfig
 import com.jobsforher.R
+import com.jobsforher.helpers.Constants
 import com.jobsforher.helpers.HelperMethods
 import com.jobsforher.helpers.Logger
 import com.jobsforher.helpers.ToastHelper
@@ -31,6 +30,10 @@ import com.jobsforher.network.responsemodels.RegisterIdResponse
 import com.jobsforher.network.retrofithelpers.EndPoints
 import com.jobsforher.network.retrofithelpers.RetrofitClient
 import com.jobsforher.network.retrofithelpers.RetrofitInterface
+import com.jobsforher.ui.auth.LoginActivity
+import com.jobsforher.ui.newsfeed.NewsFeedActivity
+import com.jobsforher.util.Preference
+import com.jobsforher.util.Preference.getPreferences
 import kotlinx.android.synthetic.main.activity_splash.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -133,15 +136,17 @@ class SplashActivity() : AppCompatActivity() {
 
 
     fun callIntent(fcm: String) {
-        val sharedPref: SharedPreferences = getSharedPreferences(
-            "mysettings",
-            Context.MODE_PRIVATE
-        );
-        val editor = sharedPref.edit()
-        editor.putString(PREF_FCM, fcm)
-        editor.commit()
 
-        if (sharedPref.getBoolean(PREF_STATUS, false)) {
+        if (getPreferences(Constants.EMAIL).toString().isNullOrEmpty()
+        ) {
+            startActivity(Intent(this@SplashActivity, ZSplashActivityNew::class.java))
+            finishAffinity()
+        } else {
+            startActivity(Intent(this@SplashActivity, HomePagePreferences::class.java))
+            finishAffinity()
+        }
+
+        /*if (sharedPref.getBoolean(PREF_STATUS, false)) {
             Log.d("TAGG", "Splash " + fcm)
             val homeIntent = Intent(this, HomePagePreferences::class.java) //HomePage
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -162,7 +167,7 @@ class SplashActivity() : AppCompatActivity() {
             intent.putExtra("fcm", fcm)
             startActivity(homeIntent)
             finish()
-        }
+        }*/
     }
 
 
@@ -216,7 +221,6 @@ class SplashActivity() : AppCompatActivity() {
                 call: Call<RegisterIdResponse>,
                 response: Response<RegisterIdResponse>
             ) {
-
 
 
                 if (response.isSuccessful) {

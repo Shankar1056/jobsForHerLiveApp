@@ -14,8 +14,10 @@ import com.bigappcompany.healthtunnel.data.network.ApiCallback
 import com.jobsforher.data.model.ExpertChatBody
 import com.jobsforher.data.model.ExpertChatReq
 import com.jobsforher.data.model.ExpertChatResponse
+import com.jobsforher.helpers.Constants
 import com.jobsforher.helpers.HelperMethods
 import com.jobsforher.network.retrofithelpers.EndPoints
+import com.jobsforher.util.Preference
 import java.util.*
 import kotlin.properties.Delegates
 
@@ -73,7 +75,7 @@ class ExpertChatViewModel(val app: Application) : AndroidViewModel(app) {
         }
 
         model.getExpertChat(
-            "Bearer ${EndPoints.ACCESS_TOKEN}", model,
+            "Bearer ${Preference.getPreferences(Constants.ACCESS_TOKEN)}", model,
             object : ApiCallback() {
                 override fun onSuccess(obj: Any?) {
                     val response = obj as ExpertChatResponse

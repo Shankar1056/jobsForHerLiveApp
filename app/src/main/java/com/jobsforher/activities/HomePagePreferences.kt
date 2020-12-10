@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.jobsforher.R
+import com.jobsforher.helpers.Constants
 import com.jobsforher.helpers.HelperMethods
 import com.jobsforher.helpers.Logger
 import com.jobsforher.helpers.ToastHelper
@@ -24,6 +25,7 @@ import com.jobsforher.network.retrofithelpers.EndPoints
 import com.jobsforher.network.retrofithelpers.RetrofitClient
 import com.jobsforher.network.retrofithelpers.RetrofitInterface
 import com.jobsforher.ui.newsfeed.NewsFeedActivity
+import com.jobsforher.util.Preference
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_homepage_preferences.*
 import org.json.JSONArray
@@ -94,7 +96,16 @@ class HomePagePreferences : AppCompatActivity() {
         EndPoints.PROFILE_URL = sharedPref.getString(PREF_PROFILEURL, "")!!
         EndPoints.profileUrl=sharedPref.getString(PREF_PROFILEURL, "")!!
         row_text.setText("Welcome "+EndPoints.USERNAME+"!")
-        if(userID==0){
+
+        if (Preference.getPreferences(Constants.EMAIL).toString().isNullOrEmpty()
+        ) {
+            openScreen()
+        } else {
+            layout1.visibility= View.GONE
+            openScreen()
+        }
+
+        /*if(userID==0){
             openScreen()
         }
         else{
@@ -102,7 +113,7 @@ class HomePagePreferences : AppCompatActivity() {
             //loadAccountSettings()
             loadCategoryData()
 
-        }
+        }*/
 
     }
 
@@ -851,7 +862,7 @@ class HomePagePreferences : AppCompatActivity() {
 //                    intent = Intent(applicationContext, NewsFeed::class.java)
                     intent = Intent(applicationContext, NewsFeedActivity::class.java)
                     startActivity(intent)
-                    finish()
+                    finishAffinity()
                 } catch (e: InterruptedException) {
                     e.printStackTrace()
                 }

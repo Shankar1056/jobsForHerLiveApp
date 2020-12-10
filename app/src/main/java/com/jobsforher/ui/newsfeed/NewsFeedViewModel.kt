@@ -17,6 +17,8 @@ import com.jobsforher.helpers.HelperMethods
 import com.jobsforher.helpers.ToastHelper
 import com.jobsforher.network.responsemodels.NotificationBubbleResponse
 import com.jobsforher.network.retrofithelpers.EndPoints
+import com.jobsforher.network.retrofithelpers.Test
+import com.jobsforher.util.Preference
 import com.jobsforher.util.Utility
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -221,7 +223,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
 
     private val getRecomEventsObservable: Observable<RecommendedEventsResponse>
         get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
-            .recommendedEvents("Bearer " + EndPoints.ACCESS_TOKEN/*, groupReq*/)
+            .recommendedEvents("Bearer " + Preference.getPreferences(Constants.ACCESS_TOKEN)/*, groupReq*/)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
 
@@ -245,7 +247,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
 
     private val getPreferenceObservable: Observable<PreferenceListResponse>
         get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
-            .getPreference("Bearer " + EndPoints.ACCESS_TOKEN)
+            .getPreference("Bearer " + Preference.getPreferences(Constants.ACCESS_TOKEN))
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
 
@@ -336,7 +338,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
 
     private val followUnFollowObservable: Observable<CompanyFollow>
         get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
-            .FollowCompayny("Bearer " + EndPoints.ACCESS_TOKEN, groupReq)
+            .FollowCompayny("Bearer " + Preference.getPreferences(Constants.ACCESS_TOKEN), groupReq)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
 
@@ -361,7 +363,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
 
     private val joinGroupObservable: Observable<JoinGroup>
         get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
-            .joinGroup(joinGroupId, "Bearer " + EndPoints.ACCESS_TOKEN)
+            .joinGroup(joinGroupId, "Bearer " + Preference.getPreferences(Constants.ACCESS_TOKEN))
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
 
@@ -386,7 +388,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
 
     private val uploadResumeObservable: Observable<ResumeUploadResponse>
         get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
-            .uploadResume("Bearer " + EndPoints.ACCESS_TOKEN, groupReq)
+            .uploadResume("Bearer " + Preference.getPreferences(Constants.ACCESS_TOKEN), groupReq)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
 
@@ -411,7 +413,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
 
     private val notificationObservable: Observable<NotificationBubbleResponse>
         get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
-            .getNotificationBubble("Bearer " + EndPoints.ACCESS_TOKEN)
+            .getNotificationBubble("Bearer " + Preference.getPreferences(Constants.ACCESS_TOKEN))
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
 
@@ -436,7 +438,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
 
     private val doDownVoteObservable: Observable<VoteResponseModel>
         get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
-            .downVoteData("Bearer " + EndPoints.ACCESS_TOKEN, groupReq)
+            .downVoteData("Bearer " + Preference.getPreferences(Constants.ACCESS_TOKEN), groupReq)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
 
@@ -465,7 +467,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
 
     private val doUpVoteObservable: Observable<VoteResponseModel>
         get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
-            .upVoteData("Bearer " + EndPoints.ACCESS_TOKEN, groupReq)
+            .upVoteData("Bearer " + Preference.getPreferences(Constants.ACCESS_TOKEN), groupReq)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
 
@@ -493,7 +495,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
 
     private val getNewsPostObservable: Observable<NewsPostResponse>
         get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
-            .getNewsPostData("Bearer " + EndPoints.ACCESS_TOKEN, groupReq)
+            .getNewsPostData("Bearer " + Preference.getPreferences(Constants.ACCESS_TOKEN), groupReq)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
 
@@ -521,7 +523,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
 
     private val getGroupsObservable: Observable<RecommendedGropsResponse>
         get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
-            .getRecommendedMyGroupData("Bearer " + EndPoints.ACCESS_TOKEN, groupReq)
+            .getRecommendedMyGroupData("Bearer " + Preference.getPreferences(Constants.ACCESS_TOKEN), groupReq)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
 
@@ -548,7 +550,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
 
     private val getCompaniesObservable: Observable<RecommendedCompaniesResponse>
         get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
-            .getRecommendedCompanies("Bearer " + EndPoints.ACCESS_TOKEN, groupReq)
+            .getRecommendedCompanies("Bearer " + Preference.getPreferences(Constants.ACCESS_TOKEN), groupReq)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
 
@@ -575,7 +577,7 @@ class NewsFeedViewModel(val app : Application) : AndroidViewModel(app) {
 
     private val getJobsObservable: Observable<RecommendedJobsResponse>
         get() = RetroClient.getRetrofit()!!.create(ApiServices::class.java)
-            .getRecommendedJobs("Bearer " + EndPoints.ACCESS_TOKEN, groupReq)
+            .getRecommendedJobs("Bearer " + Preference.getPreferences(Constants.ACCESS_TOKEN), groupReq)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
 

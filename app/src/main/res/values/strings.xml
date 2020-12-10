@@ -325,6 +325,9 @@
     <string name="hint_type_skills">Type your skills</string>
     <string name="text_join">Join</string>
     <string name="text_events_you_may_interested">Events you may be interested in</string>
+    <string name="text_password_reset_link_sent">A password reset message has been sent to your registered email id, Please click the link in that message to set your password.</string>
+    <string name="login_terms_conditions"><![CDATA[By signing up, I agree to the <font color=\'#3FA9E6\'><u>Terms and Conditions</u></font> \nand certify that I am a woman]]></string>
+    <string name="weblink_terms_conditions">"https://www.jobsforher.com/terms-of-use"</string>
 
 
     <!--<string name="app_name">Android Spinner</string>-->

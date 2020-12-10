@@ -1,12 +1,13 @@
 package com.jobsforher.data.repository
 
 import com.jobsforher.data.model.*
-import com.jobsforher.network.responsemodels.NotificationBubbleResponse
-import com.jobsforher.network.responsemodels.UpdateReplyResponse
+import com.jobsforher.network.responsemodels.*
 import com.jobsforher.network.retrofithelpers.EndPoints
+import entertainment.minersinc.tfhy.network.responsemodels.ForgotPasswordResponse
 import io.reactivex.Observable
 import retrofit2.Call
 import retrofit2.http.*
+import retrofit2.http.Body
 import java.util.*
 
 
@@ -125,5 +126,41 @@ interface ApiServices {
         @Header("Authorization") accesstoken: String
        // @Body getSkillsCredentials: HashMap<String, String>
     ): Observable<RecommendedEventsResponse>
+
+    @Headers("clientid:" + EndPoints.CLIENT_ID)
+    @POST(EndPoints.password_reset)
+    fun passwodReset(
+        @Header("Content-Type") contentType: String,
+        @Body loginCredentials: HashMap<String, String>
+    ): Observable<ForgotPasswordResponse>
+
+    @Headers("clientid:" + EndPoints.CLIENT_ID)
+    @POST(EndPoints.user_signin)
+    fun doSignIn(
+        @Header("Content-Type") contentType: String,
+        @Body signInCredentials: HashMap<String, String>
+    ): Observable<SignInResponse>
+
+    @Headers("clientid:" + EndPoints.CLIENT_ID)
+    @POST(EndPoints.get_social_token)
+    fun registerSocialToken(
+        @Header("Content-Type") contentType: String,
+        @Body registerSocialToken: HashMap<String, String>
+    ): Observable<RegisterSocialTokenResponse>
+
+    @Headers("clientid:" + EndPoints.CLIENT_ID)
+    @POST(EndPoints.social_login)
+    fun registerSocialSignIn(
+        @Header("Content-Type") contentType: String,
+        @Body registerSocialSignInCredentials: HashMap<String, String>
+    ): Observable<RegisterSocialSignInResponse>
+
+    @Headers("clientid:" + EndPoints.CLIENT_ID)
+    @POST(EndPoints.user_signup)
+    fun doSignUp(
+        @Header("Content-Type") contentType: String,
+        @Body signUpinCredentials: HashMap<String, String>
+    ): Observable<SignUpResponse>
+
 
 }
